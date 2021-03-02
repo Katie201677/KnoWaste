@@ -1,3 +1,8 @@
+## Installation
+In your terminal, `git clone https://github.com/jebzley/knowaste.git`
+Use `npm install` in the root directory to install the dependencies
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
