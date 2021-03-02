@@ -1,13 +1,12 @@
 import React from "react"
-import { render } from "react-dom"
-import { Router, Link } from "@reach/router"
+import styles from './Home.module.scss';
 
-// let Home = () => <div>Home</div>
-// let Dash = () => <div>Dash</div>
 
-render(
-  <Router>
-    <Home path="/" />
-    <Dash path="dashboard" />
-  </Router>
-)
+// Home page function
+const Home = () => {
+  return (
+    "hello Home"
+  );
+}
+
+export default Home;
