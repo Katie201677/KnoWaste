@@ -4,7 +4,7 @@ _nology Aruba's React webapp for the Knowaste project!
 ## Installation
 In your terminal
 ````
-git clone https://github.com/jebzley/knowaste.git
+git clone https://github.com/nology-tech/knowaste.git
 ````
 Use 
 ````
