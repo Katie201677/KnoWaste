@@ -1,6 +1,20 @@
+# Knowaste webapp
+_nology Aruba's React webapp for the Knowaste project!
+
 ## Installation
-In your terminal, `git clone https://github.com/jebzley/knowaste.git`
-Use `npm install` in the root directory to install the dependencies
+In your terminal
+````
+git clone https://github.com/jebzley/knowaste.git
+````
+Use 
+````
+npm install
+```` 
+in the root directory to install the dependencies
+
+
+
+
 
 
 # Getting Started with Create React App
