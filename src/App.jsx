@@ -1,6 +1,7 @@
 import react from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
+import SignUp from './components/SignUp';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -19,6 +20,9 @@ const App = () => {
         </Route>
         <Route path='/'>
           <Home />
+        </Route>
+        <Route path='/signup'>
+          <SignUp />
         </Route>
       </Switch>
       </Router>
