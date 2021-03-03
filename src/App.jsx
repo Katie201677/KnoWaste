@@ -24,9 +24,6 @@ const App = () => {
         <Route path='/login'>
           <Login />
         </Route>
-        <Route path='/'>
-          <Home />
-        </Route>
         <Route path='/register'>
           <Register />
         </Route>
@@ -47,6 +44,9 @@ const App = () => {
         </Route>
         <Route path='/environment'>
           <Environment />
+        </Route>
+        <Route path='/'>
+          <Home />
         </Route>
       </Switch>
       </Router>
