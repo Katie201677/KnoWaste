@@ -3,7 +3,7 @@ import styles from './Login.module.scss';
 
 const Login = () => {
   return (
-    "Login plz"
+    "Login plz.........."
   );
 }
 
