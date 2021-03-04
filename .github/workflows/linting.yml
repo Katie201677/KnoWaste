@@ -7,5 +7,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install modules
       run: npm install
+    - name: initialise eslint
+      run: npm run lintinit
     - name: Run ESLint
       run: npm run lint
