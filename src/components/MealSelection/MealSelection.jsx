@@ -3,7 +3,11 @@ import styles from './MealSelection.module.scss';
 
 const MealSelection = () => {
   return (
-    "select ur food"
+  <div>
+    <Timebar />
+    <CardList />
+    <Navbar />
+  </div>
   );
 }
 
