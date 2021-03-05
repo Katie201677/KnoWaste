@@ -1,5 +1,6 @@
 # Knowaste webapp
 _nology Aruba's React webapp for the Knowaste project!
+Public channel: https://knowaste-3c92c.web.app/
 
 ## Installation
 In your terminal
