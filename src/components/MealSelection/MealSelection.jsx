@@ -9,7 +9,7 @@ const MealSelection = () => {
   return (
   <div>
     <TimeBar />
-    <WeekPlanner className={styles.cardList} />
+    <WeekPlanner className={styles.classList} />
     <NavBar />
   </div>
   );
