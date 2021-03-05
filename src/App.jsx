@@ -56,4 +56,8 @@ const App = () => {
 
 // hi guys
 
+export const testFunction = () => {
+  return "All Good"
+}
+
 export default App;
