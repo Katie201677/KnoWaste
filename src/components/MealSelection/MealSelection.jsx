@@ -1,7 +1,7 @@
 import react from 'react';
 import TimeBar from './TimeBar';
 import NavBar from './NavBar';
-import CardList from './CardList';
+import WeekPlanner from './WeekPlanner';
 
 import styles from './MealSelection.module.scss';
 
@@ -9,7 +9,7 @@ const MealSelection = () => {
   return (
   <div>
     <TimeBar />
-    <CardList className={styles.cardList} />
+    <WeekPlanner className={styles.cardList} />
     <NavBar />
   </div>
   );
