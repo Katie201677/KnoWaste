@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Timebar = () => {
+const TimeBar = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Timebar = () => {
   )
 }
 
-export default Timebar
+export default TimeBar

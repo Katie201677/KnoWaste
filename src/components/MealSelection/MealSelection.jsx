@@ -1,6 +1,6 @@
 import react from 'react';
-import Timebar from './Timebar';
-import Navbar from './Navbar';
+import TimeBar from './TimeBar';
+import NavBar from './NavBar';
 import CardList from './CardList';
 
 import styles from './MealSelection.module.scss';
@@ -8,9 +8,9 @@ import styles from './MealSelection.module.scss';
 const MealSelection = () => {
   return (
   <div>
-    <Timebar />
-    <CardList />
-    <Navbar />
+    <TimeBar />
+    <CardList className={styles.cardList} />
+    <NavBar />
   </div>
   );
 }

@@ -1,16 +1,16 @@
 import React from 'react'
 
-const RecipeCard = () => {
+const RecipeCard = (props) => {
+  const {type, recipeName, dietaryrestriction} = props.mealChoice;
+  console.log(props.mealChoice);
   return (
     <div>
       <section>
-        <img src="" alt="meat option"/>
-        <h3>Chicken Tikka Masala</h3>
-        <p>Served with rice, mango chutney and a mini naan</p>
+        <img src="" alt={type}/>
+        <h3>{recipeName}</h3>
       </section>
       <section>
-        <img class= "carbondioxide"></img>
-        <img class= "sustainability"></img>
+       <p>{dietaryrestriction.join(" ")}</p>
       </section>
     </div>
   )
