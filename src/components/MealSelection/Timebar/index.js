@@ -1,3 +1,3 @@
-import Timebar from "Timebar.jsx";
+import TimeBar from "./TimeBar.jsx";
 
-export default Timebar;
+export default TimeBar;
