@@ -3,13 +3,15 @@ import styles from "./ForgotPassword.module.scss";
 
 const ForgotPassword = () => {
   const [notify, setBeenNotified] = useState(false);
+  const [validate, isEmailValid] = useState(false);
 
   const handleClick = () => {
-    if (notify == true) {
+    if (notify == true && validate == true) {
       setBeenNotified(false);
-      // setBeenNotified to false
+      isEmailValid(true);
     } else {
       setBeenNotified(true);
+      isEmailValid(false);
       // ... or the other way around
     }
   };
@@ -17,13 +19,21 @@ const ForgotPassword = () => {
   return (
     <div>
       <label for="email">Enter your email:</label>
-
-      {
-        // ..  if statement should show the notification or hide based on whether "notify" is true/false
+      {notify && validate ? (
+      <section class={styles.alert}>Notificaton</section>
+      ) : (
+        <section class = {styles.displayNone}></section>
+      ) 
       }
       <button onClick={handleClick}>Submit</button>
 
-      <section class={styles.alert}>Notificaton</section>
+
+      {/* <>
+      <Notify show={notify}/>
+      <button onClick={() => setBeenNotified(!notify)}>Submit</button>
+      </> */}
+
+      
     </div>
   );
 };
