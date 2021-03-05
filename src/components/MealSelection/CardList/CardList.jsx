@@ -5,6 +5,7 @@ import styles from './CardList.module.scss';
 
 
 const CardList = () => {
+  //Holds and organises the daily selection of food.
   const mealsOptions = [{type: "meat", recipeName: "Chicken Tikka Masala", dietaryrestriction: ["nuts", "gluten", "lactose"]}, {type: "fish", recipeName: "I am a fish", dietaryrestriction: ["nuts", "gluten", "lactose"]}, {type: "vegetarian", recipeName: "A single brocolli", dietaryrestriction: ["nuts", "gluten", "lactose"]}]
   const meal = mealsOptions.map(meal => {
     return meal

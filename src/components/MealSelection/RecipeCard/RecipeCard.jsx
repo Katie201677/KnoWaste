@@ -1,8 +1,8 @@
 import React from 'react'
 
 const RecipeCard = (props) => {
+  //Each individual recipe information in a card format.
   const {type, recipeName, dietaryrestriction} = props.mealChoice;
-  console.log(props.mealChoice);
   return (
     <div>
       <section>
