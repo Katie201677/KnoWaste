@@ -19,7 +19,6 @@ import {
 const App = () => {
   return (
     <div>
-      <MealSelection />
       <Router>
       <Switch>
         <Route path='/login'>
