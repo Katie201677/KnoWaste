@@ -10,8 +10,20 @@
 
     color: white;
     text-align: end;
+    height: 80px;
 
-    p { margin-right: 20px;
-        
+    p { 
+        margin: 30px 20px;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .timeBar {
+        width: 100vw;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+  } 
