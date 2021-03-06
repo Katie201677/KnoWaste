@@ -1,12 +1,13 @@
 import React from "react";
+import styles from './NavBar.module.scss';
 
 const NavBar = () => {
   return (
-    <nav>
-        <button id="profile"><a>I am a face</a></button>
-        <button id="leaderboard"><a>I am a leaderboard</a></button>
-        <button id="home"><a>I am a house</a></button>
-        <button id="meal-selection"><a>I am some utensils</a></button>
+    <nav className={styles.nav}>
+        <button className={styles.btn} id="profile"><a>1</a></button>
+        <button className={styles.btn} id="leaderboard"><a>2</a></button>
+        <button className={styles.btn} id="home"><a>3</a></button>
+        <button className={styles.btn} id="meal-selection"><a>4</a></button>
     </nav>
   );
 };  

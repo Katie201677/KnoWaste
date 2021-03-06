@@ -1,0 +1,17 @@
+.timeBar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    background-color: rgb(29, 18, 37);
+    width: 100%;
+
+    color: white;
+    text-align: end;
+
+    p { margin-right: 20px;
+        
+    }
+}

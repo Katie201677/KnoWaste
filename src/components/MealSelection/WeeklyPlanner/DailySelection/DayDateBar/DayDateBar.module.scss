@@ -1,0 +1,23 @@
+.dayBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+
+    background: linear-gradient(180deg, #5656FF 0%, #9556C0 99.99%, rgba(205, 40, 40, 0) 100%);
+
+    h2 {
+        margin-left: 3%;
+        color: #F9F3F3;
+    }
+
+    button {
+        background-color: #FF5757;
+        border: 2px solid #FF5757;
+        border-radius: 50px;
+        padding: 8px 40px;
+        color: white;
+    }
+}
