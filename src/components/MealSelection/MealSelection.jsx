@@ -1,15 +1,15 @@
 import react from 'react';
 import TimeBar from './TimeBar';
 import NavBar from './NavBar';
-import WeekPlanner from './WeekPlanner';
-
+import WeeklyPlanner from './WeeklyPlanner';
 import styles from './MealSelection.module.scss';
 
 const MealSelection = () => {
+
   return (
-  <div>
+  <div className={styles.page}>
     <TimeBar />
-    <WeekPlanner className={styles.classList} />
+    <WeeklyPlanner />
     <NavBar />
   </div>
   );

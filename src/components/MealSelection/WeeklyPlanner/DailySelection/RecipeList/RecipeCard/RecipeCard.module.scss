@@ -1,0 +1,26 @@
+.recipeCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    .recipeImg {
+        margin-top: 10%;
+        height: 100px;
+        width: 100px;
+        border: 2px solid rgb(160, 21, 21);
+        border-radius: 100%;
+    }
+
+    h3 {
+        color: #666666;
+    }
+
+    .dietRestrictions {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+}
