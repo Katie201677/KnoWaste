@@ -1,0 +1,51 @@
+@import '../../assets/styles/variables';
+
+.linkContainerOne {
+display: flex;
+justify-content: center;
+
+.mealSelectionButton {
+background: navy;
+text-align:center;
+border: 2px solid black;
+border-radius: 50%;
+width: 300px;
+height: 300px;
+
+h3 {
+  color: white;
+  font-size: 34px;
+}
+}
+}
+
+.linkContainerTwo {
+display: flex;
+justify-content: space-evenly;
+}
+.aboutUs {
+  background: navy;
+  text-align:center;
+  border: 2px solid black;
+border-radius: 50%;
+width: 150px;
+height: 150px;
+  
+  h3 {
+    color: white;
+    font-size: 16px;
+  }
+  }
+
+.gamification {
+  background: navy;
+  text-align:center;
+  border: 2px solid black;
+border-radius: 50%;
+width: 150px;
+height: 150px;
+  
+  h3 {
+    color: white;
+  }
+}

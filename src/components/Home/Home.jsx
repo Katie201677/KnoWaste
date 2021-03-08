@@ -1,4 +1,5 @@
 import React from "react"
+import NavBar from "../NavBar";
 import styles from './Home.module.scss';
 
 const Home = () => {
@@ -7,20 +8,30 @@ const Home = () => {
       {/*timer*/}
       {/*info re timer (?)*/}
       {/*improvements since last week etc*/}
-      <div className='linkContainer'>
-        <a href='./MealSelection'>
-          <img className='mealSelection'></img>
-        </a>
-        <a href='./AboutUs'>
+      <div className={styles.linkContainerOne}>
+        <div className={styles.mealSelectionButton}>
+          <a href='./MealSelection'><h3>Meal Selection</h3>
+            <img className='mealSelection'></img>
+          </a>
+        </div>
+        </div>
+        <div className={styles.linkContinerTwo}>
+        <div className={styles.aboutUs}>
+        <a href='./AboutUs'><h3>About Us / Environment</h3>
           <img className='aboutUs'></img>
         </a>
-        <a href='./Gamification'>
+        </div>
+        <div className={styles.gamification}>
+        <a href='./Gamification'><h3>Gamification</h3>
           <img className='gamification'></img>
         </a>
+        </div>
       </div>
-      {/*nav bar*/}
+      <div>
+        <NavBar />
+      </div>
     </div>
   );
 };
 
-export default Home
+export default Home;
