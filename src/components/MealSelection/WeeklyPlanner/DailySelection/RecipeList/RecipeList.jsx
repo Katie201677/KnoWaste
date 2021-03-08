@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import RecipeCard from './RecipeCard/RecipeCard';
 import styles from './RecipeList.module.scss';
 

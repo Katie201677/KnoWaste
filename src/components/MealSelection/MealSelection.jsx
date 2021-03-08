@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import TimeBar from './TimeBar';
 import NavBar from './NavBar';
 import WeeklyPlanner from './WeeklyPlanner';
