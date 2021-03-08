@@ -13,6 +13,7 @@ const WeeklyPlanner = () => {
     
     let indexDate = dayArr.indexOf(date)
     const nextDay = dayArr[indexDate+1]
+    console.log("nextDay",nextDay)
     setActiveDate(nextDay);
     
   }
