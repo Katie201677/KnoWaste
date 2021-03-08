@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import DailySelection from './DailySelection/DailySelection.jsx';
 import styles from './WeeklyPlanner.module.scss';
-
+import PropTypes from 'prop-types';
 
 const WeeklyPlanner = () => {
   //Accordion that holds each Card Selection for each day.
