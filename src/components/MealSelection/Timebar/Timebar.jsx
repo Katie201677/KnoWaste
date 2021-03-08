@@ -1,10 +1,13 @@
 import React from 'react'
 import styles from './TimeBar.module.scss'
+import { DateTime } from 'luxon';
 
 const TimeBar = () => {
+  const now = DateTime.local().toString();
+  
   return (
     <div className={styles.timeBar}>
-      <p>10:20:30   until the ordering stops</p>
+      <p>{now} + until the ordering stops</p>
     </div>
   )
 }
