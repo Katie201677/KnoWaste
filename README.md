@@ -14,7 +14,16 @@ npm install
 in the root directory to install the dependencies
 
 
+## Linting
+[ESlint](https://eslint.org/) is used to assist us in writing better code. We are using the default recommended settings supplied by ESlint with a small override to downgrade an error to a warning. The list of rules that are enforced can be viewed [here](https://eslint.org/docs/rules/).
 
+Rules can be modified by adding the rule name to the rules attribute on the `.eslintrc` file.
+
+You can run `npm run lint` to run ESlint and report any errors/warnings on any of the `.js` or `.jsx` files in the project.
+
+Linting will run on any `pull_request` action and prevent deployment if failed.
+
+The ESlint extension can be added to VSCode to highlight any errors in the editor without having to run `npm run lint`
 
 
 
