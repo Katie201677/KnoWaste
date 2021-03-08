@@ -3,7 +3,7 @@ import styles from './DayDateBar.module.scss';
 import PropTypes from 'prop-types';
 
 const DayDateBar = (props) => {
-    const {date, setActiveDate, activeDate, isSelected, meal} = props;
+    const {date, setActiveDate, activeDate, isSelected, activeMeal, action} = props;
 
 
     const openDaySelection = () => {
@@ -11,13 +11,16 @@ const DayDateBar = (props) => {
     }
 
     return (
-        <div className={styles.dayBar}>
-            <h2><button className={styles.daySelector} onClick={openDaySelection}> {">"} </button> {date}</h2>
-            {/* {   
-               isSelected == true ? <h2>{meal[0].recipeName}</h2> : <button className={styles.btn}>Skip Meal</button>
-           }  */}
-           {console.log("meal[0].recipeName",meal[0].recipeName)}
-           <button className={styles.btn}>Skip Meal</button>
+        
+        <div  className={ date == activeDate ? styles.diffColour : styles.dayBar}  >
+            <h2>{date}</h2>
+            {
+                date == activeDate ? <button className={styles.btn} onClick={action}>SKIP THE MEAL</button> : ""
+            }
+            {   
+               isSelected == true ? <h5>{activeMeal}</h5> : ""
+           }  
+           {console.log("activeMeal",activeMeal)}
         </div>
     )
 }

@@ -4,35 +4,68 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 35px;
     overflow: hidden;
 
-    background: linear-gradient(90deg, #5656FF 0%, #9556C0 99.99%, rgba(205, 40, 40, 0) 100%);
-    border-bottom: 1px solid #454599;
+    background-color: rgba(251, 86, 7, 0.7);
+    border-bottom: 1px solid #FFFFFF;
+
+    h2 {
+        margin-left: 3%;
+        color: #F9F3F3;
+        font-size: medium;
+    }
+
+    h5 {
+        margin-right: 3%;
+        color: #F9F3F3;
+    }
+    
+}
+
+.diffColour {
+    position: relative;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: #FB5607;
 
     h2 {
         margin-left: 3%;
         color: #F9F3F3;
     }
+    
+    h5 {
+        margin-right: 3%;
+        color: #F9F3F3;
+    }
 
     .btn {
-        background-color: #FF5757;
-        border: 2px solid #FF5757;
+        position: absolute;
+        top: 0;
+        right: -5px;
+        background-color: #27187E;
+        border: 2px solid #27187E;
         border-radius: 50px;
-        padding: 5px 40px;
+        padding: 5px 70px;
         color: white;
     }
+}
 
-    .daySelector {
-        font-size: large;
-        border: none;
-        background-color: transparent;
-        color: #F9F3F3;
-    }
 
-    .daySelector:active {
-        transform: scale(0.9);
-        background-color: transparent;
-        color: #F9F3F3;
-    }
+
+.daySelector {
+    font-size: large;
+    border: none;
+    background-color: transparent;
+    color: #F9F3F3;
+}
+
+.daySelector:active {
+    transform: scale(0.9);
+    background-color: transparent;
+    color: #F9F3F3;
 }
