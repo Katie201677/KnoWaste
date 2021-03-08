@@ -5,7 +5,7 @@ import styles from './NavBar.module.scss';
 const NavBar = () => {
   return ( <>
   <div className={styles.navBar}>
-    'NavBar'
+    <h1>NavBar BABY!!</h1>
   </div>
     </>
   );
