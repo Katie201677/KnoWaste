@@ -1,4 +1,44 @@
-.logo {
-    width: 100px;
-    height: 100px;
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
+
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    align-items: center;
+    margin: auto;
+    background-color: #5656FF;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.logo {
+    width: 100%;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    
+    input {
+        height: 30px;
+        border-radius: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+    }
+
+    #loginButton {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
