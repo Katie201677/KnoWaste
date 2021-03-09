@@ -13,6 +13,7 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        with: 
+        with:
+          start: npm start 
           wait-on: 'http://localhost:3000'
           env: stage=LOCAL
