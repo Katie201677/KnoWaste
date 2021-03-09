@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import styles from "./Login.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Login = () => {
 
@@ -17,7 +19,10 @@ const Login = () => {
         {/* LOGO */}
         <img src="./knoWasteLogo_white.png" alt="logo" className={styles.logo} />
         {/* vertical line to separate logo from fields (desktop/tablet) */}
+        <div className={styles.divider}></div>
+
         <form action="" className={styles.loginForm}>
+          <h3>Member Login</h3>
           {/* email label */}
           <label for="emailInput">Email </label>
           {/* email input */}
@@ -27,16 +32,24 @@ const Login = () => {
           {/* password input */}
           <input type={isVisible ? 'text':'password'} id="passwordInput" />
           {/* show password button */}
-          <span className={styles.showPass} onClick={togglePassword}>show</span>
-          {/* forgot password link */}
-          <span className={styles.smallText}>
-          Forgot your password?<a href="http://www.google.com"> Reset</a>
+          <span className={styles.showPass} onClick={togglePassword}>
+            <FontAwesomeIcon icon={isVisible ? ["far", "eye-slash"]:["far", "eye"]} />
           </span>
-          {/* login button */}
-          <input type="submit" value="LOG IN" id={styles.loginButton} />
+          {/* forgot password link */}
+          <span className={`${styles.smallText} ${styles.forgotPassword}`}>
+          Forgot your password?
+          {/* <a href="http://www.google.com"> Reset</a> */}
+          <Link to="/forgotpassword"> Reset</Link>
+          </span>
+                    {/* login button */}
+          <span className={styles.centered}>
+          <Link to="/" ><input type="submit" value="LOG IN" id={styles.loginButton} /></Link>
+          </span>
           {/* sign up hyperlink */}
           <span className={styles.smallText}>
-            Don't have an account? <a href="/Register"> Sign up</a>
+            Don't have an account? 
+            {/* <a href="/Register"> Sign up</a> */}
+            <Link to="/register"> Sign up</Link>
           </span>
         </form>
       </div>
