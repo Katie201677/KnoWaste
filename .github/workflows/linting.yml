@@ -6,6 +6,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install eslint-plugin-react@latest --save-dev
+      run: npm install eslint && eslint-plugin-react
     - name: Run ESLint
+      run: npm run lintinit 
+    - name: eslint-init
       run: npm run lint
