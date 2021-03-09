@@ -19,7 +19,6 @@ import {
 const App = () => {
   return (
     <div>
-      <MealSelection />
 
       <Router>
       <Switch>
@@ -54,6 +53,12 @@ const App = () => {
       </Router>
     </div>
   );
+}
+
+// hi guys
+
+export const testFunction = () => {
+  return "All Good"
 }
 
 export default App;
