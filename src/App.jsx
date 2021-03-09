@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -13,7 +13,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  // Link
  } from 'react-router-dom';
 
 const App = () => {
@@ -55,5 +55,9 @@ const App = () => {
 }
 
 // hi guys
+
+export const testFunction = () => {
+  return "All Good"
+}
 
 export default App;

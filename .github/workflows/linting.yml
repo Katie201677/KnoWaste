@@ -1,0 +1,13 @@
+name: Linting
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: npm install eslint && npm install eslint-plugin-react
+    - name: Run ESLint
+      run: npm run lintinit 
+    - name: eslint-init
+      run: npm run lint
