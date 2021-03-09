@@ -25,7 +25,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         env: 
-          CYPRESS_RECORD_KEY: 8febb1dc-91c6-43f1-b3b4-c33642e7e891
+          CYPRESS_RECORD_KEY: ${{ CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           start: npm start 
