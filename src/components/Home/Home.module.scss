@@ -57,9 +57,20 @@ body {
         
 
         .mealSelection {
+          text-decoration: none;
+
+          .fork{
+            width: 100px;
+            height: 120px;
+            margin-top: 5px;
+          }
           h3 {
           color: white;
           margin-top: 25px;
+        }
+        .textMeal {
+          color: white;
+          font-size: small;
         }
       }
       }
@@ -76,6 +87,16 @@ body {
           background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
                                       rgba(175, 87, 235, 0.9) 100%);
           border-radius: 25px;
+
+          .logo {
+            width: 100px;
+          }
+          .leagueTable {
+            height: 75px;
+            width: 75px;
+            margin-top: 20px;
+          
+          }
 
           h3 {
             color: white;
