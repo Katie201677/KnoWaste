@@ -1,54 +1,49 @@
 import React, { useState } from "react";
 import styles from "./ForgotPassword.module.scss";
+import kitchenImage from '../../assets/cafe.jpg';
+import logo from '../../assets/Logo_white_new.png';
 
 const ForgotPassword = () => {
-  const [notify, setBeenNotified] = useState(false);
+  
   const [email, setEmail] = useState("");
-  const [validate, isEmailValid] = useState("");
+  const [isValid, setEmailValid] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   const handleClick = () => {
-    if (notify == true && validate == true) {
-      setBeenNotified(false);
-      isEmailValid(true);
-    } else {
-      setBeenNotified(true);
-      isEmailValid(false);
-    }
+    setHasSubmitted(true);
   };
 
   const emailValidation = (event) => {
-    const newEmail = (event.target.value);
+    const newEmail = event.target.value;
     const re = /\S+@\S+\.\S+/;
-    const isValidEmail = re.test(String(newEmail).toLowerCase());
-
-    if(isValidEmail){   
-    return alert("Please check your emails for password reset")
-  } else if (!isValidEmail) {
-    alert ("Please enter a valid email")
+    const isValidEmail = re.test(String(newEmail).toLowerCase()); 
+    setEmailValid(isValidEmail);
   }
 
-
-  // check if the input box is a valid email, if it is a valid email then notify user displayed on page of password reset email
-  // else if the email is invalid prompt "please enter a valid email"
   return (
-    <div>
-      <label for="email">Enter your email:</label>
-      <input type="email" placeholder="example@email.com" onChange={emailValidation}></input>
-      // if statement/ change of ternary 
-      {notify && validate ? (
-      <section className={styles.alert}>Notificaton</section>) : () 
-      }
+    <main style={{
+      backgroundImage: `url(${kitchenImage})`
+    }}>
+        <div className={styles.forgotPasswordContainer}>
+          <img className={styles.logo} src={logo} />
+          <p className={styles.paragraph}>Please enter the email associated with your account to reset your password</p>
+          <section className={styles.email}>
+            <label htmlFor="email">Email</label>
+          </section>
+          <input type="email" placeholder="example@email.com" onBlur={emailValidation}></input>  
+         
+          <button onClick={handleClick}>Submit</button>          
+        </div>
 
-      <button onClick={handleClick}>Submit</button>
-
-
-      {/* <>
-      <Notify show={notify}/>
-      <button onClick={() => setBeenNotified(!notify)}>Submit</button>
-      </> */}
-
-      
-    </div>
+        {
+            // 1. Show an invalid message once a user has clicked submit and it's STILL invalid 
+            !isValid && hasSubmitted ? <section className={styles.alert}><h3>Please enter a valid email</h3></section> : null                          
+        }
+        {
+            // 2. Show a success message if their email is valid upon submisison
+            isValid && hasSubmitted ? <section className={styles.alert}><h3>Please check your emails for a password reset</h3></section> : null
+        }
+    </main>
   );
 };
 
