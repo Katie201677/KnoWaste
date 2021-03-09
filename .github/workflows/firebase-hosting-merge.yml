@@ -7,6 +7,16 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - master
 jobs:
+
+  jest:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: npm install && CI='' npm run build
+    - name: Run Jest
+      run: npm run test
+      
   cypress-run:
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +36,7 @@ jobs:
           record: true
           
   build_and_deploy:
-    needs: cypress-run
+    needs: [cypress-run, jest]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
