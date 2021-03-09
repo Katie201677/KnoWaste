@@ -24,8 +24,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lintinit": "eslint --init",
+    "lint": "eslint . --ext .js --ext .jsx"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -40,6 +48,7 @@
   },
   "devDependencies": {
     "eslint": "^7.21.0",
+    "eslint-plugin-react": "^7.22.0",
     "jest": "^26.6.0"
   }
 }
