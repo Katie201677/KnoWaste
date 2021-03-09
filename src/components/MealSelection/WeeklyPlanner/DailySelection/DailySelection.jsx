@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import styles from './DailySelection.module.scss';
 import RecipeList from './RecipeList';
 import DayDateBar from './DayDateBar/DayDateBar.jsx';

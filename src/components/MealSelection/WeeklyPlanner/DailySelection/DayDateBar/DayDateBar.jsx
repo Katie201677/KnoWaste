@@ -5,13 +5,13 @@ const DayDateBar = (props) => {
     const {date, activeDate, isSelected, activeMeal, action} = props;
     
     return (
-        <div  className={ date == activeDate ? styles.diffColour : styles.dayBar}  >
+        <div  className={ date === activeDate ? styles.diffColour : styles.dayBar}  >
             <h2>{date}</h2>
             {
-                date == activeDate ? <button className={styles.btn} onClick={action}> SKIP THE MEAL</button> : ""
+                date === activeDate ? <button className={styles.btn} onClick={action}> SKIP THE MEAL</button> : ""
             }
             {   
-               isSelected == true ? <h5>{activeMeal}</h5> : ""
+               isSelected ? <h5>{activeMeal}</h5> : ""
            }  
         </div>
     )

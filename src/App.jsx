@@ -20,7 +20,6 @@ const App = () => {
   return (
     <div>
       <MealSelection />
-
       <Router>
       <Switch>
         <Route path='/login'>
@@ -54,6 +53,12 @@ const App = () => {
       </Router>
     </div>
   );
+}
+
+// hi guys
+
+export const testFunction = () => {
+  return "All Good"
 }
 
 export default App;
