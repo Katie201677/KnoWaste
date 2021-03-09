@@ -28,7 +28,7 @@ const ForgotPassword = () => {
           <img className={styles.logo} src={logo} />
           <p className={styles.paragraph}>Please enter the email associated with your account to reset your password</p>
           <section className={styles.email}>
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
           </section>
           <input type="email" placeholder="example@email.com" onBlur={emailValidation}></input>  
          
