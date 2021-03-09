@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Unit Test and E2e Test
 
 on: [push]
 
@@ -19,3 +19,6 @@ jobs:
         env: 
           CYPRESS_RECORD_KEY: 8febb1dc-91c6-43f1-b3b4-c33642e7e891
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Jest run
+        run: npm run test
+            
