@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import PropTypes from 'prop-types';
->>>>>>> c735b753d2aae56d151a9d29f52717c570c924fd
 import RecipeCard from './RecipeCard/RecipeCard';
 import styles from './RecipeList.module.scss';
 
