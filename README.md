@@ -13,6 +13,13 @@ npm install
 ```` 
 in the root directory to install the dependencies
 
+## Testing
+[Jest](https://jestjs.io/) is used to run unit testing, it will pick up any files named `*.test.js` or `*.spec.js`. Babel is configured to translate from ES6 modules to commonJS so they can be run by Jest.
+
+Functions can be exported and imported into the `spec` files for testing. Once tests are written, `npm run test` can be used to run locally.
+
+GH Actions have been configured to run automated tests on any action involving a `pull_request` deployment will be stopped if tests are failing.
+
 
 ## Linting
 [ESlint](https://eslint.org/) is used to assist us in writing better code. We are using the default recommended settings supplied by ESlint with a small override to downgrade an error to a warning. The list of rules that are enforced can be viewed [here](https://eslint.org/docs/rules/).
