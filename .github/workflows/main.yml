@@ -1,4 +1,4 @@
-name: Unit Test and E2e Test
+name: Cypress Tests
 
 on: [push]
 
@@ -13,12 +13,10 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        with:
-          start: npm start 
-          wait-on: 'http://localhost:3000'
         env: 
           CYPRESS_RECORD_KEY: 8febb1dc-91c6-43f1-b3b4-c33642e7e891
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Jest run
-        run: npm run test
-            
+        with:
+          start: npm start 
+          wait-on: 'http://localhost:3000'
+        
