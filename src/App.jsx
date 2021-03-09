@@ -19,7 +19,7 @@ import {
 const App = () => {
   return (
     <div>
-      <Router>v
+      <Router>
       <Switch>
         <Route path='/login'>
           <Login />
