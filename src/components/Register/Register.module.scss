@@ -1,24 +1,82 @@
-
-
-.entryContainer{
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.termsContainer {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-}
-
-.signUpButtonContainer {
+.pageBody {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height:100vh;
+    background-image: url("../../assets/images/knowasteBG.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+.mainFormContainer {
+    
+   
+    
+    height: 80vh;
+    width: 80vw;
+    background: lightblue;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:20px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+    h1{
+        text-align: center;
+    }
+
+    .entryContainer{
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+       
+        input {
+            border-radius: 15px;
+            height: 30px;
+            
+        }
+       
+        
+    }
+    
+    .termsContainer {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        textarea {
+            overflow-y: scroll;
+        }
+    }
+    
+    .signUpButtonContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .signUpButton {
+            font-size: 30px;
+            border-radius: 20px;
+            padding: 5px;
+            color: white;
+            background: grey;
+        }
+    }
+    
+    p{
+        display: inline;
+    }
+
+
+    
+    
+
 }
 
-p{
-    display: inline;
-}
 
