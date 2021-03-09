@@ -17,5 +17,4 @@ jobs:
           start: npm start 
           wait-on: 'http://localhost:3000'
           env: 
-            stage=LOCAL
             CYPRESS_RECORD_KEY: ${{8febb1dc-91c6-43f1-b3b4-c33642e7e891}}
