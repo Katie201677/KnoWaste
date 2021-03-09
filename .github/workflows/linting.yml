@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install eslint && npm install eslint-plugin-react
+      run: npm install eslint && npm install eslint-plugin-react && npm install eslint-plugin-cypress
     - name: Run ESLint
       run: npm run lintinit 
     - name: eslint-init
