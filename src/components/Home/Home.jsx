@@ -6,7 +6,10 @@ import picture from '../../assets/images/photo-canteen.jpg';
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.fullPage}>
+       <div className={styles.timer}>
+        <h4>timer goes here</h4>
+      </div>
 
       <div className={styles.topBar}>
         <h4>Well done! less than 10% waste last week!</h4>
@@ -18,7 +21,7 @@ const Home = () => {
 
       <div className={styles.linkContainer}>
         <div className={styles.linkContainerOne}>
-          <div className={styles.mealSelectionButton}>
+          <div className={styles.mealSelection}>
             <Link to='/mealselection' >
               <h3>Meal Selection</h3>
               <img className='mealSelection'></img>
@@ -42,7 +45,7 @@ const Home = () => {
       </div>
 
       <div>
-        {/* <NavBar /> */}
+        <NavBar /> 
       </div>
     </div>
   );
