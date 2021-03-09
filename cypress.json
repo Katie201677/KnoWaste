@@ -1,4 +1,4 @@
 {
     "projectId": "mkfu7r",
-    "baseUrl": "http://notaurl"
+    "baseUrl": "http://localhost:3000"
 }
