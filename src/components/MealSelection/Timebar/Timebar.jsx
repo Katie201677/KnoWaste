@@ -33,11 +33,20 @@ useEffect(() => {
             clearInterval(myInterval)
           } else {
             setDays(days -1);
-            setHours(24);
+            setHours(23);
             setMinutes(minutes -1);
-            setSeconds(59);
+            setSeconds(seconds -1);
           }
+          
+        } else {
+          setHours(hours - 1);
+          setMinutes(59);
+          setSeconds(seconds-1);
         }
+        
+       }else {
+        setMinutes(minutes-1);
+        setSeconds(59);
       }
     }
   }, 1000)
@@ -50,7 +59,7 @@ useEffect(() => {
     <div className={styles.timeBar}>
       { minutes === 0 && seconds === 0
             ? null
-            : <h1>{days} Days {hours}:{minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</h1> 
+            : <h2>{days} Days {hours}:{minutes}:{seconds < 10 ?  `0${seconds}` : seconds} <span>until orders close</span></h2> 
         }
     </div>
   )

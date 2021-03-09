@@ -10,15 +10,18 @@ const RecipeCard = (props) => {
 
   return (
     <div className={styles.recipeCard}>
-      <section>
         <img src={imgSrc} alt={recipeName} className={styles.recipeImg} 
              onClick={() => {getActiveMeal(recipeName); selectItem(); action();}} />
-        
-        <h3>{recipeName}</h3>
-      </section>
 
-      <section className={styles.dietRestrictions}>
-       <p>{dietaryrestriction.join(" ")}</p>
+        
+      <section className={styles.foodInfo}>
+        <h3>{recipeName}</h3>
+        <p>Served with fondant potatoes and some salad!</p>
+
+        <section className={styles.dietRestrictions}>
+          <p>{dietaryrestriction.join(" ")}</p>
+        </section>
+        
       </section>
     </div>
   )

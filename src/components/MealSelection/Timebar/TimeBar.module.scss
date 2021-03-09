@@ -5,15 +5,25 @@
     grid-row-start: 1;
     grid-row-end: 2;
 
-    background-color: grey;
+    background-color: rgb(187, 185, 185);
     width: 100%;
 
     color: white;
     text-align: end;
     height: 80px;
 
-    p { 
-        margin: 30px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    h2 { 
+        margin: auto 30px;
+        color:#E61111;
+    }
+
+    span {
+        color: black;
+        font-size: medium;
     }
 }
 
@@ -24,6 +34,14 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
+
+        h2 { 
+           font-size: medium;
+        }
+    
+        span {
+            font-size: small;
+        }
     }
 
   } 

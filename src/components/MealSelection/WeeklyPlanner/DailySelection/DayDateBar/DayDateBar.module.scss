@@ -57,3 +57,18 @@
     background-color: transparent;
     color: #F9F3F3;
 }
+
+@media only screen and (max-width: 600px) {
+    .diffColour {
+        h2 {
+            font-size: large;
+        }
+        h5 {
+            font-size: medium;
+        }
+        .btn {
+            padding: 5px 40px;
+        }
+    }
+
+  } 
