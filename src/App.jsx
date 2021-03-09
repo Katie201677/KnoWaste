@@ -8,6 +8,7 @@ import Profile from './components/Profile';
 import AboutUs from './components/AboutUs';
 import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
+import Gamification from './components/Gamification';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -44,6 +45,9 @@ const App = () => {
         </Route>
         <Route path='/environment'>
           <Environment />
+        </Route>
+        <Route path='/gamification'>
+          <Gamification />
         </Route>
         <Route path='/'>
           <Home />
