@@ -22,6 +22,8 @@
         "chai-friendly"
     ],
     "rules": {
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "chai-friendly/no-unused-expressions": "warn",
+    "no-undef": "warn"
     }
 }
