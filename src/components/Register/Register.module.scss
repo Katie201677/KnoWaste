@@ -1,0 +1,24 @@
+
+
+.entryContainer{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.termsContainer {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+}
+
+.signUpButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    display: inline;
+}
+
