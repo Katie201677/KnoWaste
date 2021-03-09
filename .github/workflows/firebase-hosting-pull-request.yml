@@ -10,9 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install
+      run: npm install && CI='' npm run build
     - name: Run Jest
       run: npm run test
+      
   cypress-run:
     runs-on: ubuntu-latest
     steps:
