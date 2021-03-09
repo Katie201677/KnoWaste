@@ -13,7 +13,7 @@ const TimeBar = () => {
     return diff.values
   } 
 const countdown = getNextFriday()
-const{days, hours, minutes, seconds} = countdown;
+let{days, hours, minutes, seconds} = countdown;
 const [cddays, setDays] = useState(days);
 const [cdhours, setHours]= useState(hours);
 const [cdminutes, setMinutes] = useState(minutes);
@@ -33,11 +33,18 @@ useEffect(() => {
             clearInterval(myInterval)
           } else {
             setDays(days -1);
-            setHours(24);
+            setHours(23);
             setMinutes(minutes -1);
-            setSeconds(59);
+            setSeconds(seconds -1);
           }
+        } else {
+          setHours(hours - 1);
+          setMinutes(59);
+          setSeconds(seconds-1);
         }
+       }else {
+        setMinutes(minutes-1);
+        setSeconds(59);
       }
     }
   }, 1000)
