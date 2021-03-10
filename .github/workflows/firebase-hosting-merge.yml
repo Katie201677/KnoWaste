@@ -7,36 +7,32 @@ name: Unit test, E2E test, deployment to Firebase
     branches:
       - master
 jobs:
-
-  jest:
+  linting-jest-and-cypress:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install && CI='' npm run build
+      run: npm install
+    - name: Run ESLint
+      run: npm run lintinit 
+    - name: eslint-init
+      run: npm run lint
+    - name: run build
+      run: CI='' npm run build
     - name: Run Jest
       run: npm run test
-      
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - run: npm install && CI='' npm run build
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        env: 
-          CYPRESS_RECORD_KEY: 8febb1dc-91c6-43f1-b3b4-c33642e7e891
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          start: npm start 
-          wait-on: 'http://localhost:3000'
-          record: true
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      env: 
+        CYPRESS_RECORD_KEY: 8febb1dc-91c6-43f1-b3b4-c33642e7e891
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        start: npm start 
+        wait-on: 'http://localhost:3000'
+        record: true
           
   build_and_deploy:
-    needs: [cypress-run, jest]
+    needs: linting-jest-and-cypress
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
