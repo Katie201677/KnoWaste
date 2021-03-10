@@ -17,9 +17,10 @@ main {
     background-size: cover;
     background-color: $background-color;
     color: $primary-font-color;
+    padding: 10px;
+    box-sizing: border-box;
     /* -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px); */
-
 
     .mainDiv {
         position: relative;
@@ -27,12 +28,11 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 100%;
+        max-width: calc(100% - 20px);
         border-radius: $border-radius-2;
         background-color: $background-color;
         padding: 20px;
         box-sizing: border-box;
-
     }
 
     .dayItemImage {
@@ -44,8 +44,6 @@ main {
     }
 
     .confirmMenu {
-        -webkit-backdrop-filter: blur(6px);
-                backdrop-filter: blur(6px);
         width: 900px;
         max-width: 100%;
         border-radius: $border-radius-2;

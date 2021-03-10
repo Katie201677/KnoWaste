@@ -9,7 +9,9 @@ const MealConfirmation = () => {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   return (
     <main style={{ backgroundImage: `url(${kitchenImage})` }}>
+      
       <div className={styles.mainDiv}>
+      
         <h1>Your Meal Choices</h1>
         <section className={styles.confirmMenu}>
           {
