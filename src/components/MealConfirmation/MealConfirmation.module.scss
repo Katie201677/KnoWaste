@@ -1,6 +1,10 @@
 @import '../../assets/styles/variables';
 
 main {
+    *{
+        margin: 0;
+        padding: 0;
+    }
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -18,14 +22,17 @@ main {
 
 
     .mainDiv {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: auto;
-        height: auto;
+        max-width: 100%;
         border-radius: $border-radius-2;
         background-color: $background-color;
+        padding: 20px;
+        box-sizing: border-box;
+
     }
 
     .dayItemImage {
@@ -40,6 +47,7 @@ main {
         -webkit-backdrop-filter: blur(6px);
                 backdrop-filter: blur(6px);
         width: 900px;
+        max-width: 100%;
         border-radius: $border-radius-2;
     }
 
@@ -54,12 +62,6 @@ main {
     }
 
     ul {
-        margin: 20px;
-        padding: 20px;
-
-        border-radius: 25px;
-        ;
-
         li {
             color: #454599;
 
