@@ -26,7 +26,7 @@ const TimeBar = () => {
       } else {
         setIsTimerRunout(false);
       }
-      setTimeLeft(` ${days}Days  ${hours}h ${minutes}min ${seconds}sec`)
+      setTimeLeft(` ${days} Days ${hours}:${minutes}:${seconds}`)
     }, 1000)
     return ()=> {
       clearInterval(myInterval);
