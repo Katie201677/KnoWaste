@@ -1,3 +1,5 @@
+@import '../../assets/styles/variables';
+
 main {
     margin: 0;
     padding: 0;
@@ -9,13 +11,10 @@ main {
     flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: (filter grayscale(100%));
-    // z-index: -1;
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #FFFFFF;
-    backdrop-filter: blur(6px);
+    background-color: $background-color;
+    color: $primary-font-color;
+    /* -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px); */
 
 
     .mainDiv {
@@ -25,11 +24,8 @@ main {
         flex-direction: column;
         width: auto;
         height: auto;
-        border-radius: 25px;
-        color: black;
-        z-index: -1;
-
-
+        border-radius: $border-radius-2;
+        background-color: $background-color;
     }
 
     .dayItemImage {
@@ -41,13 +37,14 @@ main {
     }
 
     .confirmMenu {
-        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+                backdrop-filter: blur(6px);
         width: 900px;
-        border-radius: 25px;
+        border-radius: $border-radius-2;
     }
 
     h1 {
-        color: #3F3737;
+        color: $primary-font-color;
     }
 
     .mealOption {
