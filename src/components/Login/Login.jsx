@@ -42,9 +42,9 @@ const Login = () => {
           <Link to="/forgotpassword"> Reset</Link>
           </span>
                     {/* login button */}
-          <span className={styles.centered}>
-          <Link to="/" ><input type="submit" value="LOG IN" id={styles.loginButton} /></Link>
-          </span>
+          {/* <span className={styles.centered}> */}
+          <Link to="/" ><input type="submit" value="LOG IN" id={styles.loginButton} className={styles.centered}/></Link>
+          {/* </span> */}
           {/* sign up hyperlink */}
           <span className={styles.smallText}>
             Don't have an account? 
