@@ -1,6 +1,8 @@
+@import "../../../../assets/styles/_variables.scss";
+@import "../../../../assets/styles/_typography.scss";
 .dailySelection {
     overflow: hidden;
-    background-color: rgb(198, 195, 195);
+    background-color: $background-color;
     width: 100%;
     display: flex;
     flex-direction: column;

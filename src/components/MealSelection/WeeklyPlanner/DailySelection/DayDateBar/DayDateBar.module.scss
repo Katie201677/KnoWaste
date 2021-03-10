@@ -1,3 +1,7 @@
+@import "../../../../../assets/styles/_variables.scss";
+@import "../../../../../assets/styles/_typography.scss";
+
+
 .dayBar {
     padding: 5px;
     display: flex;
@@ -6,16 +10,16 @@
     width: 100%;
     height: 35px;
     overflow: hidden;
-    background-color: rgba(251, 86, 7, 0.7);
-    border-bottom: 1px solid #FFFFFF;
+    background-color:$tertiary-color;
+    border-bottom: $border-1;
     h2 {
         margin-left: 3%;
-        color: #F9F3F3;
-        font-size: medium;
+        color: $background-color;
+        font-size: $font-m;
     }
     h5 {
         margin-right: 3%;
-        color: #F9F3F3;
+        color: $background-color;
     }
 }
 .diffColour {
@@ -26,45 +30,46 @@
     align-items: center;
     width: 100%;
     overflow: hidden;
-    background-color: #FB5607;
+    background-color: $primary-color;
     h2 {
+        font-size: $font-m;
         margin-left: 3%;
-        color: #F9F3F3;
+        color: $background-color;
     }
     h5 {
         margin-right: 3%;
-        color: #F9F3F3;
+        color: $background-color;
     }
     .btn {
         position: absolute;
         top: 0;
         right: -5px;
-        background-color: #27187E;
-        border: 2px solid #27187E;
+        background-color: $secondary-color;
+        border: 2px solid $secondary-color;
         border-radius: 50px;
         padding: 5px 70px;
         color: white;
     }
 }
 .daySelector {
-    font-size: large;
+    font-size: $font-xl;
     border: none;
     background-color: transparent;
-    color: #F9F3F3;
+    color: $background-color;
 }
 .daySelector:active {
     transform: scale(0.9);
     background-color: transparent;
-    color: #F9F3F3;
+    color: $background-color;
 }
 
 @media only screen and (max-width: 600px) {
     .diffColour {
         h2 {
-            font-size: large;
+            font-size: $font-m;
         }
         h5 {
-            font-size: medium;
+            font-size: $font-s;
         }
         .btn {
             padding: 5px 40px;
