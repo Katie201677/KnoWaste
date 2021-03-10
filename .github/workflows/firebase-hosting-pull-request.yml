@@ -5,7 +5,7 @@ name: E2E test, Unit test, deployment on PR
 'on': pull_request
 
 jobs:
-  jest:
+  jest and cypress:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -13,27 +13,22 @@ jobs:
       run: npm install && CI='' npm run build
     - name: Run Jest
       run: npm run test
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      env: 
+        CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        start: npm start 
+        wait-on: 'http://localhost:3000'
+        record: true
       
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - run: npm install && CI='' npm run build
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        env: 
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          start: npm start 
-          wait-on: 'http://localhost:3000'
-          record: true
+
+
+      
           
   build_and_preview:
-    needs: [cypress-run, jest]
+    needs: jest and cypress
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
