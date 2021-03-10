@@ -15,7 +15,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  // Link
+  Link
  } from 'react-router-dom';
 
 const App = () => {
@@ -55,6 +55,7 @@ const App = () => {
     </div>
   );
 }
+
 
 // hi guys
 
