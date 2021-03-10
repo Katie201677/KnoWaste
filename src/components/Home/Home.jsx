@@ -2,9 +2,7 @@ import React from "react"
 import NavBar from "../NavBar";
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/Logo.png';
-import fork from '../../assets/images/fork.png';
-import leagueTable from '../../assets/images/leagueTable.png';
+
 
 const Home = () => {
   return (
