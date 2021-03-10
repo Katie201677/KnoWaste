@@ -14,43 +14,35 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles.loginPage}>
-        {" "}
-        {/* blue and purple container */}
-        {/* LOGO */}
         <img src="./knoWasteLogo_white.png" alt="logo" className={styles.logo} />
-        {/* vertical line to separate logo from fields (desktop/tablet) */}
         <div className={styles.divider}></div>
 
         <form action="" className={styles.loginForm}>
           <h3>Member Login</h3>
-          {/* email label */}
           <label htmlFor="emailInput">Email </label>
-          {/* email input */}
-          <input type="email" id="emailInput" />
-          {/* password label */}
+          <input type="email" id="emailInput" required />
+
           <label htmlFor="passwordInput">Password </label>
-          {/* password input */}
-          <input type={isVisible ? 'text':'password'} id="passwordInput" />
-          {/* show password button */}
+          <input type={isVisible ? 'text':'password'} id="passwordInput" required />
+
           <span className={styles.showPass} onClick={togglePassword}>
             <FontAwesomeIcon icon={isVisible ? ["far", "eye-slash"]:["far", "eye"]} />
           </span>
-          {/* forgot password link */}
+
           <span className={`${styles.smallText} ${styles.forgotPassword}`}>
-          Forgot your password?
-          {/* <a href="http://www.google.com"> Reset</a> */}
-          <Link to="/forgotpassword"> Reset</Link>
+            Forgot your password?
+            <Link to="/forgotpassword"> Reset</Link>
           </span>
-                    {/* login button */}
-          {/* <span className={styles.centered}> */}
-          <Link to="/" ><input type="submit" value="LOG IN" id={styles.loginButton} className={styles.centered}/></Link>
+
+          {/* <span> */}
+            {/* <input type="submit" value="LOG IN" id={styles.loginButton} className={styles['btn-secondary']} /> */}
+            <button type="submit" id={styles.loginButton} className={styles['btn-secondary']}>LOG IN</button>
           {/* </span> */}
-          {/* sign up hyperlink */}
           <span className={styles.smallText}>
             Don&apos;t have an account? 
-            {/* <a href="/Register"> Sign up</a> */}
             <Link to="/register"> Sign up</Link>
           </span>
+
         </form>
       </div>
     </div>

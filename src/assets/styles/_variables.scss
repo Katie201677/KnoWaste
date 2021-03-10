@@ -4,6 +4,9 @@ $secondary-color: #27187E;
 $tertiary-color: #E31B1B;
 $background-color: #F1F2F6;
 
+$background-gradient: linear-gradient(180deg, #5656ff 0%, #9556c0 100%);
+$hyperlink-color:  #3f3737;
+
 // BORDERS
 $border-1: 1px solid $background-color;
 $border-2: 2px solid $background-color;
@@ -13,6 +16,7 @@ $border-3: 4px solid $background-color;
 $border-radius-1: 50%;
 $border-radius-2: 20px;
 $border-radius-3: 10px;
+// $border-radius-end-cap;
 
 // BREAKPOINTS
 $mob-breakpoint: 576px;

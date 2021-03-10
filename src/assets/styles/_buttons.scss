@@ -1,11 +1,27 @@
 @import './_variables.scss';
 
+.input-submit {
+
+}
+
+.input-field {
+
+}
+
 .btn-primary {
   // Main button style
 }
 
-.btn-secondary {
 
+.btn-secondary {
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
 }
 
 .btn-warning {
