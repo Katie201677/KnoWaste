@@ -9,6 +9,8 @@ import AboutUs from './components/AboutUs';
 import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
 import './App.css';
+import './assets/styles/styles.scss';
+import library from './assets/data/fa-library';
 import {
   BrowserRouter as Router,
   Switch,
