@@ -43,11 +43,14 @@ const Profile = () => {
       <EditProfile />
     </div>
     {/* weekly score... data/metrics are input here */}
-      <div id={styles.score} className={isEditing ? styles.hidden : ''}>
+      <div id={styles.score} className={isEditing ? styles.hidden : styles.stats}>
+        <h2>Weekly Score</h2>
+        <div className={styles.figures}>
         <p>You helped save 30L of water</p>
         <p>You helped save ... of CO2</p>
+        </div>
       </div>
-      {/* insert nav bar?? */}
+      {/*<NavBar />*/}
     </div>
   );
 }

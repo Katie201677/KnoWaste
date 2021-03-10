@@ -18,6 +18,7 @@
       position: relative;
       display: grid;
       grid-template-rows: 2fr 3fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
       align-items: center;
       justify-content: center;
     }
@@ -31,12 +32,15 @@
       width: 170px;
       grid-row-start: 2;
       grid-row-end: 3;
+      grid-column-start: 2;
       border: $background-color 2px solid;
+      margin: auto;
     }
 
     .profileText {
       color: $background-color;
       font-family: $primary-font;
+
     }
 
     #fullName {
@@ -47,12 +51,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
-      border: 3px solid $background-color;
-      font-size: 16px;
-      background: white;
+      border: 3px solid $primary-color;
+      background: $background-color;
     }
 
     #editPicButton {
@@ -61,10 +64,9 @@
     }
 
     #editProfileButton {
-      grid-row-start: 4;
-      grid-row-end: 5;
-      justify-content: flex-end;
-      align-items: flex-end;
+      grid-row-start: 3;
+      grid-column-start: 3;
+      background: $background-color;
     }
 
     #profileInfo {
@@ -72,29 +74,45 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      // position
+      grid-column-start: 2;
       grid-row-start: 3;
       grid-row-end: 4;
+      margin: auto;
     }
     .dietTile {
-      background: coral;
-      border: 3px solid black;
+      background: $primary-color;
       border-radius: 50%;
-      height: 40x;
+      height: 40px;
       width: 40px;
-      margin: auto;
+      margin: 20px;
       text-align: center;
+      font-size: 15px;
     }
     .DietSection {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: lightsteelblue;
-      width: 200px;
+      background: white;
+      width: 90%;
       height: 80px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
     }
     .hidden {
       display: none !important;
+    }
+    .stats {
+      width: 90%;
+      height: 30%;
+      border: 2px solid $secondary-color;
+      text-align: center;
+      margin-top: 20px;
+      
+      .figures {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
     }
   }
 }
