@@ -10,11 +10,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install && CI='' npm run build
+      run: npm install
     - name: Run ESLint
       run: npm run lintinit 
     - name: eslint-init
       run: npm run lint
+    - name: Run build
+      run: CI='' npm run buid
     - name: Run Jest
       run: npm run test
     - name: Cypress run
