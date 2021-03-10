@@ -1,3 +1,3 @@
-import Gamification from "./Gamification";
+import Gamification from "./Gamification.jsx";
 
 export default Gamification;
