@@ -16,7 +16,7 @@ jobs:
     - name: eslint-init
       run: npm run lint
     - name: Run build
-      run: CI='' npm run buid
+      run: CI='' npm run build
     - name: Run Jest
       run: npm run test
     - name: Cypress run
