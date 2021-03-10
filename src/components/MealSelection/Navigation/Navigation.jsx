@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './NavBar.module.scss';
+import styles from './Navigation.module.scss';
 
-const NavBar = () => {
+const Navigation = () => {
   return (
     <nav className={styles.nav}>
         <button className={styles.btn} id="profile"><a>1</a></button>
@@ -12,4 +12,4 @@ const NavBar = () => {
   );
 };  
 
-export default NavBar;
+export default Navigation;

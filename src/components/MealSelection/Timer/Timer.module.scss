@@ -1,4 +1,4 @@
-.timeBar {
+.Timer {
     grid-column-start: 2;
     grid-column-end: 3;
 
@@ -28,7 +28,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .timeBar {
+    .Timer {
         width: 100vw;
         grid-column-start: 1;
         grid-column-end: 2;

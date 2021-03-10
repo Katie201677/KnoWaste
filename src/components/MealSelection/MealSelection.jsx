@@ -1,6 +1,6 @@
 import React from 'react';
-import TimeBar from './TimeBar';
-import NavBar from './NavBar';
+import Timer from './Timer';
+import Navigation from './Navigation';
 import WeeklyPlanner from './WeeklyPlanner';
 import styles from './MealSelection.module.scss';
 
@@ -8,9 +8,9 @@ const MealSelection = () => {
 
   return (
   <div className={styles.page}>
-    <TimeBar />
+    <Timer />
     <WeeklyPlanner />
-    <NavBar />
+    <Navigation />
   </div>
   );
 }

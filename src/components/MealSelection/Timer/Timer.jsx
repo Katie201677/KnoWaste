@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import styles from './TimeBar.module.scss'
+import styles from './Timer.module.scss'
 import { DateTime } from 'luxon';
 
-const TimeBar = () => {
+const Timer = () => {
 
   const [timeLeftStr, setTimeLeft] = useState("");
   const [isTimerRunout, setIsTimerRunout] = useState(false);
@@ -34,7 +34,7 @@ const TimeBar = () => {
   }, []);
   
   return (
-    <div className={styles.timeBar}>
+    <div className={styles.Timer}>
       { isTimerRunout? null
             : <h2>{timeLeftStr} <span>until orders close</span></h2> 
         }
@@ -42,4 +42,4 @@ const TimeBar = () => {
   )
 }
 
-export default TimeBar
+export default Timer;
