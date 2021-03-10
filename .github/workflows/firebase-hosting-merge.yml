@@ -6,6 +6,7 @@ name: Unit test, E2E test, deployment to Firebase
   push:
     branches:
       - master
+      - e2e-testing-merge
 jobs:
   linting-jest-and-cypress:
     runs-on: ubuntu-latest
