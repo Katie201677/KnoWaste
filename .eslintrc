@@ -5,7 +5,9 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:cypress/recommended",
+        "plugin:chai-friendly/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,10 +17,14 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "cypress",
+        "chai-friendly"
     ],
     "rules": {
-        "no-unused-vars": "warn",
-        "react/prop-types": "off"
+    "no-unused-vars": "warn",
+    "chai-friendly/no-unused-expressions": "warn",
+    "no-undef": "warn",
+    "react/prop-types": "off"
     }
 }
