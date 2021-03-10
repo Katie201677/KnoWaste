@@ -33,13 +33,13 @@ const Home = () => {
           <div className={styles.aboutUs}>
             <Link to='/aboutus'>
             <h3>Your Impact</h3>
-            <img src={logo} className={styles.logo}></img>
+            <img src='../../assets/images/Logo.png' className={styles.logo}></img>
             </Link>
           </div>
           <div className={styles.gamification}>
             <Link to='/gamification'>
               <h3>League Tables</h3>
-              <img src={leagueTable} className={styles.leagueTable}></img>
+              <img src=''../../assets/images/leagueTable.png' className={styles.leagueTable}></img>
             </Link>
           </div>
         </div>
