@@ -1,9 +1,17 @@
-import react from 'react';
+import React from 'react';
+import Timer from './Timer';
+import Navigation from './Navigation';
+import WeeklyPlanner from './WeeklyPlanner';
 import styles from './MealSelection.module.scss';
 
 const MealSelection = () => {
+
   return (
-    "select ur food"
+  <div className={styles.page}>
+    <Timer />
+    <WeeklyPlanner />
+    <Navigation />
+  </div>
   );
 }
 

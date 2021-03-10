@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:cypress/recommended",
+        "plugin:chai-friendly/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "cypress",
+        "chai-friendly"
+    ],
+    "rules": {
+    "no-unused-vars": "warn",
+    "chai-friendly/no-unused-expressions": "warn",
+    "no-undef": "warn",
+    "react/prop-types": "off"
+    }
+}
