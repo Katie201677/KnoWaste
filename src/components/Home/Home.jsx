@@ -24,7 +24,7 @@ const Home = () => {
           <div className={styles.mealSelection}>
             <Link to='/mealselection' >
               <h3>Meal Selection</h3>
-              <img src={fork} className={styles.fork}></img>
+              <img src='../../assets/images/fork.png' className={styles.fork}></img>
               <p className={styles.textMeal}>Tonight you&apos;re having chicken curry!</p>
             </Link>
           </div>
