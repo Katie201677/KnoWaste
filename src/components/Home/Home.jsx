@@ -39,7 +39,7 @@ const Home = () => {
           <div className={styles.gamification}>
             <Link to='/gamification'>
               <h3>League Tables</h3>
-              <img src=''../../assets/images/leagueTable.png' className={styles.leagueTable}></img>
+              <img src='../../assets/images/leagueTable.png' className={styles.leagueTable}></img>
             </Link>
           </div>
         </div>
