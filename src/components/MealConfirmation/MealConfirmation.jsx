@@ -11,7 +11,7 @@ const MealConfirmation = () => {
     <main style={{ backgroundImage: `url(${kitchenImage})` }}>
       
       <div className={styles.mainDiv}>
-      
+        <div className = {styles.milkyBackground}></div>
         <h1>Your Meal Choices</h1>
         <section className={styles.confirmMenu}>
           {
