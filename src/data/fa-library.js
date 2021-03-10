@@ -1,5 +1,13 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { 
+  library
+} from "@fortawesome/fontawesome-svg-core";
 
-import { faPen } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPen,
+  faArrowRight
+} from "@fortawesome/free-solid-svg-icons";
 
-export default library.add(faPen);
+export default library.add(
+  faPen,
+  faArrowRight
+  );
