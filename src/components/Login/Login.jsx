@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import styles from "./Login.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Login = () => {
 
@@ -24,11 +24,11 @@ const Login = () => {
         <form action="" className={styles.loginForm}>
           <h3>Member Login</h3>
           {/* email label */}
-          <label for="emailInput">Email </label>
+          <label htmlFor="emailInput">Email </label>
           {/* email input */}
           <input type="email" id="emailInput" />
           {/* password label */}
-          <label for="passwordInput">Password </label>
+          <label htmlFor="passwordInput">Password </label>
           {/* password input */}
           <input type={isVisible ? 'text':'password'} id="passwordInput" />
           {/* show password button */}
@@ -47,7 +47,7 @@ const Login = () => {
           {/* </span> */}
           {/* sign up hyperlink */}
           <span className={styles.smallText}>
-            Don't have an account? 
+            Don&apos;t have an account? 
             {/* <a href="/Register"> Sign up</a> */}
             <Link to="/register"> Sign up</Link>
           </span>

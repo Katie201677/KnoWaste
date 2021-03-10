@@ -1,6 +1,5 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
+import{library}from"@fortawesome/fontawesome-svg-core";
 
-import { faEye, faEyeSlash} from "@fortawesome/free-regular-svg-icons";
-// import { fa-eye fa-eye-slash} from "@fortawesome/free-solid-svg-icons";
+import{faEye,faEyeSlash}from"@fortawesome/free-regular-svg-icons";
 
-export default library.add( faEye, faEyeSlash);
+export default library.add( faEye, faEyeSlash);
