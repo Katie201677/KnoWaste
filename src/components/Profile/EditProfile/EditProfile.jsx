@@ -37,13 +37,14 @@ const EditProfile = () => {
       </select>
       {/* dietary requirment options */}
       <div className={styles.DietSection}>
-        <span className={isSelected ? styles.bigDietTile : styles.smallDietTile} onClick={selectTile}>Diet 1</span>
-        <span className={isSelected ? styles.bigDietTile : styles.smallDietTile} onClick={selectTile}>Diet 2</span>
-        <span className={isSelected ? styles.bigDietTile : styles.smallDietTile} onClick={selectTile}>Diet 3</span>
-        <span className={isSelected ? styles.bigDietTile : styles.smallDietTile} onClick={selectTile}>Diet 4</span>
-        <span className={isSelected ? styles.bigDietTile : styles.smallDietTile} onClick={selectTile}>Diet 5</span>
+        <span className={isSelected ? styles.dietTile : styles.dietTile} onClick={selectTile}>Diet 1</span>
+        <span className={isSelected ? styles.dietTile : styles.dietTile} onClick={selectTile}>Diet 2</span>
+        <span className={isSelected ? styles.dietTile : styles.dietTile} onClick={selectTile}>Diet 3</span>
+        <span className={isSelected ? styles.dietTile : styles.dietTile} onClick={selectTile}>Diet 4</span>
+        <span className={isSelected ? styles.dietTile : styles.dietTile} onClick={selectTile}>Diet 5</span>
       </div>
     </div>
+
   );
 }
 export default EditProfile;
