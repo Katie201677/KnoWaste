@@ -6,6 +6,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: (filter grayscale(100%));
@@ -28,6 +29,14 @@ main {
         color: black;
         z-index: -1;
 
+
+    }
+
+    .dayItemImage {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        width: 200px;
 
     }
 

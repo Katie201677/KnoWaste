@@ -9,57 +9,59 @@ const MealConfirmation = () => {
     return (
         <main style={{backgroundImage: `url(${kitchenImage})`
   }}>
+    <h1>Your Meal Choices</h1>
             <div className={styles.mainDiv}>
-                <h1>Your Meal Choices</h1>
+            {/* <section className={styles.dayItemImage}>
+                    <span className={styles.dot}></span>
+                    <span className={styles.dot}></span>
+                    <span className={styles.dot}></span>
+                    <span className={styles.dot}></span>
+                    <span className={styles.dot}></span>
+                    
+                    
+                    </section>   */}
                 <section className={styles.confirmMenu}>
                     <ul>
                         <li>
-                            <span className={styles.dot}>
-                                <h3>Monday</h3>
-                            </span>
-                            
+                            <h3>Monday</h3>
                             <span className={styles.mealOption}>
                                 <p>Yummy Monday Dinner</p>
                                 {/* Allergen symbols */}
                                 <FontAwesomeIcon icon="pen"/>
                             </span>
-                            
                         </li>
-                        <li>
+                        <li>                       
                             <h3>Tuesday</h3>
                             <span className={styles.mealOption}>
                                 <p>Yummy Tuesday Dinner</p>
                                 {/* Allergen symbols */}
                                 <FontAwesomeIcon icon="pen"/>   
-                            </span>
-                            
+                            </span>  
                         </li>
-                        <li>
+                        <li> 
                             <h3>Wednesday</h3>
                             <span className={styles.mealOption}>
                                 <p>Yummy Wednesday Dinner</p>
                                 {/* Allergen symbols */}
                                 <FontAwesomeIcon icon="pen"/>
-                            </span>
-                            
+                            </span>          
                         </li>
                         <li>
-                            <h3>Thurdsday</h3>
+                            <h3>Thursday</h3>    
                             <span className={styles.mealOption}>
                                 <p>Yummy Thursday Dinner</p>
                                 {/* Allergen symbols */}
                                 <FontAwesomeIcon icon="pen"/>
                             </span>   
                         </li>
-                        <li>
-                            <h3>Friday</h3>
+                        <li>   
+                            <h3>Friday</h3> 
                             <span className={styles.mealOption}>
                                 <p>you have to go to TGI Fridays on Fridays it is law.</p>
                                 {/* Allergen symbols */}
                                 {/* Edit Button */}
                                 <FontAwesomeIcon icon="pen"/>
-                            </span>
-                            
+                            </span>  
                         </li>
                     </ul>
         
