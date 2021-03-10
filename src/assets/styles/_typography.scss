@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
 * {
-  font-family: 'Roboto';
+  font-family: $primary-font;
 }
 
 h1 {
@@ -16,3 +18,13 @@ p {
 }
 
 // anything else?...
+
+
+$primary-font: 'Noto Sans JP', sans-serif;
+
+$font-xl: 64px; 
+$font-l: 38px; 
+$font-m: 24px; 
+$font-s: 16px; 
+$font-xs: 10px; 
+

@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 .btn-primary {
   // Main button style
 }
@@ -11,5 +13,16 @@
 }
 
 .btn-danger {
-  // 
+  }
+
+
+// Styling for the ideal button is... for example:
+
+button {
+    border-radius: 50%;
+    border: $background-color 2px solid;
+    background-color: $secondary-color;
+    color: $background-color;
+    height: 80px;
+    width: 80px;
 }
