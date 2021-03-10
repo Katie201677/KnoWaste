@@ -1,0 +1,100 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/typography';
+
+@media screen and (max-width: $mob-breakpoint) {
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: $background-color;
+
+    .profileContainer {
+      background: $secondary-color;
+      width: 100%;
+      height: 40%;
+      position: relative;
+      display: grid;
+      grid-template-rows: 2fr 3fr 3fr 1fr;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profilePic {
+      background-image: url('../../assets/kitchen_1.jpg');
+      background-position: center;
+      background-size: 120%;
+      border-radius: 50%;
+      height: 170px;
+      width: 170px;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      border: $background-color 2px solid;
+    }
+
+    .profileText {
+      color: $background-color;
+      font-family: $primary-font;
+    }
+
+    #fullName {
+      font-weight: bold;
+    }
+
+    .editButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 3px solid $background-color;
+      font-size: 16px;
+      background: white;
+    }
+
+    #editPicButton {
+      top: 65%;
+      right: 25%;
+    }
+
+    #editProfileButton {
+      grid-row-start: 4;
+      grid-row-end: 5;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    #profileInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      // position
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .dietTile {
+      background: coral;
+      border: 3px solid black;
+      border-radius: 50%;
+      height: 40x;
+      width: 40px;
+      margin: auto;
+      text-align: center;
+    }
+    .DietSection {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: lightsteelblue;
+      width: 200px;
+      height: 80px;
+    }
+    .hidden {
+      display: none !important;
+    }
+  }
+}

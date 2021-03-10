@@ -13,7 +13,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  // Link
+  Link
  } from 'react-router-dom';
 
 const App = () => {
@@ -52,12 +52,6 @@ const App = () => {
       </Router>
     </div>
   );
-}
-
-// hi guys
-
-export const testFunction = () => {
-  return "All Good"
 }
 
 export default App;

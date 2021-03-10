@@ -1,0 +1,38 @@
+.editProfileSection {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+.smallDietTile {
+    background: coral;
+    border: 3px solid black;
+    border-radius: 50%;
+    &:hover {
+    transition: 110%;
+    border-color: coral;
+    }
+}
+.bigDietTile {
+    background: rgb(36, 28, 26);
+    border: 3px solid black;
+    border-radius: 50%;
+    &:hover {
+    transition: 90%;
+    border-color: coral;
+    }
+}
+.inputBox {
+    width: 100px;
+    padding: 2px 10px;
+}
+.DietSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightsteelblue;
+    width: 200px;
+    height: 80px;
+    margin: 20px;
+}
+}
