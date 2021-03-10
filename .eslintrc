@@ -24,6 +24,7 @@
     "rules": {
     "no-unused-vars": "warn",
     "chai-friendly/no-unused-expressions": "warn",
-    "no-undef": "warn"
+    "no-undef": "warn",
+    "react/prop-types": "off"
     }
 }

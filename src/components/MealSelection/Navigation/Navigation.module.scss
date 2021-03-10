@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: #27187E;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    .btn {
+        background-color: white;
+        border: 2px solid purple;
+        border-radius: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .nav {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+  } 
