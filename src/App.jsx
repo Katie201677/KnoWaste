@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -9,7 +9,10 @@ import AboutUs from './components/AboutUs';
 import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
 import NavBar from './components/NavBar'
+import Gamification from './components/Gamification';
 import './App.css';
+import './assets/styles/styles.scss';
+import library from './assets/data/fa-library';
 import {
   BrowserRouter as Router,
   Switch,
@@ -49,6 +52,9 @@ const App = () => {
         <Route path='/environment'>
           <Environment />
         </Route>
+        <Route path='/gamification'>
+          <Gamification />
+        </Route>
         <Route path='/'>
           <Home />
         </Route>
@@ -57,7 +63,5 @@ const App = () => {
     </div>
   );
 }
-
-// hi guys
 
 export default App;

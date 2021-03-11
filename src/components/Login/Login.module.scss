@@ -1,0 +1,118 @@
+@import "../../assets/styles/typography";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/forms";
+@import "../../assets/styles/buttons";
+
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.loginPage {
+  font-family: $primary-font;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  min-width: 320px;
+  align-items: center;
+  margin: auto;
+  background: $background-gradient;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 30px;
+  
+}
+
+.logo {
+  height: 40vh;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  // input {
+  //   height: 30px;
+  //   border-radius: 30px;
+  //   margin-top: 10px;
+  //   margin-bottom: 10px;
+  //   background-color: white;
+  //   color: #3f3737;
+  //   border: none;
+  //   padding: 0px 10px;
+  // }
+
+  #loginButton {
+    // width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    // display: flex;
+  }
+
+  span {
+    font-size: 0.8em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $hyperlink-color;
+  }
+
+  .showPass {
+    position: relative;
+    top: -32px;
+    left: -10px;
+    margin-left: auto;
+    color: black;
+  }
+}
+
+.forgotPassword {
+  position: relative;
+  top: -20px;
+}
+
+.smallText {
+  font-size: 0.8em;
+}
+
+.divider {
+  // display: none;
+  width: 0;
+}
+
+@media screen and (min-width: $mob-breakpoint) {
+  .loginPage {
+    // display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    min-width: 600px;
+    max-width: 900px;
+    // align-items: center;
+    // margin: auto;
+    // background: linear-gradient(180deg, #5656FF 0%, #9556C0 100%);
+    // padding-top: 50px;
+    // padding-bottom: 50px;
+    // border-radius: 30px;
+  }
+
+  .logo {
+    // width: 100%;
+    max-height: 200px;
+  }
+
+  .divider {
+    // display: block;
+    width: 2px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}

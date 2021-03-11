@@ -1,7 +1,6 @@
 import React from 'react'
 import {useState} from "react"
 import styles from './NavBar.module.scss'
-// import styles from "./NavBar.css"
 import logo from "../../assets/Logo_white_new.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import library from '../../data/fa-library.js'
@@ -10,7 +9,6 @@ import { CSSTransition } from 'react-transition-group'
 
 const NavBar = () => {
     const [ show, setShow] = useState(false);
-    // const [inProp, setInProp] = useState(false);
     const handleClick = () => {
         return setShow(!show);
     }
@@ -45,10 +43,7 @@ const NavBar = () => {
                 null
                 }
                 
-
-
                 <ul className={styles.mainNav}>
-                   
                     <li className={styles.utensils}>
                         <FontAwesomeIcon icon="utensils"/>
                     </li>
@@ -61,7 +56,6 @@ const NavBar = () => {
                     </li>
                 </ul>
             </section>
-                
         </div>
     )
 }
