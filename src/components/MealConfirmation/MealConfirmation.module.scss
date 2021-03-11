@@ -1,5 +1,5 @@
 @import '../../assets/styles/variables';
-
+@import '../../assets/styles/buttons';
 main {
     *{
         margin: 0;
@@ -34,7 +34,7 @@ main {
         padding: 20px;
         background-color: rgba(255,255,255,0.8);
         box-sizing: border-box;
-        
+        box-shadow: 0 0 5px 3px rgba(0,0,0,0.2);
     }
 
     
@@ -89,15 +89,14 @@ main {
 }
 
 button {
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
     color: white;
     width: 307px;
     height: 62px;
-    background: #EF4242;
+    //background: #EF4242;
     border-radius: 30px;
     border-style: none;
-    margin: 20px;
-    outline: none;
-}
+   // margin: 20px;
+} 
