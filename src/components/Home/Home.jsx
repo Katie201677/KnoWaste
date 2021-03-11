@@ -2,18 +2,21 @@ import React from "react"
 import NavBar from "../NavBar";
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
+import Fork from '../../assets/images/fork.png';
+import Logo from '../../assets/images/Logo.png';
+import Table from '../../assets/images/leagueTable.png';
 
 
 const Home = () => {
   return (
     <div className={styles.fullPage}>
-       <div className={styles.timer}>
+       {/* <div className={styles.timer}>
         <h4>timer goes here</h4>
-      </div>
+      </div> */}
 
-      <div className={styles.topBar}>
+      {/* <div className={styles.topBar}>
         <h4>Well done! less than 10% waste last week!</h4>
-      </div>
+      </div> */}
 
       {/* <div className={styles.picture}>
         <img src={picture}></img>
@@ -22,25 +25,29 @@ const Home = () => {
       <div className={styles.linkContainer}>
         <div className={styles.linkContainerOne}>
           <div className={styles.mealSelection}>
-            <Link to='/mealselection' >
-              <h3>Meal Selection</h3>
-              <img src='../../assets/images/fork.png' className={styles.fork}></img>
-              <p className={styles.textMeal}>Tonight you&apos;re having chicken curry!</p>
-            </Link>
+            <div>
+              <h2 className="text-white">Meal Selection</h2>
+              <Link to="/mealselection">
+                Click here to see this weeks meals
+              </Link>
+              <p className={styles.textMeal}>Tonight you are having chicken curry!</p>
+            </div>
+            <div>
+              <img src={Fork} className={styles.fork}></img>
+            </div>  
           </div>
         </div>
         <div className={styles.linkContainerTwo}>
           <div className={styles.aboutUs}>
-            <Link to='/aboutus'>
-            <h3>Your Impact</h3>
-            <img src='../../assets/images/Logo.png' className={styles.logo}></img>
-            </Link>
+            <img src={Logo} className={styles.leagueTable}></img>
+            <h3 className="text-white">Your Impact</h3>
+            <p className="text-white">Well done! 10% waste less than last week.</p>
           </div>
           <div className={styles.gamification}>
-            <Link to='/gamification'>
-              <h3>League Tables</h3>
-              <img src='../../assets/images/leagueTable.png' className={styles.leagueTable}></img>
-            </Link>
+            <img src={Table} className={styles.leagueTable}></img>
+            <h3 className="text-white">League Tables</h3>       
+            <p className="text-white">Your hall is number #1 in the KnoWaste league.</p>   
+
           </div>
         </div>
       </div>

@@ -24,41 +24,41 @@ const App = () => {
   return (
     <div>
       <Router>
-      <Switch>
-        <Route path='/login'>
-          <Login />
-        </Route>
-        <Route path='/register'>
-          <Register />
-        </Route>
-        <Route path='/forgotpassword'>
-          <ForgotPassword />
-        </Route>
-        <Route path='/navbar'>
-          <NavBar />
-        </Route>
-        <Route path='/mealselection'>
-          <MealSelection />
-        </Route>
-        <Route path='/profile'>
-          <Profile />
-        </Route>
-        <Route path='/aboutus'>
-          <AboutUs />
-        </Route>
-        <Route path='/mealconfirmation'>
-          <MealConfirmation />
-        </Route>
-        <Route path='/environment'>
-          <Environment />
-        </Route>
-        <Route path='/gamification'>
-          <Gamification />
-        </Route>
-        <Route path='/'>
-          <Home />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='/register'>
+            <Register />
+          </Route>
+          <Route path='/forgotpassword'>
+            <ForgotPassword />
+          </Route>
+          <Route path='/navbar'>
+            <NavBar />
+          </Route>
+          <Route path='/mealselection'>
+            <MealSelection />
+          </Route>
+          <Route path='/profile'>
+            <Profile />
+          </Route>
+          <Route path='/aboutus'>
+            <AboutUs />
+          </Route>
+          <Route path='/mealconfirmation'>
+            <MealConfirmation />
+          </Route>
+          <Route path='/environment'>
+            <Environment />
+          </Route>
+          <Route path='/gamification'>
+            <Gamification />
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );

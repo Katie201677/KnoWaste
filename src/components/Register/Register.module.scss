@@ -18,17 +18,17 @@
 }
 
 .mainFormContainer {
-    
-   
-    
-    height: 80vh;
+    height: fit-content;
+    margin-top: 100px;
     width: 50vw;
-    background-color: $primary-color;
+    //background-color: $primary-color;
+    background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
+    rgba(175, 87, 235, 0.9) 100%);
     border:5px solid $secondary-color;
     // background-color: rgba(255, 255, 255, .5);
     // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     // backdrop-filter: blur(5px);
-    border-radius: 25px;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
