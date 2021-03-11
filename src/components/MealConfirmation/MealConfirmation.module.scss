@@ -1,0 +1,102 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/buttons';
+main {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $background-color;
+    color: $primary-font-color;
+    padding: 10px;
+    box-sizing: border-box;
+    /* -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px); */
+
+    .mainDiv {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: calc(100% - 20px);
+        border-radius: $border-radius-2;
+        background-attachment: fixed;
+        padding: 20px;
+        background-color: rgba(255,255,255,0.8);
+        box-sizing: border-box;
+        box-shadow: 0 0 5px 3px rgba(0,0,0,0.2);
+    }
+
+    
+    
+
+    .dayItemImage {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        width: 200px;
+
+    }
+
+    .confirmMenu {
+        width: 900px;
+        max-width: 100%;
+        border-radius: $border-radius-2;
+        z-index: 2;
+    }
+
+    h1 {
+        color: $primary-font-color;
+        z-index: 2;
+    }
+
+    .mealOption {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    ul {
+        li {
+            color: #454599;
+
+            list-style-type: none;
+
+            p {
+                color: #3F3737;
+            }
+
+            .dot {
+                height: 25px;
+                width: 25px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+        }
+    }
+}
+
+button {
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    width: 307px;
+    height: 62px;
+    //background: #EF4242;
+    border-radius: 30px;
+    border-style: none;
+   // margin: 20px;
+} 
