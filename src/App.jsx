@@ -8,6 +8,7 @@ import Profile from './components/Profile';
 import AboutUs from './components/AboutUs';
 import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
+import NavBar from './components/NavBar'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -29,6 +30,9 @@ const App = () => {
         </Route>
         <Route path='/forgotpassword'>
           <ForgotPassword />
+        </Route>
+        <Route path='/navbar'>
+          <NavBar />
         </Route>
         <Route path='/mealselection'>
           <MealSelection />
