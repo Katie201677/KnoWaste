@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 $primary-font: 'Noto Sans JP', sans-serif;
+$secondary-font: Verdana, Geneva, Tahoma, sans-serif; //for legal text
 
 $font-xl: 64px; 
 $font-l: 38px; 
 $font-m: 24px; 
 $font-s: 16px; 
 $font-xs: 10px; 
+
+* {
+  font-family: $primary-font;
+}
+
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+  font-weight: 400;
+}
+p {
+
+}
+
+// anything else?...
 

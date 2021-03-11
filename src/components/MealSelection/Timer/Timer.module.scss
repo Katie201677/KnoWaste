@@ -1,0 +1,47 @@
+@import "../../../assets/styles/_variables.scss";
+@import "../../../assets/styles/_typography.scss";
+
+.Timer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    background-color: $background-color;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    h2 { 
+        margin: auto 30px;
+        color:$tertiary-color;
+    }
+
+    span {
+        color: black;
+        font-size: $font-s;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .Timer {
+        width: 100vw;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        h2 { 
+           font-size: $font-s;
+        }
+    
+        span {
+            font-size: $font-xs;
+        }
+    }
+
+  } 

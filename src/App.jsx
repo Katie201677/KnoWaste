@@ -8,12 +8,15 @@ import Profile from './components/Profile';
 import AboutUs from './components/AboutUs';
 import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
+import Gamification from './components/Gamification';
 import './App.css';
+import './assets/styles/styles.scss';
+import library from './assets/data/fa-library';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  // Link
+  Link
  } from 'react-router-dom';
 
 const App = () => {
@@ -45,6 +48,9 @@ const App = () => {
         <Route path='/environment'>
           <Environment />
         </Route>
+        <Route path='/gamification'>
+          <Gamification />
+        </Route>
         <Route path='/'>
           <Home />
         </Route>
@@ -53,6 +59,7 @@ const App = () => {
     </div>
   );
 }
+
 
 // hi guys
 
