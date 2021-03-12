@@ -8,6 +8,7 @@ import Profile from './components/Profile';
 import AboutUs from './components/AboutUs';
 import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
+import NavBar from './components/NavBar'
 import Gamification from './components/Gamification';
 import './App.css';
 import './assets/styles/styles.scss';
@@ -23,48 +24,44 @@ const App = () => {
   return (
     <div>
       <Router>
-      <Switch>
-        <Route path='/login'>
-          <Login />
-        </Route>
-        <Route path='/register'>
-          <Register />
-        </Route>
-        <Route path='/forgotpassword'>
-          <ForgotPassword />
-        </Route>
-        <Route path='/mealselection'>
-          <MealSelection />
-        </Route>
-        <Route path='/profile'>
-          <Profile />
-        </Route>
-        <Route path='/aboutus'>
-          <AboutUs />
-        </Route>
-        <Route path='/mealconfirmation'>
-          <MealConfirmation />
-        </Route>
-        <Route path='/environment'>
-          <Environment />
-        </Route>
-        <Route path='/gamification'>
-          <Gamification />
-        </Route>
-        <Route path='/'>
-          <Home />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='/register'>
+            <Register />
+          </Route>
+          <Route path='/forgotpassword'>
+            <ForgotPassword />
+          </Route>
+          <Route path='/navbar'>
+            <NavBar />
+          </Route>
+          <Route path='/mealselection'>
+            <MealSelection />
+          </Route>
+          <Route path='/profile'>
+            <Profile />
+          </Route>
+          <Route path='/aboutus'>
+            <AboutUs />
+          </Route>
+          <Route path='/mealconfirmation'>
+            <MealConfirmation />
+          </Route>
+          <Route path='/environment'>
+            <Environment />
+          </Route>
+          <Route path='/gamification'>
+            <Gamification />
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
-}
-
-
-// hi guys
-
-export const testFunction = () => {
-  return "All Good"
 }
 
 export default App;

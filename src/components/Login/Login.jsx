@@ -36,7 +36,10 @@ const Login = () => {
 
           {/* <span> */}
             {/* <input type="submit" value="LOG IN" id={styles.loginButton} className={styles['btn-secondary']} /> */}
+            <Link to="/">
             <button type="submit" id={styles.loginButton} className={styles['btn-secondary']}>LOG IN</button>
+            </Link>
+            
           {/* </span> */}
           <span className={styles.smallText}>
             Don&apos;t have an account? 
