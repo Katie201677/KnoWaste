@@ -5,6 +5,8 @@ import {
   faUtensils,
   faTrophy,
   faUserCircle,
+  faPen,
+  faArrowRight
 } from "@fortawesome/free-solid-svg-icons";
 
-export default library.add(faUtensils, faTrophy, faUserCircle);
+export default library.add(faUtensils, faTrophy, faUserCircle, faPen, faArrowRight);
