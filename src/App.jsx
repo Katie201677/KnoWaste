@@ -23,6 +23,7 @@ import {
 const App = () => {
   return (
     <div>
+    <AboutUs />
       <Router>
         <Switch>
           <Route path='/login'>
@@ -44,7 +45,7 @@ const App = () => {
             <Profile />
           </Route>
           <Route path='/aboutus'>
-            <AboutUs />
+            
           </Route>
           <Route path='/mealconfirmation'>
             <MealConfirmation />

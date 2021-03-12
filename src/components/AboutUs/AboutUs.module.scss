@@ -1,0 +1,33 @@
+@import "../../assets/styles/styles.scss";
+
+.aboutus { 
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center; 
+  background: $background-gradient; 
+  border-radius: $border-radius-1;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ } 
+
+.divider {
+  margin: 0 10px;
+  width: 2px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo{
+  height: 70px;
+  width: auto;
+  margin: 10px;
+}
+
+
+
