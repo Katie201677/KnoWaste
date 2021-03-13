@@ -23,7 +23,6 @@ import {
 const App = () => {
   return (
     <div>
-    <AboutUs />
       <Router>
         <Switch>
           <Route path='/login'>
