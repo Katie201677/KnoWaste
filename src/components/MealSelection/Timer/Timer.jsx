@@ -11,7 +11,10 @@ const Timer = () => {
     // 1. Get current date for comparison with upcoming friday
     const now = DateTime.now();
     // 2. Get the upcoming friday
-    const upcomingFriday = DateTime.local().startOf('week').plus({days: 5});
+    const upcomingFriday = 
+     (now.weekday <= 5) ?
+    DateTime.local().startOf('week').plus({days: 4, hours: 17})
+    : DateTime.local().startOf('week').plus({days: 11, hours: 17});
     // 3. Do the comparison to get the remaining time
     const diff = upcomingFriday.diff(now, ["days", "hours", "minutes", "seconds", "milliseconds"])
     return diff.values
