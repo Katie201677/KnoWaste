@@ -63,5 +63,7 @@ const App = () => {
     </div>
   );
 }
-
+export const testFunction = () => {
+  return "All Good"
+}
 export default App;
