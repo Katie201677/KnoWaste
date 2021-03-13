@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <div className={styles.content}>
       <Timer />
-      <Navbar />
+      <NavBar />
       <div className={styles.aboutus}>
         <div>
           <img src={Logo} className={styles.logo} />
