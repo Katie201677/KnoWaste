@@ -10,6 +10,7 @@ import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
 import NavBar from './components/NavBar'
 import Gamification from './components/Gamification';
+import AdminMealInput from './components/AdminMealInput';
 import './App.css';
 import './assets/styles/styles.scss';
 import library from './assets/data/fa-library';
@@ -54,6 +55,9 @@ const App = () => {
           </Route>
           <Route path='/gamification'>
             <Gamification />
+          </Route>
+          <Route path='/adminmealinput'>
+            <AdminMealInput />
           </Route>
           <Route path='/'>
             <Home />
