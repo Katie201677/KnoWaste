@@ -75,6 +75,13 @@
         padding: 10px 0px 0px 0px;
         height: 80px;
         width: 110px;
+        opacity: 0.5;
+    }
+    .logo:hover {
+        padding: 10px 0px 0px 0px;
+        height: 80px;
+        width: 110px;
+        opacity: 1;
     }
 
     .topIcon a {
@@ -92,11 +99,16 @@
         list-style-type: none;
         font-size: 45px;
         filter: blur(0.5px);
-        color: white;
+
 
     }
 .white {
     color: white;
+    opacity: 0.5;
+}
+.white:hover {
+    color: white;
+    opacity: 1;
 }
     .utensils {
         margin-left: 5px;
