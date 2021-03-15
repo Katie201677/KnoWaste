@@ -17,8 +17,10 @@ const NavBar = () => {
     return (
 
             <section className={styles.navBarContainer}>
-                <span className={styles.closeBtn} onClick={handleClick}>      
+                <span className={styles.closeBtn} onClick={handleClick}> 
+                    <Link to="/"> 
                         <img src={logo} className={styles.logo}/>
+                    </Link>    
                 </span>
 
                 {/* <CSSTransition in={show} timeout={200} classNames="appear">
@@ -32,27 +34,37 @@ const NavBar = () => {
                     </div>  
                 
                 </CSSTransition> */}
-                { show ? <div className={styles.sideNav}>   
+                {/* { show ? <div className={styles.sideNav}>   
                             <Link to="mealselection">Select Meals</Link>
-                            {/* <Link to="gamification">Play Game</Link>     */}
                             <Link to="environment">Enviromental Impact</Link> 
-                            <Link to="gamification">About Us</Link>   
+                            <Link to="aboutus">About Us</Link>   
                             <Link to="login">Sign Out</Link>
+
                          </div>
                 :
                 null
-                }
+                } */}
                 
                 <ul className={styles.mainNav}>
                     <li className={styles.utensils}>
-                        <FontAwesomeIcon icon="utensils"/>
+                        <Link to="aboutus">
+                            <FontAwesomeIcon icon="info-circle" className={styles.white}/>
+                        </Link>
+                    </li>
+                    <li className={styles.utensils}>
+                        <Link to="mealselection">
+                            <FontAwesomeIcon icon="utensils" className={styles.white}/>
+                        </Link>
                     </li>
                     <li className={styles.trophy}>
-                        <FontAwesomeIcon  icon="trophy"/>
+                        <Link to="gamification">
+                            <FontAwesomeIcon  icon="trophy" className={styles.white}/>
+                        </Link>
                     </li>
                     <li className={styles.userCircle}>
-                        <FontAwesomeIcon  icon="user-circle"
-                        />
+                        <Link to="profile">
+                            <FontAwesomeIcon  icon="user-circle" className={styles.white}/>
+                        </Link>
                     </li>
                 </ul>
             </section>
