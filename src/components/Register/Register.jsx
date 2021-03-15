@@ -21,7 +21,7 @@ const Register = () => {
   console.log(formComplete)
 
 
-
+/*
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -60,88 +60,84 @@ const Register = () => {
       <button type="submit" disabled={!formComplete || true} >Submit</button>
     </form>
   );
+*/
+  return (
+    <div className={styles.pageBody}>
+      <div className={styles.mainFormContainer}>
+      <h3 className={styles.header}>Sign Up</h3>
+      <form onSubmit={handleSubmit} >
+        
+          <label htmlFor="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="John Smith" ref={register}></input>
 
-  // return (
-  //   <div className={styles.pageBody}>
-  //     <form onSubmit={handleSubmit} className={styles.mainFormContainer}>
-  //       <h1 className={styles.header}>Sign Up</h1>
+          <label>Email</label>
+          <input name="email" type="email" placeholder="example@example.co.uk" ref={register}></input>
 
-  //       <div className={styles.formInput}>
-  //         <label>Name</label>
+          <label>Password</label>
 
-  //         <input name="name" type="text" placeholder="John Smith" ref={register}></input>
+          <input
+            name="password"
+            type="password"
+            minLength="8"
+            placeholder="Passwords must be at least 8 characters"
+            ref={register}
+          ></input>
 
-  //         <label>Email</label>
-  //         <input name="email" type="email" placeholder="example@example.co.uk" ref={register}></input>
+          <label>Student Number</label>
+          <input name="studentNumber" type="number" placeholder="123456" ref={register}></input>
 
-  //         {/* <label>Password</label>
+          <label>Halls of Residence</label>
+          <select name="residenceHall" ref={register}>
+            <option>Badock Hall</option>
+            <option>Churchill Hall</option>
+            <option>Clifton Hill House</option>
+            <option>Hiatt Baker Hall</option>
+            <option>Wills Hall</option>
+          </select>
 
-  //         <input
-  //           name="password"
-  //           type="password"
-  //           minLength="8"
-  //           placeholder="Passwords must be at least 8 characters"
-  //           ref={register}
-  //         ></input> */}
+          <label>Date of Birth</label>
+          <input name="dob" type="date" placeholder="DD/MM/YYYY" ref={register}></input>
 
-  //         <label>Student Number</label>
-  //         <input name="studentNumber" type="number" placeholder="123456" ref={register}></input>
+          <label>Mobile Number</label>
+          <input name="mobile" type="tel" placeholder="07717330113" ref={register}></input>
 
-  //         <label>Halls of Residence</label>
-  //         <select name="residenceHall" ref={register}>
-  //           <option>Badock Hall</option>
-  //           <option>Churchill Hall</option>
-  //           <option>Clifton Hill House</option>
-  //           <option>Hiatt Baker Hall</option>
-  //           <option>Wills Hall</option>
-  //         </select>
+        <div className={styles.termsContainer}>
+          <label>Terms and Conditions</label>
+          <textarea rows="5" cols="50" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloribus
+            nihil qui, minima harum officia cum provident sit dicta adipisci optio
+            sequi at soluta temporibus quo quia laborum illum dignissimos! Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Quo voluptatem labore
+            architecto nostrum, repudiandae nisi! Minus nesciunt minima excepturi
+            corporis eum obcaecati. Corporis tempora deleniti expedita exercitationem
+            earum quas voluptatibus? Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Inventore voluptatum distinctio, fugiat quis ex
+            deserunt quasi molestias placeat ipsa quo aut ipsam itaque? Sequi
+            explicabo quidem consequatur cumque temporibus rerum?" readOnly />
+          {/* </textarea> */}
+        </div>
 
-  //         <label>Date of Birth</label>
-  //         <input name="dob" type="date" placeholder="DD/MM/YYYY" ref={register}></input>
+        <div className={styles.tAndC}>
+          <input name="tAndCCheck" type="checkbox" ref={register({ checked: true })}/>
+          <p>
+            By ticking this box you aknowledge that you have read and agree to our
+            terms and conditions
+          </p>
+          <input name="advertisementCheck" type="checkbox" ref={register({ checked: true })}></input>
+          <p>
+            By ticking this box you agree to recieving occasional tailored
+            advertisments about our amazing products
+          </p>
+        </div>
 
-  //         <label>Mobile Number</label>
-  //         <input name="mobile" type="tel" placeholder="07717330113" ref={register}></input>
-  //       </div>
-
-  //       <div className={styles.termsContainer}>
-  //         <label>Terms and Conditions</label>
-  //         <textarea rows="5" cols="50" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloribus
-  //           nihil qui, minima harum officia cum provident sit dicta adipisci optio
-  //           sequi at soluta temporibus quo quia laborum illum dignissimos! Lorem
-  //           ipsum dolor, sit amet consectetur adipisicing elit. Quo voluptatem labore
-  //           architecto nostrum, repudiandae nisi! Minus nesciunt minima excepturi
-  //           corporis eum obcaecati. Corporis tempora deleniti expedita exercitationem
-  //           earum quas voluptatibus? Lorem, ipsum dolor sit amet consectetur
-  //           adipisicing elit. Inventore voluptatum distinctio, fugiat quis ex
-  //           deserunt quasi molestias placeat ipsa quo aut ipsam itaque? Sequi
-  //           explicabo quidem consequatur cumque temporibus rerum?" readOnly />
-  //         {/* </textarea> */}
-  //       </div>
-
-  //       <div className={styles.tickBox}>
-  //         <input name="tAndCCheck" type="checkbox" ref={register({ checked: true })}/>
-  //         <p>
-  //           By ticking this box you aknowledge that you have read and agree to our
-  //           terms and conditions
-  //         </p>
-  //       </div>
-
-  //       <div className={styles.tickBox}>
-  //         <input name="advertisementCheck" type="checkbox" ref={register({ checked: true })}></input>
-  //         <p>
-  //           By ticking this box you agree to recieving occasional tailored
-  //           advertisments about our amazing products
-  //         </p>
-  //       </div>
-
-  //       <div className={styles.signUpButtonContainer}>
-  //         <button type="submit" className={`${styles.signUpButton} ${styles.button}`}>
-  //           Sign Up
-  //         </button>
-  //       </div>
-  //     </form>
-  //   </div>
-  // );
+        <div className={styles.signUpButtonContainer}>
+          <button type="submit" className={`${styles['btn-primary']} ${styles.button}`}>
+            Sign Up
+          </button>
+        </div>
+      </form>
+      </div>
+    </div>
+   );
 };
 
 export default Register;

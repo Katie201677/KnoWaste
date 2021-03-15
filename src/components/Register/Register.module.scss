@@ -6,55 +6,59 @@
 
 
 .pageBody {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
-    // background-image: url("../../assets/images/knowasteBG.jpg");
-    background: white;
-    background-repeat: no-repeat;
-    background-size:cover;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/images/knowasteBG.jpg");
+  background-repeat: no-repeat;
+   background-size:cover;
     
 }
 
 .mainFormContainer {
-    height: fit-content;
-    margin-top: 100px;
-    width: 50vw;
-    //background-color: $primary-color;
-    background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-    rgba(175, 87, 235, 0.9) 100%);
-    border:5px solid $secondary-color;
-    // background-color: rgba(255, 255, 255, .5);
-    // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-    // backdrop-filter: blur(5px);
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding:20px;
-    font-size: $font-m;
-    font-family: Arial, Helvetica, sans-serif;
-
+  max-width: 780px;
+  width: 50%;
+  min-width: 580px; 
+  padding: 50px;
+  box-sizing: border-box;
+  background: $background-gradient;
+  border-radius: $border-radius-2;
+  color: #fff;
+  font-size: $font-m;
+  font-family: Arial, Helvetica, sans-serif;
+  label {
+    display: block;
+    font-size: 20px;
+  }
+  input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+ 
+  .tAndC {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  
+    input {
+      width: 14px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
 }
     
 
 .header{
     text-align: center;
+    font-size: 22px;
 }
 
-.formInput{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        margin-left: 10%;
-        grid-gap: 5px;
-}
 
-.tickBox{
-        display: inline-flex;
-        align-items: center;
-          }
         
 
 .termsContainer {
@@ -67,7 +71,7 @@
     }
 
 textarea {
-        overflow-y: scroll;
+        
     }
     
 .signUpButtonContainer {
