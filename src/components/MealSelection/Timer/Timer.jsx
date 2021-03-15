@@ -12,7 +12,7 @@ const Timer = () => {
     const now = DateTime.now();
     // 2. Get the upcoming friday
     const upcomingFriday = 
-     (now.weekday <= 5) ?
+     (now.weekday <= 5 || (now.weekday == 5 && now.hour > 17)) ?
     DateTime.local().startOf('week').plus({days: 4, hours: 17})
     : DateTime.local().startOf('week').plus({days: 11, hours: 17});
     // 3. Do the comparison to get the remaining time
@@ -29,7 +29,7 @@ const Timer = () => {
       } else {
         setIsTimerRunout(false);
       }
-      setTimeLeft(` ${days} Days ${hours}:${minutes}:${seconds}`)
+      setTimeLeft(` ${days} Days ${hours}h ${minutes}min ${seconds}sec`)
     }, 1000)
     return ()=> {
       clearInterval(myInterval);

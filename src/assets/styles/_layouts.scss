@@ -3,7 +3,9 @@
   height: 100vh;
   width: 100%;
   grid-template-columns: 60px 1fr;
+  grid-template-rows: 80px auto;
 }
+
 @media only screen and (max-width: 600px) {
     .content {
         grid-template-columns: 1fr;

@@ -6,28 +6,80 @@
   grid-row-start: 2;
   grid-row-end: 3;
   justify-self: center; 
+  margin: auto;
+
   background: $background-gradient; 
   border-radius: $border-radius-1;
   width: 60%;
-  height: 400px;
+  height: 70%;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+
+  
  } 
+
+ .textFields {
+  width: 45%;
+  margin:auto;
+  text-align: left;
+  color: $background-color;
+}
 
 .divider {
   margin: 0 10px;
-  width: 2px;
-  height: 200px;
+  width: 3px;
+  height: 60%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .logo{
-  height: 180px;
+  height: 200px;
   width: auto;
-  margin: 10px;
+  margin: 10px auto;
 }
 
+@media only screen and (max-width: 576px) {
+  .aboutUs {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
 
+    width: 80%;
+    height: 70%;
+
+    flex-direction: column;    
+  } 
+
+  .logo {
+    height: 100px;
+    margin: auto;
+  }
+
+  .textFields {
+    width: 78%;
+    margin: 20px auto;
+    text-align: left;
+
+    h1 {
+      font-size: $font-s;
+    }
+
+    p {
+      font-size: $font-xs;
+    }
+  }
+
+  .divider {
+    margin: 10px auto;
+    width: 60%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+
+
+} 
 

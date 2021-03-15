@@ -15,14 +15,13 @@ const AboutUs = () => {
           <img src={Logo} className={styles.logo} />
         </div>
 
-        <span className={styles.divider}></span>
+        <div className={styles.divider}></div>
 
-        <div>
+        <div className={styles.textFields}>
           <h1>Who are we?</h1>
-          <h2>We are Knowaste</h2>
-          <p className={styles.textwhite} >
+          <p>
             Etiam mattis risus sed risus ultrices, id euismod orci ornare. Donec nec urna a sem ultricies elementum. Vestibulum id quam tellus. Pellentesque vestibulum laoreet est at finibus. 
-            Sed vel mauris felis. Vivamus suscipit, massa quis posuere suscipit, enim ligula efficitur lectus, vitae cursus nisi erat ut nibh. Donec accumsan cursus neque.
+            <br /> <br/>Sed vel mauris felis. Vivamus suscipit, massa quis posuere suscipit, enim ligula efficitur lectus, vitae cursus nisi erat ut nibh. Donec accumsan cursus neque.
           </p>
         </div>
 

@@ -1,16 +1,17 @@
 .navBarContainer {
-    height: 100vh;
-    width: 75px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: white;
     background: linear-gradient(180deg, #5656FF 0%, #9556C0 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    
 
     .sideNav {
         height: 100%;
@@ -110,6 +111,11 @@
 
 @media screen and (max-width: 568px) {
     .navBarContainer {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
         flex-direction: row;
         position: fixed;
         height: 75px;
