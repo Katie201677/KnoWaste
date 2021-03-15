@@ -1,0 +1,35 @@
+[
+  [
+    {
+        "mealName": "Roasted aubergine, lamb and feta tart",
+        "mealId": 1,
+        "mealIncludes": ["potato", "leek", "cheese"],
+        "mealAllergens": ["onion", "nuts"],
+        "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
+        "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+    }
+  ],
+  
+  [
+    {
+      "mealName": "Smoked cheddar macaroni cheese",
+      "mealId": 2,
+      "mealIncludes": ["potato", "leek", "cheese"],
+      "mealAllergens": ["onion", "nuts"],
+      "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
+      "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+    }
+  ],
+  
+  [
+    {
+      "mealName": "Vegan paella with roasted tofu" ,
+      "mealId":3,
+      "mealIncludes": ["potato", "leek", "cheese"],
+      "mealAllergens": ["onion", "nuts"],
+      "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
+      "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+    }
+  ]
+
+]
