@@ -44,7 +44,7 @@ const App = () => {
             <Profile />
           </Route>
           <Route path='/aboutus'>
-            <AboutUs />
+            
           </Route>
           <Route path='/mealconfirmation'>
             <MealConfirmation />
@@ -63,5 +63,7 @@ const App = () => {
     </div>
   );
 }
-
+export const testFunction = () => {
+  return "All Good"
+}
 export default App;
