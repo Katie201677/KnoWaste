@@ -9,16 +9,23 @@ const AboutUs = () => {
     <div className={styles.content}>
       <Timer />
       <NavBar />
-      <div className={styles.aboutus}>
+      <div className={styles.aboutUs}>
+
         <div>
           <img src={Logo} className={styles.logo} />
         </div>
-        <div className={styles.divider}></div>
+
+        <span className={styles.divider}></span>
+
         <div>
-          <h1>Hello</h1>
+          <h1>Who are we?</h1>
           <h2>We are Knowaste</h2>
-          <h3 className={styles.textwhite} >We are all about no waste</h3>
+          <p className={styles.textwhite} >
+            Etiam mattis risus sed risus ultrices, id euismod orci ornare. Donec nec urna a sem ultricies elementum. Vestibulum id quam tellus. Pellentesque vestibulum laoreet est at finibus. 
+            Sed vel mauris felis. Vivamus suscipit, massa quis posuere suscipit, enim ligula efficitur lectus, vitae cursus nisi erat ut nibh. Donec accumsan cursus neque.
+          </p>
         </div>
+
       </div>
     </div>
   );

@@ -23,7 +23,9 @@ import {
 const App = () => {
   return (
     <div>
-      <Router>
+      <AboutUs />
+
+     {/*  <Router>
         <Switch>
           <Route path='/login'>
             <Login />
@@ -59,7 +61,7 @@ const App = () => {
             <Home />
           </Route>
         </Switch>
-      </Router>
+      </Router> */}
     </div>
   );
 }

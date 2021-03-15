@@ -1,6 +1,6 @@
 @import "../../assets/styles/styles.scss";
 
-.aboutus { 
+.aboutUs { 
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -8,7 +8,7 @@
   justify-self: center; 
   background: $background-gradient; 
   border-radius: $border-radius-1;
-  width: 500px;
+  width: 60%;
   height: 400px;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
 }
 
 .logo{
-  height: 70px;
+  height: 180px;
   width: auto;
   margin: 10px;
 }
