@@ -23,13 +23,12 @@ const Home = () => {
       </div> */}
 
       <div className={styles.linkContainer}>
+      <Link to="/mealselection">
         <div className={styles.linkContainerOne}>
           <div className={styles.mealSelection}>
             <div>
               <h2 className="text-white">Meal Selection</h2>
-              <Link to="/mealselection">
                 Click here to see this weeks meals
-              </Link>
               <p className={styles.textMeal}>Tonight you are having chicken curry!</p>
             </div>
             <div>
@@ -37,6 +36,7 @@ const Home = () => {
             </div>  
           </div>
         </div>
+        </Link>
         <div className={styles.linkContainerTwo}>
           <div className={styles.aboutUs}>
             <img src={Logo} className={styles.leagueTable}></img>

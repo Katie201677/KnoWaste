@@ -75,6 +75,13 @@
         padding: 10px 0px 0px 0px;
         height: 80px;
         width: 110px;
+        opacity: 0.5;
+    }
+    .logo:hover {
+        padding: 10px 0px 0px 0px;
+        height: 80px;
+        width: 110px;
+        opacity: 1;
     }
 
     .topIcon a {
@@ -83,6 +90,7 @@
 
     .mainNav {
         padding-right: 20px;
+       
     }
 
     li {
@@ -92,10 +100,19 @@
         font-size: 45px;
         filter: blur(0.5px);
 
-    }
 
+    }
+.white {
+    color: white;
+    opacity: 0.5;
+}
+.white:hover {
+    color: white;
+    opacity: 1;
+}
     .utensils {
         margin-left: 5px;
+        
     }
 
     .trophy {
