@@ -23,9 +23,7 @@ import {
 const App = () => {
   return (
     <div>
-      <AboutUs />
-
-     {/*  <Router>
+      <Router>
         <Switch>
           <Route path='/login'>
             <Login />
@@ -61,7 +59,7 @@ const App = () => {
             <Home />
           </Route>
         </Switch>
-      </Router> */}
+      </Router>
     </div>
   );
 }
