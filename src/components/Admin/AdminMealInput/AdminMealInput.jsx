@@ -1,70 +1,102 @@
 import React from "react";
 import styles from "./AdminMealInput.module.scss";
-import { mealLibrary } from "../AdminLibrary/AdminLibrary";
-
+import mealLibrary from "../AdminLibrary/AdminLibrary.json";
+import { useForm } from "react-hook-form";
 
 const AdminMealInput = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    mealLibrary.push(data);
+    //push a random ID to it
+    //split mealIncludes and return as array
+    //push it to adminLibrary
+    console.log(mealLibrary)
+  };
 
-  return (<section className={styles.mainFormContainer}>
-    {/* As a developer I have input boxes for each meal array item */}
+  return (
+    <section className={styles.mainFormContainer}>
+      <h1>Add a meal</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label>Name of Meal</label>
+        <input
+          type="text"
+          placeholder="Name"
+          name="mealName"
+          ref={register}
+        ></input>
+        <label>Description of Meal</label>
+        <textarea
+          type="text"
+          placeholder="Description"
+          name="mealDescription"
+          ref={register}
+        ></textarea>
+        <button>Upload Image</button>
+        <div className={styles.imgPreview}></div>
+        <h3>Meal Type</h3>
+        <select name="mealType" ref={register}>
+          <option value="main">Main</option>
+          <option value="side">Side</option>
+          <option value="dessert">Dessert</option>
+        </select>
+        <h3>Allergens</h3>
+        <label>Gluten</label>
+        <input
+          type="checkbox"
+          name="mealAllergens"
+          value="gluten"
+          className={styles.checkBox}
+          ref={register}
+        />
+        <label>Dairy</label>
+        <input
+          type="checkbox"
+          name="mealAllergens"
+          value="dairy"
+          className={styles.checkBox}
+          ref={register}
+        />
+        <label>Shellfish</label>
+        <input
+          type="checkbox"
+          name="mealAllergens"
+          value="shellfish"
+          className={styles.checkBox}
+          ref={register}
+        />
 
+        <h3>Dietary Requirements</h3>
+        <label>Vegetarian</label>
+        <input
+          type="checkbox"
+          name="mealDiet"
+          value="vegetarian"
+          ref={register}
+        />
+        <label>Vegan</label>
+        <input type="checkbox" name="mealDiet" value="vegan" ref={register} />
+        <label>Halal</label>
+        <input type="checkbox" name="mealDiet" value="halal" ref={register} />
 
+        <h3>Meal Includes</h3>
+        <input
+          type="text"
+          placeholder="potato, leek, cheese"
+          name="mealIncludes"
+          ref={register}
+        ></input>
 
-<form>
-    <input type="text" placeholder="Name" className={mealName}></input>
-    <input type="text" placeholder="Description" className={mealDescription}></input>
-    {/* As a developer I can see a button that adds images */}
-      <button>Upload Image</button>
-      <div className={`${styles.imgPreview} ${mealImage}`}></div>
+        <label>Carbon Footprint</label>
+        <input type="number" name="mealCarbon" ref={register}></input>
+        <label>Water Usage</label>
+        <input type="number" name="mealWater" ref={register}></input>
 
-    {/* As a developer I have a dropdown box for meal type (main, dessert etc) */}
-    <h3>Meal Type</h3>
-    <select className = {mealType}>
-      <option>Main</option>
-      <option>Side</option>
-      <option>Dessert</option>
-    </select>
-    {/* As a developer I have a button for allergy */}
-    <h3 className = {mealAllergens}>Allergens</h3>
-    <button>Gluten</button>
-    <button>Dairy</button>
-    <button>Nut</button>
-    <button>Shellfish</button>
-
-    <h3 className = {mealDiet}>Dietary Requirements</h3>
-    <button>Vegetarian</button>
-    <button>Vegan</button>
-    <button>Pescatarian</button>
-    <button>Halal</button>
-
-<h3>Meal Includes</h3>
-<input type="text" placeholder="potato, leek, cheese" className={mealIncludes}></input>
-
-    {/* As a developer I have a dropdown menu for environmental data */}
-    <label>Carbon Footprint</label>
-    <input type="number" className = {mealCarbon}></input>
-    <label>Water Usage</label>
-    <input type="number" className = {mealWater}></input>
-
-    <button>Preview</button>
-    <input type="submit"/>
-    {/* As a developer I have designed a basic template based on the wireframe provided (lol) */}
-
-    {/* Multiple meals in one input??????? */}
-    </form>
-
-    {/* 
-    
-    ON SUBMIT - SEND THE FORM DATA AS AN OBJECT WITH EACH VALUE FORMATTED CORRECTLY
-    
-    
-    */}
-
-
-
-
-
-  </section>);
+        <button>Preview</button>
+        <input type="submit" />
+      </form>
+    </section>
+  );
 };
 
 export default AdminMealInput;
