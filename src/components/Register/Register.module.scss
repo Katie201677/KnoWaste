@@ -6,6 +6,7 @@
 
 
 .pageBody {
+  letter-spacing: 0.6px;
   min-height: 100vh;
   padding: 0;
   margin: 0;
@@ -16,6 +17,12 @@
   background-repeat: no-repeat;
    background-size:cover;
     
+}
+
+@media screen and (max-width: 580px) {
+  .mainFormContainer {
+    min-width: 480px;
+  }
 }
 
 .mainFormContainer {
@@ -31,22 +38,35 @@
   label {
     
   }
- 
+  
+  .terms {
+    height: 80px;
+    background: #fff;
+    color: $form-font-color;
+    margin: 4px 0 0 0;
+    padding: 10px;
+    overflow-y: scroll;
+    p {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
   
   .tAndC {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: min-content 1fr;
   align-items: center;
-  padding: 10px 0;
     input {
+      width: 14px;;
       height: 14px;
-      margin: 0;
+      margin: 10px 10px 10px 0;
     }  
 
     p {
       font-size: 12px;
       margin: 10px 0;
     }
+    
   }
 }
     

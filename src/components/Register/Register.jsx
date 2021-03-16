@@ -65,7 +65,7 @@ const Register = () => {
       <div className={styles.mainFormContainer}>
         <h3 className={styles.header}>Sign Up</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="name">Name<span className={styles.inputError}>{errors.name?.message}</span></label>
+          <label htmlFor="name">Name</label>
           <input
             id="name"
             name="name"
@@ -75,8 +75,9 @@ const Register = () => {
               required: "Name is required.",
             })}
           ></input>
-
-          <label htmlFor="email">Email<span className={styles.inputError}>{errors.email?.message}</span></label>
+          {errors.name && <p className={styles.inputError}>{errors.name.message}</p>}
+          
+          <label htmlFor="email">Email</label>
           
           <input
             id="email"
@@ -91,8 +92,9 @@ const Register = () => {
               },
             })}
           ></input>
+          {errors.email && <p className={styles.inputError}>{errors.email.message}</p>}
 
-          <label htmlFor="password">Password<span className={styles.inputError}>{errors.password?.message}</span></label>
+          <label htmlFor="password">Password</label>
           
           <input
             id= "password"
@@ -106,9 +108,9 @@ const Register = () => {
               },
             })}
           ></input>
+          {errors.password && <p className={styles.inputError}>{errors.password.message}</p>}
 
           <label>Student Number
-          <span className={styles.inputError}>{errors.studentNumber?.message}</span>
           </label>
           
           <input
@@ -123,9 +125,9 @@ const Register = () => {
               required: "Student Number is required."
             })}
           ></input>
-
+          {errors.studentNumber && <p className={styles.inputError}>{errors.studentNumber.message}</p>}
+            
           <label>Halls of Residence
-          <span className={styles.inputError}>{errors.residenceHall?.message}</span>
           </label>
           <select name="residenceHall" 
             ref={register({
@@ -139,9 +141,9 @@ const Register = () => {
             <option value="Hiatt Baker Hall">Hiatt Baker Hall</option>
             <option value="Wills Hall">Wills Hall</option>
           </select>
+          {errors.residenceHall && <p className={styles.inputError}>{errors.residenceHall.message}</p>}
 
           <label>Date of Birth
-          <span className={styles.inputError}>{errors.dob?.message}</span>
           </label>
           <input
             name="dob"
@@ -151,6 +153,7 @@ const Register = () => {
               required: "Date of Birth is required."
             })}
           ></input>
+          {errors.dob && <p className={styles.inputError}>{errors.dob.message}</p>}
 
           <label>Mobile Number</label>
           <input
@@ -162,13 +165,10 @@ const Register = () => {
 
           <div className={styles.termsContainer}>
             <label>Terms and Conditions
-            <span className={styles.inputError}>{errors.tAndCCheck?.message}</span>
             </label>
-            <textarea
-              rows="5"
-              cols="50"
-              value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloribus
-            nihil qui, minima harum officia cum provident sit dicta adipisci optio
+           <div className={styles.terms}>
+             <p>
+             nihil qui, minima harum officia cum provident sit dicta adipisci optio
             sequi at soluta temporibus quo quia laborum illum dignissimos! Lorem
             ipsum dolor, sit amet consectetur adipisicing elit. Quo voluptatem labore
             architecto nostrum, repudiandae nisi! Minus nesciunt minima excepturi
@@ -176,10 +176,9 @@ const Register = () => {
             earum quas voluptatibus? Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Inventore voluptatum distinctio, fugiat quis ex
             deserunt quasi molestias placeat ipsa quo aut ipsam itaque? Sequi
-            explicabo quidem consequatur cumque temporibus rerum?"
-              readOnly
-            />
-            {/* </textarea> */}
+            explicabo quidem consequatur cumque temporibus rerum
+             </p>
+           </div>
           </div>
 
           <div className={styles.tAndC}>
@@ -195,6 +194,9 @@ const Register = () => {
               By ticking this box you aknowledge that you have read and agree to
               our terms and conditions
             </p>
+          </div>
+            {errors.tAndCCheck && <p className={styles.inputError}>{errors.tAndCCheck.message}</p>}
+          <div className={styles.tAndC}>
             <input
               value = {true}
               ref={register}
@@ -206,6 +208,7 @@ const Register = () => {
               advertisments about our amazing products
             </p>
           </div>
+          
 
           <div className={styles.signUpButtonContainer}>
             <button 
