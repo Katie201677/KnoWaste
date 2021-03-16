@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div className={styles.content}>
       <Timer />
       <NavBar />
-      <div className={styles.aboutUs}>
+      <div className={styles.mainSection}>
 
         <div>
           <img src={Logo} className={styles.logo} />
