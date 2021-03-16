@@ -10,10 +10,13 @@ const DailySelection = (props) => {
     // Need a mapping function to display each value in the array
     //  this function must be general as multiply mealData keys have arrays as values 
     
-    console.log(mealDayData)
-    const mealOptions = [{type: "meat", imgSrc:"https://cafedelites.com/wp-content/uploads/2018/04/Best-Chicken-Tikka-Masala-IMAGE-2.jpg" ,recipeName: "Roasted aubergine, lamb and feta tart", dietaryrestriction: ["gluten", "lactose"]}, 
-                        {type: "fish", imgSrc:"https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg", recipeName: "Smoked cheddar macaroni cheese", dietaryrestriction: ["nuts", "gluten", "lactose"]}, 
-                        {type: "vegetarian", imgSrc:"https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", recipeName: "Vegan paella with roasted tofu", dietaryrestriction: ["nuts", "gluten"]}]
+    // console.log(mealDayData[0].mealName)
+
+    // mealOption is an array with three objects. Each object is a meal option.
+    // The meal option object keys are the bits of meal information display.
+    const mealOptions = [{type: "meat", imgSrc: mealDayData[0].mealImage ,recipeName: mealDayData[0].mealName, dietaryrestriction: mealDayData[0].mealDiet}, 
+                        {type: "fish", imgSrc: mealDayData[1].mealImage, recipeName: mealDayData[1].mealName, dietaryrestriction: mealDayData[1].mealDiet}, 
+                        {type: "vegetarian", imgSrc: mealDayData[2].mealImage, recipeName: mealDayData[2].mealName, dietaryrestriction: mealDayData[2].mealDiet}]
     
     const meal = mealOptions.map(meal => {
         return meal

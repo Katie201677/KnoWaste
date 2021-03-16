@@ -1,65 +1,85 @@
 [  
     [
         {
-            "mealName": "Roasted aubergine, lamb and feta tart",
+            "mealName": "Monday Roasted aubergine, lamb and feta tart",
             "mealId": 1,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
-            "mealName": "Smoked cheddar macaroni cheese",
+            "mealName": "Monday Smoked cheddar macaroni cheese",
             "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
             "mealName": "Vegan paella with roasted tofu" ,
             "mealId":3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealCo2": 420,
+            "mealWater": 69
         }
     ],
 
     [
 
 
-        { "mealName": "Roasted aubergine, lamb and feta tart",
+        {   "mealName": " Tuesday Roasted aubergine, lamb and feta tart",
             "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["Vegetarian"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealEmissions": ["a lil carbon...", "a lil' CO2"],
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
             "mealName": "Smoked cheddar macaroni cheese",
             "mealId": 3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
             "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
             "mealName": "Vegan paella with roasted tofu" ,
             "mealId":4,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealCo2": 420,
+            "mealWater": 69
         }
 
 
@@ -69,31 +89,42 @@
     [
 
 
-        { "mealName": "Roasted aubergine, lamb and feta tart",
+        {   "mealName": "Roasted aubergine, lamb and feta tart",
             "mealId": 5,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
-        "mealName": "Smoked cheddar macaroni cheese",
-        "mealId": 2,
-        "mealIncludes": ["potato", "leek", "cheese"],
-        "mealAllergens": ["onion", "nuts"],
-        "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-        "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealName": "Smoked cheddar macaroni cheese",
+            "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
+            "mealIncludes": ["potato", "leek", "cheese"],
+            "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
+            "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
-        "mealName": "Vegan paella with roasted tofu" ,
-        "mealId":3,
-        "mealIncludes": ["potato", "leek", "cheese"],
-        "mealAllergens": ["onion", "nuts"],
-        "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-        "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealName": "Vegan paella with roasted tofu" ,
+            "mealId":3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
+            "mealIncludes": ["potato", "leek", "cheese"],
+            "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
+            "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
+            "mealCo2": 420,
+            "mealWater": 69
         }
 
 
@@ -103,31 +134,42 @@
     [
 
 
-        { "mealName": "Roasted aubergine, lamb and feta tart",
+        {   "mealName": "Roasted aubergine, lamb and feta tart",
             "mealId": 1,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
-        "mealName": "Smoked cheddar macaroni cheese",
-        "mealId": 2,
-        "mealIncludes": ["potato", "leek", "cheese"],
-        "mealAllergens": ["onion", "nuts"],
-        "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-        "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealName": "Smoked cheddar macaroni cheese",
+            "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
+            "mealIncludes": ["potato", "leek", "cheese"],
+            "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
+            "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
-        "mealName": "Vegan paella with roasted tofu" ,
-        "mealId":3,
-        "mealIncludes": ["potato", "leek", "cheese"],
-        "mealAllergens": ["onion", "nuts"],
-        "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-        "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealName": "Vegan paella with roasted tofu" ,
+            "mealId":3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
+            "mealIncludes": ["potato", "leek", "cheese"],
+            "mealAllergens": ["onion", "nuts"],
+            "mealDiet":["halal", "vegan"],
+            "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
+            "mealCo2": 420,
+            "mealWater": 69
         }
 
 
@@ -138,32 +180,40 @@
         {
             "mealName": "Roasted aubergine, lamb and feta tart",
             "mealId": 1,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
             "mealName": "Smoked cheddar macaroni cheese",
             "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
             "mealName": "Vegan paella with roasted tofu" ,
             "mealId":3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealCo2": 420,
+            "mealWater": 69
         }
     ],
 
@@ -171,32 +221,40 @@
         {
             "mealName": "Roasted aubergine, lamb and feta tart",
             "mealId": 1,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
             "mealName": "Smoked cheddar macaroni cheese",
             "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
             "mealName": "Vegan paella with roasted tofu" ,
             "mealId":3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealCo2": 420,
+            "mealWater": 69
         }
     ],
 
@@ -204,32 +262,40 @@
         {
             "mealName": "Roasted aubergine, lamb and feta tart",
             "mealId": 1,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
             "mealName": "Smoked cheddar macaroni cheese",
             "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
             "mealName": "Vegan paella with roasted tofu" ,
             "mealId":3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealCo2": 420,
+            "mealWater": 69
         }
     ],
 
@@ -237,32 +303,40 @@
         {
             "mealName": "Roasted aubergine, lamb and feta tart",
             "mealId": 1,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["halal", "vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", 
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
 
         {
             "mealName": "Smoked cheddar macaroni cheese",
             "mealId": 2,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
+            "mealCo2": 420,
+            "mealWater": 69
         },
         
         {
             "mealName": "Vegan paella with roasted tofu" ,
             "mealId":3,
+            "mealDescription": "A delicious blend of paella and tofu, slow roasted..",
+            "mealType": "main",
             "mealIncludes": ["potato", "leek", "cheese"],
             "mealAllergens": ["onion", "nuts"],
             "mealDiet":["vegan"],
             "mealImage": "https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg",
-            "mealEmissions": ["a lil carbon...", "a lil' CO2"]
-        
+            "mealCo2": 420,
+            "mealWater": 69
         }
     ]
 

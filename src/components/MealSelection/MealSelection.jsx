@@ -6,7 +6,6 @@ import styles from './MealSelection.module.scss';
 
 const MealSelection = (props) => {
 
-  console.log(props.mealData)
   return (
   <div className={styles.page}>
     <NavBar />
