@@ -4,8 +4,13 @@ import RecipeList from './RecipeList';
 import DayDateBar from './DayDateBar/DayDateBar.jsx';
 
 const DailySelection = (props) => {
-    const {date, setActiveDate, activeDate, action} = props;
+    const {date, setActiveDate, activeDate, action, mealDayData} = props;
 
+    // mealDiet is an array of dietary information e.g. meat, fish, vegan...
+    // Need a mapping function to display each value in the array
+    //  this function must be general as multiply mealData keys have arrays as values 
+    
+    console.log(mealDayData)
     const mealOptions = [{type: "meat", imgSrc:"https://cafedelites.com/wp-content/uploads/2018/04/Best-Chicken-Tikka-Masala-IMAGE-2.jpg" ,recipeName: "Roasted aubergine, lamb and feta tart", dietaryrestriction: ["gluten", "lactose"]}, 
                         {type: "fish", imgSrc:"https://grilledcheesesocial.com/wp-content/uploads/2019/12/smoked-mac-and-cheese-grilled-cheese-social-9.jpg", recipeName: "Smoked cheddar macaroni cheese", dietaryrestriction: ["nuts", "gluten", "lactose"]}, 
                         {type: "vegetarian", imgSrc:"https://zardyplants.com/wp-content/uploads/2020/05/Vegan-Vegetarian-Spanish-Paella-02.jpg", recipeName: "Vegan paella with roasted tofu", dietaryrestriction: ["nuts", "gluten"]}]
