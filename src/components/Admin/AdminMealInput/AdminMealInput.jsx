@@ -1,13 +1,18 @@
 import React from "react";
 import styles from "./AdminMealInput.module.scss";
+import { mealLibrary } from "../AdminLibrary/AdminLibrary";
+
 
 const AdminMealInput = () => {
+
   return (<section className={styles.mainFormContainer}>
     {/* As a developer I have input boxes for each meal array item */}
+
+
+
 <form>
     <input type="text" placeholder="Name" className={mealName}></input>
     <input type="text" placeholder="Description" className={mealDescription}></input>
-    
     {/* As a developer I can see a button that adds images */}
       <button>Upload Image</button>
       <div className={`${styles.imgPreview} ${mealImage}`}></div>
@@ -47,6 +52,18 @@ const AdminMealInput = () => {
 
     {/* Multiple meals in one input??????? */}
     </form>
+
+    {/* 
+    
+    ON SUBMIT - SEND THE FORM DATA AS AN OBJECT WITH EACH VALUE FORMATTED CORRECTLY
+    
+    
+    */}
+
+
+
+
+
   </section>);
 };
 
