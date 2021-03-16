@@ -1,7 +1,7 @@
 @import "../../assets/styles/variables";
 @import "../../assets/styles/buttons";
 @import "../../assets/styles/typography";
-
+@import "../../assets/styles/forms";
 
 
 
@@ -28,26 +28,24 @@
   border-radius: $border-radius-2;
   color: #fff;
   font-size: $font-m;
-  font-family: Arial, Helvetica, sans-serif;
   label {
-    display: block;
-    font-size: 20px;
-  }
-  input {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
+    
   }
  
+  
   .tAndC {
   display: grid;
   grid-template-columns: 40px 1fr;
-  
+  align-items: center;
+  padding: 10px 0;
     input {
-      width: 14px;
-    }
+      height: 14px;
+      margin: 0;
+    }  
+
     p {
-      font-size: 14px;
+      font-size: 12px;
+      margin: 10px 0;
     }
   }
 }
@@ -57,52 +55,4 @@
     text-align: center;
     font-size: 22px;
 }
-
-
-        
-
-.termsContainer {
-        display: grid;
-        text-align: center;
-        grid-template-columns: 1fr;
-        font-family: $secondary-font;
-        font-size: $font-s;
-        
-    }
-
-textarea {
-        
-    }
-    
-.signUpButtonContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-       
-    }
-    
- p{
-        font-size: $font-s;
-    }
-
-
-    
-
-
- 
-
-
-@media only screen and (max-width: $mob-breakpoint){
-
-
-.entryContainer {
-    grid-template-columns: 1fr;
-}
-
-
-
-
-}
-
 
