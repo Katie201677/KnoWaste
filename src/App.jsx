@@ -11,6 +11,7 @@ import Environment from './components/Environment';
 import NavBar from './components/NavBar'
 import Gamification from './components/Gamification';
 import AdminMealInput from './components/Admin/AdminMealInput';
+import AdminWeeklyPlanner from './components/Admin/AdminWeeklyPlanner';
 import './App.css';
 import './assets/styles/styles.scss';
 import library from './assets/data/fa-library';
@@ -58,6 +59,9 @@ const App = () => {
           </Route>
           <Route path='/adminmealinput'>
             <AdminMealInput />
+          </Route>
+          <Route path='/adminweeklyplanner'>
+            <AdminWeeklyPlanner />
           </Route>
           <Route path='/'>
             <Home />
