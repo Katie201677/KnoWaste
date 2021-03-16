@@ -14,7 +14,7 @@ const Home = () => {
     <div className={styles.fullPage}>
       <div className={styles.makeInline}>
         <Timer />
-        <HelpPopUp />
+        <HelpPopUp sourcePage='homepage'/>
       </div>
       
       

@@ -1,23 +1,33 @@
+@import '../../assets/styles/variables';
+
 .popup {
   position: relative;
-  display: inline-block;
   .popupText {
     visibility: hidden;
     width: 60vw;
     height: 50vh;
-    background-color: #555;
-    color: #fff;
+    background-color: $secondary-color;
+    color: $primary-color;
     text-align: center;
-    border-radius: 6px;
-    padding: 8px 0px;
+    border-radius: $border-radius-2;
+    padding: 8px 20px;
     position: absolute;
     z-index: 1;
-    top: 50px;
-    left: 200px;
+    top: 20px;
+    right: 275px;
       }
   }
 
 .show {
   visibility: visible !important;
-  animation: fadeIn 1s;
+  
+}
+.info {
+  width: 30px !important;
+  height: 30px !important;
+  padding: 10px;
+  color: limegreen;
+}
+.info:hover {
+  cursor: pointer;
 }
