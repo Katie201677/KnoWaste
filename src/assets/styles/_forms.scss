@@ -1,4 +1,11 @@
-input {
+@import "../../assets/styles/variables";
+@import "../../assets/styles/buttons";
+@import "../../assets/styles/typography";
+
+input,select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   height: 30px;
   border-radius: 30px;
   margin-top: 10px;
@@ -7,10 +14,24 @@ input {
   color: #3f3737;
   border: none;
   padding: 0px 10px;
+  font-size: 14px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.inputError {
+  display: block;
+  float: right;
+  font-size: 15px;
+  color: $danger-color;
+  margin: 0 0 0 30px; 
 }
 
 label {
-
+  display: block;
+  font-size: 20px;
 }
 
 select {

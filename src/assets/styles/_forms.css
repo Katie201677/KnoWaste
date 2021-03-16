@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+.btn-primary {
+  display: block;
+  height: 30px;
+  border-radius: 30px;
+  margin: 10px auto;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+}
+
+.btn-secondary {
+  display: block;
+  height: 30px;
+  border-radius: 30px;
+  margin: 10px auto;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+}
+
+button {
+  border-radius: 10px;
+  border: #F1F2F6 2px solid;
+  background-color: #27187E;
+  color: #F1F2F6;
+  padding: 20px;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.text-white {
+  color: white;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+  font-size: 14px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.inputError {
+  display: block;
+  float: right;
+  font-size: 15px;
+  color: #f46d6d;
+  margin: 0 0 0 30px;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
