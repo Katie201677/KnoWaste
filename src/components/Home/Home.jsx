@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import NavBar from "../NavBar";
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
@@ -6,27 +6,18 @@ import Fork from '../../assets/images/fork.png';
 import Logo from '../../assets/images/Logo.png';
 import Table from '../../assets/images/leagueTable.png';
 import Timer from '../MealSelection/Timer/Timer';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
+import HelpPopUp from '../HelpPopUp';
 
 const Home = () => {
+
   return (
     <div className={styles.fullPage}>
       <div className={styles.makeInline}>
-        <Timer /><FontAwesomeIcon icon="question-circle" className={styles.info}/>
+        <Timer />
+        <HelpPopUp />
       </div>
       
-       {/* <div className={styles.timer}>
-        <h4>timer goes here</h4>
-      </div> */}
-
-      {/* <div className={styles.topBar}>
-        <h4>Well done! less than 10% waste last week!</h4>
-      </div> */}
-
-      {/* <div className={styles.picture}>
-        <img src={picture}></img>
-      </div> */}
+      
 
       <div className={styles.linkContainer}>
       <Link to="/mealselection">
