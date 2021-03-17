@@ -17,17 +17,14 @@
 }
 
 .main-box-desk {
-  position: absolute;
   width: 1291px;
   height: 877px;
-  left: 150px;
-  top: 141px;
 }
 
 
 @media only screen and (max-width: 600px) {
-    .content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px 1fr 60px;
-    }
+  .content {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 1fr 60px;
   }
+}
