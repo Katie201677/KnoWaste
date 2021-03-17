@@ -33,12 +33,12 @@ const NavBar = () => {
                                     <a href="">About Us</a>
                     </div>  
                 
-                </CSSTransition> */}
-                {/* { show ? <div className={styles.sideNav}>   
-                            <Link to="mealselection">Select Meals</Link>
-                            <Link to="environment">Enviromental Impact</Link> 
-                            <Link to="aboutus">About Us</Link>   
-                            <Link to="login">Sign Out</Link>
+                </CSSTransition>
+                { show ? <div className={styles.sideNav}>   
+                            <Link to="/mealselection">Select Meals</Link>
+                            <Link to="/environment">Enviromental Impact</Link> 
+                            <Link to="/aboutus">About Us</Link>   
+                            <Link to="/login">Sign Out</Link>
 
                          </div>
                 :
@@ -47,22 +47,22 @@ const NavBar = () => {
                 
                 <ul className={styles.mainNav}>
                     <li className={styles.utensils}>
-                        <Link to="aboutus">
+                        <Link to="/aboutus">
                             <FontAwesomeIcon icon="info-circle" className={styles.white}/>
                         </Link>
                     </li>
                     <li className={styles.utensils}>
-                        <Link to="mealselection">
+                        <Link to="/mealselection">
                             <FontAwesomeIcon icon="utensils" className={styles.white}/>
                         </Link>
                     </li>
                     <li className={styles.trophy}>
-                        <Link to="gamification">
+                        <Link to="/gamification">
                             <FontAwesomeIcon  icon="trophy" className={styles.white}/>
                         </Link>
                     </li>
                     <li className={styles.userCircle}>
-                        <Link to="profile">
+                        <Link to="/profile">
                             <FontAwesomeIcon  icon="user-circle" className={styles.white}/>
                         </Link>
                     </li>
