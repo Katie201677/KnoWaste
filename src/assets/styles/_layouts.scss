@@ -37,24 +37,17 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   height: 877px;
 }
 
-
-@media only screen and (max-width: 600px) {
-  .content {
+@media only screen and (max-width: 576px) {
+    .content {
       grid-template-columns: 1fr;
-      grid-template-rows: 60px 1fr 60px;
+      grid-template-rows: 60px 1fr 75px;
+    }
+
+    .mainSection {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      //width: 100vw;
+    }
   }
-}
-.mainSection {
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  grid-row-start: 2;
-  grid-row-end: 3;
-
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //margin: 0;
-  //height: 100%;
-  //width: 100%;
-}
