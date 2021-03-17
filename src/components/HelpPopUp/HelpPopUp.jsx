@@ -12,6 +12,10 @@ const HelpPopUp = (props) => {
     setIsPopUpVisible(!isPopUpVisible);
   };
 
+  const filteredPopUp = helpPopUp.filter((page) => {
+    return page.label == sourcePage;
+  })[0].text
+
   return (
     <div>
       <div>
@@ -34,9 +38,7 @@ const HelpPopUp = (props) => {
           <h1>How to use this page!</h1>
           <p>
             {
-              helpPopUp.filter((page) => {
-                return page.label == sourcePage;
-              })[0].text
+            filteredPopUp
             }
           </p>
         </span>
