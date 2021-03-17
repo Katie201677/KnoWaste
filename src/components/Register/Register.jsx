@@ -1,22 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Register.module.scss";
 import { useForm } from "react-hook-form";
 
 const Register = () => {
+
   const onSubmit = (data) => {
-    console.log(data);
+      // Simple POST request with a JSON body using fetch
+      // const requestOptions = {
+      //     method: 'POST',
+      //     headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify({ title: 'React POST Request Example' })
+      // };
+      // fetch('https://jsonplaceholder.typicode.com/posts', requestOptions)
+      //     .then(response => response.json())
+      //     .then(data => this.setState({ postId: data.id }));
   };
 
   const { 
     register,
     handleSubmit,
     errors,
-    watch,
     formState
   } = useForm({
     mode: 'onBlur'
   });
-  console.log(watch());
+
   return (
     <div className={styles.pageBody}>
       <div className={styles.mainFormContainer}>
@@ -47,6 +55,11 @@ const Register = () => {
                 value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                 message: "Invalid email address",
               },
+              // validate: {
+              // fetch can be used to call an endpoint and check for exisiting users with current email - Check with Gabor and Alex if you are lost :)
+              //   asyncValidate: async value => await fetch("someurl/users/currentemail")
+              //   message: "An account with this email already exists"                    
+              // }
             })}
           ></input>
           {errors.email && <p className={styles.inputError}>{errors.email.message}</p>}
@@ -171,6 +184,7 @@ const Register = () => {
             <button 
               type="submit"
               className={`${styles["btn-primary"]} ${styles.button}`}
+              disabled={!formState.isValid}
             >
               Sign Up
             </button>

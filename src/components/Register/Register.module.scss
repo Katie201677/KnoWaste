@@ -3,7 +3,17 @@
 @import "../../assets/styles/typography";
 @import "../../assets/styles/forms";
 
+[disabled] {
+  color: lightgrey;
+  cursor: not-allowed;
+}
 
+.btn-primary {
+  &:hover {
+    cursor: pointer;
+    border: 1px solid lightgrey;
+  }
+}
 
 .pageBody {
   letter-spacing: 0.6px;
