@@ -41,13 +41,6 @@ const AdminMealInput = () => {
         {errors.mealDescription && errors.mealDescription.type === "required" && (<p>This field is required</p>)}
         <button>Upload Image</button>
         <div className={styles.imgPreview}></div>
-        <h3>Meal Type</h3>
-        <select name="mealType" ref={register ({required : true})}>
-          <option value="main">Main</option>
-          <option value="side">Side</option>
-          <option value="dessert">Dessert</option>
-        </select>
-        {errors.mealType && errors.mealType.type === "required" && (<p>This field is required</p>)}
         <h3>Allergens</h3>
         <label>Gluten</label>
         <input
