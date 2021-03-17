@@ -35,7 +35,7 @@ const DailySelection = (props) => {
   
     return (
         <div className={styles.dailySelection}>
-            <DayDateBar date={date} setActiveDate={setActiveDate} activeDate={activeDate} isSelected={isSelected} activeMeal={activeMeal} action={action}/>
+            <DayDateBar date={date} setActiveDate={setActiveDate} activeDate={activeDate} isSelected={isSelected} activeMeal={activeMeal} action={action} getActiveMeal={getActiveMeal}/>
             {
                 activeDate === date ? <RecipeList meal={meal} action={action}  selectItem={selectItem} getActiveMeal={getActiveMeal}/> : ""
             }

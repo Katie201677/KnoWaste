@@ -12,7 +12,7 @@ const WeeklyPlanner = (props) => {
     
     let indexDate = dayArr.indexOf(day)
     const nextDay = dayArr[indexDate+1]
-    setActiveDate(nextDay);
+     setActiveDate(nextDay);
     
   }
 

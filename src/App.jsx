@@ -34,6 +34,9 @@ const App = () => {
     return mealChoiceArr;
    }
 
+   const clearMealChoiceArr = () => mealChoiceArr = []
+   
+
   return (
     <div>
       <Router>
@@ -60,7 +63,7 @@ const App = () => {
             <AboutUs />
           </Route>
           <Route path='/mealconfirmation'>
-            <MealConfirmation mealChoiceArr={mealChoiceArr}/>
+            <MealConfirmation mealChoiceArr={mealChoiceArr} clearArr={clearMealChoiceArr} />
           </Route>
           <Route path='/environment'>
             <Environment />
