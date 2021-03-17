@@ -1,16 +1,17 @@
 .navBarContainer {
-    height: 100vh;
-    width: 75px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: white;
     background: linear-gradient(180deg, #5656FF 0%, #9556C0 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    
 
     .sideNav {
         height: 100%;
@@ -75,6 +76,13 @@
         padding: 10px 0px 0px 0px;
         height: 80px;
         width: 110px;
+        opacity: 0.5;
+    }
+    .logo:hover {
+        padding: 10px 0px 0px 0px;
+        height: 80px;
+        width: 110px;
+        opacity: 1;
     }
 
     .topIcon a {
@@ -83,6 +91,7 @@
 
     .mainNav {
         padding-right: 20px;
+       
     }
 
     li {
@@ -92,10 +101,19 @@
         font-size: 45px;
         filter: blur(0.5px);
 
-    }
 
+    }
+.white {
+    color: white;
+    opacity: 0.5;
+}
+.white:hover {
+    color: white;
+    opacity: 1;
+}
     .utensils {
         margin-left: 5px;
+        
     }
 
     .trophy {
@@ -110,6 +128,11 @@
 
 @media screen and (max-width: 568px) {
     .navBarContainer {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
         flex-direction: row;
         position: fixed;
         height: 75px;
