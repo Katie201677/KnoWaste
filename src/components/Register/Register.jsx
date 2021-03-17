@@ -11,7 +11,7 @@ const Register = () => {
 
   const emailIsUnique = async(email) => {
     await wait(1000);
-    return email !== email ? "email is already in use" : undefined;
+    return email === "test@example.com" ? "email is already in use" : undefined;
   };
 
   const onSubmit = (data) => {
@@ -61,12 +61,10 @@ const Register = () => {
             placeholder="example@example.co.uk"
             ref={register({
               required: "Email is required.",
-              // pattern: {
-              //   value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              //   message: "Invalid email address"
-              // }
-
-              //validate: emailIsUnique
+              pattern: {
+                value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: "Invalid email address"
+              },
               validate: (email) => emailIsUnique(email)
             })}
           ></input>
