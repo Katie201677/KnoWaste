@@ -3,6 +3,16 @@ import styles from "./Register.module.scss";
 import { useForm } from "react-hook-form";
 
 const Register = () => {
+  const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+
+  // REAL EMAIL VALIDATION COMES HERE!
+
+
+  const emailIsUnique = async(email) => {
+    await wait(1000);
+    return email !== email ? "email is already in use" : undefined;
+  };
 
   const onSubmit = (data) => {
       // Simple POST request with a JSON body using fetch
@@ -51,15 +61,13 @@ const Register = () => {
             placeholder="example@example.co.uk"
             ref={register({
               required: "Email is required.",
-              pattern: {
-                value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                message: "Invalid email address",
-              },
-              // validate: {
-              // fetch can be used to call an endpoint and check for exisiting users with current email - Check with Gabor and Alex if you are lost :)
-              //   asyncValidate: async value => await fetch("someurl/users/currentemail")
-              //   message: "An account with this email already exists"                    
+              // pattern: {
+              //   value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              //   message: "Invalid email address"
               // }
+
+              //validate: emailIsUnique
+              validate: (email) => emailIsUnique(email)
             })}
           ></input>
           {errors.email && <p className={styles.inputError}>{errors.email.message}</p>}
