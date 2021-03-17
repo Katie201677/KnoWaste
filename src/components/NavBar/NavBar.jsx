@@ -1,11 +1,11 @@
 import React from 'react'
 import {useState} from "react"
 import { Link } from 'react-router-dom';
-import styles from './NavBar.module.scss'
-import logo from "../../assets/Logo_white_new.png"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import library from '../../data/fa-library.js'
-import { CSSTransition } from 'react-transition-group'
+import styles from './NavBar.module.scss';
+import logo from "../../assets/Logo_white_new.png";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import library from '../../data/fa-library.js';
+import { CSSTransition } from 'react-transition-group';
 
 
 const NavBar = () => {
