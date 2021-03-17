@@ -5,8 +5,11 @@ import library from "../../data/fa-library.js";
 import styles from "./MealConfirmation.module.scss";
 import MealCard from "./MealCard";
 
-const MealConfirmation = () => {
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const MealConfirmation = (props) => {
+  
+  console.log(props.mealChoiceArr)
+  
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   return (
     <main style={{ backgroundImage: `url(${kitchenImage})` }}>
       
@@ -16,11 +19,15 @@ const MealConfirmation = () => {
         <section className={styles.confirmMenu}>
           {
             <ul>
-              {days.map((day) => (
-                <>
-                  <MealCard day={day} meal="Yummy meal" />
-                </>
-              ))}
+              {days.map((day) => {
+                let i = days.indexOf(day);
+                  return (
+                    <>
+                      <MealCard day={day} meal={props.mealChoiceArr[i]} />
+                    </>
+                  )
+                })
+              }
             </ul>
           }
         </section>
