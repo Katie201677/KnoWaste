@@ -1,74 +1,87 @@
-import React from "react";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import ForgotPassword from "./components/ForgotPassword";
-import MealSelection from "./components/MealSelection";
-import Profile from "./components/Profile";
-import AboutUs from "./components/AboutUs";
-import MealConfirmation from "./components/MealConfirmation";
-import Environment from "./components/Environment";
-import NavBar from "./components/NavBar";
-import Gamification from "./components/Gamification";
-import AdminMealInput from "./components/Admin/AdminMealInput";
-import AdminWeeklyPlanner from "./components/Admin/AdminWeeklyPlanner";
-import mealData from "./assets/data/meal-data.json";
-import "./App.css";
-import "./assets/styles/styles.scss";
-import library from "./assets/data/fa-library";
+import React from 'react';
+import Home from './components/Home';
+import Login from './components/Login';
+import Register from './components/Register';
+import ForgotPassword from './components/ForgotPassword';
+import MealSelection from './components/MealSelection';
+import Profile from './components/Profile';
+import AboutUs from './components/AboutUs';
+import MealConfirmation from './components/MealConfirmation';
+import Environment from './components/Environment';
+import NavBar from './components/NavBar'
+import Gamification from './components/Gamification';
+import adminHome from './components/Admin/AdminHome';
+import AdminMealInput from './components/Admin/AdminMealInput';
+import AdminWeeklyPlanner from './components/Admin/AdminWeeklyPlanner';
+import mealData from "./assets/data/meal-data.json"
+import './App.css';
+import './assets/styles/styles.scss';
+import library from './assets/data/fa-library';
 import testFunc from "./services/mealSelection.service.js";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+ } from 'react-router-dom';
+import AdminHome from './components/Admin/AdminHome';
 
 const App = () => {
+
+  
   return (
     <div>
       <Router>
         <Switch>
-          <Route path="/login">
+          <Route path='/login'>
             <Login />
           </Route>
-          <Route path="/register">
+          <Route path='/register'>
             <Register />
           </Route>
-          <Route path="/forgotpassword">
+          <Route path='/forgotpassword'>
             <ForgotPassword />
           </Route>
-          <Route path="/navbar">
+          <Route path='/navbar'>
             <NavBar />
           </Route>
-          <Route path="/mealselection">
+          <Route path='/mealselection'>
             <MealSelection mealData={mealData} />
           </Route>
-          <Route path="/profile">
+          <Route path='/profile'>
             <Profile />
           </Route>
-          <Route path="/aboutus">
+          <Route path='/aboutus'>
             <AboutUs />
           </Route>
-          <Route path="/mealconfirmation">
+          <Route path='/mealconfirmation'>
             <MealConfirmation />
           </Route>
-          <Route path="/environment">
+          <Route path='/environment'>
             <Environment />
           </Route>
-          <Route path="/gamification">
+          <Route path='/gamification'>
             <Gamification />
           </Route>
-          <Route path="/adminmealinput">
+          <Route path='/admin'>
+            <AdminHome />
+          </Route>
+          <Route path='/adminmealinput'>
             <AdminMealInput />
           </Route>
-          <Route path="/adminweeklyplanner">
+          <Route path='/adminweeklyplanner'>
             <AdminWeeklyPlanner />
           </Route>
-          <Route path="/">
+          <Route path='/'>
             <Home />
           </Route>
         </Switch>
       </Router>
+     
     </div>
   );
-};
+}
 export const testFunction = () => {
-  return "All Good";
-};
+  return "All Good"
+}
 export default App;
