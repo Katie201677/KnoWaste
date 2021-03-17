@@ -10,9 +10,11 @@ import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
 import NavBar from './components/NavBar'
 import Gamification from './components/Gamification';
+import mealData from "./assets/data/meal-data.json"
 import './App.css';
 import './assets/styles/styles.scss';
 import library from './assets/data/fa-library';
+import testFunc from "./services/mealSelection.service.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +23,8 @@ import {
  } from 'react-router-dom';
 
 const App = () => {
+
+  
   return (
     <div>
       <Router>
@@ -38,7 +42,7 @@ const App = () => {
             <NavBar />
           </Route>
           <Route path='/mealselection'>
-            <MealSelection />
+            <MealSelection mealData={mealData} />
           </Route>
           <Route path='/profile'>
             <Profile />
@@ -60,6 +64,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+     
     </div>
   );
 }
