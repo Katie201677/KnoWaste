@@ -34,7 +34,9 @@ const App = () => {
     return mealChoiceArr;
    }
 
-   const clearMealChoiceArr = () => mealChoiceArr = []
+  // function to clear meal array when edit button selected on meal confirmation page
+  // passed as a prop to meal confirmation
+  const clearMealChoiceArr = () => mealChoiceArr = []
    
 
   return (
