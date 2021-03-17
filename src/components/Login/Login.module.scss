@@ -22,7 +22,7 @@
   min-width: 320px;
   align-items: center;
   margin: auto;
-  background: $background-gradient;
+  background: $background-color;
   padding-top: 50px;
   padding-bottom: 50px;
   border-radius: 30px;
@@ -62,7 +62,7 @@
 
   a {
     text-decoration: none;
-    color: $hyperlink-color;
+    color: $primary-color;
   }
 
   .showPass {
