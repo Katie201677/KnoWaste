@@ -4,13 +4,13 @@ import NavBar from '../NavBar';
 import WeeklyPlanner from './WeeklyPlanner';
 import styles from './MealSelection.module.scss';
 
-const MealSelection = () => {
+const MealSelection = (props) => {
 
   return (
   <div className={styles.page}>
     <NavBar />
     <Timer />
-    <WeeklyPlanner />
+    <WeeklyPlanner mealData = {props.mealData} />
   
   </div>
   );
