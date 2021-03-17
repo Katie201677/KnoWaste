@@ -7,58 +7,15 @@ const Register = () => {
     console.log(data);
   };
 
-  // console.log(watch("firstName"))
-  // console.log(watch("email"))
-
-  // const [formComplete, setFormComplete] = useState(false)
-
-  // Object.values(watch()).every(value => value) === formComplete ? '' : setFormComplete(!formComplete);
-
-  //let formComplete = Object.values(watch()).every(value => value)
-
-  //console.log(formComplete)
-
-  /*
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-
-      <label htmlFor="firstName">First Name</label>
-      <input
-        name="firstName"
-        placeholder="Name"
-        ref={register({
-          required: "this is a required",
-          maxLength: {
-            value: 2,
-            message: "Max length is 2",
-          },
-        })}
-      />
-      <br/>
-      {errors.firstName && errors.firstName.message}
-      <br/>
-
-      <label htmlFor="email">Email</label>
-      <input
-        name="email"
-        placeholder="example@example.com"
-        type="text"
-        ref={register({
-          required: "this is required",
-          pattern: {
-            value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-            message: "Invalid email address",
-          },
-        })}
-      />
-      <br />
-      {errors.email && errors.email.message}
-      <br />
-      <button type="submit" disabled={!formComplete || true} >Submit</button>
-    </form>
-  );
-*/
-  const { register, handleSubmit, errors, watch } = useForm();
+  const { 
+    register,
+    handleSubmit,
+    errors,
+    watch,
+    formState
+  } = useForm({
+    mode: 'onBlur'
+  });
   console.log(watch());
   return (
     <div className={styles.pageBody}>
@@ -226,37 +183,3 @@ const Register = () => {
 
 export default Register;
 
-// need pattern for student number from Pete and Kirsty
-//6 digit numerical
-
-// const Input = ({ label, type, register, required }) => (
-//   <>
-//     <label>{label}</label>
-//     <input name={label} type={type} ref={register({ required })} />
-//   </>
-// );
-
-// return (
-//   <div className={styles.pageBody}>
-//     <form onSubmit={handleSubmit} className={styles.mainFormContainer}>
-//       <h1 className={styles.header}>Sign Up</h1>
-
-//       <div className={styles.formInput}>
-//       <Input label="Name" type="text" register={register} required />
-//       <Input label="Email" type="email" register={register} required />
-//       <Input label="Password" type="password" register={register} required />
-//       <Input label="Student Number" type="password" register={register} required />
-//       <Input label="Student Number" type="password" register={register} required />
-//       </div>
-
-//       <div className={styles.signUpButtonContainer}>
-//         <button
-//           type="submit"
-//           className={`${styles.signUpButton} ${styles.button}`}
-//         >
-//           Sign Up
-//         </button>
-//       </div>
-//     </form>
-//   </div>
-// );
