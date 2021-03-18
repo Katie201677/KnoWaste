@@ -23,8 +23,10 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 }
 
 .nav-box-desk {
-  width: 152px;
+  width: 94px;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .header-box-desk {
