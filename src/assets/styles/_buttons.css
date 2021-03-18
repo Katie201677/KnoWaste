@@ -1,0 +1,29 @@
+.btn-primary {
+  display: block;
+  height: 30px;
+  border-radius: 30px;
+  margin: 10px auto;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+}
+
+.btn-secondary {
+  display: block;
+  height: 30px;
+  border-radius: 30px;
+  margin: 10px auto;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+}
+
+button {
+  border-radius: 10px;
+  border: #F1F2F6 2px solid;
+  background-color: #27187E;
+  color: #F1F2F6;
+  padding: 20px;
+}
