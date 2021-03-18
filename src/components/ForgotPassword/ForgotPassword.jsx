@@ -21,18 +21,19 @@ const ForgotPassword = () => {
   }
 
   return (
-    <main style={{
-      backgroundImage: `url(${kitchenImage})`
-    }}>
+    <main>
         <div className={styles.forgotPasswordContainer}>
+          
           <img className={styles.logo} src={logo} />
-          <p className={styles.paragraph}>Please enter the email associated with your account to reset your password</p>
+          <p>Enter your e-mail and press the button. <br/>Then we’ll send you a link that you can use to reset your password!</p>
+          
           <section className={styles.email}>
             <label htmlFor="email">Email</label>
+            <input type="email" placeholder="example@email.com" onBlur={emailValidation}></input>
           </section>
-          <input type="email" placeholder="example@email.com" onBlur={emailValidation}></input>  
+            
          
-          <button onClick={handleClick}>Submit</button>          
+          <button className="button-style-1" onClick={handleClick}>Submit</button>          
         </div>
 
         {
