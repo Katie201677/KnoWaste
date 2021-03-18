@@ -33,7 +33,7 @@ const MealConfirmation = (props) => {
                 let i = days.indexOf(day);
                   return (
                     <>
-                      <MealCard day={day} meal={props.mealChoiceArr[i]} />
+                      <MealCard day={day} meal={props.mealChoiceArr[i]}  />
                     </>
                   )
                 })
