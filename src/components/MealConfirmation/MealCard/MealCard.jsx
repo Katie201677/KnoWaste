@@ -5,10 +5,10 @@ import styles from "./MealCard.module.scss";
 const MealCard = (prop) => {
   const { day, meal } = prop;
   return (
-    <li>
-      <div>
+    <div>
+      {/* <div>
         <FontAwesomeIcon icon="arrow-right" className={styles.arrowIcon} />
-      </div>
+      </div> */}
       <div className = {styles.mealInfo}>
           <h3>{day}</h3>
           <p>{meal}</p>
@@ -16,7 +16,7 @@ const MealCard = (prop) => {
       {/* <div>
         <FontAwesomeIcon icon="pen" className={styles.penIcon} />
       </div> */}
-    </li>
+    </div>
   );
 };
 

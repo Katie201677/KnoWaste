@@ -1,41 +1,52 @@
-@import '../../assets/styles/variables';
-@import '../../assets/styles/buttons';
+@import '../../assets/styles/styles';
+
+.background {
+    background-color: $background-color;
+}
 
 main {
+
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: $background-color;
+    // background-color: $background-color;
     color: $primary-font-color;
     padding: 10px;
     box-sizing: border-box;
     /* -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px); */
 
+    // position
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
     .mainDiv {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        max-width: calc(100% - 20px);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        height: 100%;
+        width: 100%;
+        // max-width: calc(100% - 20px);
         border-radius: $border-radius-2;
-        background-attachment: fixed;
+        // background-attachment: fixed;
         padding: 20px;
-        background-color: rgba(255,255,255,0.8);
+        // background-color: rgba(255,255,255,0.8);
         box-sizing: border-box;
-        box-shadow: 0 0 5px 3px rgba(0,0,0,0.2);
+        box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
     }
 
-    
-    
+
+
 
     .dayItemImage {
         display: flex;
@@ -46,11 +57,54 @@ main {
     }
 
     .confirmMenu {
-        width: 900px;
+        // width: 900px;
         max-width: 100%;
         border-radius: $border-radius-2;
         z-index: 2;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        // display: grid;
+        // grid-template-areas:
+        //     "a b c d."
+        //     ". e f g .";
+
+
     }
+
+    .day {
+        width: 20%;
+        margin: 10px;
+    }
+
+    // #Monday {
+    //     grid-area: "a";
+    //     background: red;
+    // }
+
+    // #Tuesday {
+    //     grid-area: "b";
+    // }
+
+    // #Wednesday {
+    //     grid-area: "c";
+    // }
+
+    // #Thursday {
+    //     grid-area: "d";
+    // }
+
+    // #Friday {
+    //     grid-area: "e";
+    // }
+
+    // #Saturday {
+    //     grid-area: "f";
+    // }
+
+    // #Sunday {
+    //     grid-area: "g";
+    // }
 
     h1 {
         color: $primary-font-color;
@@ -95,6 +149,5 @@ button {
     //background: #EF4242;
     border-radius: 30px;
     border-style: none;
-   // margin: 20px;
-} 
-
+    // margin: 20px;
+}

@@ -1,7 +1,7 @@
 @import '../../assets/styles/styles';
 
 body {
-  background: url('../../assets/images/photo-canteen.jpg') center no-repeat;
+
   background-size: cover;
 }
 
@@ -9,6 +9,7 @@ body {
   width: 560px;
   margin: auto;
 }
+
 .makeInline {
   display: flex;
   justify-content: space-between;
@@ -16,7 +17,7 @@ body {
   .info {
     width: 30px;
     height: 30px;
-    color:limegreen;
+    color: limegreen;
     margin-top: 5px;
   }
 }
@@ -26,24 +27,27 @@ body {
 .linkContainerOne {
   height: 260px;
   border-radius: $border-radius-2;
-  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                       rgba(175, 87, 235, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%,
+      rgba(175, 87, 235, 0.9) 100%);
+
   .mealSelection {
-      text-decoration: none;
-      display: flex;
-      justify-content: space-between;
-      padding: 50px;  
-                 
-    .fork{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+
+    .fork {
       width: 100px;
       height: 120px;
       margin-top: 5px;
     }
+
     h3 {
       color: white;
       margin-top: 25px;
       text-decoration: none;
     }
+
     .textMeal {
       color: white;
       font-size: small;
@@ -51,27 +55,30 @@ body {
     }
   }
 }
+
 .linkContainerTwo {
   display: flex;
   justify-content: space-evenly
 }
+
 .aboutUs {
   text-align: center;
   margin-top: 20px;
   padding: 30px;
   border-radius: $border-radius-2;
   width: 200px;
-  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                       rgba(175, 87, 235, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%,
+      rgba(175, 87, 235, 0.9) 100%);
 }
+
 .gamification {
   text-align: center;
   margin-top: 20px;
   padding: 30px;
   border-radius: $border-radius-2;
   width: 200px;
-  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-  rgba(175, 87, 235, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%,
+      rgba(175, 87, 235, 0.9) 100%);
 }
 
 .leagueTable {
@@ -81,41 +88,42 @@ body {
 
 
 // Mobile Styles
-@media screen and (max-width:576px){
-* {
-  margin-block-end: 0;
-  margin-block-start: 0;
-  margin-inline-end: 0;
-  margin-inline-start: 0;
-}
-body {
-  height: 100vh;
-  width: 100vw;
-  background: url('../../assets/images/photo-canteen.jpg') center no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-
-  .timer {
-    height: 5vh;
-    background: black;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
+@media screen and (max-width:576px) {
+  * {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
   }
 
-  .topBar {
+  body {
+    height: 100vh;
     width: 100vw;
-    height: 8vh;
-    background: linear-gradient(180deg, #5656FF 26.35%, #9556C0 126.35%);
-    text-align:center;
-    color: white;
-    margin-top: 20px;
-  }
+    background: url('../../assets/images/photo-canteen.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .linkContainer {
-    background: rgba(255, 250, 250, 0.5);
+    .timer {
+      height: 5vh;
+      background: black;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .topBar {
+      width: 100vw;
+      height: 8vh;
+      background: linear-gradient(180deg, #5656FF 26.35%, #9556C0 126.35%);
+      text-align: center;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .linkContainer {
+      background: rgba(255, 250, 250, 0.5);
       backdrop-filter: blur(4px);
       border-radius: 30px;
       height: 60vh;
@@ -132,52 +140,57 @@ body {
         height: 30vh;
         width: 70vw;
         border-radius: 50%;
-        background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                           rgba(175, 87, 235, 0.9) 100%);
+        background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%,
+            rgba(175, 87, 235, 0.9) 100%);
         margin-top: 15px;
-        
-        
+
+
 
         .mealSelection {
           text-decoration: none;
 
-          .fork{
+          .fork {
             width: 100px;
             height: 120px;
             margin-top: 5px;
           }
+
           h3 {
-          color: white;
-          margin-top: 25px;
-        }
-        .textMeal {
-          color: white;
-          font-size: small;
+            color: white;
+            margin-top: 25px;
+          }
+
+          .textMeal {
+            color: white;
+            font-size: small;
+          }
         }
       }
-      }
+
       .linkContainerTwo {
         display: flex;
         justify-content: space-between;
         height: 40%;
         margin-top: 15px;
-        
 
-        .aboutUs, .gamification {
+
+        .aboutUs,
+        .gamification {
           width: 45%;
           height: 100%;
-          background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                      rgba(175, 87, 235, 0.9) 100%);
+          background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%,
+              rgba(175, 87, 235, 0.9) 100%);
           border-radius: 25px;
 
           .logo {
             width: 100px;
           }
+
           .leagueTable {
             height: 75px;
             width: 75px;
             margin-top: 20px;
-          
+
           }
 
           h3 {
@@ -186,9 +199,9 @@ body {
           }
         }
       }
-    
+
+    }
+
+
   }
-
-
-}
 }
