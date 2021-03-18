@@ -13,6 +13,9 @@
   justify-items: center;
   align-items: center;
   background: $background-color;
+  background-image: url("../../assets/images/FoodAndDrinkDesign.svg");
+  background-size: 600px 600px;
+  
 }
 
 .loginPage {
@@ -26,21 +29,38 @@
   min-width: 320px;
   align-items: center;
   margin: auto;
+  background: inherit;
+  z-index: 1;
   border: 1px solid #fff;
   padding-top: 50px;
   padding-bottom: 50px;
   border-radius: 30px;
-  ::before {
-    content : "";
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    height: calc(100% + 2px);
-    width: calc(100% + 2px);
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.055);
-    filter: blur(1px);
-  }
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  overflow: hidden;
+}
+
+.loginPage:before {
+	content: "";
+	position: absolute;
+	background: inherit;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+  z-index: -1;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+	filter: blur(10px);
+	margin: -20px;
+}
+
+.danger,.danger:focus {
+  border: 2px solid red;
+}
+
+input:focus {
+  border: 2px solid $primary-color;
+  outline-color: $primary-color;
+  outline-style: none;
 }
 
 .logo {
