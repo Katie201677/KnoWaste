@@ -15,6 +15,7 @@ const NavBar = () => {
     }
 
     return (
+        <div>
         <section className={styles.navigation}>
             
             <span className={styles.closeBtn} onClick={handleClick}> 
@@ -68,6 +69,7 @@ const NavBar = () => {
                 </li>
             </ul>
         </section>
+        </div>
     )
 }
 

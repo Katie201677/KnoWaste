@@ -11,7 +11,7 @@ import HelpPopUp from '../HelpPopUp';
 const Home = () => {
 
   return (
-    <div className={styles.fullPage}>
+    <div className="content">
       <div className={styles.makeInline}>
         <Timer />
         <HelpPopUp sourcePage='homepage'/>
@@ -52,7 +52,7 @@ const Home = () => {
       </div>
       </div>
 
-      <div>
+      <div className="nav-box-desk">
         <NavBar /> 
       </div>
     </div>
