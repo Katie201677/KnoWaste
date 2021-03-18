@@ -1,66 +1,78 @@
-@import '../../assets/styles/styles';
+@import "../../assets/styles/styles";
 
 body {
   background: $background-color;
 }
 .mainSection {
-    align-self: center;
-    width: auto;
-    height: auto;
-}
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width:50%;
-  height: 70%;
-  padding: 5px;
-  margin: auto;
-  background-color: $primary-color;
-  border-radius: $border-radius-2;
-  font-family: $primary-font;
-  font-size: $font-s;
+  align-self: center;
+  width: auto;
+  height: auto;
 
-}
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 70%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.455);
+    border-radius: $border-radius-2;
+    font-family: $primary-font;
+    font-size: $font-s;
+    color: $secondary-color;
 
-.profile__info {
-  display: flex;
-  justify-content: center;
-  background: $primary-color;
-  width: 100%;
-  
-}
-.profile__pic {
-  border-radius: $border-radius-1;
-  margin: 10px;
-  height: 200px;
-  width: 200px;
-  border: $border-2;
-  margin-bottom: 50px;
+    .profile__card {
+      display: flex;
+      flex-direction: column;
+      background: $secondary-color;
+      width: 100%;
+      justify-content: space-between;
+      border-radius: $border-radius-2;
+
+      .profile__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $primary-color;
+        width: 100%;
+        border-radius: $border-radius-2;
+
+        .profile__pic {
+          border-radius: $border-radius-1;
+          margin: 10px;
+          margin-top: 40px;
+          height: 200px;
+          width: 200px;
+          border: 2px solid $secondary-color;
+          margin-bottom: 50px;
+        }
+
+        .profile__editinfo {
+          line-height: 4em;
+          margin-left: 25px;
+          .name {
+            font-size: $font-l;
+            font-weight: 600;
+          }
+          .hall {
+            font-size: $font-s;
+            color: $secondary-font-color;
+          }
+          .username {
+            font-size: $font-m;
+          }
+          
+        }
+      }
+    }
+    .diet__info {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
   }
-.profile__card {
-  display: flex;
-  flex-direction: column;
-  background: $secondary-color;
-  width: 100%;
-  justify-content: space-between;
-  border-radius: $border-radius-2;
-  
 }
-.diet__info {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  
-}
-.profile__editinfo {
-  line-height: 4em;
-  .name {
-    font-size: $font-xl;
-  }
-}
-
 // @media screen and (max-width: $mob-breakpoint) {
 //   .profile {
 //     display: flex;
@@ -165,7 +177,7 @@ body {
 //       height: 30%;
 //       text-align: center;
 //       margin-top: 20px;
-      
+
 //       .figures {
 //         display: flex;
 //         justify-content: space-evenly;

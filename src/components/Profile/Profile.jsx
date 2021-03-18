@@ -27,15 +27,19 @@ const Profile = () => {
         {/* profile picture tile */}
 
         <div className={styles.profile}>
+
           <section className={styles.profile__card}>
+
             <section className={styles.profile__info}>
               <img src={ProfilePic} className={styles.profile__pic}></img>
               <p className={styles.profile__editinfo}>
-                <span className={styles.name}>John Woody</span><br></br>
-                <span className={styles.username}>Xx_woody_xX</span><br></br>
-                <span className={styles.hall}>Woody Hall</span><br></br> 
+                <span className={styles.name}>John Doe</span><br></br>
+                <span className={styles.hall}>Pseudonym Hall</span><br></br> 
+                <span className={styles.username}>Xx_king_xX</span><br></br>
+                
               </p>
             </section>
+
             <div className={styles.diet__info}>
               <span className={styles.dietTile}>Diet 1</span>
               <span className={styles.dietTile}>Diet 2</span>
