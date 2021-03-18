@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from "react"
 import { Link } from 'react-router-dom';
 import styles from './NavBar.module.scss';
-import logo from "../../assets/Logo_white_new.png";
+import logo from "../../assets/logoNoText.svg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import library from '../../data/fa-library.js';
 import { CSSTransition } from 'react-transition-group';
@@ -15,13 +15,7 @@ const NavBar = () => {
     }
 
     return (
-
-            <section className={styles.navBarContainer}>
-                <span className={styles.closeBtn} onClick={handleClick}> 
-                    <Link to="/"> 
-                        <img src={logo} className={styles.logo}/>
-                    </Link>    
-                </span>
+            <section className={`${styles.navBarContainer} box-style-4`}>
 
                 {/* <CSSTransition in={show} timeout={200} classNames="appear">
                    <div className="sideNav">                
@@ -47,23 +41,28 @@ const NavBar = () => {
                 
                 <ul className={styles.mainNav}>
                     <li className={styles.utensils}>
+                        <Link to="/"> 
+                            <FontAwesomeIcon icon="home" className={styles.iconStyle}/>
+                        </Link>    
+                    </li>
+                    <li className={styles.utensils}>
                         <Link to="aboutus">
-                            <FontAwesomeIcon icon="info-circle" className={styles.white}/>
+                            <FontAwesomeIcon icon="info-circle" className={styles.iconStyle}/>
                         </Link>
                     </li>
                     <li className={styles.utensils}>
                         <Link to="mealselection">
-                            <FontAwesomeIcon icon="utensils" className={styles.white}/>
+                            <FontAwesomeIcon icon="utensils" className={styles.iconStyle}/>
                         </Link>
                     </li>
                     <li className={styles.trophy}>
                         <Link to="gamification">
-                            <FontAwesomeIcon  icon="trophy" className={styles.white}/>
+                            <FontAwesomeIcon  icon="trophy" className={styles.iconStyle}/>
                         </Link>
                     </li>
                     <li className={styles.userCircle}>
                         <Link to="profile">
-                            <FontAwesomeIcon  icon="user-circle" className={styles.white}/>
+                            <FontAwesomeIcon  icon="user-circle" className={styles.iconStyle}/>
                         </Link>
                     </li>
                 </ul>

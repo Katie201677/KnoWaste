@@ -7,8 +7,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    background: linear-gradient(180deg, #5656FF 0%, #9556C0 100%);
+    color: $primary-color;
+    background: $background-color;
     position: absolute;
     top: 20%;
     left: 0;
@@ -105,11 +105,11 @@
 
 
     }
-.white {
-    color: white;
+.iconStyle {
+    color: $primary-color;
     opacity: 0.5;
 }
-.white:hover {
+.iconStyle:hover {
     color: white;
     opacity: 1;
 }
