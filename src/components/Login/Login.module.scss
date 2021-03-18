@@ -4,17 +4,21 @@
 @import "../../assets/styles/buttons";
 
 
+
+
 .container {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-items: center;
   align-items: center;
+  background: $background-color;
 }
 
 .loginPage {
+  box-sizing: border-box;
   font-family: $primary-font;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,11 +26,21 @@
   min-width: 320px;
   align-items: center;
   margin: auto;
-  background: $background-color;
+  border: 1px solid #fff;
   padding-top: 50px;
   padding-bottom: 50px;
   border-radius: 30px;
-  
+  ::before {
+    content : "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.055);
+    filter: blur(1px);
+  }
 }
 
 .logo {
@@ -38,16 +52,7 @@
   flex-direction: column;
   color: white;
 
-  // input {
-  //   height: 30px;
-  //   border-radius: 30px;
-  //   margin-top: 10px;
-  //   margin-bottom: 10px;
-  //   background-color: white;
-  //   color: #3f3737;
-  //   border: none;
-  //   padding: 0px 10px;
-  // }
+
 
   #loginButton {
     // width: 70%;
@@ -55,7 +60,9 @@
     margin-right: auto;
     // display: flex;
   }
-
+  h3 {
+    margin-top: 0;
+  }
   span {
     font-size: 0.8em;
   }
@@ -63,6 +70,12 @@
   a {
     text-decoration: none;
     color: $primary-color;
+  }
+  .inputError {
+    font-size: 12px;
+    color: rgb(209, 52, 52); //fixed reference to danger color
+    margin-top: -5px;
+    
   }
 
   .showPass {
@@ -96,12 +109,7 @@
     justify-content: space-evenly;
     min-width: 600px;
     max-width: 900px;
-    // align-items: center;
-    // margin: auto;
-    // background: linear-gradient(180deg, #5656FF 0%, #9556C0 100%);
-    // padding-top: 50px;
-    // padding-bottom: 50px;
-    // border-radius: 30px;
+
   }
 
   .logo {

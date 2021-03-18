@@ -38,6 +38,7 @@ const Register = () => {
   return (
     <div className={styles.pageBody}>
       <div className={styles.mainFormContainer}>
+        <div>
         <h3 className={styles.header}>Sign Up</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="name">Name</label>
@@ -184,18 +185,15 @@ const Register = () => {
               advertisments about our amazing products
             </p>
           </div>
-          
-
-          <div className={styles.signUpButtonContainer}>
-            <button 
+            <button
               type="submit"
-              className={`${styles["btn-primary"]} ${styles.button}`}
+              className={styles["button-style-1"]}
               disabled={!formState.isValid}
             >
               Sign Up
             </button>
-          </div>
         </form>
+      </div>
       </div>
     </div>
   );

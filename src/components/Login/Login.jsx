@@ -74,7 +74,7 @@ const Login = () => {
           {/* <span> */}
             {/* <input type="submit" value="LOG IN" id={styles.loginButton} className={styles['btn-secondary']} /> */}
             {/* <Link to="/"> */}
-            <button type="submit" id={styles.loginButton} className={styles['btn-secondary']}>LOG IN</button>
+            <button type="submit" id={styles.loginButton} className={styles["button-style-1"]}>LOG IN</button>
             {/* </Link> */}
             
           {/* </span> */}
