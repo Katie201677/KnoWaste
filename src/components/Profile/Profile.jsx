@@ -30,8 +30,10 @@ const Profile = () => {
           <section className={styles.profile__card}>
             <section className={styles.profile__info}>
               <img src={ProfilePic} className={styles.profile__pic}></img>
-              <p>
-                Woody<br></br>woody99<br></br> Woody Hall
+              <p className={styles.profile__editinfo}>
+                <span className={styles.name}>John Woody</span><br></br>
+                <span className={styles.username}>Xx_woody_xX</span><br></br>
+                <span className={styles.hall}>Woody Hall</span><br></br> 
               </p>
             </section>
             <div className={styles.diet__info}>

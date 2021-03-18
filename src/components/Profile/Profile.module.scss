@@ -37,6 +37,7 @@ body {
   height: 200px;
   width: 200px;
   border: $border-2;
+  margin-bottom: 50px;
   }
 .profile__card {
   display: flex;
@@ -44,12 +45,20 @@ body {
   background: $secondary-color;
   width: 100%;
   justify-content: space-between;
+  border-radius: $border-radius-2;
   
 }
 .diet__info {
   display: flex;
   justify-content: space-around;
-  border-radius: $border-radius-2;
+  margin-top: 20px;
+  
+}
+.profile__editinfo {
+  line-height: 4em;
+  .name {
+    font-size: $font-xl;
+  }
 }
 
 // @media screen and (max-width: $mob-breakpoint) {
