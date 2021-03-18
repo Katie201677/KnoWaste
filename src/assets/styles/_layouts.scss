@@ -21,6 +21,12 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   grid-template-columns: 80px 1fr;
   grid-template-rows: 80px auto;
 }
+.mainSection{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
 
 .mainSection {
   grid-column-start: 2;
