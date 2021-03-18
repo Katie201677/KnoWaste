@@ -33,12 +33,12 @@ const ForgotPassword = () => {
           </section>
             
          
-          <button className="button-style-1" onClick={handleClick}>Submit</button>          
+          <button onClick={handleClick}>Submit</button>          
         </div>
 
         {
             // 1. Show an invalid message once a user has clicked submit and it's STILL invalid 
-            !isValid && hasSubmitted ? <section className={styles.alert}><h3>Please enter a valid email</h3></section> : null                          
+            !isValid && hasSubmitted ? <section className={styles.alert}><h3>Please enter a valid email!</h3><button>OK</button></section> : null                          
         }
         {
             // 2. Show a success message if their email is valid upon submisison
