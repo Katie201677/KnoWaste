@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../../NavBar";
+import AdminNavBar from "../AdminNavBar";
 import styles from "./AdminHome.module.scss";
 import { Link } from "react-router-dom";
 import Fork from "../../../assets/images/fork.png";
@@ -9,13 +9,14 @@ import Table from "../../../assets/images/leagueTable.png";
 const adminHome = () => {
   return (
     <div className={styles.content}>
+
       <div className={styles.linkContainer}>
         
         <Link to="/adminmealinput">
 
-          <div className={styles.linkContainerOne}>
+          <div className={"box-style-1"}>
 
-            <div className={styles.mealSelection}>
+            <div className={"styles.mealSelection"}>
               <div>
                 <h2 className="text-white">Upload a Meal</h2>
                 <p>Add a new meal to the database</p>
@@ -26,9 +27,9 @@ const adminHome = () => {
             </div>
           </div>
         </Link>
-        <div className={styles.weekPlanner}>
+        <div className={"box-style-1"}>
           <Link to="/adminweeklyplanner">
-            <div className={styles.aboutUs}>
+            <div>
               <img src={Logo} className={styles.leagueTable}></img>
               <h3 className="text-white">Week Planner</h3>
               <p className="text-white">Plan meals for next week</p>
@@ -37,7 +38,7 @@ const adminHome = () => {
         </div>
       </div>
 
-      <NavBar />
+      <AdminNavBar />
     </div>
   );
 };
