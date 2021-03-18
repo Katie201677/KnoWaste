@@ -43,6 +43,7 @@ const Register = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="name">Name</label>
           <input
+            className={errors.name && styles.danger}
             id="name"
             name="name"
             type="text"
@@ -56,6 +57,7 @@ const Register = () => {
           <label htmlFor="email">Email</label>
           
           <input
+            className={errors.email && styles.danger}
             id="email"
             name="email"
             type="text"
@@ -74,6 +76,7 @@ const Register = () => {
           <label htmlFor="password">Password</label>
           
           <input
+            className={errors.password && styles.danger}
             id= "password"
             name="password"
             type="password"
@@ -91,6 +94,7 @@ const Register = () => {
           </label>
           
           <input
+            className={errors.studentNumber && styles.danger}
             name="studentNumber"
             type="number"
             placeholder="123456"
@@ -106,7 +110,9 @@ const Register = () => {
             
           <label>Halls of Residence
           </label>
-          <select name="residenceHall" 
+          <select 
+            className={errors.residenceHall && styles.danger}
+            name="residenceHall" 
             ref={register({
               required: "Residence Hall is required."
             })}
@@ -123,6 +129,7 @@ const Register = () => {
           <label>Date of Birth
           </label>
           <input
+            className={errors.dob && styles.danger}
             name="dob"
             type="date"
             placeholder="DD/MM/YYYY"
@@ -160,6 +167,7 @@ const Register = () => {
 
           <div className={styles.tAndC}>
             <input
+              className={errors.tAndCCheck && styles.danger}
               name="tAndCCheck"
               type="checkbox"
               ref={
