@@ -9,6 +9,18 @@ body {
   width: 560px;
   margin: auto;
 }
+.makeInline {
+  display: flex;
+  justify-content: space-between;
+
+  .info {
+    width: 30px;
+    height: 30px;
+    color:limegreen;
+    margin-top: 5px;
+  }
+}
+
 
 // Desktop Styles
 .linkContainerOne {
@@ -20,7 +32,8 @@ body {
       text-decoration: none;
       display: flex;
       justify-content: space-between;
-      padding: 50px;              
+      padding: 50px;  
+                 
     .fork{
       width: 100px;
       height: 120px;
@@ -29,10 +42,12 @@ body {
     h3 {
       color: white;
       margin-top: 25px;
+      text-decoration: none;
     }
     .textMeal {
       color: white;
       font-size: small;
+      text-decoration: none;
     }
   }
 }
@@ -62,6 +77,8 @@ body {
 .leagueTable {
   width: 100px;
 }
+
+
 
 // Mobile Styles
 @media screen and (max-width:576px){

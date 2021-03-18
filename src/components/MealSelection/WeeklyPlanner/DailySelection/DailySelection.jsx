@@ -4,13 +4,9 @@ import RecipeList from './RecipeList';
 import DayDateBar from './DayDateBar/DayDateBar.jsx';
 
 const DailySelection = (props) => {
-    const {date, setActiveDate, activeDate, action, mealDayData} = props;
+    const {date, setActiveDate, activeDate, action, mealDayData, getMealChoice} = props;
 
-    // mealDiet is an array of dietary information e.g. meat, fish, vegan...
-    // Need a mapping function to display each value in the array
-    //  this function must be general as multiply mealData keys have arrays as values 
-    
-    // console.log(mealDayData[0].mealName)
+    // mealDiet is an array of dietary information e.g. meat, fish, vegan... 
 
     // mealOption is an array with three objects. Each object is a meal option.
     // The meal option object keys are the bits of meal information display.
@@ -26,15 +22,16 @@ const DailySelection = (props) => {
     const [activeMeal, setActiveMeal] = useState("");
     
     const getActiveMeal = (recipeName) => {
+        getMealChoice(recipeName);
         return setActiveMeal(recipeName);
     }
     const selectItem = () => {
         return setIsSelected(true);
     }
-
+  
     return (
         <div className={styles.dailySelection}>
-            <DayDateBar date={date} setActiveDate={setActiveDate} activeDate={activeDate} isSelected={isSelected} activeMeal={activeMeal} action={action}/>
+            <DayDateBar date={date} setActiveDate={setActiveDate} activeDate={activeDate} isSelected={isSelected} activeMeal={activeMeal} action={action} getActiveMeal={getActiveMeal}/>
             {
                 activeDate === date ? <RecipeList meal={meal} action={action}  selectItem={selectItem} getActiveMeal={getActiveMeal}/> : ""
             }

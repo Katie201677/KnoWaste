@@ -1,0 +1,33 @@
+@import '../../assets/styles/variables';
+
+.popup {
+  position: relative;
+  .popupText {
+    visibility: hidden;
+    width: 60vw;
+    height: 50vh;
+    background-color: $background-color;
+    color: $primary-color;
+    text-align: center;
+    border-radius: $border-radius-2;
+    padding: 8px 20px;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 275px;
+      }
+  }
+
+.show {
+  visibility: visible !important;
+  
+}
+.info {
+  width: 30px !important;
+  height: 30px !important;
+  padding: 10px;
+  color: limegreen;
+}
+.info:hover {
+  cursor: pointer;
+}
