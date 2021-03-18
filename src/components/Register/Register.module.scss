@@ -24,7 +24,7 @@ button {
   }
 }
 
-input:focus {
+input:focus, select:focus {
   border: 2px solid $primary-color;
   outline-color: $primary-color;
   outline-style: none;
@@ -55,18 +55,13 @@ input:focus {
   
 }
 
-@media screen and (max-width: 580px) {
-  .mainFormContainer {
-    min-width: 480px;
-  }
-}
+
 
 
 .mainFormContainer {
   margin: 100px auto;
-  max-width: 780px;
+  max-width: 580px;
   width: 50%;
-  min-width: 580px; 
   padding: 50px;
   box-sizing: border-box;
   border-radius: $border-radius-2;
@@ -109,6 +104,15 @@ input:focus {
   }
 }
 
+@media screen and (max-width: 580px) {
+  .mainFormContainer {
+    max-width: 95%;
+    width: 95%;
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
 .mainFormContainer:before {
 	content: "";
 	position: absolute;
@@ -130,17 +134,13 @@ input:focus {
     font-size: 22px;
 }
 
-@import "../../assets/styles/variables";
-@import "../../assets/styles/buttons";
-@import "../../assets/styles/typography";
-
-input,select {
+.mainFormContainer input, .mainFormContainer select {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  height: 36px;
+  height: 30px;
   border-radius: 30px;
-  margin: 4px 0 20px 0;
+  margin: 4px 0 0 0;
   background-color: white;
   color: $form-font-color;
   border: none;
@@ -155,13 +155,13 @@ textarea {
 .inputError {
   font-size: 12px;
   color: rgb(209, 52, 52); //fixed reference to danger color
-  margin-top: -5px;
   
 }
 
 label {
   display: block;
   font-size: 12px;
+  margin-top:  10px;
 }
 
 // anything else?... radio buttons? checkboxes?
