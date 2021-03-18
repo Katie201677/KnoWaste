@@ -9,7 +9,6 @@ const MealSelection = (props) => {
   return (
     <div className="content">
       <NavBar />
-      <Timer />
       <div className={`${styles.page} mainSection`}>
         <WeeklyPlanner mealData = {props.mealData} getMealChoice = {props.getMealChoice} />
         <Link to="mealconfirmation">

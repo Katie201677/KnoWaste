@@ -18,7 +18,7 @@ const HelpPopUp = (props) => {
 
   return (
     <div>
-      <div>
+      <div className='inforTopRight'>
         <FontAwesomeIcon
           onClick={handleClick}
           icon="question-circle"

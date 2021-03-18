@@ -15,7 +15,7 @@ const Home = () => {
       <NavBar />
       <div className={styles.fullPage}>
         <div className={styles.makeInline}>
-          <Timer />
+         
           <HelpPopUp sourcePage='homepage'/>
         </div>
         <div className={styles.linkContainer} >
@@ -33,6 +33,7 @@ const Home = () => {
               </div>  
             </div>
           </div>
+          <Timer />
           <div className={styles.linkContainerTwo}>
        
               <div className={`${styles.aboutUs} box-style-1`}>

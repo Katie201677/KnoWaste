@@ -6,15 +6,17 @@
     visibility: hidden;
     width: 60vw;
     height: 50vh;
-    background-color: $primary-color;
-    color: $secondary-color;
+    background-color: $secondary-color;
+    color: $hyperlink-color;
     text-align: center;
     border-radius: $border-radius-2;
     padding: 8px 20px;
     position: absolute;
     z-index: 1;
     top: 20px;
-    right: 275px;
+    right: 40%;
+    border-left: 10px solid $primary-color;
+    border-right: 10px solid $primary-color;
       }
   }
 
@@ -30,4 +32,7 @@
 }
 .info:hover {
   cursor: pointer;
+}
+.inforTopRight {
+  
 }

@@ -51,11 +51,13 @@ const Timer = () => {
   }, []);
   
   return (
-    <div className={styles.Timer}>
-      { isTimerRunout? null
-            : <h2>{timeLeftStr} <span>until orders close</span></h2> 
-        }
-    </div>
+    
+      <div className={`${styles.Timer} textwhite`}>
+        { isTimerRunout? null
+              : <h2>{timeLeftStr} <span className="textwhite">until orders close</span></h2>
+          }
+      </div>
+    
   )
 }
 

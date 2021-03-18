@@ -18,7 +18,7 @@ const NavBar = () => {
         <div className="nav-box-desk">
             <section className={`${styles.navBarContainer} box-style-4`}>
                 <ul className={styles.mainNav}>
-                    <li className={styles.utensils}>
+                    <li>
                         <Link to="/"> 
                             <FontAwesomeIcon icon="home" className={styles.iconStyle}/>
                         </Link>    
