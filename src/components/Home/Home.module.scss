@@ -1,12 +1,5 @@
 @import '../../assets/styles/styles';
 
-body {
-  
-  //background-color: $background-color;
-  background: url('../../assets/images/background_1.jpg') center repeat;
-  // background-size: cover;
-}
-
 .linkContainer {
   width: 80%;
   margin: auto;
@@ -15,7 +8,7 @@ body {
 }
 .makeInline {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 
   .info {
     width: 30px;

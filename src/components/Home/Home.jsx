@@ -15,8 +15,7 @@ const Home = () => {
       <NavBar />
       <div className={styles.fullPage}>
         <div className={styles.makeInline}>
-         
-          <HelpPopUp sourcePage='homepage'/>
+         <HelpPopUp sourcePage='homepage'/>
         </div>
         <div className={styles.linkContainer} >
         

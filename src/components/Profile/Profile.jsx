@@ -22,7 +22,7 @@ const Profile = () => {
   return (
     <div className="content">
       <NavBar />
-      <Timer />
+      {/* <Timer /> */}
       <div className={styles.mainSection} >
         {/* profile picture tile */}
 

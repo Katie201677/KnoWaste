@@ -7,7 +7,7 @@ import Logo from '../../assets/Logo_white_new.png'
 const AboutUs = () => {
   return (
     <div className={styles.content}>
-      <Timer />
+      {/* <Timer /> */}
       <NavBar />
       <div className={styles.mainSection}>
 
