@@ -13,9 +13,9 @@ const MealCard = (prop) => {
           <h3>{day}</h3>
           <p>{meal}</p>
       </div>
-      <div>
+      {/* <div>
         <FontAwesomeIcon icon="pen" className={styles.penIcon} />
-      </div>
+      </div> */}
     </li>
   );
 };

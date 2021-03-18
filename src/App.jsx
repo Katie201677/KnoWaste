@@ -10,9 +10,11 @@ import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
 import NavBar from './components/NavBar'
 import Gamification from './components/Gamification';
+import mealData from "./assets/data/meal-data.json"
 import './App.css';
 import './assets/styles/styles.scss';
 import library from './assets/data/fa-library';
+import mealChoiceArr from "./assets/data/user-meal-choices.json"
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +23,23 @@ import {
  } from 'react-router-dom';
 
 const App = () => {
+
+  // meal choice is an array for storing the users selected main meals
+  
+
+  // get meal choice is a function which adds the selected meals as recipe names
+  // getMealChoice function is passed down as props: app -> mealselection -> .. -> DailySelection
+  const getMealChoice = (activeMeal) => {
+    mealChoiceArr.push(activeMeal)
+    console.log(mealChoiceArr);
+    return mealChoiceArr;
+   }
+
+  // function to clear meal array when edit button selected on meal confirmation page
+  // passed as a prop to meal confirmation
+  const clearMealChoiceArr = () => mealChoiceArr.length = 0;
+   
+
   return (
     <div>
       <Router>
@@ -38,7 +57,7 @@ const App = () => {
             <NavBar />
           </Route>
           <Route path='/mealselection'>
-            <MealSelection />
+            <MealSelection mealData={mealData} getMealChoice = {getMealChoice} />
           </Route>
           <Route path='/profile'>
             <Profile />
@@ -47,7 +66,7 @@ const App = () => {
             <AboutUs />
           </Route>
           <Route path='/mealconfirmation'>
-            <MealConfirmation />
+            <MealConfirmation mealChoiceArr={mealChoiceArr} clearArr={clearMealChoiceArr} />
           </Route>
           <Route path='/environment'>
             <Environment />
@@ -60,8 +79,11 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+     
     </div>
   );
 }
-
+export const testFunction = () => {
+  return "All Good"
+}
 export default App;

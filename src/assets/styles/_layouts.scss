@@ -1,3 +1,57 @@
-.content {
+/* HOW TO USE
+@import "../../assets/styles/styles.scss"   into your module.
+
+the first div, which wraps <NavBar> <Timer> <yourComponent> needs to have className={styles.content}
+example: MealSelection.jsx -->    <div className={styles.content}> 
+                                        <NavBar> <Timer> <WeeklySelection> 
+                                  </div>
+on your component the first div that wraps whatever you're displaying needs to have className={styles.mainSection}
+example: WeeklySelection.jsx ---> <div className={styles.mainSection}> 
+                                        <DailySelection> 
+                                  </div>
+
+CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
+ */
+
+
+ .content {
   display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 80px auto;
 }
+
+.nav-box-desk {
+  width: 152px;
+  height: 100vh;
+}
+
+.header-box-desk {
+  width: 1291px;
+  height: 143px;
+}
+
+.main-box-desk {
+  width: 1291px;
+  height: 877px;
+}
+
+@media only screen and (max-width: 576px) {
+    body {
+      background-image: none;
+    }
+    .content {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 1fr 75px;
+      
+    }
+
+    .mainSection {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      //width: 100vw;
+    }
+  }

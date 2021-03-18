@@ -8,7 +8,8 @@
     grid-row-start: 1;
     grid-row-end: 2;
 
-    
+
+    background-color: transparent;
     width: 100%;
     height: 80px;
 
@@ -18,12 +19,12 @@
 
     h2 { 
         margin: auto 30px;
-        color:$tertiary-color;
+        font-size: $font-l;
     }
 
     span {
         color: black;
-        font-size: $font-s;
+        font-size: $font-m;
     }
 }
 
