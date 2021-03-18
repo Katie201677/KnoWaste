@@ -25,7 +25,7 @@ const ForgotPassword = () => {
         <div className={styles.forgotPasswordContainer}>
           
           <img className={styles.logo} src={logo} />
-          <p>Enter your e-mail and press the button. <br/>Then we’ll send you a link that you can use to reset your password!</p>
+          <p>Enter your e-mail and press the button.  Then we’ll send you a link that you can use to reset your password!</p>
           
           <section className={styles.email}>
             <label htmlFor="email">Email</label>
