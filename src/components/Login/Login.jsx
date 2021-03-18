@@ -43,9 +43,11 @@ const Login = () => {
         <form action="" className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
           <h3>Member Login</h3>
           <label htmlFor="emailInput">Email </label>
-          <input type="text" id="emailInput"
-          name="email"
-          ref={register({
+          <input 
+            className={errors.email && styles.danger}
+            type="text" id="emailInput"
+            name="email"
+            ref={register({
             required: "Email is required.",
             pattern: {
               value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
@@ -56,7 +58,9 @@ const Login = () => {
           {errors.email && <p className={styles.inputError}>{errors.email.message}</p>}
 
           <label htmlFor="passwordInput">Password </label>
-          <input type={isVisible ? 'text':'password'} id="passwordInput"
+          <input 
+            className={errors.password && styles.danger}
+          type={isVisible ? 'text':'password'} id="passwordInput"
           name="password" ref={register({
               required: "Password is required."
             })} />
