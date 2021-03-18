@@ -6,8 +6,8 @@
     visibility: hidden;
     width: 60vw;
     height: 50vh;
-    background-color: $background-color;
-    color: $primary-color;
+    background-color: $primary-color;
+    color: $secondary-color;
     text-align: center;
     border-radius: $border-radius-2;
     padding: 8px 20px;
@@ -26,7 +26,7 @@
   width: 30px !important;
   height: 30px !important;
   padding: 10px;
-  color: limegreen;
+  color: $primary-color;
 }
 .info:hover {
   cursor: pointer;
