@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: $background-gradient;
+    background: $secondary-color;
 
     .closeBtn {
         display: flex;
@@ -90,7 +90,7 @@
         z-index: 1;
         top: 0;
         left: 75px;
-        background: $background-gradient;
+        background: $secondary-color;
         overflow-x: hidden;
         padding-top: 60px;
         opacity: 0.8;
@@ -185,7 +185,7 @@
             top: 75px;
             right: 0;
             margin-left: -75px;
-            background: $background-gradient;
+            background: $secondary-color;
             overflow-x: hidden;
             opacity: 1;
         }
