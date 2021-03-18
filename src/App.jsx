@@ -17,6 +17,7 @@ import mealData from "./assets/data/meal-data.json"
 import './App.css';
 import './assets/styles/styles.scss';
 import library from './assets/data/fa-library';
+import mealChoiceArr from "./assets/data/user-meal-choices.json"
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,7 +29,7 @@ import AdminHome from './components/Admin/AdminHome';
 const App = () => {
 
   // meal choice is an array for storing the users selected main meals
-  let mealChoiceArr = [];
+  
 
   // get meal choice is a function which adds the selected meals as recipe names
   // getMealChoice function is passed down as props: app -> mealselection -> .. -> DailySelection
@@ -40,7 +41,7 @@ const App = () => {
 
   // function to clear meal array when edit button selected on meal confirmation page
   // passed as a prop to meal confirmation
-  const clearMealChoiceArr = () => mealChoiceArr = []
+  const clearMealChoiceArr = () => mealChoiceArr.length = 0;
    
 
   return (
