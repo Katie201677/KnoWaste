@@ -8,7 +8,8 @@ import {
   faPen,
   faArrowRight,
   faInfoCircle,
-  faQuestionCircle
+  faQuestionCircle,
+  faHome
 } from "@fortawesome/free-solid-svg-icons";
 
-export default library.add(faUtensils, faTrophy, faUserCircle, faPen, faArrowRight, faInfoCircle, faQuestionCircle);
+export default library.add(faHome, faUtensils, faTrophy, faUserCircle, faPen, faArrowRight, faInfoCircle, faQuestionCircle);

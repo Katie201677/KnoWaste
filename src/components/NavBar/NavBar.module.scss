@@ -1,17 +1,27 @@
+@import '../../assets/styles/variables';
 @import "../../assets/styles/styles.scss";
+
+.navBarContainer {
+    height: 419px;
+    width: 94px;
+}
 
 .navigation {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 3;
-
-    
+    grid-row-end: 3;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: $secondary-color;
+    color: $primary-color;
+    background: $background-color;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 10;
+    border-radius: $border-radius-2;
 
     .closeBtn {
         display: flex;
@@ -81,59 +91,42 @@
     }
 }
 
-
- /*    .sideNav {
-        height: 100%;
-        width: 400px;
-        position: fixed;
-        justify-content: space-evenly;
-        z-index: 1;
-        top: 0;
-        left: 75px;
-        background: $secondary-color;
-        overflow-x: hidden;
-        padding-top: 60px;
-        opacity: 0.8;
+    .mainNav {
+        padding-right: 0px;
+        padding-left:20px;
+       
     }
 
-    .sideNav a {
-        justify-content: space-evenly;
-        padding: 15px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 35px;
-        color: black;
-        display: block;
-        transition: 0.3s;
+    li {
+        // margin-right: 30px;
+        padding-top: 17px;
+        list-style-type: none;
+        font-size: 40px;
+        filter: blur(0.5px);
+
+
+    }
+.iconStyle {
+    color: $primary-color;
+    opacity: 0.5;
+}
+.iconStyle:hover {
+    opacity: 1;
+}
+    .utensils {
+        margin-left: 5px;
+        
     }
 
-    .sideNav a:hover {
-        color: #f1f1f1;
-    } */
-
-   /*  .appear-enter {
-        opacity: 0;
+    .trophy {
+        margin-right: 20px;
     }
 
-    .appear-enter-active {
-        opacity: .5;
-        transition: opacity 400ms;
+    .userCircle {
+        margin-left: 3px;
     }
 
-    .appear-exit {
-        opacity: 1;
-    }
 
-    .appear-exit-active {
-        opacity: 0;
-        transition: opacity 200ms;
-    }
-
-    .sideNav {
-        transition: margin-left .5s;
-        padding: 16px;
-    } */
-
-    
 
 @media screen and (max-width: 568px) {
     .navigation {

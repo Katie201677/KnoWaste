@@ -28,9 +28,19 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   grid-row-end: 3;
 }
 
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  //width: 100vw;
+}
+
 .nav-box-desk {
-  width: 152px;
+  width: 94px;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .header-box-desk {
