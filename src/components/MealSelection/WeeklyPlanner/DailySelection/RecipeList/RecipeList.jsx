@@ -8,7 +8,7 @@ const RecipeList = (props) => {
   
 
   return (
-    <div className={styles.recipeList && 'box-style-2'}>
+    <div className={styles.recipeList}>
       <section className={styles.transparentMeals}> 
         <RecipeCard mealChoice={meal[0]} action={action} selectItem={selectItem} getActiveMeal={getActiveMeal} />
         <RecipeCard mealChoice={meal[1]} action={action} selectItem={selectItem} getActiveMeal={getActiveMeal} />

@@ -20,7 +20,7 @@ const WeeklyPlanner = (props) => {
   // props.mealData[i] -> i = index and refers to the day in the week: i = 0 -> Monday...
 
   return (
-    <div className={styles.weeklySelection && 'box-style-2'}>
+    <div>
       {/* Monday */}
       <DailySelection getMealChoice={props.getMealChoice} mealDayData={props.mealData[0]} date="Monday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Monday")} />
       

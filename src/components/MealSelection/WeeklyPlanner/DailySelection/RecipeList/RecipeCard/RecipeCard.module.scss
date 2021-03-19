@@ -39,6 +39,10 @@
         align-items: center;
         font-size: $font-s;
     }
+
+    .selectButton {
+        width: 110px;
+    }
 }
 
 @media only screen and (max-width: 576px) {

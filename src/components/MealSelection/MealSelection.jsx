@@ -11,9 +11,13 @@ const MealSelection = (props) => {
       <NavBar />
       <div className={`${styles.page} mainSection`}>
         <WeeklyPlanner mealData = {props.mealData} getMealChoice = {props.getMealChoice} />
-        <Link to="mealconfirmation">
-          <button>Review</button>
-        </Link>
+        
+          <button className={"button-style-1 " + styles.btnReview}>
+            <Link to="mealconfirmation">
+              Review
+            </Link>
+          </button>
+      
       </div>
     </div>
   );

@@ -5,6 +5,12 @@
   // grid-template-columns: 60px 1fr;
 }
 
+.btnReview {
+  width: 300px;
+  margin: auto!important;
+  display: block;
+}
+
 @media only screen and (max-width: 600px) {
   .page {
       grid-template-columns: 1fr;

@@ -5,7 +5,7 @@
   .popupText {
     visibility: hidden;
     width: 60vw;
-    height: 50vh;
+    height: 200px;
     background-color: $secondary-color;
     color: $hyperlink-color;
     text-align: center;
@@ -13,7 +13,7 @@
     padding: 8px 20px;
     position: absolute;
     z-index: 1;
-    left: 50%;
+    right: 10px;
     margin-left: -30vw;
     border-left: 10px solid $primary-color;
     border-right: 10px solid $primary-color;
