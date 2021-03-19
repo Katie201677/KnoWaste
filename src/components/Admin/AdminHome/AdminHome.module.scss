@@ -1,81 +1,66 @@
-@import '../../assets/styles/styles';
+@import '../../../assets/styles/styles';
+
+
+.content{
+  
+  background-color: $background-color;
+}
 
 .linkContainer {
-  width: 80%;
+  width: 560px;
   margin: auto;
-  max-width: 900px;
-
+  grid-column: 2;
+  grid-row: 2;
 }
-.makeInline {
-  display: flex;
-  justify-content: flex-end;
-
-  .info {
-    width: 30px;
-    height: 30px;
-    color: orange;
-    margin-top: 5px;
-  }
-}
-
 
 // Desktop Styles
 .linkContainerOne {
-  height: 260px;
-  border-radius: $border-radius-2;
-  
   .mealSelection {
       text-decoration: none;
       display: flex;
-      justify-content: space-evenly;
-      padding: 50px;  
-                 
+      justify-content: space-between;
+      padding: 50px;              
     .fork{
       width: 100px;
       height: 120px;
       margin-top: 5px;
     }
-    h2 {
+    h3 {
       color: white;
       margin-top: 25px;
-      text-decoration: none;
     }
     .textMeal {
       color: white;
       font-size: small;
-      text-decoration: none;
     }
-   
   }
 }
 .linkContainerTwo {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly
 }
 .aboutUs {
-  width: 50%;
-  margin-right: 10px;
   text-align: center;
   margin-top: 20px;
   padding: 30px;
   border-radius: $border-radius-2;
- // width: 90%;
+  width: 200px;
+  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
+                                       rgba(175, 87, 235, 0.9) 100%);
 }
 .gamification {
   text-align: center;
   margin-top: 20px;
   padding: 30px;
   border-radius: $border-radius-2;
-  width: 50%;
-  margin-left: 10px;
-
+  width: 200px;
+  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
+  rgba(175, 87, 235, 0.9) 100%);
 }
 
 .leagueTable {
   width: 100px;
 }
-
-
 
 // Mobile Styles
 @media screen and (max-width:576px){
@@ -88,7 +73,6 @@
 body {
   height: 100vh;
   width: 100vw;
- 
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -151,6 +135,9 @@ body {
           color: white;
           font-size: small;
         }
+      }
+      .weekPlanner{
+        
       }
       }
       .linkContainerTwo {

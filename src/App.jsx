@@ -10,6 +10,9 @@ import MealConfirmation from './components/MealConfirmation';
 import Environment from './components/Environment';
 import NavBar from './components/NavBar'
 import Gamification from './components/Gamification';
+import adminHome from './components/Admin/AdminHome';
+import AdminMealInput from './components/Admin/AdminMealInput';
+import AdminWeeklyPlanner from './components/Admin/AdminWeeklyPlanner';
 import mealData from "./assets/data/meal-data.json"
 import './App.css';
 import './assets/styles/styles.scss';
@@ -21,6 +24,7 @@ import {
   Route,
   Link
  } from 'react-router-dom';
+import AdminHome from './components/Admin/AdminHome';
 
 const App = () => {
 
@@ -73,6 +77,15 @@ const App = () => {
           </Route>
           <Route path='/gamification'>
             <Gamification />
+          </Route>
+          <Route path='/admin'>
+            <AdminHome />
+          </Route>
+          <Route path='/adminmealinput'>
+            <AdminMealInput />
+          </Route>
+          <Route path='/adminweeklyplanner'>
+            <AdminWeeklyPlanner />
           </Route>
           <Route path='/'>
             <Home />
