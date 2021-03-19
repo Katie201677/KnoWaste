@@ -43,7 +43,7 @@ const Timer = () => {
       } else {
         setIsTimerRunout(false);
       }
-      setTimeLeft(` ${days} Days ${hours}h ${minutes}min ${seconds}sec`)
+      setTimeLeft(` ${days}D ${hours}h ${minutes}min ${seconds}sec`)
     }, 1000)
     return ()=> {
       clearInterval(myInterval);
