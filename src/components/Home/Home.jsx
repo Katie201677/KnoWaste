@@ -22,15 +22,16 @@ const Home = () => {
         
           <div className={`${styles.linkContainerOne} box-style-1`}>
             <div className={styles.mealSelection}>
-              <div className="textcenter">
-                <h1 className="textwhite">Meal Selection</h1>
-                <Link to="/mealselection">
+            <h1 className="textwhite">Meal Selection</h1>
+            <Link to="/mealselection">
                   <button className='button-style-1'>Click here to choose!</button>
-                </Link>               
-              </div>
-              <div>
-                <img src={Fork} className={styles.fork}></img>
-              </div>  
+            </Link>               
+            <img src={Fork} className={styles.fork}></img>
+                
+                {/* <div className="textcenter">
+                </div>
+                <div>
+                </div>   */}
             </div>
           </div>
           <Timer />
