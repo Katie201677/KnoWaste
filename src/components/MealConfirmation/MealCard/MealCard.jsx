@@ -9,7 +9,7 @@ const MealCard = (prop) => {
       {/* <div>
         <FontAwesomeIcon icon="arrow-right" className={styles.arrowIcon} />
       </div> */}
-      <div className = {styles.mealInfo}>
+      <div className = {`box-style-2 ${styles.mealInfo}`}>
           <h3>{day}</h3>
           <p>{meal}</p>
       </div>

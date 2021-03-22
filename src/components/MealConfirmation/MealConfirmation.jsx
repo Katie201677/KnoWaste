@@ -6,6 +6,7 @@ import MealCard from "./MealCard";
 import { Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Timer from "../MealSelection/Timer";
+// import HelpPopUp from '../HelpPopUp';
 
 const MealConfirmation = (props) => {
   console.log(props.mealChoiceArr);
@@ -25,26 +26,25 @@ const MealConfirmation = (props) => {
   ];
 
   return (
-
-    <div className={`content ${styles.background}`}>
-      <Timer />
+    <div className='content'>
       <NavBar />
-      <main>
-        <div className={styles.mainDiv}>
+      {/* <HelpPopUp /> */}
+      {/* <Timer className={styles.timerMealConfirm}/> */}
+
+      {/* <main> */}
+        <div className={`mainSection ${styles.mealConfirmLayout}`}>
           {/* <div className={styles.milkyBackground}></div> */}
-          <h1>Your Meal Choices</h1>
-
-          <Link to="mealselection">
-            <FontAwesomeIcon
-              onClick={props.clearArr}
-              icon="pen"
-              className={styles.penIcon}
-            />
-          </Link>
-
-          <section className={styles.confirmMenu}>
-            {
-              <ul>
+          <div className={`box-style-1 ${styles.mealConfirmMilky}`}>
+            <h1>Your Meal Choices</h1>
+            <Link to="mealselection">
+                <FontAwesomeIcon
+                  onClick={props.clearArr}
+                  icon="pen"
+                  className={styles.penIcon}
+                />
+            </Link>
+            <div className={styles.mealConfirmBox}>
+              <section className={styles.confirmMenu}>
                 {days.map((day) => {
                   let i = days.indexOf(day);
                     return (
@@ -54,14 +54,14 @@ const MealConfirmation = (props) => {
                     )
                   })
                 }
-              </ul>
-            }
-          </section>
-          <Link to="/">
-            <button className="confirmationButton" onClick={handleSubmit}>CHECKOUT</button>
-          </Link>
+              </section>
+              <Link to="/">
+                <button className={`button-style-1 ${styles.confirmationButton}`} onClick={handleSubmit}>CHECKOUT</button>
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
+      {/* </main> */}
     </div>
   );
 };

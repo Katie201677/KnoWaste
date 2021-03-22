@@ -4,151 +4,62 @@
     background-color: $background-color;
 }
 
-main {
-
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+.mealConfirmLayout {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.mealConfirmBox {
+    display: flex;
     flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-color: $background-color;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
     color: $primary-font-color;
-    padding: 10px;
-    box-sizing: border-box;
-    /* -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px); */
+    display: inline-block;
+}
 
-    // position
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    .mainDiv {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto;
-        height: 100%;
-        width: 100%;
-        // max-width: calc(100% - 20px);
-        border-radius: $border-radius-2;
-        // background-attachment: fixed;
-        padding: 20px;
-        // background-color: rgba(255,255,255,0.8);
-        box-sizing: border-box;
-        box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
-    }
-
-
-
-
-    .dayItemImage {
-        display: flex;
-        flex-direction: column;
-        height: 400px;
-        width: 200px;
-
+@media only screen and (max-width: $comp-breakpoint) {
+    .mealConfirmMilky {
+        height: 740px;
+        width: 1150px;
     }
 
     .confirmMenu {
-        // width: 900px;
-        max-width: 100%;
-        border-radius: $border-radius-2;
-        z-index: 2;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
-        // display: grid;
-        // grid-template-areas:
-        //     "a b c d."
-        //     ". e f g .";
+        margin-bottom: 20px;
+    }
+    
+    .confirmationButton {
+        font-size: 1rem;
+        width: 307px;
+        height: 62px;
+    } 
+} 
 
-
+@media only screen and (max-width: $mob-breakpoint) {
+    .mealConfirmMilky {
+        height: 80vh;
+        width: 90vw;
     }
 
-    .day {
-        width: 20%;
-        margin: 10px;
-    }
-
-    // #Monday {
-    //     grid-area: "a";
-    //     background: red;
-    // }
-
-    // #Tuesday {
-    //     grid-area: "b";
-    // }
-
-    // #Wednesday {
-    //     grid-area: "c";
-    // }
-
-    // #Thursday {
-    //     grid-area: "d";
-    // }
-
-    // #Friday {
-    //     grid-area: "e";
-    // }
-
-    // #Saturday {
-    //     grid-area: "f";
-    // }
-
-    // #Sunday {
-    //     grid-area: "g";
-    // }
-
-    h1 {
-        color: $primary-font-color;
-        z-index: 2;
-    }
-
-    .mealOption {
+    .confirmMenu {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-bottom: 1vh;
     }
 
-    ul {
-        li {
-            color: #454599;
-
-            list-style-type: none;
-
-            p {
-                color: #3F3737;
-            }
-
-            .dot {
-                height: 25px;
-                width: 25px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-            }
-
-        }
-    }
-}
-
-.confirmationButton {
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    color: white;
-    height: 40px;
-    border-radius: 30px;
-    border-style: none;
-    font-size: 1rem;
-    width: 307px;
-    height: 62px;
+    .confirmationButton {
+        font-size: 1rem;
+        height: 4vh;
+        width: 80vw;
+        line-height: 1.5rem;
+    } 
 } 
 
