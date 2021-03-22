@@ -20,22 +20,15 @@ const Home = () => {
         </div>
         <div className={styles.linkContainer} >
         
-          <div className={`${styles.linkContainerOne} box-style-1`}>
-            <div className={styles.mealSelection}>
+            <div className={`${styles.mealSelection} box-style-1`}>
             <h1 className="textwhite">Meal Selection</h1>
             <Link to="/mealselection">
                   <button className='button-style-1'>Click here to choose!</button>
             </Link>               
             <img src={Fork} className={styles.fork}></img>
                 
-                {/* <div className="textcenter">
-                </div>
-                <div>
-                </div>   */}
             </div>
-          </div>
           <Timer />
-          <div className={styles.linkContainerTwo}>
        
               <div className={`${styles.aboutUs} box-style-1`}>
                 <img src={Logo} className={styles.leagueTable}></img>
@@ -55,7 +48,6 @@ const Home = () => {
                 <button className='button-style-1'>View League</button>
                 </Link>
             </div>
-        </div>
         </div>
 
         
