@@ -1,4 +1,5 @@
 @import '../../assets/styles/styles';
+@import '../../assets/styles/layouts';
 
 .linkContainer {
   width: 80%;
@@ -21,7 +22,7 @@
 
 // Desktop Styles
 .linkContainerOne {
-  height: 200px;
+
   border-radius: $border-radius-2;
   
   .mealSelection {
@@ -48,6 +49,7 @@
    
   }
 }
+
 .linkContainerTwo {
   display: flex;
   justify-content: space-between;
@@ -112,7 +114,7 @@ body {
   }
 
   .linkContainer {
-    background: rgba(255, 250, 250, 0.5);
+    
       backdrop-filter: blur(4px);
       border-radius: 30px;
       height: 60vh;
@@ -126,11 +128,7 @@ body {
       align-items: center;
 
       .linkContainerOne {
-        height: 30vh;
-        width: 70vw;
-        border-radius: 50%;
-        background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                           rgba(175, 87, 235, 0.9) 100%);
+
         margin-top: 15px;
         
         
@@ -163,8 +161,6 @@ body {
         .aboutUs, .gamification {
           width: 45%;
           height: 100%;
-          background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                      rgba(175, 87, 235, 0.9) 100%);
           border-radius: 25px;
 
           .logo {

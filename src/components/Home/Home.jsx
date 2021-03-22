@@ -11,8 +11,9 @@ import HelpPopUp from '../HelpPopUp';
 const Home = () => {
 
   return (
-    <div className="content">
-      <NavBar />
+    <div className={styles.content}>
+      {/*<NavBar />*/}
+      <div></div>
       <div className={styles.fullPage}>
         <div className={styles.makeInline}>
          <HelpPopUp sourcePage='homepage'/>
