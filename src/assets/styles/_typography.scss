@@ -16,6 +16,12 @@ $font-xs: 10px;
 .textwhite {
   color: white;
 }
+.textcenter {
+  text-align: center;
+}
+
+$form-font-color: #3f3737;
+
 
 h1 {
 
@@ -31,4 +37,11 @@ p {
 }
 
 // anything else?...
+a:visited {
+  color: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
 

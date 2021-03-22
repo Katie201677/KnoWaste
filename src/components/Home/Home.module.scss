@@ -1,22 +1,19 @@
 @import '../../assets/styles/styles';
 
-body {
-  background: url('../../assets/images/photo-canteen.jpg') center no-repeat;
-  background-size: cover;
-}
-
 .linkContainer {
-  width: 560px;
+  width: 80%;
   margin: auto;
+  max-width: 900px;
+
 }
 .makeInline {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   .info {
     width: 30px;
     height: 30px;
-    color:limegreen;
+    color: orange;
     margin-top: 5px;
   }
 }
@@ -24,22 +21,21 @@ body {
 
 // Desktop Styles
 .linkContainerOne {
-  height: 260px;
+  height: 200px;
   border-radius: $border-radius-2;
-  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                       rgba(175, 87, 235, 0.9) 100%);
+  
   .mealSelection {
       text-decoration: none;
       display: flex;
-      justify-content: space-between;
-      padding: 50px;  
+      justify-content: space-evenly;
+      padding: 25px;  
                  
     .fork{
       width: 100px;
       height: 120px;
       margin-top: 5px;
     }
-    h3 {
+    h2 {
       color: white;
       margin-top: 25px;
       text-decoration: none;
@@ -49,29 +45,30 @@ body {
       font-size: small;
       text-decoration: none;
     }
+   
   }
 }
 .linkContainerTwo {
   display: flex;
-  justify-content: space-evenly
+  justify-content: space-between;
 }
 .aboutUs {
+  width: 50%;
+  margin-right: 10px;
   text-align: center;
   margin-top: 20px;
   padding: 30px;
   border-radius: $border-radius-2;
-  width: 200px;
-  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-                                       rgba(175, 87, 235, 0.9) 100%);
+ // width: 90%;
 }
 .gamification {
   text-align: center;
   margin-top: 20px;
   padding: 30px;
   border-radius: $border-radius-2;
-  width: 200px;
-  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, 
-  rgba(175, 87, 235, 0.9) 100%);
+  width: 50%;
+  margin-left: 10px;
+
 }
 
 .leagueTable {
@@ -91,7 +88,7 @@ body {
 body {
   height: 100vh;
   width: 100vw;
-  background: url('../../assets/images/photo-canteen.jpg') center no-repeat;
+ 
   background-size: cover;
   display: flex;
   flex-direction: column;
