@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
-import firebase from 'firebase';
+import firebase from "firebase/app";
 import "firebase/auth";
-import "firebase/firestore";
+import {
+  FirebaseAuthProvider
+} from "@react-firebase/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCJypedQSVDr-lIILrJWSltWjcUQaHv6oc",
   authDomain: "knowaste-3c92c.firebaseapp.com",
@@ -17,11 +20,12 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseAuthProvider firebase={firebase} {...firebaseConfig}>
+      <App />
+    </FirebaseAuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Register.module.scss";
 import { useForm } from "react-hook-form";
-
+import firebase from 'firebase';
 const Register = () => {
   const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+//Firebase auth boilerplate
 
 
   // REAL EMAIL VALIDATION COMES HERE!
@@ -15,6 +16,17 @@ const Register = () => {
   };
 
   const onSubmit = (data) => {
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
       // Simple POST request with a JSON body using fetch
       // const requestOptions = {
       //     method: 'POST',
