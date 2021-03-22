@@ -11,29 +11,24 @@ import HelpPopUp from '../HelpPopUp';
 const Home = () => {
 
   return (
-    <div className="content">
-      <NavBar />
+    <div className={styles.content}>
+      {/*<NavBar />*/}
+      <div></div>
       <div className={styles.fullPage}>
         <div className={styles.makeInline}>
          <HelpPopUp sourcePage='homepage'/>
         </div>
         <div className={styles.linkContainer} >
         
-          <div className={`${styles.linkContainerOne} box-style-1`}>
-            <div className={styles.mealSelection}>
-              <div className="textcenter">
-                <h1 className="textwhite">Meal Selection</h1>
-                <Link to="/mealselection">
+            <div className={`${styles.mealSelection} box-style-1`}>
+            <h1 className="textwhite">Meal Selection</h1>
+            <Link to="/mealselection">
                   <button className='button-style-1'>Click here to choose!</button>
-                </Link>               
-              </div>
-              <div>
-                <img src={Fork} className={styles.fork}></img>
-              </div>  
+            </Link>               
+            <img src={Fork} className={styles.fork}></img>
+                
             </div>
-          </div>
           <Timer />
-          <div className={styles.linkContainerTwo}>
        
               <div className={`${styles.aboutUs} box-style-1`}>
                 <img src={Logo} className={styles.leagueTable}></img>
@@ -53,7 +48,6 @@ const Home = () => {
                 <button className='button-style-1'>View League</button>
                 </Link>
             </div>
-        </div>
         </div>
 
         
