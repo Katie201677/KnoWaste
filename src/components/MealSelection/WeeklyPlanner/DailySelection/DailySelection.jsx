@@ -30,7 +30,7 @@ const DailySelection = (props) => {
     }
   
     return (
-        <div className={styles.dailySelection}>
+        <div className={styles.dailySelection && 'box-style-2'}>
             <DayDateBar date={date} setActiveDate={setActiveDate} activeDate={activeDate} isSelected={isSelected} activeMeal={activeMeal} action={action} getActiveMeal={getActiveMeal}/>
             {
                 activeDate === date ? <RecipeList meal={meal} action={action}  selectItem={selectItem} getActiveMeal={getActiveMeal}/> : ""

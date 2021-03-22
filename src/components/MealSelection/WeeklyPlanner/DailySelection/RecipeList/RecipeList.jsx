@@ -2,8 +2,6 @@ import React from 'react';
 import RecipeCard from './RecipeCard/RecipeCard';
 import styles from './RecipeList.module.scss';
 
-
-
 const RecipeList = (props) => {
   const {action, selectItem, meal, getActiveMeal} = props;
   //Holds and organises the daily selection of food.

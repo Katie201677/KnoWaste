@@ -8,9 +8,8 @@ const RecipeCard = (props) => {
   
 
   return (
-    <div className={styles.recipeCard}>
-        <img src={imgSrc} alt={recipeName} className={styles.recipeImg} 
-             onClick={() => {getActiveMeal(recipeName); selectItem(); action();}} />
+    <div className={styles.recipeCard + " box-style-2"}>
+        <img src={imgSrc} alt={recipeName} className={styles.recipeImg} />
 
         
       <section className={styles.foodInfo}>
@@ -20,6 +19,10 @@ const RecipeCard = (props) => {
         <section className={styles.dietRestrictions}>
           <p>{dietaryrestriction.join(" ")}</p>
         </section>
+
+        <button className={"button-style-1 " + styles.selectButton} onClick={() => {getActiveMeal(recipeName); selectItem(); action();}}>
+          Select
+        </button>
         
       </section>
     </div>

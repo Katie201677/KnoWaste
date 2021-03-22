@@ -11,49 +11,52 @@ import HelpPopUp from '../HelpPopUp';
 const Home = () => {
 
   return (
-    <div className={styles.fullPage}>
-      <div className={styles.makeInline}>
-        <Timer />
-        <HelpPopUp sourcePage='homepage'/>
-      </div>
-      
-      
-
-      <div className={styles.linkContainer}>
-      <Link to="/mealselection">
-        <div className={styles.linkContainerOne}>
-          <div className={styles.mealSelection}>
-            <div>
-              <h2 className="text-white">Meal Selection</h2>
-                Click here to see this weeks meals
-              <p className={styles.textMeal}>Tonight you are having chicken curry!</p>
-            </div>
-            <div>
-              <img src={Fork} className={styles.fork}></img>
-            </div>  
-          </div>
+    <div className="content">
+      <NavBar />
+      <div className={styles.fullPage}>
+        <div className={styles.makeInline}>
+         <HelpPopUp sourcePage='homepage'/>
         </div>
-        </Link>
-        <div className={styles.linkContainerTwo}>
-          <Link to="environment">
-            <div className={styles.aboutUs}>
-              <img src={Logo} className={styles.leagueTable}></img>
-              <h3 className="text-white">Your Impact</h3>
-              <p className="text-white">Well done! 10% waste less than last week.</p>
+        <div className={styles.linkContainer} >
+        
+          <div className={`${styles.linkContainerOne} box-style-1`}>
+            <div className={styles.mealSelection}>
+              <div className="textcenter">
+                <h1 className="textwhite">Meal Selection</h1>
+                <Link to="/mealselection">
+                  <button className='button-style-1'>Click here to choose!</button>
+                </Link>               
+              </div>
+              <div>
+                <img src={Fork} className={styles.fork}></img>
+              </div>  
             </div>
-          </Link>
-          <Link to="gamification">
-            <div className={styles.gamification}>
-              <img src={Table} className={styles.leagueTable}></img>
-              <h3 className="text-white">League Tables</h3>       
-              <p className="text-white">Your hall is number #1 in the KnoWaste league.</p>
           </div>
-          </Link>
-      </div>
-      </div>
+          <Timer />
+          <div className={styles.linkContainerTwo}>
+       
+              <div className={`${styles.aboutUs} box-style-1`}>
+                <img src={Logo} className={styles.leagueTable}></img>
+                <h3 className="textwhite">Your Impact</h3>
+                <p className="textwhite">Well done! 10% waste less than last week.</p>
+                <Link to="environment">
+                 <button className='button-style-1'>Explore</button>
+                </Link>
+              </div>
+          
+         
+              <div className={`${styles.gamification} box-style-1`}>
+                <img src={Table} className={styles.leagueTable}></img>
+                <h3 className="textwhite">League Tables</h3>       
+                <p className="textwhite">Your hall is number #1 in the KnoWaste league.</p>
+                <Link to="gamification">
+                <button className='button-style-1'>View League</button>
+                </Link>
+            </div>
+        </div>
+        </div>
 
-      <div>
-        <NavBar /> 
+        
       </div>
     </div>
   );

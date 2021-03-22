@@ -25,6 +25,7 @@ const MealConfirmation = (props) => {
   ];
 
   return (
+
     <div className={`content ${styles.background}`}>
       <Timer />
       <NavBar />
@@ -42,19 +43,22 @@ const MealConfirmation = (props) => {
           </Link>
 
           <section className={styles.confirmMenu}>
-            {/* <ul> */}
-            {days.map((day) => {
-              let i = days.indexOf(day);
-              return (
-                <span key={day} className={styles.day}>
-                  <MealCard day={day} meal={props.mealChoiceArr[i]} />
-                </span>
-              );
-            })}
-            {/* </ul> */}
+            {
+              <ul>
+                {days.map((day) => {
+                  let i = days.indexOf(day);
+                    return (
+                      <>
+                        <MealCard day={day} meal={props.mealChoiceArr[i]}  />
+                      </>
+                    )
+                  })
+                }
+              </ul>
+            }
           </section>
           <Link to="/">
-            <button onClick={handleSubmit}>CHECKOUT</button>
+            <button className="confirmationButton" onClick={handleSubmit}>CHECKOUT</button>
           </Link>
         </div>
       </main>

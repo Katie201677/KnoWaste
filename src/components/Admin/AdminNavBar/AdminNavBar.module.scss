@@ -1,0 +1,209 @@
+@import "../../../assets/styles/styles.scss";
+
+.navigation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: $secondary-color;
+    height: 100vh;
+    position: fixed;
+    width: 80px;
+
+    .closeBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:5px;
+    }
+
+    .logo {
+        height: 70px;
+        width: auto;
+        opacity: 0.5;
+    }
+    
+    .logo:hover , .logo:active {
+        opacity: 1;
+    }
+
+    .logo:active {
+        transform: scale(0.9);
+    }
+    
+    
+    //NAVIGATION BUTTONS
+    ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 100%;
+
+    
+        li {
+            margin: 7px auto;
+            list-style-type: none;
+            background-color: $btn-navigation;
+            border: 5px solid $btn-navigation;
+            border-radius: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            height: 52px;
+            width: 52px;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .icon {
+                margin: auto;
+                opacity: 0.5;
+                font-size: $font-l;
+                color: $icon-navigation;
+                background-color: $btn-navigation;
+            }
+    
+            .icon:active, .icon:hover {
+                opacity: 1;
+            }
+    
+        }
+    
+        li:hover, li:active {
+            opacity: 1;
+            transform: scale(0.98);
+            box-shadow: none;
+        }
+       
+    }
+}
+
+
+ /*    .sideNav {
+        height: 100%;
+        width: 400px;
+        position: fixed;
+        justify-content: space-evenly;
+        z-index: 1;
+        top: 0;
+        left: 75px;
+        background: $secondary-color;
+        overflow-x: hidden;
+        padding-top: 60px;
+        opacity: 0.8;
+    }
+
+    .sideNav a {
+        justify-content: space-evenly;
+        padding: 15px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 35px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sideNav a:hover {
+        color: #f1f1f1;
+    } */
+
+   /*  .appear-enter {
+        opacity: 0;
+    }
+
+    .appear-enter-active {
+        opacity: .5;
+        transition: opacity 400ms;
+    }
+
+    .appear-exit {
+        opacity: 1;
+    }
+
+    .appear-exit-active {
+        opacity: 0;
+        transition: opacity 200ms;
+    }
+
+    .sideNav {
+        transition: margin-left .5s;
+        padding: 16px;
+    } */
+
+    
+
+@media screen and (max-width: 568px) {
+    .navigation {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        flex-direction: row;
+        justify-content: space-evenly;
+        background: $btn-navigation;
+
+        .closeBtn {
+            display: none;
+        }
+
+        ul {
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0;
+            
+            li {
+                margin: auto;
+                background-color: transparent;
+                border:none;
+                box-shadow: none;
+
+                height: auto;
+                width: auto;
+
+                .icon {
+                    background-color: transparent;
+                }
+        
+                .icon:hover , .icon:active {
+                    opacity: 1;
+                }
+            }
+            li:hover,li:active {
+                transform: none;
+            }
+        }
+
+
+        /* .sideNav {
+            height: 75.5%;
+            width: 100vw;
+            position: fixed;
+            top: 75px;
+            right: 0;
+            margin-left: -75px;
+            background: $secondary-color;
+            overflow-x: hidden;
+            opacity: 1;
+        }
+
+        .sideNav a {
+            padding: 15px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        } */
+
+    }
+
+
+
+}
