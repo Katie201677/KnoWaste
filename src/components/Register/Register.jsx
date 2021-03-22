@@ -176,7 +176,7 @@ const Register = () => {
               value = {true}
             />
             <p>
-              By ticking this box you aknowledge that you have read and agree to
+              By ticking this box you acknowledge that you have read and agree to
               our terms and conditions
             </p>
           </div>
@@ -189,8 +189,8 @@ const Register = () => {
               type="checkbox"
             ></input>
             <p>
-              By ticking this box you agree to recieving occasional tailored
-              advertisments about our amazing products
+              By ticking this box you agree to receiving occasional tailored
+              advertisements about our amazing products
             </p>
           </div>
             <button

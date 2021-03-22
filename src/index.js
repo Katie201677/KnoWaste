@@ -4,7 +4,8 @@ import './index.css';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
 import firebase from 'firebase';
-
+import "firebase/auth";
+import "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyCJypedQSVDr-lIILrJWSltWjcUQaHv6oc",
   authDomain: "knowaste-3c92c.firebaseapp.com",
