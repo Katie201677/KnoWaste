@@ -4,15 +4,45 @@ import mealLibrary from "../AdminLibrary/AdminLibrary.json";
 import AdminNavBar from "../AdminNavBar";
 import { useForm } from "react-hook-form";
 import AdminMealPreview from "./AdminMealPreview";
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 const AdminMealInput = () => {
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    mealLibrary.push(data);
-    console.log(data);
 
-    console.log(mealLibrary);
+  const onSubmit = (data) => {
+    const db = firebase.firestore();
+
+    var docRef = db.collection("mealinput").doc(data.mealName);
+
+    //check if doc/meal already exists
+    docRef
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          alert("Meal name already taken");
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+          writeMeal()
+        }
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+
+    const writeMeal = () => {
+      docRef
+        .set({
+          data,
+        })
+        .then(() => {
+          console.log("Document successfully written!");
+        })
+        .catch((error) => {
+          console.error("Error writing document: ", error);
+        });
+    };
   };
 
   return (
@@ -39,10 +69,9 @@ const AdminMealInput = () => {
             name="mealDescription"
             ref={register({ required: true })}
           ></textarea>
-          {errors.mealDescription &&
-            errors.mealDescription.type === "required" && (
-              <p>This field is required</p>
-            )}
+          {errors.mealDescription && errors.mealDescription.type === "required" && (
+            <p>This field is required</p>
+          )}
 
           <div className={styles.imgPreview}></div>
           <button className="button-style-1">Upload Image</button>
@@ -76,12 +105,7 @@ const AdminMealInput = () => {
 
           <h3>Dietary Requirements</h3>
           <label>Vegetarian</label>
-          <input
-            type="checkbox"
-            name="mealDiet"
-            value="vegetarian"
-            ref={register}
-          />
+          <input type="checkbox" name="mealDiet" value="vegetarian" ref={register} />
           <label>Vegan</label>
           <input type="checkbox" name="mealDiet" value="vegan" ref={register} />
 
