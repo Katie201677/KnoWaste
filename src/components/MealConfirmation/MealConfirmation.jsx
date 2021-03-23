@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import library from "../../data/fa-library.js";
 import styles from "./MealConfirmation.module.scss";
 import MealCard from "./MealCard";
-import { Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Timer from "../MealSelection/Timer";
+import { Link } from "react-router-dom";
+
 // import HelpPopUp from '../HelpPopUp';
 
 const MealConfirmation = (props) => {
@@ -27,7 +28,7 @@ const MealConfirmation = (props) => {
 
   return (
     <div className='content'>
-      <NavBar />
+      {/* <NavBar /> */}
       {/* <HelpPopUp /> */}
       {/* <Timer className={styles.timerMealConfirm}/> */}
 
@@ -35,28 +36,22 @@ const MealConfirmation = (props) => {
         <div className={`mainSection ${styles.mealConfirmLayout}`}>
           {/* <div className={styles.milkyBackground}></div> */}
           <div className={`box-style-1 ${styles.mealConfirmMilky}`}>
-            <h1>Your Meal Choices</h1>
-            <Link to="mealselection">
-                <FontAwesomeIcon
-                  onClick={props.clearArr}
-                  icon="pen"
-                  className={styles.penIcon}
-                />
-            </Link>
+            <h1 className = {styles.mealConfirmTitle}>Your Meal Choices</h1>
+            
             <div className={styles.mealConfirmBox}>
               <section className={styles.confirmMenu}>
                 {days.map((day) => {
                   let i = days.indexOf(day);
                     return (
                       <>
-                        <MealCard day={day} meal={props.mealChoiceArr[i]}  />
+                        <MealCard day={day} meal={props.mealChoiceArr[i]} clearArr={props.clearArr} />
                       </>
                     )
                   })
                 }
               </section>
               <Link to="/">
-                <button className={`button-style-1 ${styles.confirmationButton}`} onClick={handleSubmit}>CHECKOUT</button>
+                <button className={`button-style-1 ${styles.mealConfirmationButton}`} onClick={handleSubmit}>CHECKOUT</button>
               </Link>
             </div>
           </div>
