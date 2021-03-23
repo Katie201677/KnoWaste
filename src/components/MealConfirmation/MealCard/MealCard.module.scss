@@ -1,10 +1,11 @@
 @import '../../../assets/styles/variables';
 
-@media only screen and (max-width: $comp-breakpoint) {
+@media only screen and (min-width: $comp-breakpoint) {
   .mealInfo {
     text-align: left;
     flex-grow: 1;
     margin: 20px;
+    padding:15px;
     flex-shrink: 0;
     height: 200px;
     width: 200px;
@@ -19,6 +20,7 @@
   .mealInfo {
     text-align: left;
     margin: 5px;
+    padding: 2px;
     height: 4vh;
     width: 80vw;
   
