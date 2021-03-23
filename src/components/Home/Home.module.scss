@@ -20,12 +20,13 @@
   }
 }
 
-
+.navBar {
+  align-self: center;
+  grid-row: 1/3;
+}
 // Desktop Styles
 
-  .navBar {
-
-  }
+ 
   
   .mealSelection {
       text-decoration: none;
@@ -34,7 +35,8 @@
       justify-content: space-between;
       padding: 25px;
       grid-column: 1/3;  
-                 
+      padding: 50px;
+
     .fork{
       grid-row: 1;
       grid-column: 2;
@@ -70,9 +72,9 @@
 .gamification {
   grid-column: 2;
   text-align: center;
-  .leagueTable {
+.leagueTable {
     width: 100px;
-  }
+}
   
 }
 
@@ -82,6 +84,7 @@
 }
 
 .gamification, .aboutUs {
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -114,13 +117,7 @@
   margin-inline-start: 0;
 }
 body {
-  height: 100vh;
-  width: 100vw;
  
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
 
   .timer {
     height: 5vh;

@@ -12,16 +12,15 @@ example: WeeklySelection.jsx ---> <div className={styles.mainSection}>
 
 CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
  */
-
-
- .content {
+.content {
   display: grid;
   height: 100vh;
   width: 100%;
   grid-template-columns: 94px 1fr;
   grid-template-rows: 80px auto;
 }
-.mainSection{
+
+.mainSection {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -33,7 +32,6 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  //width: 100vw;
 }
 
 .nav-box-desk {
@@ -52,20 +50,19 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 }
 
 @media only screen and (max-width: 576px) {
-    body {
-      background-image: none;
-    }
-    .content {
-      grid-template-columns: 1fr;
-      grid-template-rows: 60px 1fr 75px;
-      
-    }
-
-    .mainSection {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3;
-      //width: 100vw;
-    }
+  body {
+    background-image: none;
   }
+
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 75px;
+  }
+
+  .mainSection {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}

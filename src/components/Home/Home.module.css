@@ -72,8 +72,6 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 }
 
 .nav-box-desk {
-  width: 94px;
-  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -216,8 +214,6 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 }
 
 .nav-box-desk {
-  width: 94px;
-  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -253,6 +249,8 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   width: 80%;
   margin: auto;
   max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .makeInline {
@@ -266,58 +264,75 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   margin-top: 5px;
 }
 
-.linkContainerOne {
-  border-radius: 20px;
+.navBar {
+  align-self: center;
+  grid-row: 1/3;
 }
-.linkContainerOne .mealSelection {
+
+.mealSelection {
   text-decoration: none;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  justify-content: space-between;
   padding: 25px;
+  grid-column: 1/3;
+  padding: 50px;
 }
-.linkContainerOne .mealSelection .fork {
+.mealSelection .fork {
+  grid-row: 1;
+  grid-column: 2;
   width: 100px;
   height: 120px;
   margin-top: 5px;
 }
-.linkContainerOne .mealSelection h2 {
+.mealSelection h1 {
+  grid-row: 1;
+  grid-column: 1;
+  text-align: left;
   color: white;
   margin-top: 25px;
   text-decoration: none;
 }
-.linkContainerOne .mealSelection .textMeal {
-  color: white;
-  font-size: small;
-  text-decoration: none;
-}
-
-.linkContainerTwo {
-  display: flex;
-  justify-content: space-between;
+.mealSelection a {
+  grid-row: 2;
+  grid-column: 1/3;
+  margin: 0 auto;
 }
 
 .aboutUs {
-  width: 50%;
-  margin-right: 10px;
+  grid-column: 1;
   text-align: center;
-  margin-top: 20px;
-  padding: 30px;
-  border-radius: 20px;
 }
 
 .gamification {
+  grid-column: 2;
   text-align: center;
-  margin-top: 20px;
-  padding: 30px;
-  border-radius: 20px;
-  width: 50%;
-  margin-left: 10px;
 }
-
-.leagueTable {
+.gamification .leagueTable {
   width: 100px;
 }
 
+.timer {
+  grid-column: 1/3;
+}
+
+.gamification, .aboutUs {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.gamification .imageContainer, .aboutUs .imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+@media screen and (min-width: 577px) and (max-width: 900px) {
+  .timer h2, .timer span {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 576px) {
   * {
     margin-block-end: 0;
@@ -326,20 +341,15 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
     margin-inline-start: 0;
   }
 
-  body {
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   body .timer {
     height: 5vh;
     background: black;
     color: white;
     text-align: center;
     margin-top: 20px;
+  }
+  body .navBar {
+    grid-row: 3;
   }
   body .topBar {
     width: 100vw;
@@ -362,45 +372,36 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
     flex-direction: column;
     align-items: center;
   }
-  body .linkContainer .linkContainerOne {
-    margin-top: 15px;
-  }
-  body .linkContainer .linkContainerOne .mealSelection {
+  body .linkContainer .mealSelection {
     text-decoration: none;
   }
-  body .linkContainer .linkContainerOne .mealSelection .fork {
+  body .linkContainer .mealSelection .fork {
     width: 100px;
     height: 120px;
     margin-top: 5px;
   }
-  body .linkContainer .linkContainerOne .mealSelection h3 {
+  body .linkContainer .mealSelection h3 {
     color: white;
     margin-top: 25px;
   }
-  body .linkContainer .linkContainerOne .mealSelection .textMeal {
+  body .linkContainer .mealSelection .textMeal {
     color: white;
     font-size: small;
   }
-  body .linkContainer .linkContainerTwo {
-    display: flex;
-    justify-content: space-between;
-    height: 40%;
-    margin-top: 15px;
-  }
-  body .linkContainer .linkContainerTwo .aboutUs, body .linkContainer .linkContainerTwo .gamification {
+  body .linkContainer .aboutUs, body .linkContainer .gamification {
     width: 45%;
     height: 100%;
     border-radius: 25px;
   }
-  body .linkContainer .linkContainerTwo .aboutUs .logo, body .linkContainer .linkContainerTwo .gamification .logo {
+  body .linkContainer .aboutUs .logo, body .linkContainer .gamification .logo {
     width: 100px;
   }
-  body .linkContainer .linkContainerTwo .aboutUs .leagueTable, body .linkContainer .linkContainerTwo .gamification .leagueTable {
+  body .linkContainer .aboutUs .leagueTable, body .linkContainer .gamification .leagueTable {
     height: 75px;
     width: 75px;
     margin-top: 20px;
   }
-  body .linkContainer .linkContainerTwo .aboutUs h3, body .linkContainer .linkContainerTwo .gamification h3 {
+  body .linkContainer .aboutUs h3, body .linkContainer .gamification h3 {
     color: white;
     margin-top: 20px;
   }

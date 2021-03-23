@@ -15,8 +15,7 @@ const NavBar = () => {
     }
 
     return (
-        <div className="nav-box-desk">
-            <section className={`${styles.navBarContainer} box-style-4`}>
+        <nav className={`${styles['nav-bar']} nav-box-desk box-style-4`}>
                 <ul className={styles.mainNav}>
                     <li>
                         <Link to="/"> 
@@ -44,8 +43,7 @@ const NavBar = () => {
                         </Link>
                     </li>
                 </ul>
-            </section>
-        </div>
+        </nav>
     )
 }
 
