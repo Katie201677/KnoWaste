@@ -19,6 +19,20 @@
     font-size: $font-s;
     color: $secondary-color;
 
+    .penIcon {
+      font-size: $font-m;
+      
+    }
+
+    .penIcon:hover {
+      cursor: pointer;
+      color: #FEBCA8;
+    }
+
+    .allergyIcon {
+      font-size: $font-m;
+    }
+
     .profile__card {
       display: flex;
       flex-direction: column;
@@ -26,6 +40,23 @@
       width: 100%;
       justify-content: space-between;
       border-radius: $border-radius-2;
+      z-index: 10;
+
+      .editProfile {
+        margin: 0;
+          .inputbox {
+            margin: 0;
+            padding: 0;
+        }
+        .editLabel {
+          font-size: $font-s;
+        }
+        .hallOptions {
+          border-radius: $border-radius-2;
+          width: 200px;
+          border: 1px solid none;
+        }
+      }
 
       .profile__info {
         display: flex;
@@ -48,6 +79,7 @@
         .profile__editinfo {
           line-height: 4em;
           margin-left: 25px;
+
           .name {
             font-size: $font-l;
             font-weight: 600;
@@ -63,12 +95,94 @@
         }
       }
     }
-    .diet__info {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-    }
   }
+
+  // for when NOT editing
+  .diet__info {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: -30px;
+    padding-bottom: 10px;
+    background: $secondary-color;
+    width: 100%;
+    height: 80px;
+    border-radius: $border-radius-2;
+  }
+
+  // diet requirment options tile/symbol
+  .dietTile {
+    background: $primary-color;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 0%;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .flex__row {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+
+  .flex__column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  // for when editing..
+  .diet__infoEditing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: $secondary-color;
+    border-radius: $border-radius-2;
+  }
+
+  // container for data/environmental scores
+  .score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: $primary-font-color;
+  }
+
+  .score__editing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: $secondary-color;
+    border-radius: $border-radius-2;
+    color: $secondary-font-color;
+  }
+
+  .diet__header {
+    color: $secondary-font-color;
+  }
+
+  .diet__label {
+    color: $secondary-font-color;
+  }
+
+  .diet__flex__row {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.invisible {
+  display: none;
 }
 // @media screen and (max-width: $mob-breakpoint) {
 //   .profile {

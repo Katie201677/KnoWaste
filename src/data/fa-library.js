@@ -9,7 +9,8 @@ import {
   faArrowRight,
   faInfoCircle,
   faQuestionCircle,
-  faHome
+  faHome,
+  faBreadSlice
 } from "@fortawesome/free-solid-svg-icons";
 
-export default library.add(faHome, faUtensils, faTrophy, faUserCircle, faPen, faArrowRight, faInfoCircle, faQuestionCircle);
+export default library.add(faHome, faUtensils, faTrophy, faUserCircle, faPen, faArrowRight, faInfoCircle, faQuestionCircle, faBreadSlice);
