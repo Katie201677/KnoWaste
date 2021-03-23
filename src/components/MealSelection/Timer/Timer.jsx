@@ -52,7 +52,7 @@ const Timer = () => {
   
   return (
     
-      <div className={`${styles.Timer} textwhite`}>
+      <div className={`${styles.timer} textwhite`}>
         { isTimerRunout? null
               : <h2>{timeLeftStr} <span className="textwhite">until orders close</span></h2>
           }
