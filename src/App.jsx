@@ -32,15 +32,15 @@ const App = () => {
 
   // get meal choice is a function which adds the selected meals as recipe names
   // getMealChoice function is passed down as props: app -> mealselection -> .. -> DailySelection
-  const getMealChoice = (activeMeal) => {
-    mealChoiceArr.push(activeMeal);
-    console.log(mealChoiceArr);
-    return mealChoiceArr;
-  };
+  // const getMealChoice = (activeMeal) => {
+  //   mealChoiceArr.push(activeMeal);
+  //   console.log(mealChoiceArr);
+  //   return mealChoiceArr;
+  // };
 
-  // function to clear meal array when edit button selected on meal confirmation page
-  // passed as a prop to meal confirmation
-  const clearMealChoiceArr = () => mealChoiceArr.length = 0;
+  // // function to clear meal array when edit button selected on meal confirmation page
+  // // passed as a prop to meal confirmation
+  // const clearMealChoiceArr = () => mealChoiceArr.length = 0;
    
 
   return (
@@ -60,7 +60,9 @@ const App = () => {
             <NavBar />
           </Route>
           <Route path="/mealselection">
-            <MealSelection mealData={mealData} getMealChoice={getMealChoice} />
+            <MealSelection 
+            // mealData={mealData} getMealChoice={getMealChoice} 
+            />
           </Route>
           <Route path="/profile">
             <Profile />
@@ -70,8 +72,8 @@ const App = () => {
           </Route>
           <Route path="/mealconfirmation">
             <MealConfirmation
-              mealChoiceArr={mealChoiceArr}
-              clearArr={clearMealChoiceArr}
+              // mealChoiceArr={mealChoiceArr}
+              // clearArr={clearMealChoiceArr}
             />
           </Route>
           <Route path="/environment">
