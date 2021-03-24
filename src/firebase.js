@@ -3,7 +3,7 @@ import "firebase/auth";
 import "firebase/firestore";
 
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCJypedQSVDr-lIILrJWSltWjcUQaHv6oc",
   authDomain: "knowaste-3c92c.firebaseapp.com",
   projectId: "knowaste-3c92c",
