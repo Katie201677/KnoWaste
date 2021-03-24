@@ -34,16 +34,16 @@ const Profile = () => {
       <div className={styles.mainSection} >
         {/* profile picture tile */}
 
-        <div className={styles.profile}>
+        <div className={isEditing ? `${styles.profile} box-style-1 ${styles.profile__width}` :  `${styles.profile} box-style-1` }>
 
           <section className={styles.profile__card}>
 
             <section className={styles.profile__info}>
               <img src={ProfilePic} className={styles.profile__pic}></img>
-              <p className={isEditing ? styles.invisible : styles.profile__editinfo}>
-                <span className={styles.name}>John Doe</span><br></br>
-                <span className={styles.hall}>Pseudonym Hall</span><br></br> 
-                <span className={styles.username}>Xx_king_xX</span><br></br>
+              <p className={isEditing ? styles.invisible : styles.profile__user__info}>
+                <span className={styles.name}>John Doe</span>
+                <span className={styles.hall}>Pseudonym Hall</span>
+                <span className={styles.username}>Xx_king_xX</span>
                 
               </p>
 
@@ -62,16 +62,19 @@ const Profile = () => {
                   <option value="Churchill">Churchill</option>
                   <option value="Badock">Badock</option>
                 </select>
+                <button className={styles.saveButton}>Save Changes</button>
               </div>
 
               {/* editing button */}
-              <FontAwesomeIcon className={styles.penIcon} onClick={showEditProfile} icon="pen" />
+              {/* <div className={styles.edit__container}> */}
+                <FontAwesomeIcon className={styles.penIcon} onClick={showEditProfile} icon="pen" />
+              {/* </div> */}
 
             </section>
           </section>
 
           {/* container div for the dietary requirment section and the personal data/metrics */}
-        <div className={isEditing ? styles.flex__row : styles.flex__column}>
+        <div className={styles.diet__and__score__container}>
 
           {/* Dietary information goes here -> only display selected requirments when Not editing */}
           <div className={isEditing ? styles.diet__infoEditing : styles.diet__info}>
@@ -89,9 +92,19 @@ const Profile = () => {
 
             <div className={styles.diet__flex__row}>
               <span className={styles.dietTile}>Diet 3</span>
-              <p className={isEditing ? styles.diet__label : styles.invisible}>somting</p>
+              <p className={isEditing ? styles.diet__label : styles.invisible}>Vegan</p>
             </div>
             
+            <div className={styles.diet__flex__row}>
+              <span className={styles.dietTile}>Diet 4</span>
+              <p className={isEditing ? styles.diet__label : styles.invisible}>Dairy Free</p>
+            </div>
+
+            <div className={styles.diet__flex__row}>
+              <span className={styles.dietTile}>Diet 5</span>
+              <p className={isEditing ? styles.diet__label : styles.invisible}>Nuts</p>
+            </div>
+
           </div>
 
           {/* weekly score... data/metrics are input here */}
