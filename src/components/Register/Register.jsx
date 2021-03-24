@@ -7,14 +7,13 @@ const Register = () => {
   let history = useHistory();
   const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-  // REAL EMAIL VALIDATION COMES HERE!
 
 
   const emailIsUnique = async(email) => {
     await wait(1000);
     return email === "test@example.com" ? "email is already in use" : undefined;
   };
-
+//OnSubmit calls firebase method, which by checking with the auth api of firebase allows for checking user credentials.
   const onSubmit = (form) => {
   
   auth.createUserWithEmailAndPassword(form.email, form.password)
@@ -38,7 +37,7 @@ const Register = () => {
     const errorMessage = error.message;
     console.log(errorCode)
     console.log(errorMessage)
-    alert("You have failed to register")
+    alert("Email is already in use.")
     // ..
   });
  
