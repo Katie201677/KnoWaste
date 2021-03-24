@@ -48,9 +48,6 @@ const App = () => {
             <Route path="/forgotpassword">
               <ForgotPassword />
             </Route>
-            <Route path="/navbar">
-              <NavBar />
-            </Route>
             <Route path="/mealselection">
               <MealSelection
                 mealData={mealData}

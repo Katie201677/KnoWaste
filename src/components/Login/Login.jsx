@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import styles from "./Login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import firebase from "firebase/app";
 import { auth } from "../../firebase.js";
 import {UserContext} from '../../context/contextUser'
 import { useForm } from "react-hook-form";

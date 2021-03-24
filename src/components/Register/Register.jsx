@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./Register.module.scss";
+import { useHistory } from 'react-router-dom'
 import { useForm } from "react-hook-form";
 import { auth, firestore } from "../../firebase";
 const Register = () => {
+  let history = useHistory();
   const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   // REAL EMAIL VALIDATION COMES HERE!
@@ -14,25 +16,32 @@ const Register = () => {
   };
 
   const onSubmit = (form) => {
+  
   auth.createUserWithEmailAndPassword(form.email, form.password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
     user.updateProfile({displayName: form.name})
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-  firestore.collection("users").doc(form.studentNumber).set({
+    history.push("/"); 
+    firestore.collection("users").doc(form.studentNumber).set({
     name: form.name,
     email: form.email,
     studentNumber: form.studentNumber,
     residenceHall: form.residenceHall,
     dateOfBirth: form.dob,
-    mobileNumber: form.mobile
+    mobileNumber: form.mobile,
+    isAdmin:false
   })
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode)
+    console.log(errorMessage)
+    alert("You have failed to register")
+    // ..
+  });
+ 
   };
 
   const { 
