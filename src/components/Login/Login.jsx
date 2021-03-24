@@ -1,31 +1,33 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import React, { useState, useContext } from "react";
+import { Link, useHistory } from 'react-router-dom';
 import styles from "./Login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { auth } from "../../firebase.js"
+import firebase from "firebase/app";
+import { auth } from "../../firebase.js";
+import {UserContext} from '../../context/contextUser'
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-
+  const userContext = useContext(UserContext)
+  let history = useHistory();
   const togglePassword = () => {
     setIsVisible(!isVisible)
   }
-  
+
   const [isVisible, setIsVisible] = useState(false)
 
   const onSubmit = (form) => {
     auth.signInWithEmailAndPassword(form.email, form.password).then((response) => {
       if(response.user) {
-        alert(`Welcome ${response.user.email}`); 
-        redirectToHome();
+        console.log(response.user)
+        userContext.setUser(response.user)
+        history.push("/home");
       }
     })
  
   }
 
-  const redirectToHome = () => {
-    window.location = "/";
-  }
+
 
   const emailIsUnique = async(email) => {
     const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
