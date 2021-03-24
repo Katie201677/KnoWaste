@@ -1,11 +1,9 @@
 import React from "react";
 import styles from "./Register.module.scss";
 import { useForm } from "react-hook-form";
-import { auth } from "../../firebase"
+import { auth, firestore } from "../../firebase";
 const Register = () => {
   const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-//Firebase auth boilerplate
-auth.createUserWithEmailAndPassword(email, password) 
 
   // REAL EMAIL VALIDATION COMES HERE!
 
@@ -15,27 +13,26 @@ auth.createUserWithEmailAndPassword(email, password)
     return email === "test@example.com" ? "email is already in use" : undefined;
   };
 
-  const onSubmit = (data) => {
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+  const onSubmit = (form) => {
+  auth.createUserWithEmailAndPassword(form.email, form.password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    // ...
+    user.updateProfile({displayName: form.name})
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
   });
-      // Simple POST request with a JSON body using fetch
-      // const requestOptions = {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify({ title: 'React POST Request Example' })
-      // };
-      // fetch('https://jsonplaceholder.typicode.com/posts', requestOptions)
-      //     .then(response => response.json())
-      //     .then(data => this.setState({ postId: data.id }));
+  firestore.collection("users").doc(form.studentNumber).set({
+    name: form.name,
+    email: form.email,
+    studentNumber: form.studentNumber,
+    residenceHall: form.residenceHall,
+    dateOfBirth: form.dob,
+    mobileNumber: form.mobile
+  })
   };
 
   const { 
