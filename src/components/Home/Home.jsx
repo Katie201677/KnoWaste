@@ -22,11 +22,11 @@ return (
     <div className={styles.linkContainer}>
       <div className={`${styles.mealSelection} box-style-1`}>
         <h1 className="textwhite">Meal Selection</h1>
+        
+        <img src={Fork} className={styles.fork}></img>
         <Link to="/mealselection">
         <button className='button-style-1'>Click here to choose!</button>
         </Link>
-        <img src={Fork} className={styles.fork}></img>
-
       </div>
       <div className={styles.timer}>
         <Timer />

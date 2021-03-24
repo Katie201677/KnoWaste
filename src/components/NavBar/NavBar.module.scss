@@ -160,6 +160,16 @@
     justify-content: space-around;
   }
 
+  .nav-bar{
+    ul.mainNav {
+      display: flex;
+      li {
+        margin: 0;
+        flex-shrink: 1;
+      }
+    }
+  }
+
   .navigation {
     grid-column-start: 1;
     grid-column-end: 2;
