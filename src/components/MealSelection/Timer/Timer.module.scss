@@ -25,11 +25,7 @@
 
 @media only screen and (max-width: 576px) {
     .Timer {
-        width: 100vw;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+       flex-grow: 1;
 
         h2 { 
            font-size: $font-s;
