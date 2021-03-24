@@ -1,15 +1,34 @@
 @import '../../../assets/styles/variables';
+@import '../../../assets/styles/typography';
 
-@media only screen and (max-width: $comp-breakpoint) {
-  .mealInfo {
-    text-align: left;
+
+@media only screen and (min-width: $comp-breakpoint) {
+  .dayCard {
     flex-grow: 1;
     margin: 20px;
+    padding:15px;
     flex-shrink: 0;
     height: 200px;
     width: 200px;
+  }
   
-    h3 {
+  .mealInfo {
+    display: flex;
+    // text-align: left;
+    justify-content: space-between;
+  
+    .confirmDay  {
+      line-height: 2rem;
+      margin-block-start: 0;
+      scroll-margin-block-end: 0;
+      color: $form-font-color;
+      font-family: $primary-font;
+    }
+
+    .penIcon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      justify-content: flex-end;
       line-height: 2rem;
     }
   }
@@ -18,12 +37,19 @@
 @media only screen and (max-width: $mob-breakpoint) {
   .mealInfo {
     text-align: left;
-    margin: 5px;
-    height: 4vh;
+    margin: 6px;
+    padding: 2px;
+    height: 6.5vh;
     width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   
-    h3 {
+    .confirmDay {
       line-height: 1.5rem;
+      color: $form-font-color;
+      font-family: $primary-font;
     }
   }
 } 
@@ -33,8 +59,5 @@
 //   flex-shrink: 0;
 // }
 
-// .penIcon {
-//   font-size: 1.2rem;
-//   flex-shrink: 0;
-// }
+
 

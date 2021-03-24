@@ -12,55 +12,58 @@ example: WeeklySelection.jsx ---> <div className={styles.mainSection}>
 
 CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
  */
+ @import './_variables.scss';
 
 
-.content {
-  display: grid;
-  height: 100vh;
-  width: 100%;
-  grid-template-columns: 94px 1fr;
-  grid-template-rows: 80px auto;
-}
-
-.mainSection{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.nav-box-desk {
-  width: 94px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.header-box-desk {
-  width: 1291px;
-  height: 143px;
-}
-
-.main-box-desk {
-  width: 1291px;
-  height: 877px;
+@media only screen and (min-width: $comp-breakpoint) {
+  .content {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 94px 1fr;
+    grid-template-rows: 80px auto;
+  }
+  
+  .mainSection{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
+  .nav-box-desk {
+    width: 94px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-box-desk {
+    width: 1291px;
+    height: 143px;
+  }
+  
+  .main-box-desk {
+    width: 1291px;
+    height: 877px;
+  }
 }
 
 @media only screen and (max-width: $mob-breakpoint) {
-    body {
-      background-image: none;
-    }
-    .content {
-      grid-template-columns: 1fr;
-      grid-template-rows: 60px 1fr 75px;
-      
-    }
-
-    .mainSection {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3;
-      //width: 100vw;
-    }
+  body {
+    background-image: none;
   }
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 75px;
+    
+  }
+
+  .mainSection {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    //width: 100vw;
+  }
+}
