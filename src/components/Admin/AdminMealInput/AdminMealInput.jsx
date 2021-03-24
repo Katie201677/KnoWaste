@@ -1,54 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AdminMealInput.module.scss";
 import mealLibrary from "../AdminLibrary/AdminLibrary.json";
 import AdminNavBar from "../AdminNavBar";
 import { useForm } from "react-hook-form";
 import AdminMealPreview from "./AdminMealPreview";
-import firebase from "firebase/app";
-import "firebase/firestore";
+import { createMeal, getAllMeals, deleteMeal } from "../../../services/meals.service"
+import ConfirmationPopUp from "../ConfirmationPopUp/ConfirmationPopUp";
 
 const AdminMealInput = () => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
-    const db = firebase.firestore();
-
-    var docRef = db.collection("mealinput").doc(data.mealName);
-
-    //check if doc/meal already exists
-    docRef
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          alert("Meal name already taken");
-        } else {
-          // doc.data() will be undefined in this case
-          console.log("No such document!");
-          writeMeal()
-        }
-      })
-      .catch((error) => {
-        console.log("Error getting document:", error);
-      });
-
-    const writeMeal = () => {
-      docRef
-        .set({
-          data,
-        })
-        .then(() => {
-          console.log("Document successfully written!");
-        })
-        .catch((error) => {
-          console.error("Error writing document: ", error);
-        });
-    };
+    createMeal(data);
+    toggleShowPopUp();
   };
+
+  const [ showPopUp, setShowPopUp] = useState(false);
+
+  const toggleShowPopUp = () => {
+    setShowPopUp(!showPopUp);
+  }
+
+  let data;
 
   return (
     <div className={styles.content}>
+
       <AdminNavBar />
+      
       <div className={styles.formContainer}>
+      <button onClick={getAllMeals} className="button-style-1">Get Da Mealz Bois</button>
+      <button onClick={deleteMeal} className="button-style-1">Delete Da Mealz Bois</button>
         <form onSubmit={handleSubmit(onSubmit)} className="box-style-1">
           <h1>Add a meal</h1>
           <label>Name of Meal</label>
@@ -132,6 +114,10 @@ const AdminMealInput = () => {
           )}
 
           <input type="submit" className="button-style-1" />
+          { showPopUp && 
+            <ConfirmationPopUp title="Submitted" message={data} toggle={toggleShowPopUp}
+             />
+          }
         </form>
       </div>
     </div>
