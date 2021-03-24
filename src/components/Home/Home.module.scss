@@ -8,7 +8,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .makeInline {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: flex-end;
 
@@ -20,30 +24,28 @@
   }
 }
 
-.navBar {
-  align-self: center;
+.fullPage {
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  grid-column: 2;
   grid-row: 1/3;
-}
-// Desktop Styles
-
- 
-  
   .mealSelection {
-      text-decoration: none;
-      display: grid;
-      grid-template-columns: 1fr min-content;
-      justify-content: space-between;
-      padding: 25px;
-      grid-column: 1/3;  
-      padding: 50px;
-
-    .fork{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    justify-content: space-between;
+    grid-column: 1/3;
+    padding: 15px 50px;
+  
+    .fork {
       grid-row: 1;
       grid-column: 2;
-      width: 100px;
-      height: 120px;
+      height: 80px;
+      width: auto;
       margin-top: 5px;
     }
+  
     h1 {
       grid-row: 1;
       grid-column: 1;
@@ -51,57 +53,79 @@
       color: white;
       margin-top: 25px;
       text-decoration: none;
+
     }
+  
     a {
       grid-row: 2;
       grid-column: 1/3;
       margin: 0 auto;
     }
-    // .textMeal {
-    //   color: white;
-    //   font-size: small;
-    //   text-decoration: none;
-    // }
-   
   }
-
-.aboutUs {
-  grid-column: 1;
-  text-align: center;
-}
-.gamification {
-  grid-column: 2;
-  text-align: center;
-.leagueTable {
-    width: 100px;
-}
+  .timer {
+    grid-column: 1/3;
+    h2, span {
+      font-size: 24px;
+    }
+  }
+  .aboutUs {
+    grid-column: 1;
+    text-align: center;
+  }
   
-}
-
-.timer {
-  grid-column: 1/3;
+  .gamification {
+    grid-column: 2;
+    text-align: center;
   
-}
-
-.gamification, .aboutUs {
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  .imageContainer {
+    .leagueTable {
+      width: 100px;
+    }
+  
+  }
+  
+  .gamification,
+  .aboutUs {
+    padding: 15px 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    img {
-    
+    flex-direction: column;
+    justify-content: flex-end;
+  
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 150px;
+
+      img {
+        flex-grow: 0;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
     }
   }
 }
 
+.navBar {
+  align-self: center;
+  grid-row: 1/3;
+  padding: 0;
+  margin: 0 auto;
+}
+
+// Desktop Styles
+
+
+
+
+
+
+
 @media screen and (min-width:577px) and (max-width:900px) {
   .timer {
-    h2, span {
+
+    h2,
+    span {
       font-size: 20px;
     }
   }
@@ -109,39 +133,40 @@
 
 
 // Mobile Styles
-@media screen and (max-width:576px){
-* {
-  margin-block-end: 0;
-  margin-block-start: 0;
-  margin-inline-end: 0;
-  margin-inline-start: 0;
-}
-body {
- 
-
-  .timer {
-    height: 5vh;
-    background: black;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
+@media screen and (max-width:576px) {
+  * {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
   }
 
-  .navBar {
-    grid-row: 3;
-  }
+  body {
 
-  .topBar {
-    width: 100vw;
-    height: 8vh;
-    background: linear-gradient(180deg, #5656FF 26.35%, #9556C0 126.35%);
-    text-align:center;
-    color: white;
-    margin-top: 20px;
-  }
 
-  .linkContainer {
-    
+    .timer {
+      height: 5vh;
+      background: black;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .navBar {
+      grid-row: 3;
+    }
+
+    .topBar {
+      width: 100vw;
+      height: 8vh;
+      background: linear-gradient(180deg, #5656FF 26.35%, #9556C0 126.35%);
+      text-align: center;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .linkContainer {
+
       backdrop-filter: blur(4px);
       border-radius: 30px;
       height: 60vh;
@@ -154,52 +179,56 @@ body {
       flex-direction: column;
       align-items: center;
 
-      
-        
 
-        .mealSelection {
-          text-decoration: none;
 
-          .fork{
-            width: 100px;
-            height: 120px;
-            margin-top: 5px;
-          }
-          h3 {
+
+      .mealSelection {
+        text-decoration: none;
+
+        .fork {
+          width: 100px;
+          height: 120px;
+          margin-top: 5px;
+        }
+
+        h3 {
           color: white;
           margin-top: 25px;
         }
+
         .textMeal {
           color: white;
           font-size: small;
         }
-      
-      }
-      
-        .aboutUs, .gamification {
-          width: 45%;
-          height: 100%;
-          border-radius: 25px;
 
-          .logo {
-            width: 100px;
-          }
-          .leagueTable {
-            height: 75px;
-            width: 75px;
-            margin-top: 20px;
-          
-          }
-
-          h3 {
-            color: white;
-            margin-top: 20px;
-          }
-        
       }
-    
+
+      .aboutUs,
+      .gamification {
+        width: 45%;
+        height: 100%;
+        border-radius: 25px;
+
+        .logo {
+          width: 100px;
+        }
+
+        .leagueTable {
+          height: 75px;
+          width: 75px;
+          margin-top: 20px;
+
+        }
+
+        h3 {
+          color: white;
+          margin-top: 20px;
+        }
+
+      }
+
+    }
+
+
   }
-
-
-}
 }

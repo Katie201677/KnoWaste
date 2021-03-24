@@ -52,6 +52,7 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 .content {
   display: grid;
   height: 100vh;
+  max-height: 100%;
   width: 100%;
   grid-template-columns: 94px 1fr;
   grid-template-rows: 80px auto;
@@ -194,6 +195,7 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 .content {
   display: grid;
   height: 100vh;
+  max-height: 100%;
   width: 100%;
   grid-template-columns: 94px 1fr;
   grid-template-rows: 80px auto;
@@ -254,6 +256,9 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 }
 
 .makeInline {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -264,28 +269,29 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   margin-top: 5px;
 }
 
-.navBar {
-  align-self: center;
+.fullPage {
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  grid-column: 2;
   grid-row: 1/3;
 }
-
-.mealSelection {
+.fullPage .mealSelection {
   text-decoration: none;
   display: grid;
   grid-template-columns: 1fr min-content;
   justify-content: space-between;
-  padding: 25px;
   grid-column: 1/3;
-  padding: 50px;
+  padding: 15px 50px;
 }
-.mealSelection .fork {
+.fullPage .mealSelection .fork {
   grid-row: 1;
   grid-column: 2;
-  width: 100px;
-  height: 120px;
+  height: 80px;
+  width: auto;
   margin-top: 5px;
 }
-.mealSelection h1 {
+.fullPage .mealSelection h1 {
   grid-row: 1;
   grid-column: 1;
   text-align: left;
@@ -293,43 +299,60 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   margin-top: 25px;
   text-decoration: none;
 }
-.mealSelection a {
+.fullPage .mealSelection a {
   grid-row: 2;
   grid-column: 1/3;
   margin: 0 auto;
 }
-
-.aboutUs {
+.fullPage .timer {
+  grid-column: 1/3;
+}
+.fullPage .timer h2, .fullPage .timer span {
+  font-size: 24px;
+}
+.fullPage .aboutUs {
   grid-column: 1;
   text-align: center;
 }
-
-.gamification {
+.fullPage .gamification {
   grid-column: 2;
   text-align: center;
 }
-.gamification .leagueTable {
+.fullPage .gamification .leagueTable {
   width: 100px;
 }
-
-.timer {
-  grid-column: 1/3;
-}
-
-.gamification, .aboutUs {
-  padding: 50px;
+.fullPage .gamification,
+.fullPage .aboutUs {
+  padding: 15px 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.gamification .imageContainer, .aboutUs .imageContainer {
+.fullPage .gamification .imageContainer,
+.fullPage .aboutUs .imageContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  align-items: flex-end;
+  height: 150px;
 }
+.fullPage .gamification .imageContainer img,
+.fullPage .aboutUs .imageContainer img {
+  flex-grow: 0;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.navBar {
+  align-self: center;
+  grid-row: 1/3;
+  padding: 0;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 577px) and (max-width: 900px) {
-  .timer h2, .timer span {
+  .timer h2,
+.timer span {
     font-size: 20px;
   }
 }
@@ -388,20 +411,24 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
     color: white;
     font-size: small;
   }
-  body .linkContainer .aboutUs, body .linkContainer .gamification {
+  body .linkContainer .aboutUs,
+body .linkContainer .gamification {
     width: 45%;
     height: 100%;
     border-radius: 25px;
   }
-  body .linkContainer .aboutUs .logo, body .linkContainer .gamification .logo {
+  body .linkContainer .aboutUs .logo,
+body .linkContainer .gamification .logo {
     width: 100px;
   }
-  body .linkContainer .aboutUs .leagueTable, body .linkContainer .gamification .leagueTable {
+  body .linkContainer .aboutUs .leagueTable,
+body .linkContainer .gamification .leagueTable {
     height: 75px;
     width: 75px;
     margin-top: 20px;
   }
-  body .linkContainer .aboutUs h3, body .linkContainer .gamification h3 {
+  body .linkContainer .aboutUs h3,
+body .linkContainer .gamification h3 {
     color: white;
     margin-top: 20px;
   }

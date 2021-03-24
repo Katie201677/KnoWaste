@@ -17,6 +17,7 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
  .content {
   display: grid;
   height: 100vh;
+  max-height: 100%;
   width: 100%;
   grid-template-columns: 94px 1fr;
   grid-template-rows: 80px auto;

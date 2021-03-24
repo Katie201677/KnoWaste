@@ -43,7 +43,7 @@ const Timer = () => {
       } else {
         setIsTimerRunout(false);
       }
-      setTimeLeft(` ${days}D ${hours}h ${minutes}min ${seconds}sec`)
+      setTimeLeft(` ${days}day ${hours}hour ${minutes}min ${seconds}sec`)
     }, 1000)
     return ()=> {
       clearInterval(myInterval);
@@ -52,7 +52,7 @@ const Timer = () => {
   
   return (
     
-      <div className={`${styles.timer} textwhite`}>
+      <div className={`${styles.timer} textwhite box-style-1`}>
         { isTimerRunout? null
               : <h2>{timeLeftStr} <span className="textwhite">until orders close</span></h2>
           }
