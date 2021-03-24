@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Register.module.scss";
 import { useForm } from "react-hook-form";
-import firebase from 'firebase';
+import { auth } from "../../firebase"
 const Register = () => {
   const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 //Firebase auth boilerplate
-
+auth.createUserWithEmailAndPassword(email, password) 
 
   // REAL EMAIL VALIDATION COMES HERE!
 

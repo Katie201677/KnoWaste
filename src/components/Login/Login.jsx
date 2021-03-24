@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import styles from "./Login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { auth } from "../../firebase.js"
 import { useForm } from "react-hook-form";
 
 const Login = () => {
@@ -12,8 +13,14 @@ const Login = () => {
   
   const [isVisible, setIsVisible] = useState(false)
 
-  const onSubmit = () => {
-    redirectToHome()
+  const onSubmit = (form) => {
+    auth.signInWithEmailAndPassword(form.email, form.password).then((response) => {
+      if(response.user) {
+        alert(`Welcome ${response.user.email}`); 
+        redirectToHome();
+      }
+    })
+ 
   }
 
   const redirectToHome = () => {

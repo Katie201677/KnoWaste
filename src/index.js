@@ -2,17 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
+<<<<<<< HEAD
 import { auth, firestore } from "./firebase.js";
+=======
+>>>>>>> f09ba14304b6d424cb578fdad7f3ebb9fa67991e
 import reportWebVitals from './reportWebVitals';
-import {
-  FirebaseAuthProvider
-} from "@react-firebase/auth";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <FirebaseAuthProvider firebase={firebase} {...firebaseConfig}>
       <App />
-    </FirebaseAuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
