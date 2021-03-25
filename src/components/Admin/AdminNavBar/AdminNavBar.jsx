@@ -16,11 +16,11 @@ const AdminNavBar = () => {
     return (
         <section className={styles.navigation}>
             
-            <span className={styles.closeBtn} onClick={handleClick}> 
+            {/* <span className={styles.closeBtn} onClick={handleClick}> 
                 <Link to="/"> 
                     <img src={logo} className={styles.logo}/>
                 </Link>    
-            </span>
+            </span> */}
             
             <ul>
                 <li>
