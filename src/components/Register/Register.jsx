@@ -22,7 +22,8 @@ const Register = () => {
     const user = userCredential.user;
     user.updateProfile({displayName: form.name})
     history.push("/"); 
-    firestore.collection("users").doc(form.studentNumber).set({
+    firestore.collection("users").doc(user.uid).set({
+    uid: user.uid,
     name: form.name,
     email: form.email,
     studentNumber: form.studentNumber,
