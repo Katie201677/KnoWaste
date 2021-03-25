@@ -1,96 +1,99 @@
+@import '../../assets/styles/variables';
+@import "../../assets/styles/styles.scss";
+
 .navBarContainer {
+    height: 419px;
+    width: 65px;
+}
+
+.navigation {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 3;
-
-    
+    grid-row-end: 3;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    background: linear-gradient(180deg, #5656FF 0%, #9556C0 100%);
-    
+    color: $primary-color;
+    background: $background-color;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 10;
+    border-radius: $border-radius-2;
 
-    .sideNav {
-        height: 100%;
-        width: 400px;
-        position: fixed;
-        justify-content: space-evenly;
-        z-index: 1;
-        top: 0;
-        left: 75px;
-        background: linear-gradient(180deg, #5656FF 0%, #9556C0 100%);
-        overflow-x: hidden;
-        padding-top: 60px;
-        opacity: 0.8;
-    }
-
-    .sideNav a {
-        justify-content: space-evenly;
-        padding: 15px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 35px;
-        color: black;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sideNav a:hover {
-        color: #f1f1f1;
-    }
-
-    // .sideNav .closebtn {
-    //     position: absolute;
-    //     top: 0;
-    //     right: 25px;
-    //     font-size: 36px;
-    //     margin-left: 50px;
-    // }
-
-    .appear-enter {
-        opacity: 0;
-    }
-
-    .appear-enter-active {
-        opacity: .5;
-        transition: opacity 400ms;
-    }
-
-    .appear-exit {
-        opacity: 1;
-    }
-
-    .appear-exit-active {
-        opacity: 0;
-        transition: opacity 200ms;
-    }
-
-    .sideNav {
-        transition: margin-left .5s;
-        padding: 16px;
+    .closeBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:5px;
     }
 
     .logo {
-        padding: 10px 0px 0px 0px;
-        height: 80px;
-        width: 110px;
+        height: 70px;
+        width: auto;
         opacity: 0.5;
     }
-    .logo:hover {
-        padding: 10px 0px 0px 0px;
-        height: 80px;
-        width: 110px;
+    
+    .logo:hover , .logo:active {
         opacity: 1;
     }
 
-    .topIcon a {
-        font-size: 10px;
+    .logo:active {
+        transform: scale(0.9);
     }
+    
+    
+    //NAVIGATION BUTTONS
+    ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 100%;
+
+    
+        li {
+            margin: 7px auto;
+            list-style-type: none;
+            background-color: $btn-navigation;
+            border: 5px solid $btn-navigation;
+            border-radius: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            height: 52px;
+            width: 52px;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .icon {
+                margin: auto;
+                opacity: 0.5;
+                font-size: $font-l;
+                color: $icon-navigation;
+                background-color: $btn-navigation;
+            }
+    
+            .icon:active, .icon:hover {
+                opacity: 1;
+            }
+    
+        }
+    
+        li:hover, li:active {
+            opacity: 1;
+            transform: scale(0.98);
+            box-shadow: none;
+        }
+       
+    }
+}
 
     .mainNav {
-        padding-right: 20px;
+        padding-right: 0px;
+        padding-left:10px;
        
     }
 
@@ -98,21 +101,20 @@
         // margin-right: 30px;
         padding-top: 17px;
         list-style-type: none;
-        font-size: 45px;
+        font-size: 40px;
         filter: blur(0.5px);
 
 
     }
-.white {
-    color: white;
+.iconStyle {
+    color: $primary-color;
     opacity: 0.5;
 }
-.white:hover {
-    color: white;
+.iconStyle:hover {
     opacity: 1;
 }
     .utensils {
-        margin-left: 5px;
+        margin-left: 3px;
         
     }
 
@@ -124,73 +126,59 @@
         margin-left: 3px;
     }
 
-}
+
 
 @media screen and (max-width: 568px) {
-    .navBarContainer {
+    .navigation {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 3;
         grid-row-end: 4;
 
         flex-direction: row;
-        position: fixed;
-        height: 75px;
-        width: 100vw;
-        bottom: 0;
-        // padding: 10px;
         justify-content: space-evenly;
-        background: linear-gradient(95deg, #5656FF 0%, #9556C0 100%);
+        background: $btn-navigation;
 
         .closeBtn {
-            position: fixed;
-            display: flex;
-            justify-content: flex-end;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 75px;
-            background: linear-gradient(95deg, #5656FF 0%, #9556C0 100%);
+            display: none;
         }
 
-        .mainNav {
-            display: flex;
+        ul {
             flex-direction: row;
-            font-size: 30px;
+            justify-content: space-around;
+            margin: 0;
+            
+            li {
+                margin: auto;
+                background-color: transparent;
+                border:none;
+                box-shadow: none;
+
+                height: auto;
+                width: auto;
+
+                .icon {
+                    background-color: transparent;
+                }
+        
+                .icon:hover , .icon:active {
+                    opacity: 1;
+                }
+            }
+            li:hover,li:active {
+                transform: none;
+            }
         }
 
-        li {
-            padding: 0px 30px 0px 20px;
-            font-size: 45px;
-            margin: auto;
-        }
 
-        .utensils {
-            margin-left: 0px;
-        }
-
-        .trophy {
-            margin-right: 0px;
-        }
-
-        .userCircle {
-            margin-left: 0px;
-        }
-
-        .logo {
-            padding: 0px 0px 0px 0px;
-            height: 70px;
-            width: auto;
-        }
-
-        .sideNav {
+        /* .sideNav {
             height: 75.5%;
             width: 100vw;
             position: fixed;
             top: 75px;
             right: 0;
             margin-left: -75px;
-            background: linear-gradient(95deg, #5656FF 0%, #9556C0 100%);
+            background: $secondary-color;
             overflow-x: hidden;
             opacity: 1;
         }
@@ -202,7 +190,7 @@
             color: white;
             display: block;
             transition: 0.3s;
-        }
+        } */
 
     }
 

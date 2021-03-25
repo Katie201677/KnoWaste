@@ -1,0 +1,113 @@
+@import "../../../assets/styles/styles.scss";
+
+.contentMain {
+  background-color: $background-color;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
+  form {
+    max-width: 1000px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  input {
+    width: 75%;
+  }
+
+  button {
+    width: 75%;
+    height: 10%;
+    margin-top: 25px;
+  }
+
+  .boxStyleDescription {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    border: none;
+    height: 150px;
+    width: 90%;
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+
+  .rowOne {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+
+  .rowTwo {
+    margin-top: 17%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .imgContainer {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
+
+label {
+  padding: 5px;
+}
+
+.imgPreview {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: auto;
+  border: none;
+
+}
+
+#submit {
+  width: 800px;
+  height: 20px;
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  .contentMain {
+    form {
+      flex-direction: column;
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
+
+  .formContainer {
+    width: 95vw;
+    // margin: 0;
+  }
+}

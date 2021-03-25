@@ -18,29 +18,49 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
   display: grid;
   height: 100vh;
   width: 100%;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 94px 1fr;
   grid-template-rows: 80px auto;
+}
+.mainSection{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .mainSection {
   grid-column-start: 2;
   grid-column-end: 3;
-
   grid-row-start: 2;
   grid-row-end: 3;
+  //width: 100vw;
+}
 
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //margin: 0;
-  //height: 100%;
-  //width: 100%;
+.nav-box-desk {
+  width: 94px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-box-desk {
+  width: 1291px;
+  height: 143px;
+}
+
+.main-box-desk {
+  width: 1291px;
+  height: 877px;
 }
 
 @media only screen and (max-width: 576px) {
+    body {
+      background-image: none;
+    }
     .content {
       grid-template-columns: 1fr;
       grid-template-rows: 60px 1fr 75px;
+      
     }
 
     .mainSection {

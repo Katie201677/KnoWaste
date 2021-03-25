@@ -2,39 +2,30 @@
 @import "../../../assets/styles/_typography.scss";
 
 .Timer {
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    background-color: transparent;
-    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding:2px;
+    backdrop-filter: blur(6px);
     height: 80px;
-
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    margin: 15px;
+    margin-top: 30px;
 
     h2 { 
         margin: auto 30px;
-        color:$tertiary-color;
         font-size: $font-l;
     }
 
     span {
-        color: black;
         font-size: $font-m;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .Timer {
-        width: 100vw;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+       flex-grow: 1;
 
         h2 { 
            font-size: $font-s;

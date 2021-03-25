@@ -4,7 +4,7 @@
   justify-self: center; 
   margin: auto;
 
-  background: $background-gradient; 
+  background: $background-color; 
   border-radius: $border-radius-1;
   width: 60%;
   height: 70%;
@@ -20,7 +20,7 @@
   width: 45%;
   margin:auto;
   text-align: left;
-  color: $background-color;
+  color: $primary-font-color;
 }
 
 .divider {

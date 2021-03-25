@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.textwhite {
+  color: white;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+}
+
+/* HOW TO USE
+@import "../../assets/styles/styles.scss"   into your module.
+
+the first div, which wraps <NavBar> <Timer> <yourComponent> needs to have className={styles.content}
+example: MealSelection.jsx -->    <div className={styles.content}> 
+                                        <NavBar> <Timer> <WeeklySelection> 
+                                  </div>
+on your component the first div that wraps whatever you're displaying needs to have className={styles.mainSection}
+example: WeeklySelection.jsx ---> <div className={styles.mainSection}> 
+                                        <DailySelection> 
+                                  </div>
+
+CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
+ */
+.content {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 94px 1fr;
+  grid-template-rows: 80px auto;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.nav-box-desk {
+  width: 94px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-box-desk {
+  width: 1291px;
+  height: 143px;
+}
+
+.main-box-desk {
+  width: 1291px;
+  height: 877px;
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    background-image: none;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 75px;
+  }
+
+  .mainSection {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+.button-style-1 {
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: white;
+  border: none;
+}
+
+.submit-button {
+  width: 40%;
+  height: 11%;
+  padding: 10px;
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #FFFFFF;
+  border: none;
+}
+
+.submit-button:hover, .submit-button:active {
+  filter: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.box-style-1 {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  backdrop-filter: blur(6px);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-2 {
+  background: #FFFFFF;
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-3 {
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-4 {
+  background: #FFFFFF;
+  border-radius: 40px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-4 {
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+body {
+  background: url("../../assets/images/background_1.jpg") center repeat;
+}
+
+/* HOW TO USE
+@import "../../assets/styles/styles.scss"   into your module.
+
+the first div, which wraps <NavBar> <Timer> <yourComponent> needs to have className={styles.content}
+example: MealSelection.jsx -->    <div className={styles.content}> 
+                                        <NavBar> <Timer> <WeeklySelection> 
+                                  </div>
+on your component the first div that wraps whatever you're displaying needs to have className={styles.mainSection}
+example: WeeklySelection.jsx ---> <div className={styles.mainSection}> 
+                                        <DailySelection> 
+                                  </div>
+
+CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
+ */
+.content {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 94px 1fr;
+  grid-template-rows: 80px auto;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.nav-box-desk {
+  width: 94px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-box-desk {
+  width: 1291px;
+  height: 143px;
+}
+
+.main-box-desk {
+  width: 1291px;
+  height: 877px;
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    background-image: none;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 75px;
+  }
+
+  .mainSection {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+.linkContainer {
+  width: 80%;
+  margin: auto;
+  max-width: 900px;
+}
+
+.makeInline {
+  display: flex;
+  justify-content: flex-end;
+}
+.makeInline .info {
+  width: 30px;
+  height: 30px;
+  color: orange;
+  margin-top: 5px;
+}
+
+.linkContainerOne {
+  border-radius: 20px;
+}
+.linkContainerOne .mealSelection {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+}
+.linkContainerOne .mealSelection .fork {
+  width: 100px;
+  height: 120px;
+  margin-top: 5px;
+}
+.linkContainerOne .mealSelection h2 {
+  color: white;
+  margin-top: 25px;
+  text-decoration: none;
+}
+.linkContainerOne .mealSelection .textMeal {
+  color: white;
+  font-size: small;
+  text-decoration: none;
+}
+
+.linkContainerTwo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutUs {
+  width: 50%;
+  margin-right: 10px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.gamification {
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.leagueTable {
+  width: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  * {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .timer {
+    height: 5vh;
+    background: black;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+  }
+  body .topBar {
+    width: 100vw;
+    height: 8vh;
+    background: linear-gradient(180deg, #5656FF 26.35%, #9556C0 126.35%);
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+  }
+  body .linkContainer {
+    backdrop-filter: blur(4px);
+    border-radius: 30px;
+    height: 60vh;
+    width: 90vw;
+    text-align: center;
+    margin-right: 0;
+    margin-top: 20px;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .linkContainer .linkContainerOne {
+    margin-top: 15px;
+  }
+  body .linkContainer .linkContainerOne .mealSelection {
+    text-decoration: none;
+  }
+  body .linkContainer .linkContainerOne .mealSelection .fork {
+    width: 100px;
+    height: 120px;
+    margin-top: 5px;
+  }
+  body .linkContainer .linkContainerOne .mealSelection h3 {
+    color: white;
+    margin-top: 25px;
+  }
+  body .linkContainer .linkContainerOne .mealSelection .textMeal {
+    color: white;
+    font-size: small;
+  }
+  body .linkContainer .linkContainerTwo {
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    margin-top: 15px;
+  }
+  body .linkContainer .linkContainerTwo .aboutUs, body .linkContainer .linkContainerTwo .gamification {
+    width: 45%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  body .linkContainer .linkContainerTwo .aboutUs .logo, body .linkContainer .linkContainerTwo .gamification .logo {
+    width: 100px;
+  }
+  body .linkContainer .linkContainerTwo .aboutUs .leagueTable, body .linkContainer .linkContainerTwo .gamification .leagueTable {
+    height: 75px;
+    width: 75px;
+    margin-top: 20px;
+  }
+  body .linkContainer .linkContainerTwo .aboutUs h3, body .linkContainer .linkContainerTwo .gamification h3 {
+    color: white;
+    margin-top: 20px;
+  }
+}
