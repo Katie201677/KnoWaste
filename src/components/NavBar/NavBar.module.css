@@ -52,9 +52,11 @@ CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
 .content {
   display: grid;
   height: 100vh;
+  max-height: 100%;
   width: 100%;
   grid-template-columns: 94px 1fr;
   grid-template-rows: 80px auto;
+  justify-content: center;
 }
 
 .mainSection {
@@ -259,6 +261,7 @@ body {
 }
 
 .nav-bar {
+  margin: 0 !important;
   width: 100%;
   box-sizing: border-box;
   padding: 0;
@@ -312,6 +315,19 @@ body {
   .mainNav {
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .nav-bar {
+    margin: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .nav-bar ul.mainNav {
+    display: flex;
+  }
+  .nav-bar ul.mainNav li {
+    margin: 0;
+    flex-shrink: 1;
   }
 
   .navigation {
