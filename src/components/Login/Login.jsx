@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "./Login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { auth } from "../../firebase.js";
+import { auth, firestore } from "../../firebase.js";
 import { UserContext } from "../../context/contextUser";
 import { useForm } from "react-hook-form";
 
@@ -20,10 +20,17 @@ const Login = () => {
       .signInWithEmailAndPassword(form.email, form.password)
       .then((response) => {
         if (response.user) {
-          console.log(response.user);
-          userContext.setUser(response.user);
-          firebase.collection('users').doc()
-          history.push("/home");
+          const user = response.user;
+
+          firestore
+            .collection("users")
+            .doc(user.uid)
+            .get()
+            .then((response) => {
+              const userDoc = response.data();
+              userDoc.isAdmin ? history.push("/admin") : history.push("/home");
+              userContext.setUser(userDoc);
+            });
         }
       })
       .catch((error) => {
