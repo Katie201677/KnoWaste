@@ -87,6 +87,17 @@ label {
   margin: auto;
   border: none;
 
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: auto;
+    border: none;
+
+  }
+
 }
 
 #submit {
