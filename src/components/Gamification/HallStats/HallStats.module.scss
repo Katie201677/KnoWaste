@@ -1,0 +1,16 @@
+@import "../../../assets/styles/styles.scss";
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  
+
+  .entry {
+    margin: 0px;
+  }
+}
+
+.orange {
+  background: $primary-color !important;
+}

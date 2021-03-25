@@ -1,0 +1,21 @@
+@import "../../assets/styles/styles.scss";
+
+.gameHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .gameTitle {
+        color: #f1f1f1;
+        font-size: $font-l;
+        margin: 5px;
+        padding: 0;
+    }
+    
+    .iconStyle {
+        color: #f1f1f1;
+        font-size: 50px;
+        padding: 5px;
+    }
+}
+
