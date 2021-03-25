@@ -12,9 +12,9 @@ const Home = () => {
 
 return (
 <div className={styles.content}>
-  <div className={styles.navBar}>
+  
     <NavBar />
-  </div>
+  
   <div className={styles.fullPage}>
     <div className={styles.makeInline}>
       <HelpPopUp sourcePage='homepage' />
