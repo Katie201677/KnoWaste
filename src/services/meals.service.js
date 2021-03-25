@@ -29,12 +29,16 @@ export const createMeal = (data) => {
     });
 };
 
+
 export const getAllMeals = () => {
+  let mealsArray = []
   var collectionRef = firestore.collection("meals");
   collectionRef.get().then((response) => {
     response.forEach((doc) => {
-      console.log(doc.data());
+      mealsArray.push(doc.data());
+      
     });
+    return mealsArray
   });
 };
 

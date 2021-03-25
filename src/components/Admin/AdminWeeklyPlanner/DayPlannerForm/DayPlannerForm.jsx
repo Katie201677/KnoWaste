@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "./DayPlannerForm.module.scss";
-
+import { getAllMeals }  from "../../../../services/meals.service"
 
 const DayPlannerForm = (props) => {
   const day = props.day;
   const register = props.register;
+
+  useEffect( async ()=>
+  {
+    await  console.log(getAllMeals())
+   
+  },[])
 
   return (
     <div key={day} className={styles.formSection}>
