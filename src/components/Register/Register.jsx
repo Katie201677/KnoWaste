@@ -1,29 +1,48 @@
 import React from "react";
 import styles from "./Register.module.scss";
+import { useHistory } from 'react-router-dom'
 import { useForm } from "react-hook-form";
-
+import { auth, firestore } from "../../firebase";
 const Register = () => {
+  let history = useHistory();
   const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-
-  // REAL EMAIL VALIDATION COMES HERE!
 
 
   const emailIsUnique = async(email) => {
     await wait(1000);
     return email === "test@example.com" ? "email is already in use" : undefined;
   };
-
-  const onSubmit = (data) => {
-      // Simple POST request with a JSON body using fetch
-      // const requestOptions = {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify({ title: 'React POST Request Example' })
-      // };
-      // fetch('https://jsonplaceholder.typicode.com/posts', requestOptions)
-      //     .then(response => response.json())
-      //     .then(data => this.setState({ postId: data.id }));
+//OnSubmit calls firebase method, which by checking with the auth api of firebase allows for checking user credentials.
+  const onSubmit = (form) => {
+  
+  auth.createUserWithEmailAndPassword(form.email, form.password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user);
+    user.updateProfile({displayName: form.name})
+    history.push("/"); 
+    firestore.collection("users").doc(user.uid).set({
+    uid: user.uid,
+    name: form.name,
+    email: form.email,
+    studentNumber: form.studentNumber,
+    residenceHall: form.residenceHall,
+    dateOfBirth: form.dob,
+    mobileNumber: form.mobile,
+    isAdmin:false
+  })
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode)
+    console.log(errorMessage)
+    alert("Email is already in use.")
+    // ..
+  });
+ 
   };
 
   const { 
@@ -176,7 +195,7 @@ const Register = () => {
               value = {true}
             />
             <p>
-              By ticking this box you aknowledge that you have read and agree to
+              By ticking this box you acknowledge that you have read and agree to
               our terms and conditions
             </p>
           </div>
@@ -189,8 +208,8 @@ const Register = () => {
               type="checkbox"
             ></input>
             <p>
-              By ticking this box you agree to recieving occasional tailored
-              advertisments about our amazing products
+              By ticking this box you agree to receiving occasional tailored
+              advertisements about our amazing products
             </p>
           </div>
             <button
