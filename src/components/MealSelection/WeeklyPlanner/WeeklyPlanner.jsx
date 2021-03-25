@@ -13,31 +13,10 @@ import { firestore } from '../../../firebase.js';
 
 const WeeklyPlanner = (props) => {
 
-  const [weeksMeals, setWeeksMeals] = useState('sos');
+  const { mealData } = props;
 
-  // const getWeeklyMeals = () => 
-  //   firestore.collection('weeksMeals').doc('210322').get()
-  //   .then(response => {
-  //   setWeeksMeals(response.data());
-  // })
-
-  // const getWeeklyMeals = () => {
-  //   firestore.collection('weeksMeals').doc('210322').get()
-  //   .then(response => response.data)
-  //   .then(response => setWeeksMeals(response.data));
-  // }
-
-  useEffect(async () => {
-    await firestore.collection('weeksMeals').doc('210322').get()
-    .then(response => {
-    setWeeksMeals(response.data());
-    console.log(response.data());
-    console.log(weeksMeals);
-    })
-  }, [])
-
-  // console.log(weeksMeals.monMealOptions.mealOption1);
-
+  console.log("The data is");
+  console.log(mealData);
   //Accordion that holds each Card Selection for each day.
   const [activeDate, setActiveDate] = useState("Monday");
 
@@ -54,28 +33,18 @@ const WeeklyPlanner = (props) => {
   // props.mealData[i] -> i = index and refers to the day in the week: i = 0 -> Monday...
 
   return (
+   <>
+    { mealData.length > 0 ?
     <div>
-      {/* Monday */}
-      {/* <DailySelection getMealChoice={weeksMeals.monMealOptions.mealOption1} mealDayData={props.mealData[0]} date="Monday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Monday")} /> */}
+      <DailySelection mealDayData={mealData[0]} date="Monday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Monday")} />  
       
-      {/* Tuesday */}
-      {/* <DailySelection getMealChoice={props.getMealChoice} mealDayData={props.mealData[1]} date="Tuesday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Tuesday")} /> */}
+      <DailySelection mealDayData={mealData[1]} date="Tuesday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Tuesday")} />
       
-      {/* Wednesday */}
-      {/* <DailySelection getMealChoice={props.getMealChoice} mealDayData={props.mealData[2]} date="Wednesday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Wednesday")}/> */}
-      
-      {/* Thursday */}
-      {/* <DailySelection getMealChoice={props.getMealChoice} mealDayData={props.mealData[3]} date="Thursday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Thursday")}/> */}
-      
-      {/* Friday */}
-      {/* <DailySelection getMealChoice={props.getMealChoice} mealDayData={props.mealData[4]} date="Friday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Friday")}/> */}
-      
-      {/* Saturday */}
-      {/* <DailySelection getMealChoice={props.getMealChoice} mealDayData={props.mealData[5]} date="Saturday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Saturday")}/> */}
-      
-      {/* Sunday */}
-      {/* <DailySelection getMealChoice={props.getMealChoice} mealDayData={props.mealData[6]} date="Sunday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Sunday")}/> */}
+      <DailySelection mealDayData={mealData[2]} date="Wednesday" setActiveDate={setActiveDate} activeDate={activeDate} action={() => handleClickOnImg("Wednesday")}/> 
     </div>
+    : null
+    }
+  </>
   )
 }
 

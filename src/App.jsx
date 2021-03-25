@@ -33,16 +33,9 @@ const App = () => {
   //   return mealChoiceArr;
   // };
 
-<<<<<<< HEAD
   // function to clear meal array when edit button selected on meal confirmation page
   // passed as a prop to meal confirmation
   const clearMealChoiceArr = () => (mealChoiceArr.length = 0);
-=======
-  // // function to clear meal array when edit button selected on meal confirmation page
-  // // passed as a prop to meal confirmation
-  // const clearMealChoiceArr = () => mealChoiceArr.length = 0;
-   
->>>>>>> c01cc55ab41011100e9cba4589dbb83a3a054f5b
 
   return (
     <div>
@@ -57,8 +50,8 @@ const App = () => {
             </Route>
             <Route path="/mealselection">
               <MealSelection
-                mealData={mealData}
-                getMealChoice={getMealChoice}
+                // mealData={mealData}
+                // getMealChoice={getMealChoice}
               />
             </Route>
             <Route path="/profile">
@@ -69,8 +62,8 @@ const App = () => {
             </Route>
             <Route path="/mealconfirmation">
               <MealConfirmation
-                mealChoiceArr={mealChoiceArr}
-                clearArr={clearMealChoiceArr}
+                // mealChoiceArr={mealChoiceArr}
+                // clearArr={clearMealChoiceArr}
               />
             </Route>
             <Route path="/environment">
