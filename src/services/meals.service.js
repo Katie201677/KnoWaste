@@ -5,6 +5,7 @@ import { firestore } from "../firebase";
 
 export const createMeal = (data) => {
   var docRef = firestore.collection("meals").doc(data.mealName);
+  
   docRef
     .get()
     .then((doc) => {
@@ -14,7 +15,7 @@ export const createMeal = (data) => {
         // doc.data() will be undefined in this case
         docRef
           .set({
-            data,
+            data
           })
           .then(() => {
             console.log("Document successfully written!");
