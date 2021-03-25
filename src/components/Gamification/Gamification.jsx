@@ -55,7 +55,7 @@ const Gamification = () => {
       
       <Navbar />
       
-      <section className={'mainSection box-style-1'}>
+      <section className={`mainSection box-style-1 ${styles.main}`}>
         <div className={styles.gameHeader}>
           <FontAwesomeIcon  icon="trophy" className={styles.iconStyle}/>
           <h1 className={styles.gameTitle}>League Tables</h1>

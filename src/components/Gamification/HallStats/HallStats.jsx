@@ -10,6 +10,7 @@ const HallStats = (props) => {
 
   // deconstruct props for halls object
   const hall = props.hall;
+  const position = 1 + props.position;
 
   // to show number of car icons depending on CO2 value
   const icons = [];
@@ -21,7 +22,7 @@ const HallStats = (props) => {
     <div className={hall.CO2 === 'CO2' ? `box-style-2 ${styles.orange} ${styles.row}` : `box-style-2 ${styles.row}`}>
 
       {/* hall position */}
-      <p className={styles.entry}>{props.position}</p>
+      <p className={styles.entry}>{hall.CO2 === 'CO2' ? "Position" : position}</p>
       
       {/* arrow? how to display?? */}
 
