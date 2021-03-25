@@ -31,16 +31,24 @@ export const createMeal = (data) => {
 
 
 export const getAllMeals = () => {
-  let mealsArray = []
-  var collectionRef = firestore.collection("meals");
-  collectionRef.get().then((response) => {
-    response.forEach((doc) => {
-      mealsArray.push(doc.data());
-      
-    });
-    return mealsArray
+  var collectionRef = firestore.collection("meals").get();
+  return collectionRef.then(response => {
+    return response.docs.map((doc) => doc.id);
   });
 };
+
+
+// export const getAllMeals = async () => {
+//   // let mealsArray = []
+//   firestore.collection("meals").get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//         // doc.data() is never undefined for query doc snapshots
+//         console.log(doc.id);
+//     });
+// });
+// };
+
+
 
 // const updateMeal = (data) => {
 // No functionailty for Admin to edit an existing meal, not necessary?
