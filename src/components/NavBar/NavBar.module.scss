@@ -2,176 +2,220 @@
 @import "../../assets/styles/styles.scss";
 
 .navBarContainer {
-    height: 419px;
-    width: 65px;
+  height: 419px;
+  width: 65px;
 }
+
+.nav-bar {
+  color: red;
+}
+
 
 .navigation {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;    
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: $primary-color;
+  background: $background-color;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: 10;
+  border-radius: $border-radius-2;
+
+  .closeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .logo {
+    height: 70px;
+    width: auto;
+    opacity: 0.5;
+  }
+
+  .logo:hover,
+  .logo:active {
+    opacity: 1;
+  }
+
+  .logo:active {
+    transform: scale(0.9);
+  }
+
+
+  //NAVIGATION BUTTONS
+  ul {
+    padding-left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    color: $primary-color;
-    background: $background-color;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    z-index: 10;
-    border-radius: $border-radius-2;
+    margin-bottom: 10px;
+    width: 100%;
 
-    .closeBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top:5px;
-    }
-
-    .logo {
-        height: 70px;
-        width: auto;
-        opacity: 0.5;
-    }
-    
-    .logo:hover , .logo:active {
-        opacity: 1;
-    }
-
-    .logo:active {
-        transform: scale(0.9);
-    }
-    
-    
-    //NAVIGATION BUTTONS
-    ul {
-        padding-left: 0;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        width: 100%;
-
-    
-        li {
-            margin: 7px auto;
-            list-style-type: none;
-            background-color: $btn-navigation;
-            border: 5px solid $btn-navigation;
-            border-radius: 100%;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            height: 52px;
-            width: 52px;
-    
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
-            .icon {
-                margin: auto;
-                opacity: 0.5;
-                font-size: $font-l;
-                color: $icon-navigation;
-                background-color: $btn-navigation;
-            }
-    
-            .icon:active, .icon:hover {
-                opacity: 1;
-            }
-    
-        }
-    
-        li:hover, li:active {
-            opacity: 1;
-            transform: scale(0.98);
-            box-shadow: none;
-        }
-       
-    }
-}
-
-    .mainNav {
-        padding-right: 0px;
-        padding-left:10px;
-       
-    }
 
     li {
-        // margin-right: 30px;
-        padding-top: 17px;
-        list-style-type: none;
-        font-size: 40px;
-        filter: blur(0.5px);
+      margin: 7px auto;
+      list-style-type: none;
+      background-color: $btn-navigation;
+      border: 5px solid $btn-navigation;
+      border-radius: 100%;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      height: 52px;
+      width: 52px;
 
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        margin: auto;
+        opacity: 0.5;
+        font-size: $font-l;
+        color: $icon-navigation;
+        background-color: $btn-navigation;
+      }
+
+      .icon:active,
+      .icon:hover {
+        opacity: 1;
+      }
 
     }
+
+    li:hover,
+    li:active {
+      opacity: 1;
+      transform: scale(0.98);
+      box-shadow: none;
+    }
+
+  }
+}
+
+.nav-bar {
+  margin: 0!important;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  ul.mainNav {
+    display:  block;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      height: 52px;
+      width: 52px;
+      padding: 0;
+      margin: 30px auto;
+      text-align: center;
+    }
+    a {
+      display: flex;
+      width:100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      svg {
+        height: 30px;
+        width: auto;
+      }
+    }
+  }
+}
+
+
+
+/*li {
+  // margin-right: 30px;
+  padding-top: 17px;
+  list-style-type: none;
+  font-size: 40px;
+  filter: blur(0.5px);
+
+
+}*/
+
 .iconStyle {
-    color: $primary-color;
-    opacity: 0.5;
+  color: $primary-color;
+  opacity: 0.5;
 }
+
 .iconStyle:hover {
-    opacity: 1;
+  opacity: 1;
 }
-    .utensils {
-        margin-left: 3px;
-        
-    }
-
-    .trophy {
-        margin-right: 20px;
-    }
-
-    .userCircle {
-        margin-left: 3px;
-    }
 
 
 
 @media screen and (max-width: 568px) {
-    .navigation {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
+  .mainNav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-        flex-direction: row;
-        justify-content: space-evenly;
-        background: $btn-navigation;
+  .nav-bar{
+    margin: 0 !important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    ul.mainNav {
+      display: flex;
+      li {
+        margin: 0;
+        flex-shrink: 1;
+      }
+    }
+  }
 
-        .closeBtn {
-            display: none;
+  .navigation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: $btn-navigation;
+
+    .closeBtn {
+      display: none;
+    }
+
+    .mainNav {
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0;
+
+      li {
+        margin: auto;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+
+        height: auto;
+        width: auto;
+
+        .icon {
+          background-color: transparent;
         }
 
-        ul {
-            flex-direction: row;
-            justify-content: space-around;
-            margin: 0;
-            
-            li {
-                margin: auto;
-                background-color: transparent;
-                border:none;
-                box-shadow: none;
-
-                height: auto;
-                width: auto;
-
-                .icon {
-                    background-color: transparent;
-                }
-        
-                .icon:hover , .icon:active {
-                    opacity: 1;
-                }
-            }
-            li:hover,li:active {
-                transform: none;
-            }
+        .icon:hover,
+        .icon:active {
+          opacity: 1;
         }
+      }
+
+      li:hover,
+      li:active {
+        transform: none;
+      }
+    }
 
 
-        /* .sideNav {
+    /* .sideNav {
             height: 75.5%;
             width: 100vw;
             position: fixed;
@@ -192,7 +236,7 @@
             transition: 0.3s;
         } */
 
-    }
+  }
 
 
 
