@@ -1,4 +1,4 @@
-import { firestore } from "../../src/index";
+import { firestore } from "../firebase";
 
 // firebase.initializeApp(firebaseConfig);
 // const db = firestore;
