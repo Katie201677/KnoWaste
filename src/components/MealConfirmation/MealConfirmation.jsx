@@ -50,7 +50,7 @@ const MealConfirmation = (props) => {
                   })
                 }
               </section>
-              <Link to="/">
+              <Link to="/home">
                 <button className={`button-style-1 ${styles.mealConfirmationButton}`} onClick={handleSubmit}>CHECKOUT</button>
               </Link>
             </div>
