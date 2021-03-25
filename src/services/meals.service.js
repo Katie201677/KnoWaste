@@ -3,9 +3,9 @@ import { firestore } from "../firebase";
 // firebase.initializeApp(firebaseConfig);
 // const db = firestore;
 
-export const createMeal = (data) => {
+export const createMeal = (data, url) => {
   var docRef = firestore.collection("meals").doc(data.mealName);
-  
+
   docRef
     .get()
     .then((doc) => {
@@ -15,7 +15,8 @@ export const createMeal = (data) => {
         // doc.data() will be undefined in this case
         docRef
           .set({
-            data
+            data,
+            imageUrl: url
           })
           .then(() => {
             console.log("Document successfully written!");
@@ -28,6 +29,8 @@ export const createMeal = (data) => {
     .catch((error) => {
       console.log("Error getting document:", error);
     });
+
+    return 1;
 };
 
 export const getAllMeals = () => {

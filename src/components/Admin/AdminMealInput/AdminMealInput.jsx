@@ -33,12 +33,8 @@ const AdminMealInput = () => {
       alert("Image too large");
     }
   } 
-  const uploadImage = (data) => {
-    firestore.collection("meals").doc(data.mealName).update({imageUrl: url})
-  }
   const onSubmit = (data) => {
-    createMeal(data);
-    uploadImage(data);
+    const mealCreation = createMeal(data, url);
     toggleShowPopUp();
   };
 
