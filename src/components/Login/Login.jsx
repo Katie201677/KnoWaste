@@ -22,6 +22,7 @@ const Login = () => {
         if (response.user) {
           console.log(response.user);
           userContext.setUser(response.user);
+          firebase.collection('users').doc()
           history.push("/home");
         }
       })
