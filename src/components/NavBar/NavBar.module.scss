@@ -1,9 +1,16 @@
-@import '../../assets/styles/variables';
 @import "../../assets/styles/styles.scss";
 
 .navBarContainer {
   height: 419px;
   width: 65px;
+}
+
+nav {
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin: 10px;
+  padding:12px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .nav-bar {
@@ -97,6 +104,12 @@
 
   }
 }
+nav {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding:12px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
 .nav-bar {
   align-self: center;
@@ -161,7 +174,12 @@
 
 
 @media screen and (max-width: 568px) {
+  nav {
+    transform: translateY(13px);
+  }
+
   .mainNav {
+    
     flex-direction: row;
     justify-content: space-around;
   }

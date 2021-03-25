@@ -15,7 +15,7 @@ const NavBar = () => {
     }
 
     return (
-        <nav className={`${styles['nav-bar']} nav-box-desk box-style-4`}>
+        <nav className={`${styles['nav-bar']} nav-box-desk `}>
                 <ul className={styles.mainNav}>
                     <li>
                         <Link to="/home"> 
