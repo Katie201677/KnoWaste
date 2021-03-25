@@ -28,6 +28,7 @@ const DailySelection = (props) => {
     const selectItem = () => {
         return setIsSelected(true);
     }
+    
   
     return (
         <div className={styles.dailySelection && 'box-style-2'}>
@@ -35,6 +36,8 @@ const DailySelection = (props) => {
             {
                 activeDate === date ? <RecipeList meal={meal} action={action}  selectItem={selectItem} getActiveMeal={getActiveMeal}/> : ""
             }
+
+
         </div>
     )
 }
