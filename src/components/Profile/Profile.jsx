@@ -86,22 +86,22 @@ const Profile = () => {
             </div>
             
             <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}>Diet 2</span>
+              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="carrot" /></span>
               <p className={isEditing ? styles.diet__label : styles.invisible}>Vegetarian</p>
             </div>
 
             <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}>Diet 3</span>
+              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="leaf" /></span>
               <p className={isEditing ? styles.diet__label : styles.invisible}>Vegan</p>
             </div>
             
             <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}>Diet 4</span>
+              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="cheese" /></span>
               <p className={isEditing ? styles.diet__label : styles.invisible}>Dairy Free</p>
             </div>
 
             <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}>Diet 5</span>
+              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="egg" /></span>
               <p className={isEditing ? styles.diet__label : styles.invisible}>Nuts</p>
             </div>
 
@@ -109,10 +109,7 @@ const Profile = () => {
 
           {/* weekly score... data/metrics are input here */}
           <div className={isEditing ? styles.score__editing : styles.score} >
-              <h2>Weekly Score</h2>
               <div className={styles.figures}>
-                <p>You helped save 30L of water</p>
-                <p>You helped save ... of CO2</p>
               </div>
           </div>
         </div>
