@@ -41,7 +41,7 @@ const MealConfirmation = (props) => {
             </ul>
           }
         </section>
-        <Link to="/">
+        <Link to="/home">
           <button className="confirmationButton" onClick={handleSubmit}>CHECKOUT</button>
         </Link>
       </div>
