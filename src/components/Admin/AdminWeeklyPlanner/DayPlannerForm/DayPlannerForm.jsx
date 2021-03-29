@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from "./DayPlannerForm.module.scss";
-import SelectSearch from 'react-select-search';
 
 
 const DayPlannerForm = (props) => {
