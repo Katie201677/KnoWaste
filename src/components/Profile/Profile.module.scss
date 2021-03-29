@@ -5,6 +5,17 @@
   height: 100%;
 
 }
+
+.signOut {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+
 .mainSection {
   align-self: center;
   height: 85%;

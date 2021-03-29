@@ -27,10 +27,17 @@ const Profile = () => {
     setIsEditing(!isEditing);
   };
 
+  const signOut = () => {
+    alert('sign out')
+  }
+
   return (
     <div className="content">
       <NavBar />
       {/* <Timer /> */}
+      <div className={styles.signOut}>
+        <button className='submit-button' onClick={signOut}>Sign out</button>
+      </div>
       <div className={styles.mainSection} >
         {/* profile picture tile */}
 
