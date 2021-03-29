@@ -31,6 +31,10 @@ export const createMeal = (data) => {
     });
 };
 
+export const addMealsToWeeklyPlanner = () => {
+  var collectionRef = firestore.collection("weeksMeals").doc(data.)
+}
+
 export const getAllMeals = () => {
   var collectionRef = firestore.collection("meals").get();
   return collectionRef.then((response) => {

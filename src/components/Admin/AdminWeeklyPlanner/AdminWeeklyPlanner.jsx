@@ -8,6 +8,7 @@ import { getAllMeals }  from "../../../services/meals.service"
 
 const AdminWeeklyPlanner = () => {
   const { register, handleSubmit } = useForm();
+  
   const onSubmit = (data) => {
     console.log(data);
   };
