@@ -15,11 +15,10 @@ const NavBar = () => {
     }
 
     return (
-        <div className="nav-box-desk">
-            <section className={`${styles.navBarContainer} box-style-4`}>
+        <nav className={`${styles['nav-bar']} nav-box-desk `}>
                 <ul className={styles.mainNav}>
                     <li>
-                        <Link to="/"> 
+                        <Link to="/home"> 
                             <FontAwesomeIcon icon="home" className={styles.iconStyle}/>
                         </Link>    
                     </li>
@@ -44,8 +43,7 @@ const NavBar = () => {
                         </Link>
                     </li>
                 </ul>
-            </section>
-        </div>
+        </nav>
     )
 }
 

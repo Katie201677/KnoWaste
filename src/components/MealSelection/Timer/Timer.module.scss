@@ -1,17 +1,11 @@
 @import "../../../assets/styles/_variables.scss";
 @import "../../../assets/styles/_typography.scss";
 
-.Timer {
+.timer {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     padding:2px;
     backdrop-filter: blur(6px);
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    margin-top: 30px;
 
     h2 { 
         margin: auto 30px;
@@ -24,12 +18,8 @@
 }
 
 @media only screen and (max-width: 576px) {
-    .Timer {
-        width: 100vw;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+    .timer {
+       flex-grow: 1;
 
         h2 { 
            font-size: $font-s;
