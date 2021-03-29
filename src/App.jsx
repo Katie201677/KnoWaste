@@ -70,7 +70,6 @@ const App = () => {
             <Route path="/gamification">
               <Gamification />
             </Route>
-
             <Route path="/admin">
               <AdminHome />
             </Route>
@@ -80,7 +79,6 @@ const App = () => {
             <Route path="/adminweeklyplanner">
               <AdminWeeklyPlanner />
             </Route>
-
             <Route path="/register">
               <Register />
             </Route>

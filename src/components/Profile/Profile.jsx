@@ -5,7 +5,7 @@ import ProfilePic from "../../assets/kitchen_1.jpg";
 import NavBar from "../NavBar/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import library from "../../data/fa-library.js";
-import Timer from "../MealSelection/Timer";
+
 
 
 // This shows once edit details button selected
@@ -30,7 +30,6 @@ const Profile = () => {
   return (
     <div className="content">
       <NavBar />
-      {/* <Timer /> */}
       <div className={styles.mainSection} >
         {/* profile picture tile */}
 
