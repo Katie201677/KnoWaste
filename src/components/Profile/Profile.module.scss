@@ -1,23 +1,50 @@
 @import "../../assets/styles/styles";
 
+.diet__and__score__container{
+  width: 100%;
+  height: 100%;
+
+}
 .mainSection {
   align-self: center;
-  width: auto;
-  height: auto;
+  height: 85%;
+
+  .profile__width {
+    width: 85% !important;
+  }
 
   .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 70%;
+    // width: 70%;
+    // height: 70%;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.455);
-    border-radius: $border-radius-2;
+    // background-color: rgba(255, 255, 255, 0.455);
+    // border-radius: $border-radius-2;
     font-family: $primary-font;
     font-size: $font-s;
     color: $secondary-color;
+    height: 100%;
+    width: 85%;
+    
+
+    .penIcon {
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+      font-size: $font-m;
+    }
+
+    .penIcon:hover {
+      cursor: pointer;
+      color: #FEBCA8;
+    }
+
+    .allergyIcon {
+      font-size: $font-m;
+    }
 
     .profile__card {
       display: flex;
@@ -26,6 +53,32 @@
       width: 100%;
       justify-content: space-between;
       border-radius: $border-radius-2;
+      z-index: 10;
+
+      .editProfile {
+        margin: 0;
+          .inputbox {
+            margin: 0;
+            padding: 0;
+        }
+        .editLabel {
+          font-size: $font-s;
+        }
+        .hallOptions {
+          border-radius: $border-radius-2;
+          width: 200px;
+          border: 1px solid none;
+        }
+        .saveButton {
+          margin: 10px;
+          padding: 10px;
+          background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+          border-radius: 30px;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          color: white;
+          border:none;
+        }
+      }
 
       .profile__info {
         display: flex;
@@ -37,17 +90,22 @@
 
         .profile__pic {
           border-radius: $border-radius-1;
-          margin: 10px;
-          margin-top: 40px;
-          height: 200px;
-          width: 200px;
+          // margin: 10px;
+          // margin-top: 40px;
+          height: 150px;
+          width: 150px;
           border: 2px solid $secondary-color;
-          margin-bottom: 50px;
+          // margin-bottom: 50px;
         }
 
-        .profile__editinfo {
-          line-height: 4em;
-          margin-left: 25px;
+        .profile__user__info {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          // line-height: 4em;
+          // margin-left: 25px;
+
           .name {
             font-size: $font-l;
             font-weight: 600;
@@ -63,13 +121,233 @@
         }
       }
     }
-    .diet__info {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
+  }
+
+  // for when NOT editing
+  .diet__info {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: -30px;
+    padding-bottom: 10px;
+    background: $secondary-color;
+    width: 100%;
+    height: 80px;
+    border-radius: $border-radius-2;
+  }
+
+  // diet requirment options tile/symbol
+  .dietTile {
+    background: $primary-color;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 0%;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .flex__row {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .flex__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  // for when editing..
+  .diet__infoEditing {
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    // width: 40%;
+    // flex-direction: column;
+    background: $secondary-color;
+    border-radius: $border-radius-2;
+  }
+
+  // container for data/environmental scores
+  .score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: $primary-font-color;
+  }
+
+  .score__editing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: 50%;
+    // height: 250px;
+    background: $secondary-color;
+    border-radius: $border-radius-2;
+    color: $secondary-font-color;
+    
+    h3 {
+      font-size: $font-s;
+    }
+
+    .figures {
+      font-size: $font-xs;
     }
   }
+
+  .diet__header {
+    color: $secondary-font-color;
+    font-size: $font-s;
+  }
+
+  .diet__label {
+    color: $secondary-font-color;
+    font-size: $font-xs;
+  }
+
+  .diet__flex__row {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
 }
+
+.invisible {
+  display: none;
+}
+
+// Ultra Desktop styly
+@media only screen and (min-width: $ultra-breakpoint) {
+  .profile {
+    width: 70%;
+    height: 70%;
+
+    .profile__pic {
+      height: 200px;
+      width: 200px;
+
+    }
+  }
+
+}
+
+// Desktop style
+@media only screen and (min-width: $comp-breakpoint) and (max-width:$ultra-breakpoint) {
+  
+  .profile {
+    width: 70%;
+    height: 70%;
+
+    .profile__pic {
+      height: 200px;
+      width: 200px;
+    }
+  }
+ 
+}
+
+// Tablet Styles 
+@media only screen and (min-width: $mob-breakpoint) and (max-width:$comp-breakpoint) {
+  .profile {
+    width: 70%;
+    height: 70%;
+
+    .profile__pic {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  
+}
+
+// Mobile Styles
+@media screen and (max-width:$mob-breakpoint){
+  .profile__card{
+    
+    position: absolute;
+    top: 0px;
+  }
+.diet__info{
+  top: 20px;
+}
+  .mainSection {
+    width: 95vw;
+    height: 95vh;
+  
+    .profile {
+      
+      width: 90%;
+      height: 90%;
+
+      .profile__info {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+      
+        .profile__pic {
+          position: static;
+          left: 0;
+          height: 80px;
+          width: 80px;
+          margin: auto;
+          margin-top: 20px;
+          
+        }
+
+        .profile__user__info { 
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .editProfile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    .diet__and__score__container {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      .diet__infoEditing {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%
+      }
+
+      .score__editing {
+        width: 100%;
+        height: 565px;
+      }
+    }
+  }
+
+
+  
+}
+
+
+
+
+
+
 // @media screen and (max-width: $mob-breakpoint) {
 //   .profile {
 //     display: flex;

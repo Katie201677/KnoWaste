@@ -17,6 +17,7 @@ export const createMeal = (data) => {
         docRef
           .set({
             data,
+            imageUrl: url
           })
           .then(() => {
             console.log("Document successfully written!");
@@ -29,6 +30,8 @@ export const createMeal = (data) => {
     .catch((error) => {
       console.log("Error getting document:", error);
     });
+
+    return 1;
 };
 
 export const addMealsToWeeklyPlanner = () => {

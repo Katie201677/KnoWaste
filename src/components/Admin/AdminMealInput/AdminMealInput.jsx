@@ -6,12 +6,35 @@ import { useForm } from "react-hook-form";
 import AdminMealPreview from "./AdminMealPreview";
 import { createMeal, getAllMeals, deleteMeal } from "../../../services/meals.service"
 import ConfirmationPopUp from "../ConfirmationPopUp/ConfirmationPopUp";
+import { storage, firestore } from "../../../firebase";
 
 const AdminMealInput = () => {
   const { register, handleSubmit, errors } = useForm();
+  const [image, setImg] = useState(null);
+  const [url, setUrl] = useState('');
 
+  //image upload
+  const handleChange = (e) => {
+    if(e.target.files[0].size < 3 * 1024 * 1024){
+      console.log(e.target.files[0])
+      setImg(e.target.files[0]);
+      console.log("image is",image)
+
+      const uploadTask = storage.ref(`images/${e.target.files[0].name}`).put(e.target.files[0]);
+      uploadTask.on("state_changed", snapshot => {
+                }, error => {
+                  alert(error.message);
+                }, () => {
+                  storage.ref("images").child(e.target.files[0].name).getDownloadURL().then(url => {
+                    setUrl(url)
+                  })
+                })
+    } else{
+      alert("Image too large");
+    }
+  } 
   const onSubmit = (data) => {
-    createMeal(data);
+    const mealCreation = createMeal(data, url);
     toggleShowPopUp();
   };
 
@@ -110,8 +133,8 @@ const AdminMealInput = () => {
           <div className={styles.rowTwo}>
                   
                   <div className={styles.imgContainer}>
-                    <div className={styles.imgPreview}></div>
-                    <button className="button-style-1">Upload Image</button>                          
+                    <div className={styles.imgPreview}> {url && <img src={url} />} </div>
+                    <input  className="button-style-1" type="file" accept="image/x-png,image/gif,image/jpeg" onChange={handleChange} />                         
                   </div>
                  
                   <div className={styles.imgContainer}>
