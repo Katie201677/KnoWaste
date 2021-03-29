@@ -4,7 +4,9 @@ import { firestore } from "../firebase";
 // const db = firestore;
 
 export const createMeal = (data) => {
-  var docRef = firestore.collection("meals").doc(data.mealName);
+  var docRef = firestore
+    .collection("meals")
+    .doc(data.mealName.split(" ").join(""));
   docRef
     .get()
     .then((doc) => {
@@ -29,14 +31,12 @@ export const createMeal = (data) => {
     });
 };
 
-
 export const getAllMeals = () => {
   var collectionRef = firestore.collection("meals").get();
-  return collectionRef.then(response => {
+  return collectionRef.then((response) => {
     return response.docs.map((doc) => doc.id);
   });
 };
-
 
 // export const getAllMeals = async () => {
 //   // let mealsArray = []
@@ -47,8 +47,6 @@ export const getAllMeals = () => {
 //     });
 // });
 // };
-
-
 
 // const updateMeal = (data) => {
 // No functionailty for Admin to edit an existing meal, not necessary?

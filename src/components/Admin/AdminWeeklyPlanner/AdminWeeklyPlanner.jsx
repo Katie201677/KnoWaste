@@ -35,22 +35,22 @@ const AdminWeeklyPlanner = () => {
           </div>
 
           <div className={styles.day}><h3>Tuesday</h3>
-          <DayPlannerForm day={"tuesday"} register={register}/></div>
+          <DayPlannerForm day={"tuesday"} register={register} meals={meals}/></div>
 
           <div className={styles.day}><h3>Wednesday</h3>
-          <DayPlannerForm day={"wednesday"} register={register}/></div>
+          <DayPlannerForm day={"wednesday"} register={register} meals={meals}/></div>
           
           <div className={styles.day}><h3>Thursday</h3>
-          <DayPlannerForm day={"thursday"} register={register}/></div>
+          <DayPlannerForm day={"thursday"} register={register} meals={meals}/></div>
           
           <div className={styles.day}><h3>Friday</h3>
-          <DayPlannerForm day={"friday"} register={register}/></div>
+          <DayPlannerForm day={"friday"} register={register} meals={meals}/></div>
           
           <div className={styles.day}><h3>Saturday</h3>
-          <DayPlannerForm day={"saturday"} register={register}/></div>
+          <DayPlannerForm day={"saturday"} register={register} meals={meals}/></div>
           
           <div className={styles.day}><h3>Sunday</h3>
-          <DayPlannerForm day={"sunday"} register={register}/></div>
+          <DayPlannerForm day={"sunday"} register={register} meals={meals}/></div>
           
         <input type="submit" className="button-style-1"/>
       </form>

@@ -6,35 +6,47 @@ import SelectSearch from 'react-select-search';
 const DayPlannerForm = (props) => {
   const day = props.day;
   const register = props.register;
-  const meals = props.meals
+  const  meals  = props.meals;
+  console.log(meals);
+
+  // const mealOptions = meals.map((meal) => {
+  //    return <option value="meal" key={meal}>{mealOptions}</option>
+  //  })
+
 
   return (
     <div key={day} className={styles.formSection}>
       
       <div>
             <h3>Option 1</h3>
-            <SelectSearch options={meals}/>
-            {/* <select name={`${day}Meal1`} ref={register}>
-              <option value="meal1">meal1</option>
-              <option value="meal2">meal2</option>
-              <option value="meal3">meal3</option>
-            </select> */}
+          
+            <select name={`${day}Meal1`} ref={register}>
+              {meals.map((meal) => {
+                  return <option value="meal" key={meal}>{meal}</option>
+                })
+              }
+             
+            </select>
           </div>
           <div>
             <h3>Option 2</h3>
-            <select name={`${day}Meal2`} ref={register}>
-              <option value="meal1">meal1</option>
-              <option value="meal2">meal2</option>
-              <option value="meal3">meal3</option>
+            <select name={`${day}Meal1`} ref={register}>
+              {meals.map((meal) => {
+                  return <option value="meal" key={meal}>{meal}</option>
+                })
+              }
+             
             </select>
           </div>
         <div>
           <h3>Option 3</h3>
-          <select name={`${day}Meal3`} ref={register}>
-            <option value="meal1">meal1</option>
-            <option value="meal2">meal2</option>
-            <option value="meal3">meal3</option>
-          </select>
+          <select name={`${day}Meal1`} ref={register}>
+              {meals.map((meal) => {
+                  return <option value="meal" key={meal}>{meal}</option>
+                })
+              }
+             
+            </select>
         </div>
     </div>
   )
