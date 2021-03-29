@@ -7,5 +7,7 @@
 
 
 body {
-    background: url('../../assets/images/background_1.jpg') center repeat;
+  background: $background-color;
+  background-image: url("../../assets/images/FoodAndDrinkDesign.svg");
+  background-size: 600px 600px;
   }
