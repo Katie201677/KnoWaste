@@ -4,19 +4,19 @@ import { DateTime } from "luxon";
 
 //USE THESE VARIABLES TO DEFINE DEADLINE
 // Luxon is not zero indexed, so Monday is equal to 1, Friday is equal to 5, so to get to Friday we add 4 days.
-let days = 4;
+let days = 0;
 let hours = 18;
-let now = DateTime.local();
+const now = () => DateTime.local();
 
 //Timer exported for testing
 export const setDeadline = (days, hours) => {
   let deadlineThisWeek = DateTime.local()
     .startOf("week")
     .plus({ days: days, hours: hours }); //Friday at 6pm
-  if (deadlineThisWeek.weekday <= now.weekday) {
+  if (deadlineThisWeek.weekday <= now().weekday) {
     let deadline =
       deadlineThisWeek.hour >= 18
-        ? deadlineThisWeek.plus({ days: deadlineThisWeek.weekday +7 })
+        ? deadlineThisWeek.plus({ days: deadlineThisWeek.weekday })
         : deadlineThisWeek;
     return deadline;
   } else {
@@ -54,7 +54,7 @@ const Timer = () => {
 
   const getTimeDifference = () => {
     let upcomingDeadline = setDeadline(days, hours);
-    const diff = upcomingDeadline.diff(now, [
+    const diff = upcomingDeadline.diff(now(), [
       "days",
       "hours",
       "minutes",
