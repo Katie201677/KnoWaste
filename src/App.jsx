@@ -11,6 +11,7 @@ import Environment from "./components/Environment";
 import Gamification from "./components/Gamification";
 import AdminMealInput from "./components/Admin/AdminMealInput";
 import AdminWeeklyPlanner from "./components/Admin/AdminWeeklyPlanner";
+import AdminRecentOrders from "./components/Admin/AdminRecentOrders";
 import mealData from "./assets/data/meal-data.json";
 import UserContext from "./context/contextUser.js";
 import "./App.css";
@@ -78,6 +79,9 @@ const App = () => {
             </Route>
             <Route path="/adminweeklyplanner">
               <AdminWeeklyPlanner />
+            </Route>
+            <Route path="/recentorders">
+              <AdminRecentOrders />
             </Route>
             <Route path="/register">
               <Register />
