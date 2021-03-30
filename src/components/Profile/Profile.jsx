@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import styles from "./Profile.module.scss";
-import { useState, useContext} from "react";
 import ProfilePic from "../../assets/kitchen_1.jpg";
 import NavBar from "../NavBar/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import library from "../../data/fa-library.js";
-// import Timer from "../MealSelection/Timer";
-import { UserContext } from "../../context/contextUser";
-import { firestore } from '../../firebase.js';
-
-
+import library from "../../data/fa-library.js";
+import Timer from "../Timer/Timer";
+import { auth, firestore } from "../../firebase.js";
+import { UserContext } from "../../context/contextUser"; 
+import { Link, useHistory } from "react-router-dom";
 
 // This shows once edit details button selected
 // const EditPicProfile = () => {
@@ -24,10 +22,12 @@ import { firestore } from '../../firebase.js';
 const Profile = () => {
 
   // get current user information
-  const userContext = useContext(UserContext);
+  
 
   // use state to display editing profile options or not
   const [isEditing, setIsEditing] = useState(false);
+  const userContext = useContext(UserContext);
+  let history = useHistory();
 
   // use state to display profiles name and halls
   const [userData, setUserData] = useState({
@@ -41,6 +41,17 @@ const Profile = () => {
     setIsEditing(!isEditing);
   };
 
+  const signOut = () => {
+  
+      //logout function:
+          auth.signOut()
+          userContext.setUser(null);
+          history.push("/login");
+          console.log(auth.currentUser)
+            };
+        
+ 
+  
   // edit/update users name in firebase
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -69,6 +80,10 @@ const Profile = () => {
   return (
     <div className={`content ${styles.contentMain}`}>
       <NavBar />
+      {/* <Timer /> */}
+      <div className={styles.signOut}>
+        <button className='submit-button' onClick={signOut}>Sign out</button>
+      </div>
       <div className={styles.mainSection} >
         {/* profile picture tile */}
 
