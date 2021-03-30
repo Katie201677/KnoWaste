@@ -1,22 +1,31 @@
 @import "../../../assets/styles/styles.scss";
 
-.navigation {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
 
+.navBarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100vw;
+
+}
+
+.navigation {
+    grid-row: 1/-1;
+    grid-column: 1;
+    // position: fixed;
+    margin: auto;
+    height: 75px;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: $primary-color;
     background: $background-color;
-    position: absolute;
-    top: 20%;
-    left: 10%;
     z-index: 10;
-    border-radius: $border-radius-2;
+    border-radius: 100%;
+
 
 
 
@@ -59,8 +68,8 @@
             border: 5px solid $btn-navigation;
             border-radius: 100%;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            height: 52px;
-            width: 52px;
+            height: 60px;
+            width: 60px;
 
             display: flex;
             justify-content: center;
@@ -149,11 +158,6 @@
 
 @media screen and (max-width: 568px) {
     .navigation {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-
         flex-direction: row;
         justify-content: space-evenly;
         background: $btn-navigation;
