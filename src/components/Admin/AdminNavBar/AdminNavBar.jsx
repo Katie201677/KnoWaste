@@ -14,7 +14,9 @@ const AdminNavBar = () => {
     }
 
     return (
-        <section className={styles.navigation}>
+
+        <div className={styles.navBarContainer}>
+            <section className={styles.navigation}>
             
             {/* <span className={styles.closeBtn} onClick={handleClick}> 
                 <Link to="/"> 
@@ -30,6 +32,10 @@ const AdminNavBar = () => {
                 </li>
             </ul>
         </section>
+
+
+        </div>
+        
     )
 }
 

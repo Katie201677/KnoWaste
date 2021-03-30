@@ -4,13 +4,16 @@ import { useForm } from "react-hook-form";
 import styles from "./AdminWeeklyPlanner.module.scss";
 import DayPlannerForm from "./DayPlannerForm"
 import AdminNavBar from "../AdminNavBar";
-import { getAllMeals }  from "../../../services/meals.service"
+import { getAllMeals, addMealsToWeeklyPlanner }  from "../../../services/meals.service"
+
 
 const AdminWeeklyPlanner = () => {
   const { register, handleSubmit } = useForm();
   
   const onSubmit = (data) => {
-    console.log(data);
+    addMealsToWeeklyPlanner(data);
+    console.log(data)
+    
   };
 
   const [meals, setMeals] = useState([])
