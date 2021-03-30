@@ -5,11 +5,8 @@ import { firestore } from "../../../../../../firebase.js";
 let mealInfo;
 
 const RecipeCard = (props) => {
-  //Each individual recipe information in a card format.
-  const { action, mealChoice } = props;
-  // const {imgSrc, recipeName, dietaryrestriction} = props.mealChoice;
+  const { action, mealChoice, setMealChoice } = props;
   const [loading, setLoading] = useState(false);
-
 
   const getMealInfo = () => {
     firestore
@@ -23,20 +20,14 @@ const RecipeCard = (props) => {
       });
   };
 
-  // data. -->
-  // mealAllergens: ["dairy"]
-  // mealCarbon: "25"
-  // mealDescription: "Just cheese"
-  // mealDiet: (2) ["vegetarian", "halal"]
-  // mealName: "Cheese"
-  // mealWater: "252"
-  // __proto__: Object
-  // imageUrl: "https://firebasestorage.googleapis.com/v0/b/knowaste-3c92c.appspot.com/o/images%2F18.gif?alt=media&token=d7e746e8-97bc-42ee-938c-4e66cf387d63"
-  // __proto__: Object
-
   useEffect(() => {
     getMealInfo();
   }, []);
+
+  const selectMeal = () => {
+    setMealChoice(mealInfo.data.mealName);
+    console.log(mealInfo.data.mealName)
+  }
 
   return (
     <>
@@ -56,7 +47,7 @@ const RecipeCard = (props) => {
           <p>{mealInfo.data.mealAllergens.join(" ")}</p>
           </section>
 
-         <button className={"button-style-1 " + styles.selectButton} onClick={() => {getActiveMeal(mealInfo.data.mealName); selectItem(); action();}}>
+         <button className={"button-style-1 " + styles.selectButton} onClick={()=>selectMeal()}>
             Select
           </button>
         </section>

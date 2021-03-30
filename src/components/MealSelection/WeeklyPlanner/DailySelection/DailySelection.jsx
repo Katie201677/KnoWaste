@@ -5,7 +5,9 @@ import DayDateBar from "./DayDateBar/DayDateBar.jsx";
 import { firestore } from "../../../../firebase.js";
 
 const DailySelection = (props) => {
-  const { date, setActiveDate, activeDate, action, mealDayData } = props;
+  const { date, setActiveDate, activeDate, action, mealDayData, addChosenMeal } = props;
+
+
 
   // mealOption is an array with three objects. Each object is a meal option.
   // The meal option object keys are the bits of meal information display.
@@ -15,6 +17,15 @@ const DailySelection = (props) => {
 
   const [loading, setLoading] = useState(true);
 
+  const [meal, setMealChoice] = useState('');
+
+  meal !== '' ? addChosenMeal(meal) : null;
+
+  console.log(meal)
+
+  // firestore.collection('mealOrder') etc etc ........
+  // meal -->>> input !!!
+
   return (
     <div className={styles.dailySelection && "box-style-2"}>
       {/* <DayDateBar date={date} setActiveDate={setActiveDate} activeDate={activeDate} isSelected={isSelected} activeMeal={activeMeal} action={action} getActiveMeal={getActiveMeal}/> */}
@@ -23,11 +34,16 @@ const DailySelection = (props) => {
         setActiveDate={setActiveDate}
         activeDate={activeDate}
         action={action}
+        
       />
-      <RecipeList mealDayData={mealDayData} />
+      <RecipeList mealDayData={mealDayData} setMealChoice={setMealChoice} />
       {/* <div className="box-style-2">{() => getMealInfo(dayOption1)}</div>
       <div className="box-style-2">{() => getMealInfo(dayOption2)}</div>
-      <div className="box-style-2">{() => getMealInfo(dayOption3)}</div> */}
+      <div className="box-style-2">{() => getMealInfo(dayOption3)}</div>
+      <div className="box-style-2">{() => getMealInfo(dayOption4)}</div>
+      <div className="box-style-2">{() => getMealInfo(dayOption5)}</div>
+      <div className="box-style-2">{() => getMealInfo(dayOption6)}</div>
+      <div className="box-style-2">{() => getMealInfo(dayOption7)}</div> */}
     </div>
   );
 };

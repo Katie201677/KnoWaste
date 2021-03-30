@@ -4,7 +4,6 @@ import library from "../../data/fa-library.js";
 import styles from "./MealConfirmation.module.scss";
 import MealCard from "./MealCard";
 import NavBar from "../NavBar/NavBar";
-import Timer from "../MealSelection/Timer";
 import { Link } from "react-router-dom";
 
 // import HelpPopUp from '../HelpPopUp';

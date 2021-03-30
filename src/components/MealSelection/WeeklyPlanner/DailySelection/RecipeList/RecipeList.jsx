@@ -6,7 +6,7 @@ const RecipeList = (props) => {
   // const { action, meal } = props;
   //Holds and organises the daily selection of food.
 
-  const { mealDayData, action } = props;
+  const { mealDayData, action, setMealChoice } = props;
 
   let mealChoice1 = mealDayData.mealOption1;
   let mealChoice2 = mealDayData.mealOption2;
@@ -14,10 +14,10 @@ const RecipeList = (props) => {
 
   return (
     <div className={styles.recipeList}>
-      <section className="box-style-2">
-        <RecipeCard mealChoice={mealChoice1} action={action} />
-        <RecipeCard mealChoice={mealChoice2} action={action} />
-        <RecipeCard mealChoice={mealChoice3} action={action} />
+      <section className={`box-style-2 ${styles.sectionFlex}`}>
+        <RecipeCard mealChoice={mealChoice1} action={action} setMealChoice={setMealChoice}/>
+        <RecipeCard mealChoice={mealChoice2} action={action} setMealChoice={setMealChoice}/>
+        <RecipeCard mealChoice={mealChoice3} action={action} setMealChoice={setMealChoice}/>
       </section>
     </div>
   );

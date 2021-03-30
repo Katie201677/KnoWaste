@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import DailySelection from "./DailySelection/DailySelection.jsx";
 import styles from "./WeeklyPlanner.module.scss";
-import { firestore } from "../../../firebase.js";
+import { firestore, auth } from "../../../firebase.js";
+
 
 // pass in firebase firestore data str8 into here..........
 
@@ -10,8 +11,21 @@ import { firestore } from "../../../firebase.js";
 //  pass into each correspoding day
 //  display
 
+
 const WeeklyPlanner = (props) => {
   const { mealData } = props;
+
+  let chosenMealsArray = []
+
+  
+  const addChosenMeal = (meal) => {
+    console.log(chosenMealsArray)
+    return chosenMealsArray.push(meal)
+    
+  } 
+
+  console.log(auth.getCurrentUser())
+
 
   //Accordion that holds each Card Selection for each day.
   const [activeDate, setActiveDate] = useState("Monday");
@@ -45,6 +59,7 @@ const WeeklyPlanner = (props) => {
             setActiveDate={setActiveDate}
             activeDate={activeDate}
             action={() => handleClickOnImg("Monday")}
+            addChosenMeal = {addChosenMeal}
           />
 
           <DailySelection
@@ -53,6 +68,7 @@ const WeeklyPlanner = (props) => {
             setActiveDate={setActiveDate}
             activeDate={activeDate}
             action={() => handleClickOnImg("Tuesday")}
+            addChosenMeal = {addChosenMeal}
           />
 
           <DailySelection
@@ -61,7 +77,45 @@ const WeeklyPlanner = (props) => {
             setActiveDate={setActiveDate}
             activeDate={activeDate}
             action={() => handleClickOnImg("Wednesday")}
+            addChosenMeal = {addChosenMeal}
           />
+
+          <DailySelection
+            mealDayData={mealData[3]}
+            date="Thursday"
+            setActiveDate={setActiveDate}
+            activeDate={activeDate}
+            action={() => handleClickOnImg("Thursday")}
+            addChosenMeal = {addChosenMeal}
+          />
+
+          <DailySelection
+            mealDayData={mealData[4]}
+            date="Friday"
+            setActiveDate={setActiveDate}
+            activeDate={activeDate}
+            action={() => handleClickOnImg("Friday")}
+            addChosenMeal = {addChosenMeal}
+          />
+
+          <DailySelection
+            mealDayData={mealData[5]}
+            date="Saturday"
+            setActiveDate={setActiveDate}
+            activeDate={activeDate}
+            action={() => handleClickOnImg("Saturday")}
+            addChosenMeal = {addChosenMeal}
+          />
+          
+          <DailySelection
+            mealDayData={mealData[6]}
+            date="Sunday"
+            setActiveDate={setActiveDate}
+            activeDate={activeDate}
+            action={() => handleClickOnImg("Sunday")}
+            addChosenMeal = {addChosenMeal}
+          />
+
         </div>
       ) : null}
     </>
