@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Profile.module.scss";
 import { useState } from "react";
 import ProfilePic from "../../assets/kitchen_1.jpg";
@@ -6,7 +6,9 @@ import NavBar from "../NavBar/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import library from "../../data/fa-library.js";
 import Timer from "../MealSelection/Timer";
-
+import { auth, firestore } from "../../firebase.js";
+import { UserContext } from "../../context/contextUser"; 
+import { Link, useHistory } from "react-router-dom";
 
 // This shows once edit details button selected
 // const EditPicProfile = () => {
@@ -21,7 +23,8 @@ const Profile = () => {
 
   // use state to display editing profile options or not
   const [isEditing, setIsEditing] = useState(false);
-
+  const userContext = useContext(UserContext);
+  let history = useHistory();
   // function runs onClick of edit button (pen icon)
   const showEditProfile = () => {
     setIsEditing(!isEditing);
@@ -29,7 +32,15 @@ const Profile = () => {
 
   const signOut = () => {
     alert('sign out')
-  }
+      //logout function:
+          auth.signOut()
+          userContext.setUser(null);
+          history.push("/login");
+          console.log(auth.currentUser)
+            };
+        
+ 
+  
 
   return (
     <div className="content">
