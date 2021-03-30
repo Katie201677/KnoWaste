@@ -4,10 +4,11 @@ import { useState, useContext} from "react";
 import ProfilePic from "../../assets/kitchen_1.jpg";
 import NavBar from "../NavBar/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import library from "../../data/fa-library.js";
-import Timer from "../MealSelection/Timer";
+// import library from "../../data/fa-library.js";
+// import Timer from "../MealSelection/Timer";
 import { UserContext } from "../../context/contextUser";
 import { firestore } from '../../firebase.js';
+
 
 
 // This shows once edit details button selected
@@ -68,7 +69,6 @@ const Profile = () => {
   return (
     <div className={`content ${styles.contentMain}`}>
       <NavBar />
-      {/* <Timer /> */}
       <div className={styles.mainSection} >
         {/* profile picture tile */}
 

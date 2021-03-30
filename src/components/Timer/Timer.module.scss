@@ -1,20 +1,22 @@
-@import "../../../assets/styles/_variables.scss";
-@import "../../../assets/styles/_typography.scss";
+@import "../../assets/styles/styles.scss";
+
 
 .timer {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     padding:2px;
     backdrop-filter: blur(6px);
+    text-align: center;
 
     h2 { 
         margin: auto 30px;
         font-size: $font-l;
     }
 
-    span {
-        font-size: $font-m;
+    .textred {
+        color: red;
     }
+
 }
 
 @media only screen and (max-width: 576px) {

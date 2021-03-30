@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Fork from '../../assets/images/fork.png';
 import Logo from '../../assets/images/Logo.png';
 import Table from '../../assets/images/leagueTable.png';
-import Timer from '../MealSelection/Timer/Timer';
+import Timer from '../Timer';
 import HelpPopUp from '../HelpPopUp';
 
 const Home = () => {
