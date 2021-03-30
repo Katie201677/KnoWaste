@@ -8,13 +8,11 @@ import Profile from "./components/Profile";
 import AboutUs from "./components/AboutUs";
 import MealConfirmation from "./components/MealConfirmation";
 import Environment from "./components/Environment";
-import NavBar from "./components/NavBar";
 import Gamification from "./components/Gamification";
-import adminHome from "./components/Admin/AdminHome";
 import AdminMealInput from "./components/Admin/AdminMealInput";
 import AdminWeeklyPlanner from "./components/Admin/AdminWeeklyPlanner";
 import mealData from "./assets/data/meal-data.json";
-import ContextUser from "./context/contextUser.js";
+import UserContext from "./context/contextUser.js";
 import "./App.css";
 import "./assets/styles/styles.scss";
 import library from "./assets/data/fa-library";
@@ -40,7 +38,7 @@ const App = () => {
   return (
     <div>
       <Router>
-        <ContextUser>
+        <UserContext>
           <Switch>
             <Route path="/home">
               <Home />
@@ -88,7 +86,7 @@ const App = () => {
               <Login />
             </Route>
           </Switch>
-        </ContextUser>
+        </UserContext>
       </Router>
     </div>
   );

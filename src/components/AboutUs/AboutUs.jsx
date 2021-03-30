@@ -1,7 +1,7 @@
 import React from "react"
 import styles from './AboutUs.module.scss';
 import NavBar from '../NavBar'
-import Timer from '../MealSelection/Timer'
+import Timer from '../Timer';
 import Logo from '../../assets/Logo_white_new.png'
 
 const AboutUs = () => {

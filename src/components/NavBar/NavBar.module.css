@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.textwhite {
+  color: white;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+}
+
+/* HOW TO USE
+@import "../../assets/styles/styles.scss"   into your module.
+
+the first div, which wraps <NavBar> <Timer> <yourComponent> needs to have className={styles.content}
+example: MealSelection.jsx -->    <div className={styles.content}> 
+                                        <NavBar> <Timer> <WeeklySelection> 
+                                  </div>
+on your component the first div that wraps whatever you're displaying needs to have className={styles.mainSection}
+example: WeeklySelection.jsx ---> <div className={styles.mainSection}> 
+                                        <DailySelection> 
+                                  </div>
+
+CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
+ */
+.content {
+  display: grid;
+  height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  grid-template-columns: 94px 1fr;
+  grid-template-rows: 80px auto;
+  justify-content: center;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.nav-box-desk {
+  display: flex;
+  align-items: center;
+}
+
+.header-box-desk {
+  width: 1291px;
+  height: 143px;
+}
+
+.main-box-desk {
+  width: 1291px;
+  height: 877px;
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    background-image: none;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 75px;
+  }
+
+  .mainSection {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+.button-style-1 {
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: white;
+  border: none;
+}
+
+.submit-button {
+  width: 40%;
+  height: 11%;
+  padding: 10px;
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #FFFFFF;
+  border: none;
+}
+
+.submit-button:hover, .submit-button:active {
+  filter: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.box-style-1 {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  backdrop-filter: blur(6px);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-2 {
+  background: #FFFFFF;
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-3 {
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-4 {
+  background: #FFFFFF;
+  border-radius: 40px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-4 {
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+body {
+  background: url("../../assets/images/background_1.jpg") center repeat;
+}
+
+.navBarContainer {
+  height: 419px;
+  width: 65px;
+}
+
+.nav-bar {
+  color: red;
+}
+
+.navigation {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #FD7951;
+  background: #54A390;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: 10;
+  border-radius: 20px;
+}
+.navigation .closeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.navigation .logo {
+  height: 70px;
+  width: auto;
+  opacity: 0.5;
+}
+.navigation .logo:hover,
+.navigation .logo:active {
+  opacity: 1;
+}
+.navigation .logo:active {
+  transform: scale(0.9);
+}
+.navigation ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.navigation ul li {
+  margin: 7px auto;
+  list-style-type: none;
+  background-color: #FD7951;
+  border: 5px solid #FD7951;
+  border-radius: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 52px;
+  width: 52px;
+  justify-content: center;
+  align-items: center;
+}
+.navigation ul li .icon {
+  margin: auto;
+  opacity: 0.5;
+  font-size: 38px;
+  color: #FFFFFF;
+  background-color: #FD7951;
+}
+.navigation ul li .icon:active,
+.navigation ul li .icon:hover {
+  opacity: 1;
+}
+.navigation ul li:hover,
+.navigation ul li:active {
+  opacity: 1;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.nav-bar {
+  margin: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+.nav-bar ul.mainNav {
+  display: block;
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.nav-bar ul.mainNav li {
+  display: block;
+  height: 52px;
+  width: 52px;
+  padding: 0;
+  margin: 30px auto;
+  text-align: center;
+}
+.nav-bar ul.mainNav a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar ul.mainNav a svg {
+  height: 30px;
+  width: auto;
+}
+
+/*li {
+  // margin-right: 30px;
+  padding-top: 17px;
+  list-style-type: none;
+  font-size: 40px;
+  filter: blur(0.5px);
+
+
+}*/
+.iconStyle {
+  color: #FD7951;
+  opacity: 0.5;
+}
+
+.iconStyle:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 568px) {
+  .mainNav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-bar {
+    margin: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .nav-bar ul.mainNav {
+    display: flex;
+  }
+  .nav-bar ul.mainNav li {
+    margin: 0;
+    flex-shrink: 1;
+  }
+
+  .navigation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: #FD7951;
+    /* .sideNav {
+            height: 75.5%;
+            width: 100vw;
+            position: fixed;
+            top: 75px;
+            right: 0;
+            margin-left: -75px;
+            background: $secondary-color;
+            overflow-x: hidden;
+            opacity: 1;
+        }
+
+        .sideNav a {
+            padding: 15px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        } */
+  }
+  .navigation .closeBtn {
+    display: none;
+  }
+  .navigation .mainNav {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .navigation .mainNav li {
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+  }
+  .navigation .mainNav li .icon {
+    background-color: transparent;
+  }
+  .navigation .mainNav li .icon:hover,
+.navigation .mainNav li .icon:active {
+    opacity: 1;
+  }
+  .navigation .mainNav li:hover,
+.navigation .mainNav li:active {
+    transform: none;
+  }
+}
