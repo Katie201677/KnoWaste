@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./Profile.module.scss";
-import { useState, useContext} from "react";
 import ProfilePic from "../../assets/kitchen_1.jpg";
 import NavBar from "../NavBar/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import library from "../../data/fa-library.js";
-import Timer from "../MealSelection/Timer";
+import Timer from "../Timer/Timer";
 import { auth, firestore } from "../../firebase.js";
 import { UserContext } from "../../context/contextUser"; 
 import { Link, useHistory } from "react-router-dom";
@@ -23,7 +22,7 @@ import { Link, useHistory } from "react-router-dom";
 const Profile = () => {
 
   // get current user information
-  const userContext = useContext(UserContext);
+  
 
   // use state to display editing profile options or not
   const [isEditing, setIsEditing] = useState(false);
@@ -43,7 +42,7 @@ const Profile = () => {
   };
 
   const signOut = () => {
-    alert('sign out')
+  
       //logout function:
           auth.signOut()
           userContext.setUser(null);
