@@ -44,7 +44,6 @@ const Login = () => {
 
   const emailIsUnique = async (email) => {
     const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
     await wait(1000);
     return email === "test@example.com"
       ? "there is no account with that email"
