@@ -13,15 +13,11 @@
 
 .mainSection {
   align-self: center;
-  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 
-  .profile__width {
-    width: 85% !important;
-  }
 
   .profile {
     display: flex;
@@ -66,8 +62,16 @@
       z-index: 10;
 
       .editProfile {
+       
         margin: 0;
-          .inputbox {
+
+        .form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .inputbox {
             margin: 0;
             padding: 0;
         }
@@ -91,6 +95,7 @@
       }
 
       .profile__info {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -242,60 +247,261 @@
 
 // Ultra Desktop style
 @media only screen and (min-width: $ultra-breakpoint) {
-  .profile {
-    width: 70%;
-    height: 70%;
 
-    .profile__pic {
-      height: 200px;
-      width: 200px;
-
-    }
+  .mainSection {
+    height: 100%;
   }
+  .profile__card{
+    height: 80%;
+    width: 80%;
+    margin: 20px;
+  }
+
+  .profile__width {
+    width: 40% !important;
+  }
+
+  .diet__info{
+    top: 20px;
+  }
+    .mainSection {
+      width: 95vw;
+      height: 95vh;
+    
+      .profile {
+        
+        // width: 90%;
+        // height: 50%;
+
+        .profile__info {
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          display: flex;
+          
+        
+          .profile__pic {
+            position: static;
+            left: 0;
+            height: 80px;
+            width: 80px;
+            margin: auto;
+            margin-top: 20px;
+            
+          }
+
+          .profile__user__info { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .editProfile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+      .diet__and__score__container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        .diet__infoEditing {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%
+        }
+
+        .score__editing {
+          width: 100%;
+          height: 565px;
+        }
+      }
+    }
 
 }
 
 // Desktop style
 @media only screen and (min-width: $comp-breakpoint) and (max-width:$ultra-breakpoint) {
-  
-  .profile {
-    width: 70%;
-    height: 70%;
 
-    .profile__pic {
-      height: 200px;
-      width: 200px;
-    }
+  .mainSection {
+    height: 100%;
   }
+  .profile__card{
+    height: 80%;
+    width: 80%;
+    margin: 20px;
+  }
+
+  .profile__width {
+    width: 50% !important;
+  }
+
+  .diet__info{
+    top: 20px;
+  }
+    .mainSection {
+      width: 95vw;
+      height: 95vh;
+    
+      .profile {
+        
+        // width: 90%;
+        // height: 50%;
+
+        .profile__info {
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          display: flex;
+          
+        
+          .profile__pic {
+            position: static;
+            left: 0;
+            height: 80px;
+            width: 80px;
+            margin: auto;
+            margin-top: 20px;
+            
+          }
+
+          .profile__user__info { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .editProfile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+      .diet__and__score__container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        .diet__infoEditing {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%
+        }
+
+        .score__editing {
+          width: 100%;
+          height: 565px;
+        }
+      }
+    }
  
 }
 
 // Tablet Styles 
 @media only screen and (min-width: $mob-breakpoint) and (max-width:$comp-breakpoint) {
-  .profile {
+  .mainSection {
+    height: 100%;
+  }
+  .profile__card{
+    height: 80%;
+    width: 80%;
+    margin: 20px;
+  }
 
-    .profile__pic {
-      height: 150px;
-      width: 150px;
+  .profile__width {
+    width: 75% !important;
+  }
+
+  .diet__info{
+    top: 20px;
+  }
+    .mainSection {
+      width: 95vw;
+      height: 95vh;
+    
+      .profile {
+        
+        // width: 90%;
+        // height: 50%;
+
+        .profile__info {
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          display: flex;
+          
+        
+          .profile__pic {
+            position: static;
+            left: 0;
+            height: 80px;
+            width: 80px;
+            margin: auto;
+            margin-top: 20px;
+            
+          }
+
+          .profile__user__info { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .editProfile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+      .diet__and__score__container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        .diet__infoEditing {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%
+        }
+
+        .score__editing {
+          width: 100%;
+          height: 565px;
+        }
+      }
     }
-  }
 
-  .profile__card {
-    margin: 30px;
-  }
+
+  
 }
 
 // Mobile Styles
 @media screen and (max-width:$mob-breakpoint){
-  .profile__card{
-    
-    // position: absolute;
-    // top: 0px;
-    margin: 20px;
+
+  .mainSection {
+    height: 85%;
   }
-.diet__info{
-  top: 20px;
-}
+  .profile__card{
+      
+      // position: absolute;
+      // top: 0px;
+      margin: 20px;
+  }
+  .diet__info{
+    top: 20px;
+  }
+
+  .profile__width {
+    width: 75% !important;
+  }
   .mainSection {
     width: 95vw;
     height: 95vh;

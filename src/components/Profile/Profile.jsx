@@ -67,7 +67,7 @@ const Profile = () => {
 
   return (
     <div className={`content ${styles.contentMain}`}>
-      {/* <NavBar /> */}
+      <NavBar />
       {/* <Timer /> */}
       <div className={styles.mainSection} >
         {/* profile picture tile */}
@@ -87,7 +87,7 @@ const Profile = () => {
 
               {/* input boxes for editing below -> these display when isEditing is true */}
               <div className={isEditing ? styles.editProfile : styles.invisible}>
-                <form onSubmit={handleSubmit}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                   <label className={styles.editLabel}>Your full name</label>
                   <input type="text" id='fullNameInput' className={styles.inputBox} placeholder="Full Name" ></input>
 
@@ -106,9 +106,9 @@ const Profile = () => {
               </div>
 
               {/* editing button */}
-              {/* <div className={styles.edit__container}> */}
+              <div className={styles.edit__container}>
                 <FontAwesomeIcon className={styles.penIcon} onClick={showEditProfile} icon="pen" />
-              {/* </div> */}
+              </div>
 
             </section>
           </section>
