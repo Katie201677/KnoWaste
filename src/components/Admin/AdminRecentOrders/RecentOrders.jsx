@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { storage, firestore } from "../../../firebase";
+import { getNextWeekID, getCurrentWeekID } from "../../../services/weekid.service";
+import DailyOrdersSummary from "./DailyOrdersSummary";
 
 // OPTION: React tables -> https://react-table.tanstack.com/docs/quick-start
 
@@ -31,8 +33,14 @@ import { storage, firestore } from "../../../firebase";
 const RecentOrders = () => {
 
   // 1. get the weeks id
-  const weekId = 210322;
+  const nextWeekId = getNextWeekID();
+  const currentWeekId = getCurrentWeekID();
+  const weekId = nextWeekId;
+  console.log(weekId);
 
+  const [mealMonday, setMealMonday] = useState([]);
+
+  // Empty arrays to store the meal choices
   const monday = [];  /* monday array for monday's meal choices */
   const tuesday = [];
   const wednesday = [];
@@ -41,40 +49,89 @@ const RecentOrders = () => {
   const saturday = [];
   const sunday = [];
 
+  // useState for rendering data once loaded
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // this function takes the total orders array for a day and returns an object with keys of the mealId's and values of the number of times it was 
+  const mealCount = (daily)=>  {
+    let array_elements = daily;
+    array_elements.sort();
+    console.log("heyyy");
+    console.log(array_elements);
+    let results = {};
+    var current = null;
+    var count = 0;
+    for (var i = 0; i < array_elements.length; i++) {
+        if (array_elements[i] != current) {
+            if (count > 0) {
+                results[current] = count;
+                // document.write(current + ' comes --> ' + count + ' times<br>');
+            }
+            current = array_elements[i];
+            console.log(`i am current ${current}`);
+            count = 1;
+        } else {
+            count++;
+        }
+        results[current] = count;
+    }
+    return results
+  }
+
 
   // get the data from firestore
-  firestore.collection('orders').get().then(result => {
+ 
+  const mealOrders = () => {
+    firestore.collection('orders').get().then(result => {
     result.docs.forEach(doc => {
-      
-      // week is a users meal options for the week
-      let week = doc.data()[weekId];
-      monday.push(week[0]);
-      tuesday.push(week[1]);
-      wednesday.push(week[2]);
-      thursday.push(week[3]);
-      friday.push(week[4]);
-      saturday.push(week[5]);
-      sunday.push(week[6]);
-    })
     
-  }).then( response => {
-    console.log(monday);
-    console.log(tuesday);
-    console.log(wednesday);
-    console.log(thursday);
-    console.log(friday);
-    console.log(saturday);
-    console.log(sunday);
-  })
+    // week is a users meal options for the week
+    let week = doc.data()[weekId];
+    if (week === undefined) {
+      console.log("error: user has not selected");
+      return;
+    } else {
+        console.log(week);
+        monday.push(week[0]);
+        tuesday.push(week[1]);
+        wednesday.push(week[2]);
+        thursday.push(week[3]);
+        friday.push(week[4]);
+        saturday.push(week[5]);
+        sunday.push(week[6]);
+    } 
+    })}).then( response => {
+      console.log(mealCount(monday));
+      console.log(mealCount(tuesday));
+      console.log(mealCount(wednesday));
+      console.log(mealCount(thursday));
+      console.log(mealCount(friday));
+      console.log(mealCount(saturday));
+      console.log(mealCount(sunday));
 
+      setMealMonday(mealCount(monday));
+    
+      setIsLoaded(true);
+    })
   
+  }
 
+  useEffect(() => {
+    mealOrders()
+  },[]);
 
   return (
     <div>
-      {monday}
+      {
+        isLoaded ? <DailyOrdersSummary mealObj={mealMonday} /> : "..loading"
+      }
     </div>
   )
 }
 
 export default RecentOrders;
+
+// **************
+// to do:
+// 1. form large array of objects 
+// 2. map over array and pass each object into DailyOrdersSummary
