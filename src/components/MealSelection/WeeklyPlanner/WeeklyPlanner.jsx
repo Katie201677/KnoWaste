@@ -1,31 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import DailySelection from "./DailySelection/DailySelection.jsx";
 import styles from "./WeeklyPlanner.module.scss";
-import { firestore, auth } from "../../../firebase.js";
-
-
-// pass in firebase firestore data str8 into here..........
-
-//  find meal collection
-//  get the diff arrays
-//  pass into each correspoding day
-//  display
-
 
 const WeeklyPlanner = (props) => {
-  const { mealData } = props;
-
-  let chosenMealsArray = []
-
-  
-  const addChosenMeal = (meal) => {
-    console.log(chosenMealsArray)
-    return chosenMealsArray.push(meal)
-    
-  } 
-
-  console.log(auth.getCurrentUser())
-
+  const { mealData, addChosenMeal } = props;
 
   //Accordion that holds each Card Selection for each day.
   const [activeDate, setActiveDate] = useState("Monday");

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { getCurrentWeekID } from "../../services/weekid.service.js"
 import NavBar from "../NavBar";
 import WeeklyPlanner from "./WeeklyPlanner";
 import styles from "./MealSelection.module.scss";
 import { Link } from "react-router-dom";
 import { firestore } from "../../firebase.js";
+import { UserContext } from "../../context/contextUser";
+
 
 const MealSelection = (props) => {
   let mon;
@@ -16,6 +18,25 @@ const MealSelection = (props) => {
   let sun;
 
   const [weeksMeals, setWeeksMeals] = useState([]);
+  const {user} = useContext(UserContext);
+
+  let chosenMeals = [];
+
+  const addChosenMeal = (lasagna) => {
+    chosenMeals.push(lasagna);
+    console.log('choosing a meal!');
+    console.log(chosenMeals);
+  } 
+
+  const uploadMeals = () => {
+    let weekId = getCurrentWeekID();
+    // let weekId = '210322';
+    console.log('deciding nooooow')
+    firestore.collection('orders').doc(user.uid)
+    .set(
+      {[weekId]: chosenMeals }
+    )
+  }
 
   const getWeeklyMeals = () => {
     firestore
@@ -44,8 +65,8 @@ const MealSelection = (props) => {
     <div className="content">
       <NavBar />
       <div className={`${styles.page} mainSection`}>
-        {weeksMeals.length > 0 ? <WeeklyPlanner mealData={weeksMeals} /> : null}
-        <button className={"button-style-1 " + styles.btnReview}>
+        {weeksMeals.length > 0 ? <WeeklyPlanner mealData={weeksMeals} addChosenMeal={addChosenMeal} /> : null}
+        <button onClick={() => uploadMeals()} className={"button-style-1 " + styles.btnReview}>
           <Link to="mealconfirmation">Review</Link>
         </button>
       </div>

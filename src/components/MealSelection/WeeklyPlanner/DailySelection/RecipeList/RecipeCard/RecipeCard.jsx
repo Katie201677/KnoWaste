@@ -3,13 +3,22 @@ import styles from "./RecipeCard.module.scss";
 import { firestore } from "../../../../../../firebase.js";
 
 let mealInfo;
+let mealName;
 
 const RecipeCard = (props) => {
-  const { action, mealChoice, setMealChoice } = props;
+  const { action, mealChoice, addChosenMeal } = props;
   const [loading, setLoading] = useState(false);
 
-  const getMealInfo = () => {
-    firestore
+  let chosenMeal = '';
+
+  const selectMeal = (e) => {
+    console.log(e.target.value);
+    chosenMeal = e.target.value;
+    return addChosenMeal(chosenMeal);
+  }
+
+  const getMealInfo =  async () => {
+    await firestore
       .collection("meals")
       .doc(mealChoice)
       .get()
@@ -20,14 +29,12 @@ const RecipeCard = (props) => {
       });
   };
 
-  useEffect(() => {
-    getMealInfo();
+  useEffect(() => { 
+    const letsGo = async () => {
+      await getMealInfo();
+    }
+    letsGo();
   }, []);
-
-  const selectMeal = () => {
-    setMealChoice(mealInfo.data.mealName);
-    console.log(mealInfo.data.mealName)
-  }
 
   return (
     <>
@@ -47,7 +54,7 @@ const RecipeCard = (props) => {
           <p>{mealInfo.data.mealAllergens.join(" ")}</p>
           </section>
 
-         <button className={"button-style-1 " + styles.selectButton} onClick={()=>selectMeal()}>
+         <button value={mealInfo.data.mealName} className={"button-style-1 " + styles.selectButton} onClick={selectMeal}>
             Select
           </button>
         </section>

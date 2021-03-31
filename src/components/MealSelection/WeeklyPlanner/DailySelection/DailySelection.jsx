@@ -17,14 +17,16 @@ const DailySelection = (props) => {
 
   const [loading, setLoading] = useState(true);
 
-  const [meal, setMealChoice] = useState('');
+  // const [meal, setMealChoice] = useState('');
 
-  meal !== '' ? addChosenMeal(meal) : null;
+  // addChosenMeal(meal)
 
-  console.log(meal)
+  // meal !== '' ? addChosenMeal(meal) : null;
+  
+  // upon click of meal
+  // addChosenMeal(mealId)
 
-  // firestore.collection('mealOrder') etc etc ........
-  // meal -->>> input !!!
+
 
   return (
     <div className={styles.dailySelection && "box-style-2"}>
@@ -34,9 +36,8 @@ const DailySelection = (props) => {
         setActiveDate={setActiveDate}
         activeDate={activeDate}
         action={action}
-        
       />
-      <RecipeList mealDayData={mealDayData} setMealChoice={setMealChoice} />
+      <RecipeList mealDayData={mealDayData} addChosenMeal={addChosenMeal}/>
       {/* <div className="box-style-2">{() => getMealInfo(dayOption1)}</div>
       <div className="box-style-2">{() => getMealInfo(dayOption2)}</div>
       <div className="box-style-2">{() => getMealInfo(dayOption3)}</div>
