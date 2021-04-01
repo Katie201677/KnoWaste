@@ -19,8 +19,8 @@ import library from "./assets/data/fa-library";
 import mealChoiceArr from "./assets/data/user-meal-choices.json";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AdminHome from "./components/Admin/AdminHome";
-import { AuthProvider } from "./AuthContext.jsx"
-import PrivateRoute from "./PrivateRoute.jsx"
+import { AuthProvider } from "./context/AuthContext.jsx"
+import PrivateRoute from "./routes/PrivateRoute.jsx"
 import AdminMealPreview from "./components/Admin/AdminMealInput/AdminMealPreview";
 
 const App = () => {
