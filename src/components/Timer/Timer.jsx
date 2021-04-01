@@ -4,7 +4,7 @@ import { DateTime } from "luxon";
 
 //USE THESE VARIABLES TO DEFINE DEADLINE
 // Luxon is not zero indexed, so Monday is equal to 1, Friday is equal to 5, so to get to Friday we add 4 days.
-let days = 0;
+let days = 4;
 let hours = 18;
 const now = () => DateTime.local();
 
