@@ -11,6 +11,7 @@ import Environment from "./components/Environment";
 import Gamification from "./components/Gamification";
 import AdminMealInput from "./components/Admin/AdminMealInput";
 import AdminWeeklyPlanner from "./components/Admin/AdminWeeklyPlanner";
+import AdminRecentOrders from "./components/Admin/AdminRecentOrders";
 import mealData from "./assets/data/meal-data.json";
 import UserContext from "./context/contextUser.js";
 import "./App.css";
@@ -22,6 +23,7 @@ import AdminHome from "./components/Admin/AdminHome";
 import { AuthProvider } from "./context/AuthContext.jsx"
 import PrivateRoute from "./routes/PrivateRoute.jsx"
 import AdminMealPreview from "./components/Admin/AdminMealInput/AdminMealPreview";
+import RecentOrders from "./components/Admin/AdminRecentOrders";
 
 const App = () => {
   // meal choice is an array for storing the users selected main meals
@@ -60,6 +62,7 @@ const App = () => {
             <PrivateRoute path="/admin" component={AdminHome} />
             <PrivateRoute path="/adminmealinput" component={AdminMealInput} />
             <PrivateRoute path="/adminweeklyplanner" component={AdminWeeklyPlanner} />
+            <PrivateRoute path="/recentorders" component={RecentOrders} />
 
             <Route path="/forgotpassword" component={ForgotPassword}/>
             <Route path="/register" component={Register}/>
