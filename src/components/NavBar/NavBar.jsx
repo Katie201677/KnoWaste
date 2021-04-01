@@ -23,22 +23,22 @@ const NavBar = () => {
                         </Link>    
                     </li>
                     <li className={styles.utensils}>
-                        <Link to="aboutus">
+                        <Link to="/aboutus">
                             <FontAwesomeIcon icon="info-circle" className={styles.iconStyle}/>
                         </Link>
                     </li>
                     <li className={styles.utensils}>
-                        <Link to="mealselection">
+                        <Link to="/mealselection">
                             <FontAwesomeIcon icon="utensils" className={styles.iconStyle}/>
                         </Link>
                     </li>
                     <li className={styles.trophy}>
-                        <Link to="gamification">
+                        <Link to="/gamification">
                             <FontAwesomeIcon  icon="trophy" className={styles.iconStyle}/>
                         </Link>
                     </li>
                     <li className={styles.userCircle}>
-                        <Link to="profile">
+                        <Link to="/profile">
                             <FontAwesomeIcon  icon="user-circle" className={styles.iconStyle}/>
                         </Link>
                     </li>

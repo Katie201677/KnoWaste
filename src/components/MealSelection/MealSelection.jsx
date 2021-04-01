@@ -1,10 +1,14 @@
 import React from 'react';
-
 import NavBar from '../NavBar';
 import WeeklyPlanner from './WeeklyPlanner';
 import styles from './MealSelection.module.scss';
 import { Link } from 'react-router-dom'
+import firebase from "firebase/app";
+import { auth, firestore } from "../../firebase.js";
+
 const MealSelection = (props) => {
+  const currentUser = firebase.auth().currentUser;
+  console.log("mealselection",currentUser)
 
   return (
     <div className="content">
@@ -13,7 +17,7 @@ const MealSelection = (props) => {
         <WeeklyPlanner mealData = {props.mealData} getMealChoice = {props.getMealChoice} />
         
           <button className={"button-style-1 " + styles.btnReview}>
-            <Link to="mealconfirmation">
+            <Link to="/mealconfirmation">
               Review
             </Link>
           </button>
