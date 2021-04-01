@@ -21,7 +21,7 @@ const adminHome = () => {
 
       <div className={styles.linkContainer}>
         
-        <Link to="/admin/mealinput">
+        <Link to="/adminmealinput">
 
           <div className={`box-style-1 ${styles.boxContainer}`}>
 
@@ -36,7 +36,7 @@ const adminHome = () => {
             </div>
           </div>
         </Link>
-        <Link to="/admin/weeklyplanner">
+        <Link to="/adminweeklyplanner">
         <div className={`box-style-1 ${styles.boxContainer}`}>
           
             <div className={styles.mealSelection}>
