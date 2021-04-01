@@ -36,6 +36,14 @@ const adminHome = () => {
             </div>
           </Link>
         </div>
+        <div className={"box-style-1"}>
+          <Link to="/recentorders">
+            <div>
+              <h3 className="text-white">Weeks Orders Summary</h3>
+              <p className="text-white">View and Print all orders for the next week</p>
+            </div>
+          </Link>
+        </div>
       </div>
 
       <AdminNavBar />

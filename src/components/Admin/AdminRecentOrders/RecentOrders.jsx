@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { storage, firestore } from "../../../firebase";
 import { getNextWeekID, getCurrentWeekID } from "../../../services/weekid.service";
 import DailyOrdersSummary from "./DailyOrdersSummary";
+import styles from './RecentOrders.module.scss';
+import AdminNavBar from "../AdminNavBar";
 
 // OPTION: React tables -> https://react-table.tanstack.com/docs/quick-start
 
@@ -38,7 +40,7 @@ const RecentOrders = () => {
   const weekId = nextWeekId;
   console.log(weekId);
 
-  const [mealMonday, setMealMonday] = useState([]);
+  const [meal, setMeal] = useState([]);
 
   // Empty arrays to store the meal choices
   const monday = [];  /* monday array for monday's meal choices */
@@ -78,7 +80,6 @@ const RecentOrders = () => {
     return results
   }
 
-
   // get the data from firestore
  
   const mealOrders = () => {
@@ -101,16 +102,40 @@ const RecentOrders = () => {
         sunday.push(week[6]);
     } 
     })}).then( response => {
-      console.log(mealCount(monday));
-      console.log(mealCount(tuesday));
-      console.log(mealCount(wednesday));
-      console.log(mealCount(thursday));
-      console.log(mealCount(friday));
-      console.log(mealCount(saturday));
-      console.log(mealCount(sunday));
-
-      setMealMonday(mealCount(monday));
+      // console.log(mealCount(monday));
+      // console.log(mealCount(tuesday));
+      // console.log(mealCount(wednesday));
+      // console.log(mealCount(thursday));
+      // console.log(mealCount(friday));
+      // console.log(mealCount(saturday));
+      // console.log(mealCount(sunday));
     
+      let mondayObj = mealCount(monday);
+      mondayObj.day = 'Monday';
+      let tuesdayObj = mealCount(tuesday);
+      tuesdayObj.day = 'Tuesday';
+      let wednesdayObj = mealCount(wednesday);
+      wednesdayObj.day = 'Wednesday';
+      let thursdayObj = mealCount(thursday);
+      thursdayObj.day = 'Thursday';
+      let fridayObj = mealCount(friday);
+      fridayObj.day = 'Friday';
+      let saturdayObj = mealCount(saturday);
+      saturdayObj.day = 'Saturday';
+      let sundayObj = mealCount(sunday);
+      sundayObj.day = 'Sunday';
+
+      const mealArray = [];
+
+      mealArray.push(mondayObj);
+      mealArray.push(tuesdayObj);
+      mealArray.push(wednesdayObj);
+      mealArray.push(thursdayObj);
+      mealArray.push(fridayObj);
+      mealArray.push(saturdayObj);
+      mealArray.push(sundayObj);
+
+      setMeal(mealArray);
       setIsLoaded(true);
     })
   
@@ -120,18 +145,19 @@ const RecentOrders = () => {
     mealOrders()
   },[]);
 
+
   return (
-    <div>
-      {
-        isLoaded ? <DailyOrdersSummary mealObj={mealMonday} /> : "..loading"
-      }
+    <div className='content'>
+      <div className={styles.AdminNavBar} >
+      <AdminNavBar />
+      </div>
+      <div className='mainSection'>
+        {
+          isLoaded ? meal.map((day, i) => <DailyOrdersSummary key={i} mealObj={day} />) : "..loading"
+        }
+      </div>
     </div>
   )
 }
 
 export default RecentOrders;
-
-// **************
-// to do:
-// 1. form large array of objects 
-// 2. map over array and pass each object into DailyOrdersSummary
