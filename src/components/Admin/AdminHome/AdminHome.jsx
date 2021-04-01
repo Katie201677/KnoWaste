@@ -8,15 +8,16 @@ import Table from "../../../assets/images/leagueTable.png";
 
 const adminHome = () => {
   return (
-    <div className={styles.content}>
+    <div className={styles.contentMain}>
+      <AdminNavBar />
 
       <div className={styles.linkContainer}>
         
         <Link to="/adminmealinput">
 
-          <div className={"box-style-1"}>
+          <div className={`box-style-1 ${styles.boxContainer}`}>
 
-            <div className={"styles.mealSelection"}>
+            <div className={styles.mealSelection}>
               <div>
                 <h2 className="text-white">Upload a Meal</h2>
                 <p>Add a new meal to the database</p>
@@ -27,15 +28,21 @@ const adminHome = () => {
             </div>
           </div>
         </Link>
-        <div className={"box-style-1"}>
-          <Link to="/adminweeklyplanner">
-            <div>
-              <img src={Logo} className={styles.leagueTable}></img>
-              <h3 className="text-white">Week Planner</h3>
+        <Link to="/adminweeklyplanner">
+        <div className={`box-style-1 ${styles.boxContainer}`}>
+          
+            <div className={styles.mealSelection}>
+              
+              <h2 className="text-white">Week Planner</h2>
               <p className="text-white">Plan meals for next week</p>
+              <div>
+                <img src={Logo} className={styles.leagueTable}></img>
+              </div>
+              
             </div>
-          </Link>
+         
         </div>
+        </Link>
         <div className={"box-style-1"}>
           <Link to="/recentorders">
             <div>
@@ -46,7 +53,7 @@ const adminHome = () => {
         </div>
       </div>
 
-      <AdminNavBar />
+     
     </div>
   );
 };

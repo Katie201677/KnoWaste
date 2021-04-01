@@ -1,7 +1,13 @@
-
-.formSection{
+.formSection {
   display: flex;
-  *{
+
+  * {
     margin: 10px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .formSection {
+    flex-direction: column;
   }
 }
