@@ -9,7 +9,7 @@ import Table from "../../../assets/images/leagueTable.png";
 const adminHome = () => {
   return (
     <div className={styles.contentMain}>
-      <AdminNavBar />
+      
 
       <div className={styles.linkContainer}>
         
