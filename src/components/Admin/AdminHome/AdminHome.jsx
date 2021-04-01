@@ -16,9 +16,8 @@ const adminHome = () => {
   return (
    
     <div className={styles.contentMain}>
-    
-      <AdminNavBar />
 
+      
       <div className={styles.linkContainer}>
         
         <Link to="/adminmealinput">
