@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
 import styles from "./Login.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { auth, firestore } from "../../firebase.js";
 import { UserContext } from "../../context/contextUser";
 import { useForm } from "react-hook-form";
+import firebase from "firebase/app";
 
 const Login = () => {
   const userContext = useContext(UserContext);
@@ -28,8 +29,22 @@ const Login = () => {
             .get()
             .then((response) => {
               const userDoc = response.data();
-              userDoc.isAdmin ? history.push("/admin") : history.push("/home");
-              userContext.setUser(userDoc);
+              const currentUser = firebase.auth().currentUser;
+              if (!currentUser) {
+                console.log("user false",currentUser)
+                return <Redirect to="/login" />;
+              } else if (currentUser && userDoc.isAdmin) {
+                userContext.setUser(userDoc);
+                console.log("user admin", currentUser)
+                return history.push("/admin");
+                
+              } else if (currentUser && !userDoc.isAdmin) {
+                userContext.setUser(userDoc);
+                console.log("user normal",currentUser)
+                return history.push("/home");
+                
+               
+              }
             });
         }
       })

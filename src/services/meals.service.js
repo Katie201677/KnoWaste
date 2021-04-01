@@ -1,4 +1,5 @@
 import { firestore } from "../firebase";
+import { getCurrentWeekID } from "./weekid.service";
 
 // firebase.initializeApp(firebaseConfig);
 // const db = firestore;
@@ -17,7 +18,7 @@ export const createMeal = (data) => {
         docRef
           .set({
             data,
-            imageUrl: url
+            imageUrl: url,
           })
           .then(() => {
             console.log("Document successfully written!");
@@ -31,7 +32,67 @@ export const createMeal = (data) => {
       console.log("Error getting document:", error);
     });
 
-    return 1;
+  return 1;
+};
+
+export const addMealsToWeeklyPlanner = (data) => {
+  var collectionRef = firestore
+    .collection("weeksMeals")
+    .doc(getCurrentWeekID());
+
+  collectionRef
+    .get()
+    .then((doc) => {
+      collectionRef
+        .set({
+          day1MealOptions: {
+            mealOption1: data.mondayMeal1,
+            mealOption2: data.mondayMeal2,
+            mealOption3: data.mondayMeal3,
+          },
+          day2MealOptions: {
+            mealOption1: data.tuesdayMeal1,
+            mealOption2: data.tuesdayMeal2,
+            mealOption3: data.tuesdayMeal3,
+          },
+          day3MealOptions: {
+            mealOption1: data.wednesdayMeal1,
+            mealOption2: data.wednesdayMeal2,
+            mealOption3: data.wednesdayMeal3,
+          },
+          day4MealOptions: {
+            mealOption1: data.thursdayMeal1,
+            mealOption2: data.thursdayMeal2,
+            mealOption3: data.thursdayMeal3,
+          },
+          day5MealOptions: {
+            mealOption1: data.fridayMeal1,
+            mealOption2: data.fridayMeal2,
+            mealOption3: data.fridayMeal3,
+          },
+          day6MealOptions: {
+            mealOption1: data.saturdayMeal1,
+            mealOption2: data.saturdayMeal2,
+            mealOption3: data.saturdayMeal3,
+          },
+          day7MealOptions: {
+            mealOption1: data.sundayMeal1,
+            mealOption2: data.sundayMeal2,
+            mealOption3: data.sundayMeal3,
+          },
+        })
+        .then(() => {
+          console.log("Document successfully written!");
+        })
+        .catch((error) => {
+          console.error("Error writing document: ", error);
+        });
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
+
+  return 1;
 };
 
 export const getAllMeals = () => {

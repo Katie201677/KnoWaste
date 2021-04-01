@@ -9,12 +9,20 @@ button:hover {
 cursor: pointer;
 }
 
+<<<<<<< HEAD
 @media only screen and (min-width: $comp-breakpoint) {
 
   .button-style-1 {
     // margin: 10px;
     // padding: 10px;
     background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+=======
+.submit-button {
+    width: 20%;
+    height: 40%;
+    margin-top: 5%;
+    background: linear-gradient(180deg, #FF8D60 0%, $primary-color 100%);
+>>>>>>> e323a8c7443aa9be0662f95c729528f26ec82401
     border-radius: 30px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     color: white;

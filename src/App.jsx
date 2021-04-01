@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -11,6 +11,7 @@ import Environment from "./components/Environment";
 import Gamification from "./components/Gamification";
 import AdminMealInput from "./components/Admin/AdminMealInput";
 import AdminWeeklyPlanner from "./components/Admin/AdminWeeklyPlanner";
+import AdminRecentOrders from "./components/Admin/AdminRecentOrders";
 import mealData from "./assets/data/meal-data.json";
 import UserContext from "./context/contextUser.js";
 import "./App.css";
@@ -19,54 +20,42 @@ import library from "./assets/data/fa-library";
 import mealChoiceArr from "./assets/data/user-meal-choices.json";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AdminHome from "./components/Admin/AdminHome";
+import { AuthProvider } from "./context/AuthContext.jsx"
+import PrivateRoute from "./routes/PrivateRoute.jsx"
+import AdminMealPreview from "./components/Admin/AdminMealInput/AdminMealPreview";
+import RecentOrders from "./components/Admin/AdminRecentOrders";
 
 const App = () => {
   return (
     <div>
       <Router>
+      <AuthProvider>
         <UserContext>
           <Switch>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/forgotpassword">
-              <ForgotPassword />
-            </Route>
-            <Route path="/mealselection">
-              <MealSelection/>
-            </Route>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route path="/aboutus">
-              <AboutUs />
-            </Route>
-            <Route path="/mealconfirmation">
-              <MealConfirmation/>
-            </Route>
-            <Route path="/environment">
-              <Environment />
-            </Route>
-            <Route path="/gamification">
-              <Gamification />
-            </Route>
-            <Route path="/admin">
-              <AdminHome />
-            </Route>
-            <Route path="/adminmealinput">
-              <AdminMealInput />
-            </Route>
-            <Route path="/adminweeklyplanner">
-              <AdminWeeklyPlanner />
-            </Route>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/">
-              <Login />
-            </Route>
+          
+            <PrivateRoute path="/home" component={Home} />
+            <PrivateRoute path="/mealselection">
+              <MealSelection  mealData={mealData} getMealChoice={getMealChoice}/>
+            </PrivateRoute>
+            <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute path="/aboutus" component={AboutUs} />
+            <PrivateRoute path="/mealconfirmation">
+              <MealConfirmation mealChoiceArr={mealChoiceArr} clearArr={clearMealChoiceArr}/>
+            </PrivateRoute>
+            <PrivateRoute path="/gamification" component={Gamification} />
+            <PrivateRoute path="/environment" component={Environment} />
+            
+            <PrivateRoute path="/admin" component={AdminHome} />
+            <PrivateRoute path="/adminmealinput" component={AdminMealInput} />
+            <PrivateRoute path="/adminweeklyplanner" component={AdminWeeklyPlanner} />
+            <PrivateRoute path="/recentorders" component={RecentOrders} />
+
+            <Route path="/forgotpassword" component={ForgotPassword}/>
+            <Route path="/register" component={Register}/>
+            <Route exac path="/" component={Login} />
           </Switch>
         </UserContext>
+        </AuthProvider>
       </Router>
     </div>
   );

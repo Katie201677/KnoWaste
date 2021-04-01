@@ -14,22 +14,15 @@ const AdminNavBar = () => {
     }
 
     return (
-        <section className={styles.navigation}>
-            
-            {/* <span className={styles.closeBtn} onClick={handleClick}> 
-                <Link to="/"> 
-                    <img src={logo} className={styles.logo}/>
-                </Link>    
-            </span> */}
-            
-            <ul>
-                <li>
+
+        <div className={styles.navBarContainer}>
+                <button className={styles['button-style-1']}>
                     <Link to="/admin">
-                        <FontAwesomeIcon  icon="user-circle" className={styles.icon}/>
+                        Back
                     </Link>
-                </li>
-            </ul>
-        </section>
+                </button>
+        </div>
+        
     )
 }
 

@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.textwhite {
+  color: white;
+}
+
+.textred {
+  color: red;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3f3737;
+  border: none;
+  padding: 0px 10px;
+}
+
+/* HOW TO USE
+@import "../../assets/styles/styles.scss"   into your module.
+
+the first div, which wraps <NavBar> <Timer> <yourComponent> needs to have className={styles.content}
+example: MealSelection.jsx -->    <div className={styles.content}> 
+                                        <NavBar> <Timer> <WeeklySelection> 
+                                  </div>
+on your component the first div that wraps whatever you're displaying needs to have className={styles.mainSection}
+example: WeeklySelection.jsx ---> <div className={styles.mainSection}> 
+                                        <DailySelection> 
+                                  </div>
+
+CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
+ */
+.content {
+  display: grid;
+  height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  grid-template-columns: 94px 1fr;
+  grid-template-rows: 80px auto;
+  justify-content: center;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.mainSection {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.nav-box-desk {
+  display: flex;
+  align-items: center;
+}
+
+.header-box-desk {
+  width: 1291px;
+  height: 143px;
+}
+
+.main-box-desk {
+  width: 1291px;
+  height: 877px;
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    background-image: none;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 28px;
+  }
+
+  .mainSection {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    overflow: scroll;
+  }
+  .mainSection body {
+    background-image: none;
+  }
+  .mainSection .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 28px;
+  }
+  .mainSection .mainSection {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    overflow: scroll;
+  }
+}
+.button-style-1 {
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: white;
+  border: none;
+}
+
+.submit-button {
+  width: 20%;
+  height: 40%;
+  margin-top: 5%;
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #FFFFFF;
+  border: none;
+}
+
+.submit-button:hover, .submit-button:active {
+  filter: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.box-style-1 {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  backdrop-filter: blur(6px);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-2 {
+  background: #FFFFFF;
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-3 {
+  background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-4 {
+  background: #FFFFFF;
+  border-radius: 40px;
+  margin: 15px;
+  padding: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-style-4 {
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 0px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+body {
+  background: #54A390;
+  background-image: url("../../assets/images/FoodAndDrinkDesign.svg");
+  background-size: 600px 600px;
+}
+
+.contentMain {
+  text-align: center;
+}
+
+.linkContainer {
+  height: 30vh;
+  width: 50%;
+  margin: auto;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.boxContainer {
+  height: 30vh;
+}
+
+.linkContainerOne .mealSelection {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.linkContainerOne .mealSelection h2 {
+  text-align: center;
+}
+.linkContainerOne .mealSelection .fork {
+  width: 100px;
+  height: 120px;
+  margin-top: 5px;
+}
+.linkContainerOne .mealSelection h3 {
+  text-align: center;
+  color: white;
+  margin-top: 25px;
+}
+.linkContainerOne .mealSelection .textMeal {
+  color: white;
+  font-size: small;
+}
+
+.linkContainerTwo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aboutUs {
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  width: 200px;
+  background: linear-gradient(180deg, rgba(86, 86, 255, 0.9) 0%, rgba(175, 87, 235, 0.9) 100%);
+}
+
+.leagueTable {
+  width: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  .linkContainer {
+    width: 90%;
+    margin: auto;
+  }
+
+  .boxContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
