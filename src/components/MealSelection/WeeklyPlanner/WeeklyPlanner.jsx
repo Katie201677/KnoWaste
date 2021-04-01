@@ -7,6 +7,7 @@ const WeeklyPlanner = (props) => {
   //Accordion that holds each Card Selection for each day.
   const [activeDate, setActiveDate] = useState("Monday");
 
+
   const handleClickOnImg = (day) => {
     const dayArr = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
     

@@ -1,6 +1,8 @@
 @import '../../../assets/styles/styles';
 
-.contentMain {}
+.contentMain {
+  text-align: center;
+}
 
 
 .linkContainer {
@@ -23,6 +25,9 @@
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    h2 {
+      text-align: center;
+    }
 
     .fork {
       width: 100px;
@@ -31,6 +36,7 @@
     }
 
     h3 {
+      text-align: center;
       color: white;
       margin-top: 25px;
     }
