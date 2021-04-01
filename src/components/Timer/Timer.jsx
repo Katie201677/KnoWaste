@@ -3,14 +3,7 @@ import styles from "./Timer.module.scss";
 import {DateTime} from "luxon";
 
 //USE THESE VARIABLES TO DEFINE DEADLINE
-<<<<<<< HEAD
-// Luxon is not zero indexed, so Monday is equal to 1, Friday is equal to 5, so to get to Friday we add 4 days.
-let days = 4;
-let hours = 18;
-const now = () => DateTime.local();
-=======
 // monday : 0, tuesday: 1...
->>>>>>> 33efafe4c27e8e0b664071c03b85693eda3a38b9
 
 let weekDay = 4;  //Friday
 let hours = 18;   //6 PM
