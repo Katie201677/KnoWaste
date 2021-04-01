@@ -39,7 +39,7 @@ const WeeklyPlanner = (props) => {
             action={() => handleClickOnImg("Monday")}
             addChosenMeal = {addChosenMeal}
           />
-
+          
           <DailySelection
             mealDayData={mealData[1]}
             date="Tuesday"

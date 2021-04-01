@@ -7,8 +7,6 @@ import { firestore } from "../../../../firebase.js";
 const DailySelection = (props) => {
   const { date, setActiveDate, activeDate, action, mealDayData, addChosenMeal } = props;
 
-
-
   // mealOption is an array with three objects. Each object is a meal option.
   // The meal option object keys are the bits of meal information display.
   //  const mealOptions = [{type: "meat", imgSrc: mealDayData[0].mealImage ,recipeName: mealDayData[0].mealName, dietaryrestriction: mealDayData[0].mealDiet},
@@ -16,17 +14,6 @@ const DailySelection = (props) => {
   // //                     {type: "vegetarian", imgSrc: mealDayData[2].mealImage, recipeName: mealDayData[2].mealName, dietaryrestriction: mealDayData[2].mealDiet}]
 
   const [loading, setLoading] = useState(true);
-
-  // const [meal, setMealChoice] = useState('');
-
-  // addChosenMeal(meal)
-
-  // meal !== '' ? addChosenMeal(meal) : null;
-  
-  // upon click of meal
-  // addChosenMeal(mealId)
-
-
 
   return (
     <div className={styles.dailySelection && "box-style-2"}>

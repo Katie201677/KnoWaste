@@ -8,30 +8,23 @@
     margin: 20px;
     padding:15px;
     flex-shrink: 0;
-    height: 200px;
+    height: 80px;
     width: 200px;
-  }
-  
-  .mealInfo {
+    color: $form-font-color;
     display: flex;
-    // text-align: left;
-    justify-content: space-between;
-  
-    .confirmDay  {
-      line-height: 2rem;
-      margin-block-start: 0;
-      scroll-margin-block-end: 0;
-      color: $form-font-color;
-      font-family: $primary-font;
-    }
-
-    .penIcon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      justify-content: flex-end;
-      line-height: 2rem;
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .confirmDay, .confirmMeal {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 5px;
+    color: $form-font-color;
+    font-family: $primary-font;
+  }
+
 }
 
 @media only screen and (max-width: $mob-breakpoint) {
@@ -52,12 +45,4 @@
       font-family: $primary-font;
     }
   }
-} 
-
-// .arrowIcon {
-//   font-size: 2rem;
-//   flex-shrink: 0;
-// }
-
-
-
+}

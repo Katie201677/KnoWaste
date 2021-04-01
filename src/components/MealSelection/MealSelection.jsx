@@ -30,7 +30,8 @@ const MealSelection = (props) => {
 
   const uploadMeals = () => {
     let weekId = getCurrentWeekID();
-    // let weekId = '210322';
+    console.log(weekId);
+    console.log(user.uid);
     console.log('deciding nooooow')
     firestore.collection('orders').doc(user.uid)
     .set(
@@ -41,8 +42,7 @@ const MealSelection = (props) => {
   const getWeeklyMeals = () => {
     firestore
       .collection("weeksMeals")
-      .doc('210322')
-      // .doc(getCurrentWeekID())
+      .doc(getCurrentWeekID())
       .get()
       .then((response) => {
         let weekObj = response.data();
@@ -67,13 +67,11 @@ const MealSelection = (props) => {
       <div className={`${styles.page} mainSection`}>
         {weeksMeals.length > 0 ? <WeeklyPlanner mealData={weeksMeals} addChosenMeal={addChosenMeal} /> : null}
         <button onClick={() => uploadMeals()} className={"button-style-1 " + styles.btnReview}>
-          <Link to="mealconfirmation">Review</Link>
+          <Link to="/mealconfirmation">Review</Link>
         </button>
       </div>
     </div>
   );
 };
-
-// READ: No button styling or positions are added yet, only the linking of it
 
 export default MealSelection;

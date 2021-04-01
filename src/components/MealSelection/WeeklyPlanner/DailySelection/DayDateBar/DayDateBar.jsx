@@ -16,7 +16,7 @@ const DayDateBar = (props) => {
             }
             {   
                isSelected ? <h5>{activeMeal}</h5> : ""
-           }  
+            }  
         </div>
     )
 }

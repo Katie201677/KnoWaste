@@ -1,32 +1,21 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect } from "react";
 import styles from "./MealCard.module.scss";
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { firestore } from "../../../firebase";
+import MealSelection from "../../MealSelection/MealSelection";
 
 const MealCard = (prop) => {
-  const { day, meal, clearArr } = prop;
+  const { day, meal } = prop;
+
   return (
     <div>
-      {/* <div>
-        <FontAwesomeIcon icon="arrow-right" className={styles.arrowIcon} />
-      </div> */}
-      <div className = {`box-style-2 ${styles.dayCard}`}>
-        <div className={styles.mealInfo}>
+      {
+        meal &&
+        <div className = {`box-style-2 ${styles.dayCard}`}>
           <h3 className ={styles.confirmDay}>{day}</h3>
-          <Link to="mealselection">
-              <FontAwesomeIcon
-                onClick={clearArr}
-                icon="pen"
-                className={styles.penIcon}
-              />
-          </Link>
+          <p className= {styles.confirmMeal} >{meal}</p>
         </div>
-        <div className={styles.mealDataFire}>
-          {/* <img src={meal.img}></img> */}
-          {/* <p>{meal.name}</p> */}
-        </div>
-      </div>
-       
+      } 
     </div>
   );
 };

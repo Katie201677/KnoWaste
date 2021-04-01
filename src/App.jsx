@@ -21,20 +21,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AdminHome from "./components/Admin/AdminHome";
 
 const App = () => {
-  // meal choice is an array for storing the users selected main meals
-
-  // get meal choice is a function which adds the selected meals as recipe names
-  // getMealChoice function is passed down as props: app -> mealselection -> .. -> DailySelection
-  // const getMealChoice = (activeMeal) => {
-  //   mealChoiceArr.push(activeMeal);
-  //   console.log(mealChoiceArr);
-  //   return mealChoiceArr;
-  // };
-
-  // function to clear meal array when edit button selected on meal confirmation page
-  // passed as a prop to meal confirmation
-  const clearMealChoiceArr = () => (mealChoiceArr.length = 0);
-
   return (
     <div>
       <Router>
@@ -47,10 +33,7 @@ const App = () => {
               <ForgotPassword />
             </Route>
             <Route path="/mealselection">
-              <MealSelection
-                // mealData={mealData}
-                // getMealChoice={getMealChoice}
-              />
+              <MealSelection/>
             </Route>
             <Route path="/profile">
               <Profile />
@@ -59,10 +42,7 @@ const App = () => {
               <AboutUs />
             </Route>
             <Route path="/mealconfirmation">
-              <MealConfirmation
-                // mealChoiceArr={mealChoiceArr}
-                // clearArr={clearMealChoiceArr}
-              />
+              <MealConfirmation/>
             </Route>
             <Route path="/environment">
               <Environment />
