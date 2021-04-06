@@ -50,6 +50,7 @@
   border: 2px solid red;
 }
 input:focus {
+  box-sizing: border-box;
   border: 2px solid $primary-color;
   outline-color: $primary-color;
   outline-style: none;
@@ -73,6 +74,7 @@ input:focus {
   }
 
   #loginButton {
+    box-sizing: border-box;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
