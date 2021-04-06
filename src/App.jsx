@@ -26,20 +26,6 @@ import AdminMealPreview from "./components/Admin/AdminMealInput/AdminMealPreview
 import RecentOrders from "./components/Admin/AdminRecentOrders";
 
 const App = () => {
-  // meal choice is an array for storing the users selected main meals
-
-  // get meal choice is a function which adds the selected meals as recipe names
-  // getMealChoice function is passed down as props: app -> mealselection -> .. -> DailySelection
-  const getMealChoice = (activeMeal) => {
-    mealChoiceArr.push(activeMeal);
-    console.log(mealChoiceArr);
-    return mealChoiceArr;
-  };
-
-  // function to clear meal array when edit button selected on meal confirmation page
-  // passed as a prop to meal confirmation
-  const clearMealChoiceArr = () => (mealChoiceArr.length = 0);
-  const userContext = useContext(UserContext)
   return (
     <div>
       <Router>
@@ -49,12 +35,12 @@ const App = () => {
           
             <PrivateRoute path="/home" component={Home} />
             <PrivateRoute path="/mealselection">
-              <MealSelection  mealData={mealData} getMealChoice={getMealChoice}/>
+              <MealSelection  mealData={mealData} />
             </PrivateRoute>
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute path="/aboutus" component={AboutUs} />
             <PrivateRoute path="/mealconfirmation">
-              <MealConfirmation mealChoiceArr={mealChoiceArr} clearArr={clearMealChoiceArr}/>
+              <MealConfirmation mealChoiceArr={mealChoiceArr} />
             </PrivateRoute>
             <PrivateRoute path="/gamification" component={Gamification} />
             <PrivateRoute path="/environment" component={Environment} />

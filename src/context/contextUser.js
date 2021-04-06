@@ -13,7 +13,7 @@ const contextUser = (props) => {
   }
   useEffect(() => {
     const loggedInUser = auth.onAuthStateChanged(user => {
-      console.log(user);
+      if (!user) return;
       firestore.collection("users").doc(user.uid).get().then(userDoc => {
         setUser(userDoc.data());
         if(user.isAdmin){ 

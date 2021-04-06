@@ -12,11 +12,11 @@ const DayDateBar = (props) => {
         <div  className={ date === activeDate ? styles.diffColour : styles.dayBar}  >
             <h2>{date}</h2>
             {
-                date === activeDate ? <button className='button-style-1' onClick={handleClick}>Forfeit Meal</button> : ""
+                date === activeDate ? <button className='button-style-1' onClick={handleClick}>Forfeit Meal</button> : ''
             }
             {   
-               isSelected ? <h5>{activeMeal}</h5> : ""
-           }  
+               activeMeal ? <h5>{activeMeal}</h5> : ""
+            }  
         </div>
     )
 }

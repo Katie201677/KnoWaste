@@ -20,43 +20,50 @@ const adminHome = () => {
       
       <div className={styles.linkContainer}>
         
-        <Link to="/adminmealinput">
+       
 
           <div className={`box-style-1 ${styles.boxContainer}`}>
 
             <div className={styles.mealSelection}>
               <div>
-                <h2 className="text-white">Upload a Meal</h2>
-                <p>Add a new meal to the database</p>
-              </div>
-              <div>
+                <h2 className="textwhite">Upload a Meal</h2>
+                <div>
                 <img src={Fork} className={styles.fork}></img>
               </div>
+                <Link to="/adminmealinput">
+                  <button className="button-style-1">
+                    Add Meal
+                  </button>
+                </Link>
+              </div>
+             
             </div>
           </div>
-        </Link>
-        <Link to="/adminweeklyplanner">
         <div className={`box-style-1 ${styles.boxContainer}`}>
           
             <div className={styles.mealSelection}>
               
-              <h2 className="text-white">Week Planner</h2>
-              <p className="text-white">Plan meals for next week</p>
+              <h2 className="textwhite">Week Planner</h2>
               <div>
                 <img src={Logo} className={styles.leagueTable}></img>
               </div>
-              
+              <Link to="/adminweeklyplanner">
+                  <button className="button-style-1">
+                    Plan Meals
+                  </button>
+                </Link>
             </div>
          
         </div>
-        </Link>
         <div className={"box-style-1"}>
-          <Link to="/recentorders">
             <div>
-              <h3 className="text-white">Weeks Orders Summary</h3>
-              <p className="text-white">View and Print all orders for the next week</p>
+              <h3 className="textwhite">Weeks Orders Summary</h3>
             </div>
-          </Link>
+            <Link to="/recentorders">
+                  <button className="button-style-1">
+                    View Orders
+                  </button>
+                </Link>
         </div>
       </div>
 

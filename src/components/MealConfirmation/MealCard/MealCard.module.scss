@@ -1,26 +1,48 @@
 @import '../../../assets/styles/variables';
+@import '../../../assets/styles/typography';
 
-.arrowIcon {
-  font-size: 2rem;
-  flex-shrink: 0;
+
+@media only screen and (min-width: $comp-breakpoint) {
+  .dayCard {
+    flex-grow: 1;
+    margin: 20px;
+    padding:15px;
+    flex-shrink: 0;
+    height: 80px;
+    width: 200px;
+    color: $form-font-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .confirmDay, .confirmMeal {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 5px;
+    color: $form-font-color;
+    font-family: $primary-font;
+  }
+
 }
-.penIcon {
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-li{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.mealInfo{
-  text-align: left;
-  flex-grow: 1;
-  margin: 20px;
-  flex-shrink: 0;
-  padding-left: 20px;
-  h3{
-    line-height: 2rem;
+
+@media only screen and (max-width: $mob-breakpoint) {
+  .mealInfo {
+    text-align: left;
+    margin: 6px;
+    padding: 2px;
+    height: 6.5vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    .confirmDay {
+      line-height: 1.5rem;
+      color: $form-font-color;
+      font-family: $primary-font;
+    }
   }
 }
-

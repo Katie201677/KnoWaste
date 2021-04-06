@@ -12,6 +12,7 @@ example: WeeklySelection.jsx ---> <div className={styles.mainSection}>
 
 CHECK AboutUs.module.scss FOR REFERENCE IF YOU'RE NOT SURE!
  */
+ @import './_variables.scss';
 
 
 .content {

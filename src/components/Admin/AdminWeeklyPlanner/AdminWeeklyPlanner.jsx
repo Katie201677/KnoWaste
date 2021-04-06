@@ -1,4 +1,5 @@
 import React, { useEffect, useState }  from "react";
+import { useHistory } from "react-router-dom";
 //import styles from "./AdminWeeklyPlanner.module.scss";
 import { useForm } from "react-hook-form";
 import styles from "./AdminWeeklyPlanner.module.scss";
@@ -9,11 +10,11 @@ import { getAllMeals, addMealsToWeeklyPlanner }  from "../../../services/meals.s
 
 const AdminWeeklyPlanner = () => {
   const { register, handleSubmit } = useForm();
+  let history = useHistory();
   
   const onSubmit = (data) => {
     addMealsToWeeklyPlanner(data);
-    console.log(data)
-    
+    history.push('/admin');
   };
 
   const [meals, setMeals] = useState([])
@@ -22,21 +23,22 @@ const AdminWeeklyPlanner = () => {
     getAllMeals().then(mealIds => {
       setMeals(mealIds)
     })
-
   },[])
-
-
 
   return (
     <section className={styles.content}>
       <AdminNavBar />
       <div className = {styles.formContainer}>
+        
       <form onSubmit={handleSubmit(onSubmit)} className="box-style-1">
+        <div className={styles.titleContainer}>
+          <h3>Option 1</h3>
+          <h3>Option 2</h3>
+          <h3>Option 3</h3>
+        </div>
         {/* As a developer I can select the day of the week */}
-          <div className={styles.day}>
-          <h3>Monday</h3>
-          <DayPlannerForm day={"monday"} register={register} meals={meals} />
-          </div>
+          <div className={styles.day}><h3>Monday</h3>
+          <DayPlannerForm day={"monday"} register={register} meals={meals} /></div>
 
           <div className={styles.day}><h3>Tuesday</h3>
           <DayPlannerForm day={"tuesday"} register={register} meals={meals}/></div>

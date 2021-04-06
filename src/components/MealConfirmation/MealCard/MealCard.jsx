@@ -1,22 +1,22 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect } from "react";
 import styles from "./MealCard.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { firestore } from "../../../firebase";
+import MealSelection from "../../MealSelection/MealSelection";
 
 const MealCard = (prop) => {
   const { day, meal } = prop;
+
   return (
-    <li>
-      <div>
-        <FontAwesomeIcon icon="arrow-right" className={styles.arrowIcon} />
-      </div>
-      <div className = {styles.mealInfo}>
-          <h3>{day}</h3>
-          <p>{meal}</p>
-      </div>
-      {/* <div>
-        <FontAwesomeIcon icon="pen" className={styles.penIcon} />
-      </div> */}
-    </li>
+    <div>
+      {
+        meal &&
+        <div className = {`box-style-2 ${styles.dayCard}`}>
+          <h3 className ={styles.confirmDay}>{day}</h3>
+          <p className= {styles.confirmMeal} >{meal}</p>
+        </div>
+      } 
+    </div>
   );
 };
 
