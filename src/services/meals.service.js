@@ -4,12 +4,10 @@ import { getCurrentWeekID } from "./weekid.service";
 // firebase.initializeApp(firebaseConfig);
 // const db = firestore;
 
-export const createMeal = (data) => {
-  var docRef = firestore
-    .collection("meals")
-    .doc(data.mealName.split(" ").join(""));
-  docRef
-    .get()
+export const createMeal = (data,url) => {
+  let docRef = firestore.collection("meals").doc(data.mealName.split(" ").join(""));
+    
+  docRef.get()
     .then((doc) => {
       if (doc.exists) {
         alert("Meal name already taken");

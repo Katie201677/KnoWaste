@@ -12,7 +12,7 @@ const RecipeCard = (props) => {
   let chosenMeal = '';
 
   const selectMeal = (e) => {
-    console.log(e.target.value);
+    action();
     chosenMeal = e.target.value;
     return addChosenMeal(chosenMeal);
   }

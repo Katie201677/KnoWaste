@@ -5,9 +5,7 @@ import styles from "./WeeklyPlanner.module.scss";
 const WeeklyPlanner = (props) => {
   const { mealData, addChosenMeal } = props;
 
-  //Accordion that holds each Card Selection for each day.
   const [activeDate, setActiveDate] = useState("Monday");
-
 
   const handleClickOnImg = (day) => {
     const dayArr = [
@@ -24,9 +22,6 @@ const WeeklyPlanner = (props) => {
     const nextDay = dayArr[indexDate + 1];
     setActiveDate(nextDay);
   };
-
-  // passing meal data for each day as props into DailySelection
-  // props.mealData[i] -> i = index and refers to the day in the week: i = 0 -> Monday...
 
   return (
     <>

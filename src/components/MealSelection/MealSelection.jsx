@@ -24,8 +24,6 @@ const MealSelection = (props) => {
 
   const addChosenMeal = (lasagna) => {
     chosenMeals.push(lasagna);
-    console.log('choosing a meal!');
-    console.log(chosenMeals);
   } 
 
   const uploadMeals = () => {
@@ -42,7 +40,8 @@ const MealSelection = (props) => {
   const getWeeklyMeals = () => {
     firestore
       .collection("weeksMeals")
-      .doc(getCurrentWeekID())
+      //.doc(getCurrentWeekID())
+      .doc("210322")
       .get()
       .then((response) => {
         let weekObj = response.data();

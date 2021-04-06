@@ -40,7 +40,7 @@ const App = () => {
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute path="/aboutus" component={AboutUs} />
             <PrivateRoute path="/mealconfirmation">
-              <MealConfirmation mealChoiceArr={mealChoiceArr} clearArr={clearMealChoiceArr}/>
+              <MealConfirmation mealChoiceArr={mealChoiceArr} />
             </PrivateRoute>
             <PrivateRoute path="/gamification" component={Gamification} />
             <PrivateRoute path="/environment" component={Environment} />

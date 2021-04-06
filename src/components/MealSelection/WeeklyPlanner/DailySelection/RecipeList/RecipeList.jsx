@@ -11,8 +11,6 @@ const RecipeList = (props) => {
   let mealChoice3 = mealDayData.mealOption3;
 
   return (
-    // 
-  // if day == day then show this
     <div className={styles.recipeList}>
       {
         mealDayData && 
