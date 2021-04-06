@@ -35,7 +35,7 @@ const UserStats = (props) => {
       </p>
 
       {/* user total CO2 */}
-      <p className={styles.entry}>{user.maxCarbon}</p>
+      <p className={styles.entry}>{user.maxCarbon}{isNaN(user.maxCarbon) ? '' : 'g'}</p>
     </div>
   )
 }
