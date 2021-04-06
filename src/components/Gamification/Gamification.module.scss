@@ -1,0 +1,54 @@
+@import "../../assets/styles/styles.scss";
+
+.main {
+    margin: auto !important;
+}
+
+.gameHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .gameTitle {
+        color: #f1f1f1;
+        font-size: $font-l;
+        margin: 5px;
+        padding: 0;
+    }
+    
+    .iconStyle {
+        color: #f1f1f1;
+        font-size: 50px;
+        padding: 5px;
+    }
+}
+
+// Responsive
+
+// Ultra Styles (above) computers
+@media screen and (min-width: $comp-breakpoint) {
+    .main {
+        width: 70%;
+    }
+}
+
+// Desktop/computer Styles
+@media screen and (max-width: $comp-breakpoint) and (min-width: $tab-breakpoint) {
+    .main {
+        width: 75%;
+    }
+}
+
+// Tablet Styles
+@media screen and (max-width:$tab-breakpoint) and (min-width: $mob-breakpoint) {
+    .main {
+        width: 85%;
+    }
+}
+
+// Mobile Styles
+@media screen and (max-width: $mob-breakpoint){
+    .main {
+        width: 85%;
+    }
+}

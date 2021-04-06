@@ -100,6 +100,7 @@ export const getAllMeals = () => {
   });
 };
 
+
 // export const getAllMeals = async () => {
 //   // let mealsArray = []
 //   firestore.collection("meals").get().then((querySnapshot) => {
