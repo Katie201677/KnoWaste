@@ -41,8 +41,6 @@ export const getUsersCarbon = async () => {
           const getMealIdArr = () =>
             doc.data()[thisWeek] ? doc.data()[thisWeek] : [];
           const mealIdArr = getMealIdArr();
-          //console.log("mealIdArr");
-          //console.log(mealIdArr);
 
           const weeksCarbon = mealIdArr.map((order) => {
             let matchingMeal = meals.find((meal) => {
