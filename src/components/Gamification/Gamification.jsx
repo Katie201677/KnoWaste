@@ -1,79 +1,55 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { getUsersCarbon } from "../../services/gamification.service";
 import styles from "./Gamification.module.scss";
-import { firestore } from "../../firebase";
-import { getCurrentWeekID } from "../../services/weekid.service";
+import Navbar from "../NavBar";
+import UserStats from "./UserStats";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import library from "../../data/fa-library.js";
 
 const Gamification = () => {
-  // ADD UP EACH USERS CARBON USAGE AND DIVIDE IT BY AMOUNT OF MEALS THEY ATE
-  const getUsersCarbon = async () => {
-    const meals = await firestore
-      .collection("meals")
-      .get()
-      .then((meals) => {
-        return meals.docs.map((meal) => {
-          return {
-            mealId: meal.data().data.mealName,
-            mealCarbon: meal.data().data.mealCarbon,
-          };
-        });
-      });
-    console.log("meals");
-    console.log(meals);
+  const [sortedUsers, setSortedUsers] = useState([]);
+  // sort data upon page load
+  useEffect(() => {
+   getUsersCarbon().then(response => {
+     setSortedUsers(orderUsers(response))
+   });
+   // setSortedUsers(orderUsers(data));
+   //setSortedUsers(data);
+  }, []);
+  // store the sorted halls data in state
 
-    const orders = await firestore
-      .collection("orders")
-      .get()
-      .then((orders) => {
-        return orders.docs.map((doc) => {
-          const thisWeek = getCurrentWeekID();
-
-          // access each object in the 'meals' array that matches the mealId of this, and get the mealCarbon property
-          const getMealIdArr = () =>
-            doc.data()[thisWeek] ? doc.data()[thisWeek] : [];
-          const mealIdArr = getMealIdArr();
-          console.log("mealIdArr");
-          console.log(mealIdArr);
-          const weeksCarbon = mealIdArr.map((order) => {
-            let matchingMeal = meals.find((meal) => {
-              if (!meal) {
-                return order;
-              } else {
-                return meal.mealId == order;
-              }
-            });
-            console.log("matching meal is");
-            console.log(matchingMeal);
-            if (matchingMeal === undefined) {
-              return 0;
-            } else {
-              return parseInt(matchingMeal.mealCarbon);
-            }
-          });
-          console.log("CABRON");
-          console.log(weeksCarbon);
-          // add them together and divide them by the length of the mealIds array
-          const carbonSum = weeksCarbon.reduce((a, b) => {
-            return a + b;
-          }, 0);
-          const carbonAvg = carbonSum / mealIdArr.length;
-          return {
-            mealIds: doc.data()[thisWeek],
-            userId: doc.id,
-            carbon: carbonAvg,
-          };
-        });
-      });
-    console.log("orders");
-    console.log(orders);
+  const tableHeadings = {
+    userName: "Name",
+    avgCarbon: "Average CO2",
+    maxCarbon: "Total CO2",
+    score: "Score",
   };
 
-  useEffect(() => {
-    getUsersCarbon();
-  }, []);
-  // REPEAT FOR EACH USER AND ADD TO A LIST
-  // SORT BY AVG CARBON USAGE
+  // function takes the data as an input and return an ordered array based on the halls score
+  const orderUsers = (data) => {
+    let sortedData = data.sort((b, a) => b.maxCarbon - a.maxCarbon);
+    return sortedData;
+  };
 
-  return "ur winning!!!!";
+  return (
+    <div className={"content"}>
+      <Navbar />
+
+      <section className={`mainSection box-style-1 ${styles.main}`}>
+        <div className={styles.gameHeader}>
+          <FontAwesomeIcon icon="trophy" className={styles.iconStyle} />
+          <h1 className={styles.gameTitle}>League Tables</h1>
+        </div>
+        <UserStats user={tableHeadings} position="Position" />
+        {/* map over sorted data array for each user */}
+        {/* mount HallStats component for each user in data array */}
+        {/* position prop is the current users position in the sorted users array */}
+        {sortedUsers.map((user, i) => {
+          return <UserStats key={user.id} user={user} position={i} />;
+        })}
+      </section>
+    </div>
+  );
 };
 
 export default Gamification;
