@@ -1,16 +1,23 @@
-import React from "react";
+import React, {useContext} from "react";
 import AdminNavBar from "../AdminNavBar";
 import styles from "./AdminHome.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Fork from "../../../assets/images/fork.png";
 import Logo from "../../../assets/images/Logo.png";
 import Table from "../../../assets/images/leagueTable.png";
+import { UserContext } from "../../../context/contextUser";
 
 const adminHome = () => {
+  const {user} = useContext(UserContext);
+  let history = useHistory();
+  if(!user.isAdmin) {
+    history.push("/home");
+  }
   return (
+   
     <div className={styles.contentMain}>
-      <AdminNavBar />
 
+      
       <div className={styles.linkContainer}>
         
         <Link to="/adminmealinput">
@@ -40,10 +47,17 @@ const adminHome = () => {
               </div>
               
             </div>
-            
          
         </div>
         </Link>
+        <div className={"box-style-1"}>
+          <Link to="/recentorders">
+            <div>
+              <h3 className="text-white">Weeks Orders Summary</h3>
+              <p className="text-white">View and Print all orders for the next week</p>
+            </div>
+          </Link>
+        </div>
       </div>
 
      

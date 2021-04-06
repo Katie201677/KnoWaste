@@ -16,24 +16,11 @@ const AdminNavBar = () => {
     return (
 
         <div className={styles.navBarContainer}>
-            <section className={styles.navigation}>
-            
-            {/* <span className={styles.closeBtn} onClick={handleClick}> 
-                <Link to="/"> 
-                    <img src={logo} className={styles.logo}/>
-                </Link>    
-            </span> */}
-            
-            <ul>
-                <li>
+                <button className={styles['button-style-1']}>
                     <Link to="/admin">
-                        <FontAwesomeIcon  icon="user-circle" className={styles.icon}/>
+                        Back
                     </Link>
-                </li>
-            </ul>
-        </section>
-
-
+                </button>
         </div>
         
     )

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react";
 import NavBar from "../NavBar";
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
@@ -7,9 +7,15 @@ import Logo from '../../assets/images/Logo.png';
 import Table from '../../assets/images/leagueTable.png';
 import Timer from '../Timer';
 import HelpPopUp from '../HelpPopUp';
+import firebase from "firebase/app";
+import { auth, firestore } from "../../firebase.js";
+import { UserContext } from "../../context/contextUser";
 
 const Home = () => {
-
+  const userContext = useContext(UserContext);
+  const currentUser = firebase.auth().currentUser;
+  userContext.setUser(currentUser);
+  console.log("homee",currentUser)
 return (
 <div className={styles.content}>
   

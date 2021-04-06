@@ -2,12 +2,11 @@
 
 
 .navBarContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100vw;
-
+  margin: 0 auto;
+  width: 80vw;
+   button{
+    width: 120px;
+   }
 }
 
 .navigation {
@@ -23,6 +22,9 @@
     align-items: center;
     color: $primary-color;
     background: $background-color;
+    // position: absolute;
+    top: 20%;
+    left: 10%;
     z-index: 10;
     border-radius: 100%;
 

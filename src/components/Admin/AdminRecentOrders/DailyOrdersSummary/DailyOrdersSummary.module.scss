@@ -1,0 +1,17 @@
+@import "../../../../assets/styles/styles.scss";
+
+.wholeTable{
+display: flex;
+width: 50%;
+height: 50%;
+border: 2px solid black;
+justify-content: space-around;
+align-items: center;
+
+}
+
+.dayOfWeek {
+    text-align: center;
+    font-size: $font-m;
+    
+}
