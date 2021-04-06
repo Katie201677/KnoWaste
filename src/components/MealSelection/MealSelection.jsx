@@ -61,10 +61,10 @@ const MealSelection = (props) => {
       <NavBar />
       <div className={`${styles.page} mainSection`}>
         {weeksMeals.length > 0 ? <WeeklyPlanner mealData={weeksMeals} addChosenMeal={addChosenMeal} /> : null}
-        <Link to="/mealconfirmation"> <button onClick={() => uploadMeals()} className={"button-style-1 " + styles.btnReview}>
-          Review
+        <button onClick={() => uploadMeals()} className={"button-style-1 " + styles.btnReview}>
+        <Link to="/mealconfirmation">  Review  </Link>
         </button>
-        </Link>
+       
       </div>
     </div>
   );
