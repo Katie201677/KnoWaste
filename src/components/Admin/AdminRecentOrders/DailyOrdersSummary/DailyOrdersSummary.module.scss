@@ -2,7 +2,8 @@
 
 .wholeTable {
 display: flex;
-width: 50%;
+width: 700px;
+margin: auto;
 height: 50%;
 border: 2px solid black;
 justify-content: space-around;
@@ -12,4 +13,11 @@ align-items: center;
 .dayOfWeek {
     text-align: center;
     font-size: $font-m;
+}
+
+.selectionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-top: 10px;
 }

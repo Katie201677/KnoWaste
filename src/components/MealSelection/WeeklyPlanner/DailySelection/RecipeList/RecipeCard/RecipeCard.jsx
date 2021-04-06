@@ -41,7 +41,7 @@ const RecipeCard = (props) => {
     { loading &&
       <div className={styles.recipeCard + " box-style-2"}>
         <img
-          // src={mealInfo.imageUrl}
+          src={mealInfo.imageUrl}
           alt={mealInfo.data.mealName}
           className={styles.recipeImg}
         />

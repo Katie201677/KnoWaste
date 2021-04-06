@@ -77,7 +77,7 @@ const MealConfirmation = () => {
                 }
               </section>
               <Link to="/home">
-                <button className={`button-style-1 ${styles.mealConfirmationButton}`} onClick={handleSubmit}>CHECKOUT</button>
+                <button className={`button-style-1 ${styles.mealConfirmationButton}`} onClick={handleSubmit}>CONFIRM</button>
               </Link>
             </div>
           }

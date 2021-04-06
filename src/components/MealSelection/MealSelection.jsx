@@ -28,9 +28,6 @@ const MealSelection = (props) => {
 
   const uploadMeals = () => {
     let weekId = getCurrentWeekID();
-    console.log(weekId);
-    console.log(user.uid);
-    console.log('deciding nooooow')
     firestore.collection('orders').doc(user.uid)
     .set(
       {[weekId]: chosenMeals }
@@ -40,8 +37,7 @@ const MealSelection = (props) => {
   const getWeeklyMeals = () => {
     firestore
       .collection("weeksMeals")
-      //.doc(getCurrentWeekID())
-      .doc("210322")
+      .doc(getCurrentWeekID())
       .get()
       .then((response) => {
         let weekObj = response.data();
@@ -65,9 +61,10 @@ const MealSelection = (props) => {
       <NavBar />
       <div className={`${styles.page} mainSection`}>
         {weeksMeals.length > 0 ? <WeeklyPlanner mealData={weeksMeals} addChosenMeal={addChosenMeal} /> : null}
-        <button onClick={() => uploadMeals()} className={"button-style-1 " + styles.btnReview}>
-          <Link to="/mealconfirmation">Review</Link>
+        <Link to="/mealconfirmation"> <button onClick={() => uploadMeals()} className={"button-style-1 " + styles.btnReview}>
+          Review
         </button>
+        </Link>
       </div>
     </div>
   );

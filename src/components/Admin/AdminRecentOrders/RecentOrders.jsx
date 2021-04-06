@@ -58,7 +58,6 @@ const RecentOrders = () => {
   const mealCount = (daily)=>  {
     let array_elements = daily;
     array_elements.sort();
-    console.log("heyyy");
     console.log(array_elements);
     let results = {};
     var current = null;
@@ -87,7 +86,7 @@ const RecentOrders = () => {
     result.docs.forEach(doc => {
     
     // week is a users meal options for the week
-    let week = doc.data()[weekId];
+    let week = doc.data()[currentWeekId];
     if (week === undefined) {
       console.log("error: user has not selected");
       return;
