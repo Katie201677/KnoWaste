@@ -14,7 +14,7 @@ import { UserContext } from "../../context/contextUser";
 const Home = () => {
   const userContext = useContext(UserContext);
   const currentUser = firebase.auth().currentUser;
-  userContext.setUser(currentUser);
+  // userContext.setUser(currentUser);
   console.log("homee",currentUser)
 return (
 <div className={styles.content}>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import styles from "./Profile.module.scss";
 import ProfilePic from "../../assets/kitchen_1.jpg";
 import NavBar from "../NavBar/";
@@ -9,20 +9,8 @@ import { auth, firestore } from "../../firebase.js";
 import { UserContext } from "../../context/contextUser"; 
 import { Link, useHistory } from "react-router-dom";
 
-// This shows once edit details button selected
-// const EditPicProfile = () => {
-//   return (
-//     <div id={styles.editPicButton} className={styles.editButton}>
-//       +
-//     </div>
-//   );
-// };
-
 
 const Profile = () => {
-
-  // get current user information
-  
 
   // use state to display editing profile options or not
   const [isEditing, setIsEditing] = useState(false);
@@ -43,15 +31,14 @@ const Profile = () => {
 
   const signOut = () => {
   
-      //logout function:
-          auth.signOut()
-          userContext.setUser(null);
-          history.push("/login");
-          console.log(auth.currentUser)
-            };
+    //logout function:
+    auth.signOut()
+    userContext.setUser(null);
+    history.push("/login");
+    console.log(auth.currentUser)
+  };
         
  
-  
   // edit/update users name in firebase
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -76,24 +63,25 @@ const Profile = () => {
       residenceHall: halls
     })
   }
+    useEffect(() => {
+      console.log(userContext.user.name)
+    }, [], isEditing)
 
   return (
     <div className={`content ${styles.contentMain}`}>
       <NavBar />
-      <div className={styles.signOut}>
-        <button className='submit-button' onClick={signOut}>Sign out</button>
-      </div>
+      
 
       <div className={styles.mainSection} >
         {/* profile picture tile */}
-        <div className={isEditing ? `${styles.profile} box-style-1 ${styles.profile__width}` :  `${styles.profile}` }>
+        <div className={isEditing ? `${styles.profile} box-style-1 ${styles.profile__width}` :  `${styles.profile} box-style-1` }>
           <section className={styles.profile__card}>
 
             <section className={`${styles.profile__info} box-style-1`}>
               <img src={ProfilePic} className={styles.profile__pic}></img>
               <p className={isEditing ? styles.invisible : styles.profile__user__info}>
-                <span className={styles.name}>{userData.name}</span>
-                <span className={styles.hall}>{userData.residenceHall}</span>
+                <span className={styles.name}>{userContext.user.name}</span>
+                <span className={styles.hall}>{userContext.user.residenceHall}</span>
               </p>
 
               {/* input boxes for editing below -> these display when isEditing is true */}
@@ -102,9 +90,6 @@ const Profile = () => {
                   <label className={styles.editLabel}>Your full name</label>
                   <input type="text" id='fullNameInput' className={styles.inputBox} placeholder="Full Name" ></input>
 
-                  {/* <label className={styles.editLabel}>Your username</label>
-                  <input type="text" id='userNameInput' className={styles.inputBox} placeholder="New Username"></input> */}
-
                   <label className={styles.editLabel}>Your hall of residence</label>
                   <select name="halls" id="hallOptions" className={styles.hallOptions}>
                     <option value="Hiatt Baker">Hiatt Baker</option>
@@ -112,6 +97,7 @@ const Profile = () => {
                     <option value="Churchill">Churchill</option>
                     <option value="Badock">Badock</option>
                   </select>
+                  
                   <button className={styles.saveButton}>Save Changes</button>
                 </form>
               </div>
@@ -120,53 +106,16 @@ const Profile = () => {
               <div className={styles.edit__container}>
                 <FontAwesomeIcon className={styles.penIcon} onClick={showEditProfile} icon="pen" />
               </div>
-
             </section>
+
+            <div className={styles.signOut}>
+              <button className='button-style-1' onClick={signOut}>Sign out</button>
+            </div>
+
           </section>
-
-          {/* container div for the dietary requirment section and the personal data/metrics */}
-        {/* <div className={styles.diet__and__score__container}> */}
-
-          {/* Dietary information goes here -> only display selected requirments when Not editing */}
-          {/* <div className={isEditing ? styles.diet__infoEditing : styles.diet__info}>
-            <h3 className={isEditing ? styles.diet__header : styles.invisible}>Dietary Requirments</h3>
-
-            <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="bread-slice" /></span>
-              <p className={isEditing ? styles.diet__label : styles.invisible}>Gluten Free</p>
-            </div>
-            
-            <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="carrot" /></span>
-              <p className={isEditing ? styles.diet__label : styles.invisible}>Vegetarian</p>
-            </div>
-
-            <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="leaf" /></span>
-              <p className={isEditing ? styles.diet__label : styles.invisible}>Vegan</p>
-            </div>
-            
-            <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="cheese" /></span>
-              <p className={isEditing ? styles.diet__label : styles.invisible}>Dairy Free</p>
-            </div>
-
-            <div className={styles.diet__flex__row}>
-              <span className={styles.dietTile}><FontAwesomeIcon className={styles.allergyIcon} icon="egg" /></span>
-              <p className={isEditing ? styles.diet__label : styles.invisible}>Nuts</p>
-            </div>
-
-          </div> */}
-
-          {/* weekly score... data/metrics are input here */}
-          {/* <div className={isEditing ? styles.score__editing : styles.score} >
-              <div className={styles.figures}>
-              </div>
-          </div> */}
-        {/* </div> */}
+        </div>
       </div>
     </div>
-  </div>
         
   );
 };
