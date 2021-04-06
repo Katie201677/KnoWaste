@@ -35,7 +35,7 @@ const App = () => {
           
             <PrivateRoute path="/home" component={Home} />
             <PrivateRoute path="/mealselection">
-              <MealSelection  mealData={mealData} getMealChoice={getMealChoice}/>
+              <MealSelection  mealData={mealData} />
             </PrivateRoute>
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute path="/aboutus" component={AboutUs} />
