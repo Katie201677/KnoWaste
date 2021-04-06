@@ -1,32 +1,67 @@
-import React from 'react';
-import styles from './RecipeCard.module.scss';
+import React, { useEffect, useState } from "react";
+import styles from "./RecipeCard.module.scss";
+import { firestore } from "../../../../../../firebase.js";
+
+let mealInfo;
+let mealName;
 
 const RecipeCard = (props) => {
-  //Each individual recipe information in a card format.
-  const {action, selectItem, getActiveMeal} = props;
-  const {imgSrc, recipeName, dietaryrestriction} = props.mealChoice;
-  
+  const { action, mealChoice, addChosenMeal } = props;
+  const [loading, setLoading] = useState(false);
+
+  let chosenMeal = '';
+
+  const selectMeal = (e) => {
+    action();
+    chosenMeal = e.target.value;
+    return addChosenMeal(chosenMeal);
+  }
+
+  const getMealInfo =  async () => {
+    await firestore
+      .collection("meals")
+      .doc(mealChoice)
+      .get()
+      .then((response) => {
+        mealInfo = response.data();
+        setLoading(true)
+        return mealInfo;
+      });
+  };
+
+  useEffect(() => { 
+    const letsGo = async () => {
+      await getMealInfo();
+    }
+    letsGo();
+  }, []);
 
   return (
-    <div className={styles.recipeCard + " box-style-2"}>
-        <img src={imgSrc} alt={recipeName} className={styles.recipeImg} />
+    <>
+    { loading &&
+      <div className={styles.recipeCard + " box-style-2"}>
+        <img
+          src={mealInfo.imageUrl}
+          alt={mealInfo.data.mealName}
+          className={styles.recipeImg}
+        />
 
-        
-      <section className={styles.foodInfo}>
-        <h3>{recipeName}</h3>
-        <p>Served with fondant potatoes and some salad!</p>
+        <section className={styles.foodInfo}>
+           <h3>{mealInfo.data.mealName}</h3> 
+          <p>{mealInfo.data.mealDescription}</p> 
 
-        <section className={styles.dietRestrictions}>
-          <p>{dietaryrestriction.join(" ")}</p>
+          <section className={styles.dietRestrictions}>
+          <p>{mealInfo.data.mealAllergens.join(" ")}</p>
+          </section>
+
+         <button value={mealInfo.data.mealName} className={"button-style-1 " + styles.selectButton} onClick={selectMeal}>
+            Select
+          </button>
         </section>
+      </div>
+      } 
+    </>
+  );
+};
 
-        <button className={"button-style-1 " + styles.selectButton} onClick={() => {getActiveMeal(recipeName); selectItem(); action();}}>
-          Select
-        </button>
-        
-      </section>
-    </div>
-  )
-}
-
-export default RecipeCard
+export default RecipeCard;

@@ -80,24 +80,20 @@ const Profile = () => {
   return (
     <div className={`content ${styles.contentMain}`}>
       <NavBar />
-      {/* <Timer /> */}
       <div className={styles.signOut}>
         <button className='submit-button' onClick={signOut}>Sign out</button>
       </div>
+
       <div className={styles.mainSection} >
         {/* profile picture tile */}
-
-        <div className={isEditing ? `${styles.profile} box-style-1 ${styles.profile__width}` :  `${styles.profile} box-style-1` }>
-
+        <div className={isEditing ? `${styles.profile} box-style-1 ${styles.profile__width}` :  `${styles.profile}` }>
           <section className={styles.profile__card}>
 
-            <section className={styles.profile__info}>
+            <section className={`${styles.profile__info} box-style-1`}>
               <img src={ProfilePic} className={styles.profile__pic}></img>
               <p className={isEditing ? styles.invisible : styles.profile__user__info}>
                 <span className={styles.name}>{userData.name}</span>
                 <span className={styles.hall}>{userData.residenceHall}</span>
-                {/* <span className={styles.username}>Xx_king_xX</span> */}
-                
               </p>
 
               {/* input boxes for editing below -> these display when isEditing is true */}

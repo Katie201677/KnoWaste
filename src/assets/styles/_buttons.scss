@@ -10,6 +10,14 @@
   color: white;
   border:none;
   box-sizing: border-box;
+
+.submit-button:hover, .submit-button:active {
+  filter: none;
+}
+
+button:hover {
+cursor: pointer;
+
 }
 
 .submit-button {
@@ -19,7 +27,7 @@
     background: linear-gradient(180deg, #FF8D60 0%, $primary-color 100%);
     border-radius: 30px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    color: $secondary-color;
+    color: white;
     border:none;
     box-sizing: border-box;
 }
@@ -34,3 +42,44 @@ button:hover {
   
 }
 
+  }
+
+  .submit-button {
+      width: 40%;
+      height: 11%;
+      // padding: 10px;
+      background: linear-gradient(180deg, #FF8D60 0%, $primary-color 100%);
+      border-radius: 30px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      color: $secondary-color;
+      border:none;
+  }
+
+  .button-style-1 {
+    background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+    border-radius: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: white;
+    border:none;
+    padding: 5px 10px;
+  }
+
+
+
+@media only screen and (max-width: $mob-breakpoint) {
+  .button-style-1 {
+    background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+    border-radius: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: white;
+    border:none;
+  }
+  
+  .submit-button {
+      background: linear-gradient(180deg, #FF8D60 0%, $primary-color 100%);
+      border-radius: 30px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      color: $secondary-color;
+      border:none;
+  }
+}

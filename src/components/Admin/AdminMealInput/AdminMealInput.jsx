@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./AdminMealInput.module.scss";
 import mealLibrary from "../AdminLibrary/AdminLibrary.json";
 import AdminNavBar from "../AdminNavBar";
@@ -12,6 +13,7 @@ const AdminMealInput = () => {
   const { register, handleSubmit, errors } = useForm();
   const [image, setImg] = useState(null);
   const [url, setUrl] = useState('');
+  let history = useHistory();
 
   //image upload
   const handleChange = (e) => {
@@ -42,6 +44,7 @@ const AdminMealInput = () => {
 
   const toggleShowPopUp = () => {
     setShowPopUp(!showPopUp);
+    history.push('/admin');
   }
 
   let data;

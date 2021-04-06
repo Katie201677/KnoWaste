@@ -1,5 +1,5 @@
-@import "../../../../assets/styles/_variables.scss";
-@import "../../../../assets/styles/_typography.scss";
+@import "../../../../assets/styles/styles.scss";
+
 .dailySelection {
     overflow: hidden;
     background-color: $background-color;
@@ -8,5 +8,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 10px;
+    margin-top: 10px;
 }
 

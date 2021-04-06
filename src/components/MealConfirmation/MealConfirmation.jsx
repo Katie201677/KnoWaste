@@ -1,51 +1,90 @@
-import React from "react";
-import kitchenImage from "../../assets/cafe.jpg";
+import React, { useContext, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getCurrentWeekID } from "../../services/weekid.service.js";
 import library from "../../data/fa-library.js";
 import styles from "./MealConfirmation.module.scss";
 import MealCard from "./MealCard";
-import { Link } from 'react-router-dom'
+import NavBar from "../NavBar/NavBar";
+import { Link } from "react-router-dom";
+import { firestore } from '../../firebase';
+import { UserContext } from "../../context/contextUser";
 
-const MealConfirmation = (props) => {
-  
-  console.log(props.mealChoiceArr);
-  
+let orderArr = [];
+
+const MealConfirmation = () => {
+
   const handleSubmit = () => {
-    console.log("submit success")
+    console.log("submit success");
+  };
+
+  const {user} = useContext(UserContext);
+
+  const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+
+  const [loading, setLoading] = useState(false);
+
+  const getUserMeals = () => {
+    let weekId = getCurrentWeekID();
+    firestore.collection('orders').doc(user.uid)
+      .get().then(
+      response => {
+        const userOrder = response.data();
+        orderArr = userOrder[weekId];
+        console.log(orderArr);
+      }
+    ).then(() => setLoading(true))
   }
 
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-  return (
-    <main style={{ backgroundImage: `url(${kitchenImage})` }}>
-      
-      <div className={styles.mainDiv}>
-        <div className = {styles.milkyBackground}></div>
-        <h1>Your Meal Choices</h1>
-        
-        <Link to="mealselection">
-         <FontAwesomeIcon onClick={props.clearArr} icon="pen" className={styles.penIcon} />
-        </Link>
+  useEffect(() => {
+    getUserMeals();
+  }, [])
 
-        <section className={styles.confirmMenu}>
+  return (
+    <div className='content'>
+      <NavBar />
+      <main>
+        <div className={`mainSection ${styles.mealConfirmLayout}`}>
+          <div className={`box-style-1 ${styles.mealConfirmMilky}`}>
+            <div className={styles.confirmTitle}>
+              <h1 className = {styles.mealConfirmTitle}>Your Meal Choices</h1>
+              <Link to="/mealselection">
+                  <FontAwesomeIcon
+                    icon="pen"
+                    className='fa-3x'
+                  />
+              </Link>
+            </div>
           {
-            <ul>
-              {days.map((day) => {
-                let i = days.indexOf(day);
-                  return (
-                    <>
-                      <MealCard day={day} meal={props.mealChoiceArr[i]}  />
-                    </>
-                  )
-                })
-              }
-            </ul>
+            loading &&
+            <div className={styles.mealConfirmBox}>
+              <section className={styles.confirmMenu}>
+                {
+                  orderArr.map((order, i) => {
+                    return (
+                      <>
+                        <MealCard day={days[i]} meal={order} />
+                      </>
+                    )
+                  })
+                }
+              </section>
+              <Link to="/home">
+                <button className={`button-style-1 ${styles.mealConfirmationButton}`} onClick={handleSubmit}>CONFIRM</button>
+              </Link>
+            </div>
           }
-        </section>
-        <Link to="/home">
-          <button className="confirmationButton" onClick={handleSubmit}>CHECKOUT</button>
-        </Link>
-      </div>
-    </main>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 };
 

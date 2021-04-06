@@ -27,3 +27,35 @@ $mob-breakpoint: 576px;
 $tab-breakpoint: 768px;
 $comp-breakpoint: 992px;
 $ultra-breakpoint: 1200px;
+
+
+#Monday {
+    grid-area: a;
+    background: red;
+}
+
+#Tuesday {
+    grid-area: b;
+}
+
+#Wednesday {
+    grid-area: c;
+}
+
+#Thursday {
+    grid-area: d;
+}
+
+#Friday {
+    grid-area: e;
+}
+
+#Saturday {
+    grid-area: f;
+}
+
+#Sunday {
+    grid-area: g;
+}
+
+.confirmMenu {}

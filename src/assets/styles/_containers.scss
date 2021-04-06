@@ -1,39 +1,57 @@
-.box-style-1 {
-    background: rgba(255, 255, 255, 0.2);
-   // border: 0.5px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 15px;
-    padding:15px;
-    backdrop-filter: blur(6px);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+@import './_variables.scss';
+
+@media only screen and (min-width: $comp-breakpoint) {
+    .box-style-1 {
+        background: rgba(255, 255, 255, 0.2);
+       // border: 0.5px solid #FFFFFF;
+        border-radius: 30px;
+        margin: 15px;
+        padding:15px;
+        backdrop-filter: blur(6px);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    
+    .box-style-2 {
+        background: #FFFFFF;
+        border-radius: 30px;
+        // margin: 15px;
+        // padding:15px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    
+    .box-style-3 {
+        background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
+        border-radius: 30px;
+        margin: 15px;
+        padding:15px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    
+    .box-style-4 {
+        background: #FFFFFF;
+        border-radius: 40px;
+        margin: 15px;
+        padding:15px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    .box-style-4 {
+        background: #FFFFFF;
+        border-radius: 20px;
+        margin: 10px;
+        padding:10px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
 }
 
 
-.box-style-2 {
-    background: #FFFFFF;
-    border-radius: 30px;
-    margin: 15px;
-    padding:15px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+// @media only screen and (max-width: $comp-breakpoint) {
 
 
-.box-style-3 {
-    background: linear-gradient(180deg, #FF8D60 0%, #FD7951 100%);
-    border-radius: 30px;
-    margin: 15px;
-    padding:15px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-
-.box-style-4 {
-    background: #FFFFFF;
-    border-radius: 40px;
-    margin: 15px;
-    padding:15px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+//  }
 
 .box-style-4 {
     background: #FFFFFF;
