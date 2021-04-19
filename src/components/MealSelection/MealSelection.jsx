@@ -37,7 +37,7 @@ const MealSelection = (props) => {
   const getWeeklyMeals = () => {
     firestore
       .collection("weeksMeals")
-      .doc(getCurrentWeekID())
+      .doc("210419")
       .get()
       .then((response) => {
         let weekObj = response.data();
