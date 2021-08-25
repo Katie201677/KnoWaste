@@ -17,7 +17,7 @@ const SwapRequest = (props) => {
   return (
     <div className={styles.addSwap}>
       <img src={ProfilePic} className={styles.profile__pic}></img>
-      <form onSubmit={handleSubmit} className={styles.swapCard}>
+      <form onSubmit={handleSubmit} className={styles.swapForm}>
         <input 
           className={styles.input}
           type="text"
