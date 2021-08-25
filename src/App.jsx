@@ -24,6 +24,7 @@ import { AuthProvider } from "./context/AuthContext.jsx"
 import PrivateRoute from "./routes/PrivateRoute.jsx"
 import AdminMealPreview from "./components/Admin/AdminMealInput/AdminMealPreview";
 import RecentOrders from "./components/Admin/AdminRecentOrders";
+import SwapForum from "./components/SwapForum/SwapForum";
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
               <MealConfirmation mealChoiceArr={mealChoiceArr} />
             </PrivateRoute>
             <PrivateRoute path="/gamification" component={Gamification} />
+            <PrivateRoute path="/swapforum" component={SwapForum} />
             <PrivateRoute path="/environment" component={Environment} />
             
             <PrivateRoute path="/admin" component={AdminHome} />

@@ -22,24 +22,29 @@ const NavBar = () => {
                             <FontAwesomeIcon icon="home" className={styles.iconStyle}/>
                         </Link>    
                     </li>
-                    <li className={styles.utensils}>
+                    <li>
                         <Link to="/aboutus">
                             <FontAwesomeIcon icon="info-circle" className={styles.iconStyle}/>
                         </Link>
                     </li>
-                    <li className={styles.utensils}>
+                    <li>
                         <Link to="/mealselection">
                             <FontAwesomeIcon icon="utensils" className={styles.iconStyle}/>
                         </Link>
                     </li>
-                    <li className={styles.trophy}>
+                    <li>
                         <Link to="/gamification">
                             <FontAwesomeIcon  icon="trophy" className={styles.iconStyle}/>
                         </Link>
                     </li>
-                    <li className={styles.userCircle}>
+                    <li>
                         <Link to="/profile">
                             <FontAwesomeIcon  icon="user-circle" className={styles.iconStyle}/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/swapforum">
+                            <FontAwesomeIcon  icon="exchange-alt" className={styles.iconStyle}/>
                         </Link>
                     </li>
                 </ul>
