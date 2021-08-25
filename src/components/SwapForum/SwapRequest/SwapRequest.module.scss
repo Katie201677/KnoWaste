@@ -1,0 +1,20 @@
+@import "../../../assets/styles/styles.scss";
+
+.addSwap {
+  display: flex;
+
+  .profile__pic {
+    border-radius: $border-radius-1;
+    height: 50px;
+    width: 50px;
+    border: 2px solid $secondary-color;
+    // margin-bottom: 50px;
+  }
+
+  .swapCard {
+    background-color: $background-color-transparent;
+    border-radius: $border-2;
+    width: 80%;
+  }
+}
+
