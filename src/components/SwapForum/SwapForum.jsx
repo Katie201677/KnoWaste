@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import NavBar from '../NavBar';
+import styles from "./SwapForum.module.scss";
 
 const SwapForum = () => {
   return (
     <div>
-      <p>Test render</p>
+      <div className={styles.content}>
+        <NavBar />
+        <div className={styles.mainSection}>
+
+          <div>
+            <p>swaps here</p>
+          </div>
+
+        </div>
+      </div>
     </div>
   )
 }
