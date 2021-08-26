@@ -3,13 +3,7 @@
 .addSwap {
   display: flex;
 
-  .profile__pic {
-    border-radius: $border-radius-1;
-    height: 50px;
-    width: 50px;
-    border: 2px solid $secondary-color;
-    // margin-bottom: 50px;
-  }
+  
 
   .swapForm {
     background-color: $background-color-transparent;

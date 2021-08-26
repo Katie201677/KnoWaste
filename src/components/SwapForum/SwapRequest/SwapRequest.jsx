@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./SwapRequest.module.scss";
-import ProfilePic from "../../../assets/kitchen_1.jpg";
+
 
 const SwapRequest = (props) => {
 
@@ -16,7 +16,7 @@ const SwapRequest = (props) => {
   
   return (
     <div className={styles.addSwap}>
-      <img src={ProfilePic} className={styles.profile__pic}></img>
+      
       <form onSubmit={handleSubmit} className={styles.swapForm}>
         <input 
           className={styles.input}
