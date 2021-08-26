@@ -9,6 +9,7 @@ import SwapCard from "./SwapCard";
 const SwapForum = () => {
   
   const [ posts, setPosts ] = useState([]);
+  const [ replied, setReplied ] = useState(false);
   
   const updatePosts = (post) => {
     console.log("event fired");
@@ -17,6 +18,10 @@ const SwapForum = () => {
       ...posts
       ]
     )
+  }
+
+  const updateReplied = () => {
+    setReplied(!replied);
   }
 
   return (
@@ -29,7 +34,7 @@ const SwapForum = () => {
           <SwapRequest placeholder="Add your swap request..." updatePosts={updatePosts} />
 
           <section className={styles.postsDisplay}> 
-            {posts.map((post, index) => <SwapCard post={post} key={index} className={styles.post} />)}
+            {posts.map((post, index) => <SwapCard post={post} key={index} className={styles.post} updateReplied={updateReplied} replied={replied} />)}
           </section>
 
         </section>
