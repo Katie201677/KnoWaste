@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./SwapCard.module.scss";
 import ProfilePic from "../../../assets/kitchen_1.jpg";
+import SwapReply from "../SwapReply";
 
 const SwapCard = (props) => {
   
@@ -21,7 +22,8 @@ const SwapCard = (props) => {
 
   const repliesJsx = replies.map((reply, index) => {
       return (
-        <div key={index}>{reply}</div>
+        // <div key={index}>{reply}</div>
+        <SwapReply reply={reply} key={index} />
       )
     });
   
