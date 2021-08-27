@@ -26,7 +26,7 @@ const SwapRequest = (props) => {
           value={value}
         >
         </input>
-        <button>Post</button>
+        <button className={styles["button-style-1"]}>Post</button>
       </form>
     </div>
   )

@@ -1,19 +1,31 @@
 @import "../../../assets/styles/styles.scss";
 
 .swapCard {
-  background: $secondary-color;
+  background: $background-color-transparent;
   border-radius: $border-radius-3;
+  color: $secondary-color;
+  padding: $base-spacing * 2;
 
   .profile__pic {
     border-radius: $border-radius-1;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border: 2px solid $secondary-color;
     // margin-bottom: 50px;
   }
 
+  .post {
+    color: $secondary-color;
+    margin-left: $base-spacing * 2;
+  }
+
   .comment {
+    align-items: center;
     display: flex;
+  }
+
+  .input {
+    border: $border-1;
   }
 }
 

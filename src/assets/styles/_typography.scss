@@ -8,6 +8,7 @@ $font-l: 38px;
 $font-m: 24px; 
 $font-s: 16px; 
 $font-xs: 10px; 
+$font-reply: 13.33px;
 
 * {
   font-family: $primary-font;
@@ -27,11 +28,15 @@ $form-font-color: #3f3737;
 
 
 h1 {
-
+  color: $primary-font-color;
+  font-size: $font-l;
 }
+
 h2 {
-
+  color: $primary-font-color;
+  font-size: $font-m;
 }
+
 h3 {
   font-weight: 400;
 }

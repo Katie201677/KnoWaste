@@ -9,6 +9,8 @@
     background-color: $background-color-transparent;
     border: $border-3;
     border-radius: $border-radius-3;
+    display: flex;
+    padding: $base-spacing * 2;
     width: 100%;
   }
 

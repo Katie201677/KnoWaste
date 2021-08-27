@@ -22,7 +22,6 @@ const SwapCard = (props) => {
 
   const repliesJsx = replies.map((reply, index) => {
       return (
-        // <div key={index}>{reply}</div>
         <SwapReply reply={reply} key={index} />
       )
     });
@@ -31,7 +30,7 @@ const SwapCard = (props) => {
     <div className={styles.swapCard}>
       <div className={styles.comment}>
         <img src={ProfilePic} className={styles.profile__pic}></img>
-        <p>{post}</p>
+        <p className={styles.post}>{post}</p>
       </div>
       <form onSubmit={handleSubmit}>
         <input
@@ -48,13 +47,6 @@ const SwapCard = (props) => {
         {repliesJsx}
       </section>
 
-
-      {/* <button
-        onClick={updateReplied}
-      >
-      reply
-      </button>
-      {replied && <input placeholder="reply here..."></input>}  */}
     </div>
   )
 }
