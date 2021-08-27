@@ -6,26 +6,32 @@ import styles from "./SwapForum.module.scss";
 import SwapRequest from "./SwapRequest";
 import SwapCard from "./SwapCard";
 
+let count = 50;
+// need to add random id generator function to use for key - this is placeholder used in update posts below
+ 
 const SwapForum = () => {
   
   const [ posts, setPosts ] = useState([]);
   const [ replied, setReplied ] = useState(false);
   
+  
+  
   const updatePosts = (post) => {
-    console.log("event fired");
     setPosts(
-      [post,
+      [{post: post, id: count},
       ...posts
       ]
-    )
+    );
+    count++;
   }
 
   const updateReplied = () => {
     setReplied(!replied);
   }
+ 
 
   const postsJsx = posts.length > 0 ?
-    posts.map((post, index) => <SwapCard post={post} key={index} className={styles.post} updateReplied={updateReplied} replied={replied} />)
+    posts.map((post) => <SwapCard post={post.post} key={post.id} className={styles.post} updateReplied={updateReplied} replied={replied} />)
     : <p className={styles.noSwaps}>No current swaps. Do you want to add one?</p>;
 
   return (
