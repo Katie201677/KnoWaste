@@ -2,6 +2,8 @@
 $primary-color: #FD7951;
 $secondary-color: #FFFFFF;
 $background-color: #54A390;
+$background-color-transparent: rgba(255, 255, 255, 0.2);
+$input-color: #3f3737;
 
 $primary-font-color: #eeeeee;
 
@@ -27,6 +29,10 @@ $mob-breakpoint: 576px;
 $tab-breakpoint: 768px;
 $comp-breakpoint: 992px;
 $ultra-breakpoint: 1200px;
+
+// SPACING
+$base-spacing: 5px;
+$indent-spacing: 40px;
 
 
 #Monday {

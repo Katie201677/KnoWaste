@@ -1,0 +1,16 @@
+@import "../../assets/styles/styles.scss";
+
+.mainSection { 
+  justify-self: center; 
+  margin: auto;
+  background: $background-color;
+  border-radius: $border-radius-2;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  padding: $base-spacing * 4;
+  
+  .noSwaps {
+    color: $primary-font-color;
+  }
+} 
