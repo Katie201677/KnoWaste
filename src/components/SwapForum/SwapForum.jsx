@@ -35,25 +35,23 @@ const SwapForum = () => {
     : <p className={styles.noSwaps}>No current swaps. Do you want to add one?</p>;
 
   return (
-    <div>
-      <div className={styles.content}>
-        <NavBar />
+    <div className={styles.content}>
+      <NavBar />
 
-        <section className={styles.mainSection}> 
-          <h1>Swap Forum</h1>
-          <section className={styles.postASwap}>
-            <h2>Post a Swap</h2>
-            <SwapRequest placeholder="Add your swap request..." updatePosts={updatePosts} />
-          </section>
-          
-          <section className={styles.postsDisplay}> 
-            <h2>Current Swaps</h2>
-            {postsJsx}
-          </section>
-
+      <section className={styles.mainSection}> 
+        <h1 className={styles.heading}>Swap Forum</h1>
+        <section className={styles.postASwap}>
+          <h2>Post a Swap</h2>
+          <SwapRequest placeholder="Add your swap request..." updatePosts={updatePosts} />
         </section>
         
-      </div>
+        <section className={styles.postsDisplay}> 
+          <h2>Current Swaps</h2>
+          {postsJsx}
+        </section>
+
+      </section>
+      
     </div>
   )
 }

@@ -2,7 +2,7 @@
 
 .mainSection { 
   justify-self: center; 
-  margin: auto;
+  // margin: auto;
   background: $background-color;
   border-radius: $border-radius-2;
   width: 60%;
@@ -12,5 +12,9 @@
   
   .noSwaps {
     color: $primary-font-color;
+  }
+
+  .heading {
+    margin-top: $base-spacing;
   }
 } 
