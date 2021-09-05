@@ -6,12 +6,18 @@ const SwapRequest = (props) => {
 
   const { updatePosts, placeholder } = props;
   const [ value, setValue ] = useState("");
+  const [ error, setError ] = useState(false);
 
 
   const handleSubmit = (event) => {
-    updatePosts(value);
     event.preventDefault();
-    setValue("");
+    setError(false);
+    if (!value) {
+      setError(true);
+    } else {
+      updatePosts(value);
+      setValue("");
+    }  
   }
   
   return (
@@ -28,6 +34,9 @@ const SwapRequest = (props) => {
         </input>
         <button className={styles["button-style-1"]}>Post</button>
       </form>
+      {error ? 
+        <p className={styles.error}>Please input your request.</p>
+        : <p></p>}
     </div>
   )
 }

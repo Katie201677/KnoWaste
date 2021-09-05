@@ -2,15 +2,21 @@
 
 .mainSection { 
   justify-self: center; 
-  margin: auto;
+  // margin: auto;
   background: $background-color;
   border-radius: $border-radius-2;
-  width: 60%;
+  height: 80vh;
+  overflow-y: scroll;
   justify-content: center;
   align-items: center;
   padding: $base-spacing * 4;
+  width: 60%;
   
   .noSwaps {
     color: $primary-font-color;
+  }
+
+  .heading {
+    margin-top: $base-spacing;
   }
 } 
